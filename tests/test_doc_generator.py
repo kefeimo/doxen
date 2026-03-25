@@ -24,8 +24,9 @@ def test_readme_generation():
     with open(summary_path, "r") as f:
         discovery_data = json.load(f)
 
+    repo_name = discovery_data['repository']['repo_name']
     print(f"✓ Loaded discovery data from {summary_path}")
-    print(f"  Repository: {discovery_data['repository']['repo_name']}")
+    print(f"  Repository: {repo_name}")
     print(f"  Languages: {', '.join(discovery_data['repository']['languages'].keys())}")
     print(f"  API Endpoints: {len(discovery_data['workflows']['api_endpoints'])}")
 
@@ -37,9 +38,10 @@ def test_readme_generation():
     print("📝 Initializing doc generator...")
     generator = DocGenerator(llm)
 
-    # Generate README.md
+    # Generate README.md in project-specific directory
     print("\n⚙️  Generating README.md...")
-    readme_path = docs_dir / "README.md"
+    project_docs_dir = project_root / ".doxen" / f"{repo_name}-docs"
+    readme_path = project_docs_dir / "README.md"
     result = generator.generate_readme(discovery_data, readme_path)
 
     print(f"\n✅ README.md generated at: {result}")
