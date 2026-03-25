@@ -15,7 +15,13 @@
       "Bash(echo \"CLAUDE_CODE_USE_BEDROCK: $CLAUDE_CODE_USE_BEDROCK\")",
       "Bash(echo \"AWS_PROFILE: $AWS_PROFILE\")",
       "Bash(echo \"AWS_REGION: $AWS_REGION\")",
-      "Bash(echo \"ANTHROPIC_MODEL: $ANTHROPIC_MODEL\")"
+      "Bash(echo \"ANTHROPIC_MODEL: $ANTHROPIC_MODEL\")",
+      "Read(//home/kefei/project/**)",
+      "Bash(ls -la /home/kefei/project/rag-demo/*.md)",
+      "Bash(python3 tests/test_repository_analyzer.py)",
+      "Bash(python3 tests/test_workflow_mapper.py)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 tests/test_discovery_pipeline.py)"
     ],
     "additionalDirectories": [
       "/home/kefei/project/doxen/.doxen/docs"
