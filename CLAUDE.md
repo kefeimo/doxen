@@ -42,12 +42,6 @@
 
 ## Memory & Context Strategy
 
-### Local Only (Never Commit)
-- `/memory/` - Detailed development context for AI
-  - Failed experiments
-  - Incremental decision-making
-  - Personal development notes
-
 ### Committed (Portable)
 - `CLAUDE.md` - This file (AI conventions)
 - `docs/DEVELOPMENT.md` - Polished development history
@@ -65,9 +59,9 @@
    - Read relevant `docs/DEVELOPMENT.md` entries
 
 2. **During development:**
-   - Save detailed context to `/memory/` (local)
    - Update `docs/PROGRESS.md` as you complete tasks
    - For intermediate progress worth committing: add to `docs/.progress/` (append-only)
+   - Claude Code auto memory handles conversation context
 
 3. **After major milestones:**
    - Distill important decisions into `docs/DEVELOPMENT.md`
@@ -83,7 +77,6 @@
 
 - Don't generate unstructured markdown documentation
 - Don't create mock/fake examples in tests
-- Don't commit `/memory/` directory (keep it local)
 - Don't over-engineer early - start simple
 - Don't optimize prematurely - make it work, then make it fast
 
@@ -93,4 +86,5 @@
 - Ask for clarification on ambiguous requirements
 - Suggest alternatives when appropriate
 - Keep responses concise and actionable
-- Use memory for detailed context, committed docs for decisions
+- Use `docs/.progress/` for intermediate tracking worth committing
+- Claude Code auto memory handles conversation context
