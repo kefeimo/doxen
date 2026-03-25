@@ -1,58 +1,74 @@
 # Doxen - Progress Tracker
 
-**Last Updated:** 2026-03-25
+**Last Updated:** 2026-03-25 (Evening)
 
 ---
 
-## Current Phase: Project Setup
+## Current Phase: Week 1 MVP - Core Pipeline Implementation
 
-**Goal:** Establish foundation for AI-assisted development
+**Goal:** Implement analysis pipeline (AST + LLM → structured docs)
 
 ---
 
 ## Recently Completed
 
+### Phase 1: Project Foundation ✅
 - [x] Project naming and branding (Doxen + dachshund metaphor)
-- [x] Product story and positioning document
+- [x] Product vision document (VISION.md)
+- [x] Comprehensive requirements (REQUIREMENTS.md)
 - [x] Git repository initialization
 - [x] Remote origin configuration (github.com:kefeimo/doxen.git)
 - [x] Development conventions setup (CLAUDE.md)
-- [x] Documentation structure (DEVELOPMENT.md, PROGRESS.md)
+- [x] Documentation structure (VISION.md, REQUIREMENTS.md, DEVELOPMENT.md, PROGRESS.md)
 - [x] .gitignore configuration
+
+### Phase 2: MVP Project Structure ✅
+- [x] Define core architecture (Hybrid: AST + LLM)
+- [x] Choose primary implementation language (Python)
+- [x] Design knowledge extraction pipeline
+- [x] Python project structure with modular design
+- [x] Package configuration (pyproject.toml) with dependencies
+- [x] CLI skeleton with Click framework (doxen analyze, doxen scan)
+- [x] Placeholder modules:
+  - analyzer/ (AST parser, LLM analyzer)
+  - extractor/ (Python AST working, JavaScript placeholder)
+  - generator/ (Markdown generator)
+  - utils/ (Git history, metadata)
+- [x] README with project overview
+- [x] Working installable package (pip install -e .)
 
 ---
 
 ## In Progress
 
-- [ ] Define core architecture
-- [ ] Choose primary implementation language
-- [ ] Design knowledge extraction pipeline
+- [ ] Implement Python AST parsing (FR-001)
+- [ ] Integrate Anthropic LLM for intent analysis (FR-002)
+- [ ] Wire up analysis pipeline in CLI
+- [ ] Test on rag-demo repository
 
 ---
 
 ## Next Steps
 
-### Immediate (This Week)
-1. Architecture design
-   - Define input sources (code parsers, AST analysis)
-   - Define output schemas (specs, graphs, flows)
-   - Choose technology stack
+### Immediate (Today/Tomorrow)
+1. **Implement core analysis pipeline**
+   - Wire AST parsing → LLM analysis → Markdown generation
+   - Integrate git history extraction
+   - Build metadata generation
+   - Test end-to-end on small Python file
 
-2. MVP scope definition
-   - Target language(s) for initial support
-   - Minimum viable knowledge extraction features
-   - Example use cases
+2. **Test on rag-demo**
+   - Clone https://github.com/kefeimo/rag-demo
+   - Run analysis: `doxen analyze rag-demo --output .doxen/docs`
+   - Human verification of output quality
 
-3. Repository structure
-   - Create source code directories
-   - Set up build/test infrastructure
-   - Add example codebases for testing
-
-### Near-term (Next 2 Weeks)
-- [ ] Implement basic code traversal
-- [ ] Design structured output schema
-- [ ] Build proof-of-concept extractor
-- [ ] Create first integration test
+### Week 2-4 (Quality & Integration)
+- [ ] Pre-existing docs integration (README.md, docstrings)
+- [ ] Testable code examples in generated docs
+- [ ] Quality metrics implementation
+- [ ] API service (FastAPI)
+- [ ] External docs integration (Confluence, Notion)
+- [ ] Conflict resolution for existing docs
 
 ### Future
 - [ ] RAG pipeline integration
