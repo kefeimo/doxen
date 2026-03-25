@@ -96,6 +96,26 @@ class DocGenerator:
                 f"Frontend (JavaScript): {', '.join(dependencies['javascript'][:5])}"
             )
 
+        # Format configuration
+        configuration = repo.get("configuration", {})
+        ports_info = []
+        for port in configuration.get("ports", []):
+            ports_info.append(f"{port['service']}: {port['host_port']}")
+
+        env_vars_info = []
+        for var in configuration.get("environment_variables", []):
+            if var['required']:
+                env_vars_info.append(f"{var['name']} (required)")
+
+        startup_cmds_info = []
+        for cmd in configuration.get("startup_commands", []):
+            if "uvicorn" in cmd['command'] or "npm" in cmd['command'] or "python" in cmd['command']:
+                startup_cmds_info.append(f"{cmd['component']}: {cmd['command']}")
+
+        scripts_info = []
+        for script_name, command in list(configuration.get("scripts", {}).items())[:5]:
+            scripts_info.append(f"{script_name}: {command}")
+
         prompt = f"""You are a technical documentation expert. Generate a comprehensive README.md for the following software project based on the discovered codebase analysis.
 
 # Project Analysis Data
@@ -116,6 +136,20 @@ class DocGenerator:
 
 **User Workflows:**
 {chr(10).join(f"- {flow['name']}: {flow['type']} workflow with {len(flow['endpoints'])} endpoint(s)" for flow in user_flows) if user_flows else "- No workflows identified"}
+
+**Runtime Configuration (Verified from Codebase):**
+
+**Ports:**
+{chr(10).join(f"- {port}" for port in ports_info) if ports_info else "- Not detected"}
+
+**Required Environment Variables:**
+{chr(10).join(f"- {var}" for var in env_vars_info[:5]) if env_vars_info else "- Not detected"}
+
+**Startup Commands:**
+{chr(10).join(f"- {cmd}" for cmd in startup_cmds_info[:3]) if startup_cmds_info else "- Not detected"}
+
+**Available Scripts:**
+{chr(10).join(f"- {script}" for script in scripts_info) if scripts_info else "- Not detected"}
 
 # Generation Instructions
 
@@ -139,10 +173,12 @@ Generate a well-structured README.md with the following sections:
    - Brief explanation of architecture (frontend/backend/etc.)
 
 5. **Quick Start**
-   - Installation prerequisites (only if found in discovery data)
-   - Basic setup steps (only if found in config files or scripts)
-   - CRITICAL: Do NOT infer port numbers, commands, or URLs - only state what is verifiable from discovery data
-   - If setup details are unknown, direct users to refer to component-specific documentation
+   - If verified ports are available, state the URLs (e.g., "Frontend: http://localhost:5173")
+   - If verified environment variables are found, list required ones
+   - If verified startup commands are found, provide exact commands
+   - If verified npm scripts are found, show how to use them (e.g., "npm run dev")
+   - CRITICAL: ONLY use information from "Runtime Configuration (Verified from Codebase)" section
+   - If configuration is not available, direct users to component-specific documentation
 
 6. **API Overview** (if applicable)
    - Brief description of main API endpoints

@@ -74,6 +74,7 @@ class RepositoryAnalyzer:
             "dependencies": self._extract_dependencies(repo_path),
             "config_files": self._find_config_files(repo_path),
             "components": self._classify_components(repo_path),
+            "configuration": self._extract_configuration(repo_path),
         }
 
         # Add LLM-powered semantic analysis if available
@@ -427,6 +428,230 @@ class RepositoryAnalyzer:
             return result
         except Exception as e:
             return {"error": str(e)}
+
+    def _extract_configuration(self, repo_path: Path) -> Dict[str, Any]:
+        """Extract runtime configuration from various sources.
+
+        Args:
+            repo_path: Repository root path
+
+        Returns:
+            Configuration dictionary with ports, scripts, env vars, commands
+        """
+        config = {
+            "ports": [],
+            "scripts": {},
+            "environment_variables": [],
+            "startup_commands": [],
+        }
+
+        # 1. Docker Compose ports
+        docker_ports = self._extract_docker_ports(repo_path)
+        config["ports"].extend(docker_ports)
+
+        # 2. Package.json scripts
+        npm_scripts = self._extract_npm_scripts(repo_path)
+        config["scripts"].update(npm_scripts)
+
+        # 3. Environment templates
+        env_vars = self._extract_env_template(repo_path)
+        config["environment_variables"].extend(env_vars)
+
+        # 4. Startup scripts
+        startup_cmds = self._extract_startup_scripts(repo_path)
+        config["startup_commands"].extend(startup_cmds)
+
+        return config
+
+    def _extract_docker_ports(self, repo_path: Path) -> List[Dict[str, Any]]:
+        """Extract port mappings from docker-compose files.
+
+        Args:
+            repo_path: Repository root
+
+        Returns:
+            List of port configurations
+        """
+        ports = []
+        docker_compose_files = [
+            "docker-compose.yml",
+            "docker-compose.yaml",
+            "docker-compose-dev.yml",
+        ]
+
+        for compose_file in docker_compose_files:
+            file_path = repo_path / compose_file
+            if not file_path.exists():
+                continue
+
+            try:
+                import yaml
+                with open(file_path, "r", encoding="utf-8") as f:
+                    data = yaml.safe_load(f)
+
+                if not data or "services" not in data:
+                    continue
+
+                for service_name, service_config in data["services"].items():
+                    if "ports" in service_config:
+                        for port_mapping in service_config["ports"]:
+                            # Handle "8000:8000" format
+                            if isinstance(port_mapping, str):
+                                parts = port_mapping.split(":")
+                                if len(parts) >= 2:
+                                    ports.append({
+                                        "service": service_name,
+                                        "host_port": parts[0],
+                                        "container_port": parts[1],
+                                        "source": compose_file,
+                                    })
+            except Exception:
+                continue
+
+        return ports
+
+    def _extract_npm_scripts(self, repo_path: Path) -> Dict[str, str]:
+        """Extract npm scripts from package.json.
+
+        Args:
+            repo_path: Repository root
+
+        Returns:
+            Dictionary of script_name: command
+        """
+        scripts = {}
+
+        # Search for package.json files
+        for package_file in repo_path.rglob("package.json"):
+            if any(excluded in package_file.parts for excluded in self.EXCLUDE_DIRS):
+                continue
+
+            try:
+                with open(package_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+
+                if "scripts" in data:
+                    component = package_file.parent.relative_to(repo_path)
+                    for script_name, command in data["scripts"].items():
+                        key = f"{component}/{script_name}" if component != Path(".") else script_name
+                        scripts[key] = command
+            except Exception:
+                continue
+
+        return scripts
+
+    def _extract_env_template(self, repo_path: Path) -> List[Dict[str, Any]]:
+        """Extract environment variables from .env.example files.
+
+        Args:
+            repo_path: Repository root
+
+        Returns:
+            List of environment variable definitions
+        """
+        env_vars = []
+        env_files = [".env.example", ".env.template", ".env.sample"]
+
+        for env_file in env_files:
+            for file_path in repo_path.rglob(env_file):
+                if any(excluded in file_path.parts for excluded in self.EXCLUDE_DIRS):
+                    continue
+
+                try:
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        lines = f.readlines()
+
+                    component = file_path.parent.relative_to(repo_path)
+                    for line in lines:
+                        line = line.strip()
+                        # Skip comments and empty lines
+                        if not line or line.startswith("#"):
+                            continue
+
+                        # Parse KEY=value format
+                        if "=" in line:
+                            key, value = line.split("=", 1)
+                            key = key.strip()
+                            value = value.strip()
+
+                            # Determine if required (no default value or placeholder)
+                            required = not value or value.startswith("your_") or value.startswith("<")
+
+                            env_vars.append({
+                                "name": key,
+                                "example_value": value if value else None,
+                                "required": required,
+                                "component": str(component) if component != Path(".") else "root",
+                                "source": env_file,
+                            })
+                except Exception:
+                    continue
+
+        return env_vars
+
+    def _extract_startup_scripts(self, repo_path: Path) -> List[Dict[str, Any]]:
+        """Extract startup commands from scripts and Dockerfiles.
+
+        Args:
+            repo_path: Repository root
+
+        Returns:
+            List of startup command definitions
+        """
+        commands = []
+
+        # 1. Shell scripts (start.sh, run.sh, etc.)
+        script_patterns = ["start.sh", "run.sh", "startup.sh", "entrypoint.sh"]
+        for pattern in script_patterns:
+            for script_file in repo_path.rglob(pattern):
+                if any(excluded in script_file.parts for excluded in self.EXCLUDE_DIRS):
+                    continue
+
+                try:
+                    with open(script_file, "r", encoding="utf-8") as f:
+                        content = f.read()
+
+                    # Extract commands (very simple heuristic)
+                    component = script_file.parent.relative_to(repo_path)
+                    lines = content.split("\n")
+                    for line in lines:
+                        line = line.strip()
+                        # Look for common startup patterns
+                        if any(cmd in line for cmd in ["uvicorn", "gunicorn", "python", "npm", "node", "yarn"]):
+                            if not line.startswith("#"):
+                                commands.append({
+                                    "command": line,
+                                    "component": str(component) if component != Path(".") else "root",
+                                    "source": script_file.name,
+                                })
+                                break  # Only first relevant command per file
+                except Exception:
+                    continue
+
+        # 2. Dockerfiles (CMD and ENTRYPOINT)
+        for dockerfile in repo_path.rglob("Dockerfile*"):
+            if any(excluded in dockerfile.parts for excluded in self.EXCLUDE_DIRS):
+                continue
+
+            try:
+                with open(dockerfile, "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+
+                component = dockerfile.parent.relative_to(repo_path)
+                for line in lines:
+                    line = line.strip()
+                    if line.startswith("CMD") or line.startswith("ENTRYPOINT"):
+                        # Simple extraction
+                        cmd = line.split(None, 1)[1] if len(line.split(None, 1)) > 1 else ""
+                        commands.append({
+                            "command": cmd,
+                            "component": str(component) if component != Path(".") else "root",
+                            "source": dockerfile.name,
+                        })
+            except Exception:
+                continue
+
+        return commands
 
     def _build_repo_analysis_prompt(self, analysis: Dict[str, Any]) -> str:
         """Build LLM prompt for repository analysis."""

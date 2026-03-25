@@ -222,6 +222,77 @@ class DiscoveryReporter:
             lines.append("No configuration files found")
             lines.append("")
 
+        # Runtime Configuration
+        lines.append("## Runtime Configuration")
+        lines.append("")
+        configuration = analysis.get("configuration", {})
+
+        # Ports
+        ports = configuration.get("ports", [])
+        if ports:
+            lines.append("### Ports")
+            lines.append("")
+            for port in ports:
+                lines.append(f"- **{port['service']}**: `{port['host_port']}:{port['container_port']}` (from `{port['source']}`)")
+            lines.append("")
+
+        # Environment Variables
+        env_vars = configuration.get("environment_variables", [])
+        if env_vars:
+            lines.append("### Environment Variables")
+            lines.append("")
+            # Group by component
+            by_component = {}
+            for var in env_vars:
+                comp = var['component']
+                if comp not in by_component:
+                    by_component[comp] = []
+                by_component[comp].append(var)
+
+            for component, vars_list in by_component.items():
+                if component != "root":
+                    lines.append(f"**{component}:**")
+                    lines.append("")
+                for var in vars_list:
+                    required_text = " (required)" if var['required'] else ""
+                    example = f" = `{var['example_value']}`" if var['example_value'] else ""
+                    lines.append(f"- `{var['name']}`{example}{required_text}")
+                lines.append("")
+
+        # Startup Commands
+        startup_commands = configuration.get("startup_commands", [])
+        if startup_commands:
+            lines.append("### Startup Commands")
+            lines.append("")
+            # Group by component
+            by_component = {}
+            for cmd in startup_commands:
+                comp = cmd['component']
+                if comp not in by_component:
+                    by_component[comp] = []
+                by_component[comp].append(cmd)
+
+            for component, cmds in by_component.items():
+                if component != "root":
+                    lines.append(f"**{component}:**")
+                    lines.append("")
+                for cmd in cmds:
+                    lines.append(f"- `{cmd['command']}` (from `{cmd['source']}`)")
+                lines.append("")
+
+        # NPM Scripts
+        scripts = configuration.get("scripts", {})
+        if scripts:
+            lines.append("### Available Scripts")
+            lines.append("")
+            for script_name, command in scripts.items():
+                lines.append(f"- **{script_name}**: `{command}`")
+            lines.append("")
+
+        if not ports and not env_vars and not startup_commands and not scripts:
+            lines.append("No runtime configuration extracted")
+            lines.append("")
+
         # Directory Structure
         lines.append("## Directory Structure")
         lines.append("")
