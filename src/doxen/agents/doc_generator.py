@@ -320,19 +320,55 @@ Refer to component-specific documentation for setup instructions.
         entry_points = repo.get("entry_points", [])
         api_endpoints = workflows.get("api_endpoints", [])
         integrations = workflows.get("integrations", [])
+        languages = repo.get("languages", {})
+        dependencies = repo.get("dependencies", {})
+        configuration = repo.get("configuration", {})
+
+        # Format API endpoints summary
+        endpoint_groups = {}
+        for ep in api_endpoints:
+            method = ep.get("method", "UNKNOWN")
+            if method not in endpoint_groups:
+                endpoint_groups[method] = []
+            endpoint_groups[method].append(ep['path'])
+
+        endpoint_summary = []
+        for method in ["GET", "POST", "PUT", "DELETE", "PATCH"]:
+            if method in endpoint_groups:
+                endpoint_summary.append(f"{method}: {', '.join(endpoint_groups[method][:5])}")
+
+        # Format dependencies
+        dep_summary = []
+        for lang, deps in dependencies.items():
+            dep_summary.append(f"{lang.title()}: {', '.join(deps[:5])}")
+
+        # Format ports
+        ports_info = []
+        for port in configuration.get("ports", []):
+            ports_info.append(f"{port['service']}: {port['host_port']}")
 
         prompt = f"""You are a software architect. Generate a comprehensive ARCHITECTURE.md document for the following project based on discovered codebase analysis.
 
 # Project: {repo_name}
 
-**Entry Points:**
-{chr(10).join(f"- {ep['path']} ({ep['language']})" for ep in entry_points) if entry_points else "- None detected"}
+**Languages:**
+{chr(10).join(f"- {lang.title()}: {count} files" for lang, count in languages.items())}
 
 **Components:**
 {chr(10).join(f"- {c['name'].title()}: {c['path']} ({c['language']})" for c in components) if components else "- None detected"}
 
+**Entry Points:**
+{chr(10).join(f"- {ep['path']} ({ep['language']})" for ep in entry_points) if entry_points else "- None detected"}
+
 **API Endpoints:** {len(api_endpoints)} total
-**Frontend-Backend Integrations:** {len(integrations)} detected
+{chr(10).join(f"- {summary}" for summary in endpoint_summary) if endpoint_summary else ""}
+
+**Dependencies:**
+{chr(10).join(dep_summary) if dep_summary else "- None detected"}
+
+**Runtime Configuration (Verified):**
+- Ports: {', '.join(ports_info) if ports_info else 'Not detected'}
+- Frontend-Backend Integrations: {len(integrations)} detected
 
 # Generation Instructions
 
@@ -371,6 +407,17 @@ Generate ARCHITECTURE.md with these sections:
 - Write for developers who need to understand the system architecture
 - Base ALL content on the provided analysis data
 - Be specific - reference actual file paths and component names
+- Be concise but comprehensive (aim for 400-600 words)
+
+# CRITICAL CONSTRAINTS
+
+- NEVER infer implementation details not present in discovery data
+- NEVER hallucinate file paths, class names, or function names
+- Only describe components, endpoints, and integrations from provided data
+- If information is missing (e.g., auth approach), state "Not detected in analysis"
+- Use verified ports and configuration from Runtime Configuration section
+- Reference actual file paths and component names from the data
+- For diagrams, base on detected components and integrations only
 
 Generate the ARCHITECTURE.md content now:"""
 
