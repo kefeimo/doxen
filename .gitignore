@@ -1,6 +1,9 @@
 # AI Development Context (keep local only)
 /memory/
 
+# Doxen Output
+.doxen/
+
 # Python
 __pycache__/
 *.py[cod]
