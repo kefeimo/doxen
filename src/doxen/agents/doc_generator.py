@@ -139,9 +139,10 @@ Generate a well-structured README.md with the following sections:
    - Brief explanation of architecture (frontend/backend/etc.)
 
 5. **Quick Start**
-   - Installation prerequisites
-   - Basic setup steps (infer from structure - Docker, package managers, etc.)
-   - How to run the application
+   - Installation prerequisites (only if found in discovery data)
+   - Basic setup steps (only if found in config files or scripts)
+   - CRITICAL: Do NOT infer port numbers, commands, or URLs - only state what is verifiable from discovery data
+   - If setup details are unknown, direct users to refer to component-specific documentation
 
 6. **API Overview** (if applicable)
    - Brief description of main API endpoints
@@ -159,7 +160,17 @@ Generate a well-structured README.md with the following sections:
 - Use present tense and active voice
 - Do NOT include placeholder text like "[Add details here]"
 - Base ALL content on the provided analysis data
-- If information is missing (e.g., no API endpoints), omit that section
+
+# CRITICAL CONSTRAINTS
+
+- NEVER infer concrete details like port numbers, URLs, or exact commands
+- NEVER hallucinate code examples, file paths, or configuration values
+- If setup information is not in the discovery data, use phrases like:
+  - "Refer to the component README for setup instructions"
+  - "See configuration files for specific parameters"
+  - "Installation steps available in component directories"
+- If a section lacks verified information, omit it entirely
+- Mark any uncertainty with qualifiers like "typically", "commonly", or "likely"
 
 Generate the README.md content now:"""
 
