@@ -202,8 +202,9 @@ class RepositoryAnalyzer:
         """
         dependencies: Dict[str, List[str]] = {}
 
-        # Python dependencies
+        # Python dependencies - search recursively
         for pkg_file in self.PACKAGE_FILES["python"]:
+            # Search in root
             file_path = repo_path / pkg_file
             if file_path.exists():
                 deps = self._parse_python_deps(file_path)
@@ -211,12 +212,46 @@ class RepositoryAnalyzer:
                     dependencies["python"] = deps
                     break
 
-        # JavaScript dependencies
-        package_json = repo_path / "package.json"
-        if package_json.exists():
-            deps = self._parse_js_deps(package_json)
-            if deps:
-                dependencies["javascript"] = deps
+            # Search in subdirectories (up to 2 levels deep)
+            if not dependencies.get("python"):
+                for match in repo_path.glob(f"*/{pkg_file}"):
+                    if any(excluded in match.parts for excluded in self.EXCLUDE_DIRS):
+                        continue
+                    deps = self._parse_python_deps(match)
+                    if deps:
+                        dependencies["python"] = deps
+                        break
+
+                # Try one more level deep
+                if not dependencies.get("python"):
+                    for match in repo_path.glob(f"*/*/{pkg_file}"):
+                        if any(excluded in match.parts for excluded in self.EXCLUDE_DIRS):
+                            continue
+                        deps = self._parse_python_deps(match)
+                        if deps:
+                            dependencies["python"] = deps
+                            break
+
+        # JavaScript dependencies - search recursively
+        for pkg_file in self.PACKAGE_FILES["javascript"]:
+            # Search in root
+            file_path = repo_path / pkg_file
+            if file_path.exists() and pkg_file == "package.json":
+                deps = self._parse_js_deps(file_path)
+                if deps:
+                    dependencies["javascript"] = deps
+                    break
+
+            # Search in subdirectories
+            if not dependencies.get("javascript"):
+                for match in repo_path.glob(f"*/{pkg_file}"):
+                    if any(excluded in match.parts for excluded in self.EXCLUDE_DIRS):
+                        continue
+                    if match.name == "package.json":
+                        deps = self._parse_js_deps(match)
+                        if deps:
+                            dependencies["javascript"] = deps
+                            break
 
         return dependencies
 

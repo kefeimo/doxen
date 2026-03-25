@@ -120,8 +120,9 @@ class WorkflowMapper:
         """
         endpoints = []
 
-        for node in ast.walk(tree):
-            if not isinstance(node, ast.FunctionDef):
+        # Iterate over top-level definitions (handles both sync and async)
+        for node in tree.body:
+            if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 continue
 
             # Check for FastAPI decorator patterns
@@ -137,7 +138,7 @@ class WorkflowMapper:
     def _parse_fastapi_decorator(
         self,
         decorator: ast.expr,
-        func_node: ast.FunctionDef,
+        func_node: ast.FunctionDef | ast.AsyncFunctionDef,
         file_path: Path,
         repo_path: Path,
     ) -> Optional[Dict[str, Any]]:

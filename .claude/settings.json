@@ -24,7 +24,8 @@
       "Bash(python3 tests/test_discovery_pipeline.py)"
     ],
     "additionalDirectories": [
-      "/home/kefei/project/doxen/.doxen/docs"
+      "/home/kefei/project/doxen/.doxen/docs",
+      "/home/kefei/project/doxen/.doxen/analysis"
     ]
   }
 }
