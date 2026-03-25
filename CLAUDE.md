@@ -38,6 +38,7 @@
 - **product_story.md** - Product vision and positioning
 - **docs/DEVELOPMENT.md** - Architecture decisions and major milestones
 - **docs/PROGRESS.md** - Current sprint status and active work
+- **docs/.progress/** - Intermediate progress tracking (append-only, rarely modified)
 
 ## Memory & Context Strategy
 
@@ -51,6 +52,11 @@
 - `CLAUDE.md` - This file (AI conventions)
 - `docs/DEVELOPMENT.md` - Polished development history
 - `docs/PROGRESS.md` - Current state tracker
+- `docs/.progress/` - Intermediate progress tracking
+  - Looser documentation than DEVELOPMENT.md
+  - Worth committing but not polished
+  - **Convention: Append-only, rarely modify once written**
+  - Examples: session summaries, enhancement plans, investigation notes
 
 ## Development Workflow
 
@@ -61,10 +67,12 @@
 2. **During development:**
    - Save detailed context to `/memory/` (local)
    - Update `docs/PROGRESS.md` as you complete tasks
+   - For intermediate progress worth committing: add to `docs/.progress/` (append-only)
 
 3. **After major milestones:**
    - Distill important decisions into `docs/DEVELOPMENT.md`
    - Update `docs/PROGRESS.md` with next steps
+   - Archive loose notes from `docs/.progress/` if needed (rarely modify existing files)
 
 4. **Before committing:**
    - Ensure tests pass
