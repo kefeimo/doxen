@@ -1,13 +1,20 @@
 """Command-line interface for Doxen."""
 
+import os
 import sys
 from pathlib import Path
 from typing import Optional
 
 import click
 from rich.console import Console
+from rich.progress import Progress, SpinnerColumn, TextColumn
 
 from doxen import __version__
+from doxen.extractor.python import PythonExtractor
+from doxen.analyzer.llm_analyzer import LLMAnalyzer
+from doxen.generator.markdown import MarkdownGenerator
+from doxen.utils.git import GitAnalyzer
+from doxen.utils.metadata import MetadataBuilder
 
 console = Console()
 
@@ -66,18 +73,93 @@ def analyze(
     output.mkdir(parents=True, exist_ok=True)
 
     try:
-        # TODO: Implement the analysis pipeline
-        # 1. Scan repository for files
-        # 2. Extract structure with AST
-        # 3. Analyze intent with LLM
-        # 4. Generate markdown documentation
-        # 5. Add git history traceability
+        # Initialize components
+        git_analyzer = GitAnalyzer(repo_path)
+        metadata_builder = MetadataBuilder()
+        markdown_gen = MarkdownGenerator(output)
 
-        console.print("[yellow]⚠ Analysis pipeline not yet implemented[/yellow]")
-        console.print("[dim]This is a skeleton CLI - implementation coming next[/dim]")
+        # Check for Anthropic API key
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        use_llm = api_key is not None
+
+        if not use_llm:
+            console.print("[yellow]⚠ ANTHROPIC_API_KEY not set - running without LLM analysis[/yellow]")
+        else:
+            llm_analyzer = LLMAnalyzer(api_key)
+
+        # Scan for Python files
+        python_files = list(repo_path.rglob("*.py"))
+
+        if not python_files:
+            console.print("[yellow]No Python files found in repository[/yellow]")
+            return
+
+        console.print(f"Found {len(python_files)} Python files")
+
+        # Process files
+        extractor = PythonExtractor()
+        processed = 0
+
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            console=console,
+        ) as progress:
+            task = progress.add_task("Analyzing files...", total=len(python_files))
+
+            for py_file in python_files:
+                if verbose:
+                    console.print(f"[dim]Processing: {py_file.relative_to(repo_path)}[/dim]")
+
+                # 1. Extract structure with AST
+                structure = extractor.extract(py_file)
+
+                if "error" in structure:
+                    console.print(f"[yellow]Skipping {py_file.name}: {structure['error']}[/yellow]")
+                    progress.advance(task)
+                    continue
+
+                # 2. Get git history
+                git_history = git_analyzer.get_file_history(py_file)
+
+                # 3. Analyze intent with LLM (if available)
+                if use_llm:
+                    with open(py_file, "r", encoding="utf-8") as f:
+                        code = f.read()
+                    llm_analysis = llm_analyzer.analyze_code(code, structure)
+                else:
+                    llm_analysis = {
+                        "purpose": "Analysis not available (no API key)",
+                        "relationships": [],
+                        "complexity": "unknown",
+                        "audience": ["junior", "senior"],
+                    }
+
+                # 4. Build metadata
+                metadata = metadata_builder.build(structure, llm_analysis, git_history)
+
+                # 5. Generate markdown documentation
+                analysis = {
+                    **structure,
+                    **llm_analysis,
+                    "metadata": metadata,
+                    "git_history": git_history,
+                }
+
+                doc_path = markdown_gen.generate(analysis)
+                processed += 1
+
+                progress.advance(task)
+
+        console.print(f"\n[bold green]✓ Analysis complete![/bold green]")
+        console.print(f"Processed {processed} files")
+        console.print(f"Documentation saved to: [cyan]{output}[/cyan]")
 
     except Exception as e:
         console.print(f"[bold red]Error:[/bold red] {e}")
+        if verbose:
+            import traceback
+            console.print(traceback.format_exc())
         sys.exit(1)
 
 
