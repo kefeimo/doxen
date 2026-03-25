@@ -1,20 +1,40 @@
 """LLM-powered code intent analysis."""
 
+import os
 from typing import Any, Optional
 
-from anthropic import Anthropic
+from anthropic import AnthropicBedrock
 
 
 class LLMAnalyzer:
     """Analyze code intent and relationships using LLM."""
 
-    def __init__(self, api_key: Optional[str] = None) -> None:
+    def __init__(self, api_key: Optional[str] = None, use_bedrock: bool = False) -> None:
         """Initialize LLM analyzer.
 
         Args:
             api_key: Anthropic API key (or use environment variable)
+            use_bedrock: Use AWS Bedrock instead of direct Anthropic API
         """
-        self.client = Anthropic(api_key=api_key) if api_key else Anthropic()
+        self.use_bedrock = use_bedrock
+
+        if use_bedrock:
+            # Use AWS Bedrock
+            aws_profile = os.environ.get("AWS_PROFILE")
+            aws_region = os.environ.get("AWS_REGION", "us-west-2")
+            self.client = AnthropicBedrock(
+                aws_profile=aws_profile,
+                aws_region=aws_region,
+            )
+            self.model = os.environ.get(
+                "ANTHROPIC_MODEL",
+                "us.anthropic.claude-sonnet-4-20250514-v1:0"
+            )
+        else:
+            # Use direct Anthropic API
+            from anthropic import Anthropic
+            self.client = Anthropic(api_key=api_key) if api_key else Anthropic()
+            self.model = "claude-sonnet-4-20250514"
 
     def analyze_code(self, code: str, context: dict[str, Any]) -> dict[str, Any]:
         """Analyze code to understand intent and relationships.
@@ -34,15 +54,21 @@ class LLMAnalyzer:
         prompt = self._build_analysis_prompt(code, context)
 
         try:
-            # Call Anthropic API
+            # Call Anthropic API (direct or Bedrock)
             message = self.client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model=self.model,
                 max_tokens=1024,
                 messages=[{"role": "user", "content": prompt}],
             )
 
             # Parse response
             response_text = message.content[0].text
+
+            # Debug: print raw response
+            import sys
+            if os.environ.get("ANTHROPIC_LOG") == "debug":
+                print(f"[DEBUG] Raw LLM response:\n{response_text}\n", file=sys.stderr)
+
             return self._parse_response(response_text)
 
         except Exception as e:
@@ -115,23 +141,34 @@ Keep your response concise and technical."""
             if not line:
                 continue
 
-            if line.startswith("PURPOSE:"):
+            # Handle both markdown (**PURPOSE:**) and plain (PURPOSE:) format
+            line_upper = line.upper()
+
+            if "PURPOSE:" in line_upper:
                 current_field = "purpose"
-                result["purpose"] = line.replace("PURPOSE:", "").strip()
-            elif line.startswith("RELATIONSHIPS:"):
+                # Extract text after PURPOSE: (handle **PURPOSE:** or PURPOSE:)
+                purpose_text = line.split(":", 1)[1] if ":" in line else ""
+                purpose_text = purpose_text.replace("**", "").strip()
+                result["purpose"] = purpose_text
+            elif "RELATIONSHIPS:" in line_upper:
                 current_field = "relationships"
-                rel_text = line.replace("RELATIONSHIPS:", "").strip()
+                rel_text = line.split(":", 1)[1] if ":" in line else ""
+                rel_text = rel_text.replace("**", "").strip()
                 if rel_text:
                     result["relationships"] = [rel_text]
-            elif line.startswith("COMPLEXITY:"):
-                complexity = line.replace("COMPLEXITY:", "").strip().lower()
+            elif "COMPLEXITY:" in line_upper:
+                current_field = "complexity"
+                complexity = line.split(":", 1)[1] if ":" in line else "moderate"
+                complexity = complexity.replace("**", "").strip().lower()
                 result["complexity"] = complexity
-            elif line.startswith("AUDIENCE:"):
-                audience_text = line.replace("AUDIENCE:", "").strip().lower()
+            elif "AUDIENCE:" in line_upper:
+                current_field = "audience"
+                audience_text = line.split(":", 1)[1] if ":" in line else ""
+                audience_text = audience_text.replace("**", "").strip().lower()
                 result["audience"] = [a.strip() for a in audience_text.split(",")]
-            elif current_field == "purpose" and line:
+            elif current_field == "purpose" and line and not line.startswith("**"):
                 result["purpose"] += " " + line
-            elif current_field == "relationships" and line:
+            elif current_field == "relationships" and line and not line.startswith("**"):
                 result["relationships"].append(line)
 
         return result

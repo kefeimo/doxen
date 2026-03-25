@@ -78,14 +78,29 @@ def analyze(
         metadata_builder = MetadataBuilder()
         markdown_gen = MarkdownGenerator(output)
 
-        # Check for Anthropic API key
+        # Check for LLM configuration (Bedrock or direct API)
+        use_bedrock = os.environ.get("CLAUDE_CODE_USE_BEDROCK") == "1"
         api_key = os.environ.get("ANTHROPIC_API_KEY")
-        use_llm = api_key is not None
 
-        if not use_llm:
-            console.print("[yellow]⚠ ANTHROPIC_API_KEY not set - running without LLM analysis[/yellow]")
-        else:
+        if use_bedrock:
+            # AWS Bedrock
+            aws_profile = os.environ.get("AWS_PROFILE")
+            if not aws_profile:
+                console.print("[yellow]⚠ AWS_PROFILE not set - running without LLM analysis[/yellow]")
+                use_llm = False
+            else:
+                console.print(f"[dim]Using AWS Bedrock (profile: {aws_profile})[/dim]")
+                llm_analyzer = LLMAnalyzer(use_bedrock=True)
+                use_llm = True
+        elif api_key:
+            # Direct Anthropic API
+            console.print("[dim]Using Anthropic API[/dim]")
             llm_analyzer = LLMAnalyzer(api_key)
+            use_llm = True
+        else:
+            console.print("[yellow]⚠ No LLM configuration found - running without LLM analysis[/yellow]")
+            console.print("[dim]Set ANTHROPIC_API_KEY or CLAUDE_CODE_USE_BEDROCK=1[/dim]")
+            use_llm = False
 
         # Scan for Python files
         python_files = list(repo_path.rglob("*.py"))

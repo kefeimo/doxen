@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(pip install:*)",
+      "Bash(doxen --version)",
+      "Bash(doxen --help)",
+      "Bash(doxen analyze:*)",
+      "Bash(echo $ANTHROPIC_API_KEY)",
+      "Read(//home/kefei/project/rag-demo/docs/**)",
+      "Bash(aws configure:*)",
+      "Bash(echo \"CLAUDE_CODE_USE_BEDROCK: $CLAUDE_CODE_USE_BEDROCK\")",
+      "Bash(echo \"AWS_PROFILE: $AWS_PROFILE\")",
+      "Bash(echo \"AWS_REGION: $AWS_REGION\")",
+      "Bash(echo \"ANTHROPIC_MODEL: $ANTHROPIC_MODEL\")"
+    ],
+    "additionalDirectories": [
+      "/home/kefei/project/doxen/.doxen/docs"
+    ]
+  }
+}
