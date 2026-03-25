@@ -11,20 +11,24 @@ def test_readme_generation():
     """Test README.md generation from discovery data."""
     # Setup paths
     project_root = Path(__file__).parent.parent
-    analysis_dir = project_root / ".doxen" / "analysis"
-    docs_dir = project_root / ".doxen" / "docs"
+
+    # Assume we're generating docs for rag-demo
+    # In real use, this would be passed as parameter
+    repo_name = "rag-demo"
+    project_dir = project_root / ".doxen" / f"{repo_name}-docs"
+    analysis_dir = project_dir / "analysis"
+    docs_dir = project_dir / "docs"
 
     # Load discovery summary
     summary_path = analysis_dir / "DISCOVERY-SUMMARY.json"
     if not summary_path.exists():
         print(f"❌ Discovery summary not found at {summary_path}")
-        print("Run discovery first: python -m doxen discover /path/to/repo")
+        print("Run discovery first: python tests/test_discovery_pipeline.py")
         return
 
     with open(summary_path, "r") as f:
         discovery_data = json.load(f)
 
-    repo_name = discovery_data['repository']['repo_name']
     print(f"✓ Loaded discovery data from {summary_path}")
     print(f"  Repository: {repo_name}")
     print(f"  Languages: {', '.join(discovery_data['repository']['languages'].keys())}")
@@ -38,10 +42,9 @@ def test_readme_generation():
     print("📝 Initializing doc generator...")
     generator = DocGenerator(llm)
 
-    # Generate README.md in project-specific directory
+    # Generate README.md in project-specific docs directory
     print("\n⚙️  Generating README.md...")
-    project_docs_dir = project_root / ".doxen" / f"{repo_name}-docs"
-    readme_path = project_docs_dir / "README.md"
+    readme_path = docs_dir / "README.md"
     result = generator.generate_readme(discovery_data, readme_path)
 
     print(f"\n✅ README.md generated at: {result}")

@@ -9,7 +9,11 @@ from doxen.analyzer.llm_analyzer import LLMAnalyzer
 def test_discovery_on_rag_demo():
     """Test discovery pipeline on rag-demo repository."""
     repo_path = Path("/home/kefei/project/rag-demo")
-    output_dir = Path("/home/kefei/project/doxen/.doxen/analysis")
+    repo_name = repo_path.name
+
+    # Project-specific output: .doxen/{repo-name}-docs/analysis/
+    project_root = Path("/home/kefei/project/doxen")
+    output_dir = project_root / ".doxen" / f"{repo_name}-docs" / "analysis"
 
     # Initialize LLM if available
     use_bedrock = os.environ.get("CLAUDE_CODE_USE_BEDROCK") == "1"
