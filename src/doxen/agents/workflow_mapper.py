@@ -169,6 +169,7 @@ class WorkflowMapper:
                                 "path": path,
                                 "handler": func_node.name,
                                 "file": str(file_path.relative_to(repo_path)),
+                                "full_path": str(file_path),  # Add full path for git history
                                 "line": func_node.lineno,
                                 "docstring": ast.get_docstring(func_node),
                             }
