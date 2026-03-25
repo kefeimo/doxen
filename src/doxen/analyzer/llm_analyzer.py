@@ -173,6 +173,31 @@ Keep your response concise and technical."""
 
         return result
 
+    def generate(self, prompt: str, max_tokens: int = 4000, temperature: float = 0.7) -> str:
+        """Generate text content using LLM.
+
+        Args:
+            prompt: Generation prompt
+            max_tokens: Maximum tokens to generate
+            temperature: Sampling temperature (0.0-1.0)
+
+        Returns:
+            Generated text content
+        """
+        try:
+            message = self.client.messages.create(
+                model=self.model,
+                max_tokens=max_tokens,
+                temperature=temperature,
+                messages=[{"role": "user", "content": prompt}],
+            )
+
+            # Extract text from response
+            return message.content[0].text
+
+        except Exception as e:
+            raise RuntimeError(f"LLM generation failed: {str(e)}")
+
     def batch_analyze(self, code_chunks: list[tuple[str, dict[str, Any]]]) -> list[dict[str, Any]]:
         """Analyze multiple code chunks efficiently.
 
