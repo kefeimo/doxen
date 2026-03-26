@@ -73,7 +73,9 @@
       "Bash(python experimental/scripts/test_framework_patterns.py express Express)",
       "Bash(python experimental/scripts/test_framework_patterns.py fastapi FastAPI 100)",
       "Bash(python experimental/scripts/test_framework_patterns.py fastapi FastAPI 500)",
-      "Bash(python experimental/scripts/test_framework_patterns.py fastapi FastAPI 2000)"
+      "Bash(python experimental/scripts/test_framework_patterns.py fastapi FastAPI 2000)",
+      "Bash(ls experimental/projects/*/doxen_output/analysis/REPOSITORY-ANALYSIS.json)",
+      "Bash(python experimental/scripts/test_framework_patterns.py nextjs \"Next.js\" 500)"
     ],
     "additionalDirectories": [
       "/home/kefei/project/doxen/.doxen/docs",
