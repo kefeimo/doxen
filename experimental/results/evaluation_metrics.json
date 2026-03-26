@@ -1,0 +1,248 @@
+{
+  "fastapi": {
+    "project": "fastapi",
+    "ground_truth_summary": {
+      "has_readme": true,
+      "has_architecture": false,
+      "doc_count": 51,
+      "patterns_mentioned": [
+        "Middleware",
+        "Strategy",
+        "ORM",
+        "Pydantic",
+        "REST",
+        "Async",
+        "GraphQL",
+        "Dependency Injection",
+        "Repository",
+        "Asynchronous"
+      ],
+      "architecture_type": "full-stack"
+    },
+    "correctness_metrics": {
+      "architecture_exact_match": false,
+      "architecture_detected": true,
+      "pattern_precision_conservative": 1.0,
+      "pattern_recall_conservative": 0.5,
+      "pattern_f1_conservative": 0.6666666666666666,
+      "pattern_precision_corrected": 1.0,
+      "pattern_recall_corrected": 0.6,
+      "pattern_f1_corrected": 0.7499999999999999,
+      "pattern_precision": 1.0,
+      "pattern_recall": 0.6,
+      "pattern_f1": 0.7499999999999999,
+      "patterns_detected": 5,
+      "patterns_in_gt": 10,
+      "patterns_supported": 5,
+      "patterns_verified": 0,
+      "patterns_unsupported": 0,
+      "patterns_supported_list": [
+        "Strategy",
+        "Dependency Injection",
+        "Async",
+        "Pydantic",
+        "ORM"
+      ],
+      "patterns_verified_list": [],
+      "patterns_unsupported_list": [],
+      "component_recall": 0.4666666666666667,
+      "components_detected": 9,
+      "components_in_gt": 15,
+      "dependencies_detected": 5
+    },
+    "completeness_metrics": {
+      "readme_section_coverage": 0.21428571428571427,
+      "readme_sections_generated": 6,
+      "readme_sections_in_gt": 28,
+      "total_doc_lines_generated": 179,
+      "total_doc_lines_in_gt": 549,
+      "components_documented": 3,
+      "has_readme": true,
+      "has_architecture": true
+    },
+    "scores": {
+      "correctness": 0.5722222222222223,
+      "completeness": 0.6071428571428571,
+      "combined": 0.5896825396825397
+    }
+  },
+  "express": {
+    "project": "express",
+    "ground_truth_summary": {
+      "has_readme": true,
+      "has_architecture": false,
+      "doc_count": 1,
+      "patterns_mentioned": [
+        "Middleware",
+        "Repository",
+        "ORM"
+      ],
+      "architecture_type": null
+    },
+    "correctness_metrics": {
+      "architecture_exact_match": null,
+      "architecture_detected": true,
+      "pattern_precision_conservative": 0.5,
+      "pattern_recall_conservative": 0.6666666666666666,
+      "pattern_f1_conservative": 0.5714285714285715,
+      "pattern_precision_corrected": 0.75,
+      "pattern_recall_corrected": 0.6666666666666666,
+      "pattern_f1_corrected": 0.7058823529411765,
+      "pattern_precision": 0.75,
+      "pattern_recall": 0.6666666666666666,
+      "pattern_f1": 0.7058823529411765,
+      "patterns_detected": 4,
+      "patterns_in_gt": 3,
+      "patterns_supported": 2,
+      "patterns_verified": 0,
+      "patterns_unsupported": 2,
+      "patterns_supported_list": [
+        "Middleware",
+        "ORM"
+      ],
+      "patterns_verified_list": [],
+      "patterns_unsupported_list": [
+        "REST",
+        "RESTful"
+      ],
+      "component_recall": 1.0,
+      "components_detected": 7,
+      "components_in_gt": 3,
+      "dependencies_detected": 44
+    },
+    "completeness_metrics": {
+      "readme_section_coverage": 0.6875,
+      "readme_sections_generated": 11,
+      "readme_sections_in_gt": 16,
+      "total_doc_lines_generated": 179,
+      "total_doc_lines_in_gt": 278,
+      "components_documented": 1,
+      "has_readme": true,
+      "has_architecture": true
+    },
+    "scores": {
+      "correctness": 0.7352941176470589,
+      "completeness": 0.84375,
+      "combined": 0.7895220588235294
+    }
+  },
+  "django": {
+    "project": "django",
+    "ground_truth_summary": {
+      "has_readme": true,
+      "has_architecture": false,
+      "doc_count": 51,
+      "patterns_mentioned": [
+        "Middleware",
+        "Strategy",
+        "ORM",
+        "Async",
+        "Model-View-Controller",
+        "REST",
+        "MVC",
+        "Repository",
+        "Asynchronous",
+        "Factory"
+      ],
+      "architecture_type": "mvc"
+    },
+    "correctness_metrics": {
+      "architecture_exact_match": false,
+      "architecture_detected": true,
+      "pattern_precision_conservative": 1.0,
+      "pattern_recall_conservative": 0.4,
+      "pattern_f1_conservative": 0.5714285714285715,
+      "pattern_precision_corrected": 1.0,
+      "pattern_recall_corrected": 0.4,
+      "pattern_f1_corrected": 0.5714285714285715,
+      "pattern_precision": 1.0,
+      "pattern_recall": 0.4,
+      "pattern_f1": 0.5714285714285715,
+      "patterns_detected": 4,
+      "patterns_in_gt": 10,
+      "patterns_supported": 4,
+      "patterns_verified": 0,
+      "patterns_unsupported": 0,
+      "patterns_supported_list": [
+        "MVC",
+        "Strategy",
+        "Model-View-Controller",
+        "ORM"
+      ],
+      "patterns_verified_list": [],
+      "patterns_unsupported_list": [],
+      "component_recall": 0.3125,
+      "components_detected": 8,
+      "components_in_gt": 16,
+      "dependencies_detected": 9
+    },
+    "completeness_metrics": {
+      "readme_section_coverage": null,
+      "readme_sections_generated": 6,
+      "readme_sections_in_gt": 0,
+      "total_doc_lines_generated": 151,
+      "total_doc_lines_in_gt": 84,
+      "components_documented": 3,
+      "has_readme": true,
+      "has_architecture": true
+    },
+    "scores": {
+      "correctness": 0.4613095238095239,
+      "completeness": 1.0,
+      "combined": 0.730654761904762
+    }
+  },
+  "nextjs": {
+    "project": "nextjs",
+    "ground_truth_summary": {
+      "has_readme": true,
+      "has_architecture": false,
+      "doc_count": 1,
+      "patterns_mentioned": [],
+      "architecture_type": "full-stack"
+    },
+    "correctness_metrics": {
+      "architecture_exact_match": false,
+      "architecture_detected": true,
+      "pattern_precision_conservative": 0.0,
+      "pattern_recall_conservative": 0.0,
+      "pattern_f1_conservative": 0.0,
+      "pattern_precision_corrected": 0.5,
+      "pattern_recall_corrected": 0.0,
+      "pattern_f1_corrected": 0.0,
+      "pattern_precision": 0.5,
+      "pattern_recall": 0.0,
+      "pattern_f1": 0.0,
+      "patterns_detected": 2,
+      "patterns_in_gt": 0,
+      "patterns_supported": 0,
+      "patterns_verified": 0,
+      "patterns_unsupported": 2,
+      "patterns_supported_list": [],
+      "patterns_verified_list": [],
+      "patterns_unsupported_list": [
+        "Monolith",
+        "ORM"
+      ],
+      "component_recall": 1.0,
+      "components_detected": 8,
+      "components_in_gt": 1,
+      "dependencies_detected": 194
+    },
+    "completeness_metrics": {
+      "readme_section_coverage": 1.0,
+      "readme_sections_generated": 16,
+      "readme_sections_in_gt": 6,
+      "total_doc_lines_generated": 196,
+      "total_doc_lines_in_gt": 80,
+      "components_documented": 3,
+      "has_readme": true,
+      "has_architecture": true
+    },
+    "scores": {
+      "correctness": 0.5,
+      "completeness": 1.0,
+      "combined": 0.75
+    }
+  }
+}

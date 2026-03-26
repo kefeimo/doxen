@@ -1,6 +1,6 @@
 # Doxen Experimental Framework - Pilot Phase
 
-**Status:** Day 2 Complete ✅
+**Status:** Day 3 Complete ✅
 **Phase:** Pilot (4 Projects, 5 Days)
 **Goal:** Validate methodology and optimize Phase 1 quality
 
@@ -124,6 +124,32 @@ python3 scripts/run_baseline.py
 - AWS Bedrock access (CLAUDE_CODE_USE_BEDROCK=1 + AWS_PROFILE set)
 - OR Anthropic API key (ANTHROPIC_API_KEY)
 
+### 5. `evaluate_baseline.py`
+Evaluates Doxen outputs against ground truth documentation.
+
+**What it does:**
+- Compares generated docs to ground truth
+- Calculates correctness metrics (architecture, patterns, components, dependencies)
+- Calculates completeness metrics (sections, doc volume, coverage)
+- Generates aggregate scores (50% correctness + 50% completeness)
+- Produces comprehensive reports
+
+**Output:**
+- `results/evaluation_metrics.json` - Detailed metrics for all projects
+- `results/comparison_table.md` - Markdown comparison table
+- `results/evaluation_report.md` - Summary report with recommendations
+
+**Usage:**
+```bash
+cd experimental
+python3 scripts/evaluate_baseline.py
+```
+
+**Metrics:**
+- **Correctness:** Architecture detection, pattern F1, component recall, dependency count
+- **Completeness:** Section coverage, doc volume, component documentation
+- **Success threshold:** ≥70% combined score
+
 ## Ground Truth Data
 
 ### FastAPI
@@ -188,9 +214,27 @@ python3 scripts/run_baseline.py
 - Documentation: 56-97 lines README, 91-123 lines ARCHITECTURE
 - All JSON/markdown outputs valid
 
-## Next: Day 3 - Automated Evaluation
+## Day 3 Deliverables ✅
 
-**Goal:** Compare outputs to ground truth and calculate quality metrics
+- [x] Created automated evaluation script (`evaluate_baseline.py`)
+- [x] Evaluated all 4 projects against ground truth
+- [x] 3/4 projects met success criteria (≥70%)
+- [x] Generated comprehensive reports
+
+**Results:**
+| Project | Correctness | Completeness | Combined | Status |
+|---------|-------------|--------------|----------|--------|
+| Express | 69.0% | 84.4% | 76.7% | ✅ |
+| Django | 46.1% | 100.0% | 73.1% | ✅ |
+| Next.js | 75.0% | 100.0% | 87.5% | ✅ |
+| FastAPI | 54.4% | 60.7% | 57.6% | ⚠️ |
+| **Average** | **61.2%** | **86.3%** | **73.7%** | ✅ |
+
+**Decision:** ✅ GO - Pilot phase successful, proceed to expansion
+
+## Next: Day 4 - Spot Checks & Analysis
+
+**Goal:** Manual review and qualitative assessment of generated documentation
 
 **Tasks:**
 1. Run Doxen Phase 1 on each project

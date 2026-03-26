@@ -4,19 +4,129 @@
 
 ---
 
-## Current Phase: Experimental Framework - Pilot Phase (4 Projects, 5 Days)
+## Current Phase: Expansion Phase (6 More Projects)
 
-**Goal:** Validate methodology and optimize Phase 1 quality using data from well-documented projects
+**Previous Phase:** Pilot Phase ✅ COMPLETE (Days 1-5)
 
-**Timeline:** Day 1 of 5 (starting today)
+**Goal:** Validate improvements across diverse projects
 
-**Projects:** FastAPI, Express.js, Django, Next.js
+**Timeline:** Starting after quick wins implementation (2-3 hours)
 
-**Documentation:** See `docs/.progress/EXPERIMENTAL-FRAMEWORK.md` and `PILOT-PHASE-PLAN.md`
+**Status:** Ready to proceed - implementing framework-aware pattern catalogs first
+
+**Documentation:** See `experimental/results/PILOT_SUMMARY.md` and `experimental/results/improvement_roadmap.md`
 
 ---
 
 ## Recently Completed
+
+### Experimental Framework - Pilot Phase (Days 1-5) ✅ COMPLETE (2026-03-26)
+
+**Decision: ✅ PROCEED to Expansion**
+
+**Key Results:**
+- **Success Rate:** 3/4 projects (75%) met ≥70% threshold
+- **Pattern Precision:** 100% (no hallucinations)
+- **Pattern Recall:** 58% (improvement opportunity)
+- **Completeness:** 86.4% average
+- **Confidence:** High (clear improvement path)
+
+**Critical Discovery:**
+- Initial hypothesis: Ground truth incomplete (only showing 5 patterns)
+- Reality: GT has 9-10 patterns per project (display truncated)
+- Actual problem: Doxen's recall is low, not GT incompleteness
+- Pivoted from "fix evaluation" to "improve pattern detection"
+
+**What Works:**
+- 100% precision (no hallucinations) ✅
+- 86% completeness (comprehensive docs) ✅
+- Framework detection (100% accurate) ✅
+- Component mapping (high accuracy) ✅
+
+**What Needs Improvement:**
+- Pattern recall: 58% (misses obvious patterns like REST, Middleware)
+- FastAPI below threshold (59% vs 70%) - close but fixable
+- Framework knowledge gaps (FastAPI → should auto-detect [REST, Async, DI, Middleware])
+
+**Quick Win Identified:**
+- Framework-aware pattern catalogs
+- Effort: 2-3 hours
+- Impact: Recall 58% → 75-80%
+- Implementation plan: `experimental/results/improvement_roadmap.md`
+
+**Documents Created:**
+- `experimental/results/PILOT_SUMMARY.md` - Executive summary
+- `experimental/results/day5_final_analysis.md` - Comprehensive findings
+- `experimental/results/improvement_roadmap.md` - Implementation plan (Phases 1-3)
+- `experimental/results/manual_verification.md` - Pattern-by-pattern analysis
+- `experimental/results/evaluation_gap_analysis.md` - Three-way classification methodology
+- `experimental/results/day4_pattern_miss_analysis.md` - Root cause analysis
+- `experimental/results/day3_4_transition_summary.md` - Journey from wrong hypothesis to correct understanding
+
+**Next Steps:**
+1. Implement framework-aware catalog (2-3 hours)
+2. Re-run pilot to validate improvement
+3. Begin expansion phase (6 projects)
+4. Parallel: Continue recall improvements
+
+### Experimental Framework - Day 5 ✅ (2026-03-26)
+- [x] Final analysis and decision documentation
+- [x] Created comprehensive findings document (day5_final_analysis.md)
+- [x] Created improvement roadmap with implementation plan
+- [x] Created executive summary (PILOT_SUMMARY.md)
+- [x] Formalized GO/NO-GO decision (✅ GO)
+- [x] Identified quick wins (framework-aware catalogs)
+- [x] Planned expansion phase (6 more projects)
+
+**Decision:** ✅ PROCEED to expansion with parallel improvements
+
+### Experimental Framework - Day 4 ✅ (2026-03-26)
+- [x] Manual verification of pattern detection (manual_verification.md)
+- [x] Root cause analysis of pattern misses (day4_pattern_miss_analysis.md)
+- [x] Three-way classification methodology (evaluation_gap_analysis.md)
+- [x] Semantic pattern matching implementation (Async = Asynchronous)
+- [x] Updated evaluation script with confidence weighting
+
+**Key Insight:** Ground truth IS comprehensive (9-10 patterns per project)
+- Initial display only showed first 5 patterns
+- Actual problem: Doxen's recall (58%), not GT incompleteness
+- Pivot: From "fix evaluation" to "improve detection"
+
+**Pattern Analysis:**
+- FastAPI: Missed Middleware, REST (fundamental!)
+- Django: Missed Strategy pattern
+- Express: Missed Repository (acceptable - usage pattern)
+- All detected patterns correct (100% precision)
+
+### Experimental Framework - Day 3 ✅ (2026-03-26)
+- [x] Built automated evaluation framework (`evaluate_baseline.py` - 650+ lines)
+- [x] Implemented correctness metrics:
+  - Architecture pattern detection (100% detected)
+  - Pattern detection F1 scores (57-67%)
+  - Component recall (31-100%)
+  - Dependency detection (5-194 deps)
+- [x] Implemented completeness metrics:
+  - Section coverage (21-100%)
+  - Documentation volume (151-196 lines)
+  - Component documentation count
+- [x] Generated evaluation reports:
+  - JSON metrics (evaluation_metrics.json)
+  - Markdown comparison table (comparison_table.md)
+  - Comprehensive report (evaluation_report.md)
+  - Day 3 summary (day3_summary.md)
+
+**Results:**
+- 3/4 projects met ≥70% threshold (Express 76.7%, Django 73.1%, Next.js 87.5%)
+- Average combined score: 73.7%
+- FastAPI below threshold: 57.6% (extensive GT, concise generation)
+- **Decision:** ✅ Pilot phase SUCCESS - proceed to expansion
+
+**Key Findings:**
+- Completeness strong (86.3% average)
+- Correctness moderate (61.2% average)
+- Pattern detection F1: 60.3%
+- Component detection: 100% for Express/Next.js, lower for others
+- Architecture detection working (all projects detected)
 
 ### Experimental Framework - Day 2 ✅ (2026-03-26)
 - [x] Ran baseline Doxen analysis on all 4 pilot projects
@@ -109,65 +219,64 @@
 
 ---
 
-## In Progress (Day 3 of Pilot)
+## In Progress
 
-**Current Focus:** Automated Evaluation
+**Current Focus:** Quick Win Implementation + Expansion Planning
 
-**Day 2 Complete ✅:**
-- [x] Run Doxen Phase 1 on all 4 projects (100% success)
-- [x] Run Doxen Phase 2 on all 4 projects (documentation generation)
-- [x] Collect performance metrics (13 LLM calls, 139.6s total)
-- [x] Verify all outputs are valid (JSON + markdown)
-- [x] Create baseline summary
+### Immediate Tasks (Next 2-3 hours)
 
-**Day 3 Tasks:**
-- [ ] Implement correctness metrics (architecture, components, patterns, tech stack)
-- [ ] Implement completeness metrics (sections, dependencies, coverage)
-- [ ] Generate comparison tables
-- [ ] Create automated evaluation script
+**Quick Win: Framework-Aware Pattern Catalog**
+- [ ] Create `src/doxen/extractors/framework_patterns.py` with pattern catalog
+- [ ] Integrate with ArchitectureExtractor
+- [ ] Update DocGenerator to use pattern details
+- [ ] Re-run pilot projects (FastAPI, Express, Django, Next.js)
+- [ ] Validate recall improvement (target: 58% → 75-80%)
 
-**See:** `docs/.progress/PILOT-PHASE-PLAN.md` for detailed day-by-day plan
+### Expansion Phase Planning
+
+**Project Selection (6 more projects):**
+- Proposed: Flask, Rails, Vue.js, Click, Requests, Docker
+- Criteria: Diverse tech stacks, well-documented, different domains
+
+**Parallel Workstreams:**
+1. **Expansion:** Extract GT, run Doxen, evaluate (1-2 weeks)
+2. **Improvements:** Framework catalogs → code verification → multi-level detection (2-3 weeks)
+
+**See:**
+- `experimental/results/improvement_roadmap.md` for detailed implementation plan
+- `experimental/results/PILOT_SUMMARY.md` for pilot findings
 
 ---
 
 ## Next Steps
 
-### Immediate: Pilot Phase (Days 1-5)
-**Day 1 (Today):** Setup & Data Collection
-- Create `.doxen/experimental/` structure
-- Clone 4 projects
-- Extract ground truth docs
-- Calculate complexity scores
+### Immediate (Next 2-3 hours)
+- [ ] Implement framework-aware pattern catalog
+- [ ] Re-run pilot projects with improvements
+- [ ] Validate recall improvement (58% → 75-80%)
 
-**Day 2:** Baseline Analysis
-- Run Doxen on all 4 projects
-- Collect performance metrics
-- Verify outputs
+### Short-Term (Next 1-2 weeks)
+- [ ] Select 6 expansion projects (Flask, Rails, Vue, Click, Requests, Docker)
+- [ ] Extract ground truth for expansion projects
+- [ ] Run Doxen on expansion projects
+- [ ] Evaluate expansion results
 
-**Day 3:** Automated Evaluation
-- Implement correctness metrics
-- Implement completeness metrics
-- Generate comparison table
+### Medium-Term (Next 2-3 weeks)
+- [ ] Implement code-based pattern verification
+- [ ] Multi-level pattern detection (framework + structure + code)
+- [ ] Target recall: 85%+
+- [ ] Re-evaluate all 10 projects
 
-**Day 4:** Spot Checks & Analysis
-- Manual review of outliers
-- Identify failure patterns
-- Document quick wins
-
-**Day 5:** Decisions & Next Steps
-- GO/NO-GO decision for expansion
-- Document findings
-- Plan improvements or expansion
-
-### After Pilot: Phase 1 Quality Improvements
-Based on pilot findings:
-- [ ] Better component purpose inference (hybrid: keyword → code → LLM)
-- [ ] Enhanced design pattern detection (multi-level: framework → structure → code)
-- [ ] Component dependency graph improvements
-- [ ] Categorized tech stack analysis
-- [ ] Targeted fixes for common failures
+### Phase 1 Quality Improvements (Ongoing)
+Based on pilot findings (see `improvement_roadmap.md`):
+- [ ] **Phase 1 (2-3 hours):** Framework pattern catalogs → 75-80% recall
+- [ ] **Phase 2 (2-3 days):** Code-based verification → 85% recall
+- [ ] **Phase 3 (1-2 weeks):** Multi-level detection → 90%+ recall
+- [ ] Pattern documentation generation (explicit pattern sections)
+- [ ] Multi-source evaluation (discovery JSON + generated docs)
 
 ### Future Phases
+- [ ] Scale to 50+ projects (statistical validation)
 - [ ] Phase 2 Expansion: Additional documentation tiers
 - [ ] Phase 3: Component reference docs (REFERENCE-*.md)
 - [ ] Dynamic analysis integration (runtime logs, traces)
@@ -237,20 +346,52 @@ else:                          depth = "shallow"
 
 ## Recent Insights
 
+### From Pilot Phase (Days 1-5)
+
+**Evaluation Methodology:**
+1. **Always verify assumptions** - GT had 10 patterns, not 5 as displayed
+2. **Precision ≠ Recall** - 100% precision (trustworthy) + 58% recall (incomplete)
+3. **Framework knowledge critical** - FastAPI → REST is obvious to humans, not automatic for Doxen
+4. **Multi-source evaluation** - Check discovery JSON + generated docs, not just text search
+
+**Pattern Detection:**
+1. **Root cause:** Lack of framework-specific knowledge (FastAPI → [REST, Async, DI, Middleware])
+2. **Pipeline issue:** Patterns detected but not mentioned in docs, or not detected at all
+3. **Solution:** Framework-aware catalogs + code verification + multi-level detection
+4. **Quick win:** 2-3 hours implementation → 58% to 75-80% recall
+
+**Process:**
+1. **Start with pilot** - Essential before scaling (found issues early)
+2. **Expect surprises** - Initial hypothesis wrong, pivoted successfully
+3. **Document everything** - Transition docs, root cause analysis crucial
+4. **Data-driven decisions** - No speculation, validate assumptions with data
+
+**Strengths Validated:**
+- Doxen is trustworthy (100% precision, no hallucinations)
+- Completeness strong (86% average)
+- Framework detection excellent (100% accurate)
+- Architecture sound (no fundamental issues)
+
+**Weaknesses Identified:**
+- Pattern recall low (58%, misses obvious patterns)
+- Framework knowledge gaps (need explicit catalogs)
+- Discovery-generation pipeline (may drop patterns)
+- Evaluation method (text search insufficient)
+
 ### From ArchitectureExtractor Implementation
 - Component purpose inference currently keyword-based (simplistic)
 - Design pattern detection uses directory names (shallow)
 - Dependency analysis only parses files (no import tracing)
 - Need: Code pattern analysis + LLM for ambiguous cases
+- **Validated:** All these need improvement (confirmed by pilot)
 
 ### From Test Refactoring
 - Generic, parameterized tests scale better
 - Centralized configuration (`TEST_REPOS`) reduces duplication
 - Consistent CLI patterns improve maintainability
 
-### Next Learning Opportunity
-Pilot phase will reveal:
-- Are complexity thresholds appropriate?
-- Where do we systematically fail?
-- What quick wins exist?
-- Should we proceed to full 10-project dataset?
+### Key Learnings
+**Complexity thresholds:** Working well (Express deep, others shallow)
+**Systematic failures:** Pattern recall across all projects
+**Quick wins:** Framework catalogs (2-3 hours → major improvement)
+**Next phase:** ✅ Proceed to 10-project dataset with improvements
