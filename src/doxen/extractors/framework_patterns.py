@@ -16,19 +16,20 @@ import re
 FRAMEWORK_PATTERNS = {
     "FastAPI": {
         "guaranteed": [
-            "REST API",
-            "Async/Await",
-            "Dependency Injection",
+            "REST",  # RESTful API architecture
+            "Async",  # Asynchronous programming with async/await
+            "Dependency Injection",  # FastAPI's Depends() system
         ],
         "likely": [
-            "Middleware",
-            "Pydantic Validation",
-            "OpenAPI/Swagger",
+            "Middleware",  # Request/response middleware
+            "Pydantic",  # Data validation with Pydantic models
+            "OpenAPI",  # Automatic OpenAPI/Swagger documentation
         ],
         "evidence_required": [
-            "GraphQL",
-            "WebSocket",
-            "Background Tasks",
+            "GraphQL",  # GraphQL support (via extensions)
+            "WebSocket",  # WebSocket endpoints
+            "ORM",  # Database ORM usage
+            "Repository",  # Repository pattern
         ]
     },
     "Django": {
@@ -148,7 +149,7 @@ FRAMEWORK_PATTERNS = {
 
 # Pattern evidence signatures for code-based verification
 PATTERN_SIGNATURES = {
-    "REST API": {
+    "REST": {
         "file_patterns": ["**/routes/**/*.py", "**/api/**/*.py", "**/views/**/*.py",
                          "**/routes/**/*.js", "**/api/**/*.js"],
         "code_patterns": [
@@ -161,7 +162,7 @@ PATTERN_SIGNATURES = {
         ],
         "imports": ["flask", "fastapi", "express", "django.urls", "starlette"],
     },
-    "Async/Await": {
+    "Async": {
         "file_patterns": ["**/*.py", "**/*.js", "**/*.ts"],
         "code_patterns": [
             r"\basync\s+def\b",
@@ -192,6 +193,16 @@ PATTERN_SIGNATURES = {
         ],
         "imports": ["fastapi", "injector", "dependency_injector"],
     },
+    "Pydantic": {
+        "file_patterns": ["**/*.py"],
+        "code_patterns": [
+            r"class.*\(BaseModel\)",
+            r"from pydantic import",
+            r"Field\(",
+            r"validator\(",
+        ],
+        "imports": ["pydantic"],
+    },
     "ORM": {
         "file_patterns": ["**/models/**/*.py", "**/models/**/*.js"],
         "code_patterns": [
@@ -203,6 +214,16 @@ PATTERN_SIGNATURES = {
         ],
         "imports": ["django.db.models", "sqlalchemy", "peewee", "sequelize", "typeorm"],
     },
+    "OpenAPI": {
+        "file_patterns": ["**/*.py"],
+        "code_patterns": [
+            r"openapi_schema",
+            r"swagger",
+            r"\"openapi\":",
+            r"@app\.get.*openapi",
+        ],
+        "imports": ["fastapi"],
+    },
     "GraphQL": {
         "file_patterns": ["**/graphql/**/*", "**/schema/**/*"],
         "code_patterns": [
@@ -213,6 +234,13 @@ PATTERN_SIGNATURES = {
             r"GraphQLSchema",
         ],
         "imports": ["graphene", "strawberry", "ariadne", "graphql", "apollo-server"],
+    },
+    "Repository": {
+        "file_patterns": ["**/repository/**/*", "**/repositories/**/*", "**/repo/**/*"],
+        "code_patterns": [
+            r"class.*Repository",
+            r"def.*repository",
+        ],
     },
     "MVT": {
         "directory_structure": ["models/", "views/", "templates/"],
