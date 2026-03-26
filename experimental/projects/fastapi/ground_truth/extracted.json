@@ -1,0 +1,418 @@
+{
+  "project": "fastapi",
+  "readme": {
+    "path": "README.md",
+    "lines": 548,
+    "char_count": 24618,
+    "sections": [
+      {
+        "level": 2,
+        "title": "Sponsors"
+      },
+      {
+        "level": 3,
+        "title": "Keystone Sponsor"
+      },
+      {
+        "level": 3,
+        "title": "Gold and Silver Sponsors"
+      },
+      {
+        "level": 2,
+        "title": "Opinions"
+      },
+      {
+        "level": 2,
+        "title": "FastAPI mini documentary"
+      },
+      {
+        "level": 2,
+        "title": "**Typer**, the FastAPI of CLIs"
+      },
+      {
+        "level": 2,
+        "title": "Requirements"
+      },
+      {
+        "level": 2,
+        "title": "Installation"
+      },
+      {
+        "level": 2,
+        "title": "Example"
+      },
+      {
+        "level": 3,
+        "title": "Create it"
+      },
+      {
+        "level": 3,
+        "title": "Run it"
+      },
+      {
+        "level": 3,
+        "title": "Check it"
+      },
+      {
+        "level": 3,
+        "title": "Interactive API docs"
+      },
+      {
+        "level": 3,
+        "title": "Alternative API docs"
+      },
+      {
+        "level": 2,
+        "title": "Example upgrade"
+      },
+      {
+        "level": 3,
+        "title": "Interactive API docs upgrade"
+      },
+      {
+        "level": 3,
+        "title": "Alternative API docs upgrade"
+      },
+      {
+        "level": 3,
+        "title": "Recap"
+      },
+      {
+        "level": 3,
+        "title": "Deploy your app (optional)"
+      },
+      {
+        "level": 4,
+        "title": "About FastAPI Cloud"
+      },
+      {
+        "level": 4,
+        "title": "Deploy to other cloud providers"
+      },
+      {
+        "level": 2,
+        "title": "Performance"
+      },
+      {
+        "level": 2,
+        "title": "Dependencies"
+      },
+      {
+        "level": 3,
+        "title": "`standard` Dependencies"
+      },
+      {
+        "level": 3,
+        "title": "Without `standard` Dependencies"
+      },
+      {
+        "level": 3,
+        "title": "Without `fastapi-cloud-cli`"
+      },
+      {
+        "level": 3,
+        "title": "Additional Optional Dependencies"
+      },
+      {
+        "level": 2,
+        "title": "License"
+      }
+    ],
+    "has_badges": false,
+    "has_code_examples": true
+  },
+  "architecture": null,
+  "contributing": {
+    "path": "CONTRIBUTING.md",
+    "lines": 1
+  },
+  "guides": [
+    {
+      "path": "docs/missing-translation.md",
+      "title": "missing-translation",
+      "lines": 9
+    },
+    {
+      "path": "docs/tr/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 68
+    },
+    {
+      "path": "docs/tr/docs/python-types.md",
+      "title": "python-types",
+      "lines": 348
+    },
+    {
+      "path": "docs/tr/docs/translation-banner.md",
+      "title": "translation-banner",
+      "lines": 11
+    },
+    {
+      "path": "docs/tr/docs/async.md",
+      "title": "async",
+      "lines": 444
+    },
+    {
+      "path": "docs/tr/docs/index.md",
+      "title": "index",
+      "lines": 545
+    },
+    {
+      "path": "docs/tr/docs/fastapi-cli.md",
+      "title": "fastapi-cli",
+      "lines": 128
+    },
+    {
+      "path": "docs/tr/docs/history-design-future.md",
+      "title": "history-design-future",
+      "lines": 79
+    },
+    {
+      "path": "docs/tr/docs/project-generation.md",
+      "title": "project-generation",
+      "lines": 28
+    },
+    {
+      "path": "docs/tr/docs/_llm-test.md",
+      "title": "_llm-test",
+      "lines": 503
+    },
+    {
+      "path": "docs/tr/docs/alternatives.md",
+      "title": "alternatives",
+      "lines": 483
+    },
+    {
+      "path": "docs/tr/docs/benchmarks.md",
+      "title": "benchmarks",
+      "lines": 34
+    },
+    {
+      "path": "docs/tr/docs/environment-variables.md",
+      "title": "environment-variables",
+      "lines": 298
+    },
+    {
+      "path": "docs/tr/docs/help-fastapi.md",
+      "title": "help-fastapi",
+      "lines": 256
+    },
+    {
+      "path": "docs/tr/docs/editor-support.md",
+      "title": "editor-support",
+      "lines": 23
+    },
+    {
+      "path": "docs/tr/docs/features.md",
+      "title": "features",
+      "lines": 202
+    },
+    {
+      "path": "docs/tr/docs/virtual-environments.md",
+      "title": "virtual-environments",
+      "lines": 862
+    },
+    {
+      "path": "docs/tr/docs/about/index.md",
+      "title": "index",
+      "lines": 3
+    },
+    {
+      "path": "docs/tr/docs/advanced/testing-websockets.md",
+      "title": "testing-websockets",
+      "lines": 13
+    },
+    {
+      "path": "docs/tr/docs/advanced/advanced-dependencies.md",
+      "title": "advanced-dependencies",
+      "lines": 163
+    },
+    {
+      "path": "docs/tr/docs/advanced/response-directly.md",
+      "title": "response-directly",
+      "lines": 83
+    },
+    {
+      "path": "docs/tr/docs/advanced/openapi-callbacks.md",
+      "title": "openapi-callbacks",
+      "lines": 186
+    },
+    {
+      "path": "docs/tr/docs/advanced/response-cookies.md",
+      "title": "response-cookies",
+      "lines": 51
+    },
+    {
+      "path": "docs/tr/docs/advanced/additional-responses.md",
+      "title": "additional-responses",
+      "lines": 247
+    },
+    {
+      "path": "docs/tr/docs/advanced/dataclasses.md",
+      "title": "dataclasses",
+      "lines": 95
+    },
+    {
+      "path": "docs/tr/docs/advanced/sub-applications.md",
+      "title": "sub-applications",
+      "lines": 67
+    },
+    {
+      "path": "docs/tr/docs/advanced/additional-status-codes.md",
+      "title": "additional-status-codes",
+      "lines": 41
+    },
+    {
+      "path": "docs/tr/docs/advanced/testing-dependencies.md",
+      "title": "testing-dependencies",
+      "lines": 54
+    },
+    {
+      "path": "docs/tr/docs/advanced/index.md",
+      "title": "index",
+      "lines": 21
+    },
+    {
+      "path": "docs/tr/docs/advanced/testing-events.md",
+      "title": "testing-events",
+      "lines": 12
+    },
+    {
+      "path": "docs/tr/docs/advanced/middleware.md",
+      "title": "middleware",
+      "lines": 97
+    },
+    {
+      "path": "docs/tr/docs/advanced/async-tests.md",
+      "title": "async-tests",
+      "lines": 99
+    },
+    {
+      "path": "docs/tr/docs/advanced/behind-a-proxy.md",
+      "title": "behind-a-proxy",
+      "lines": 466
+    },
+    {
+      "path": "docs/tr/docs/advanced/templates.md",
+      "title": "templates",
+      "lines": 126
+    },
+    {
+      "path": "docs/tr/docs/advanced/events.md",
+      "title": "events",
+      "lines": 165
+    },
+    {
+      "path": "docs/tr/docs/advanced/path-operation-advanced-configuration.md",
+      "title": "path-operation-advanced-configuration",
+      "lines": 172
+    },
+    {
+      "path": "docs/tr/docs/advanced/generate-clients.md",
+      "title": "generate-clients",
+      "lines": 208
+    },
+    {
+      "path": "docs/tr/docs/advanced/settings.md",
+      "title": "settings",
+      "lines": 302
+    },
+    {
+      "path": "docs/tr/docs/advanced/websockets.md",
+      "title": "websockets",
+      "lines": 186
+    },
+    {
+      "path": "docs/tr/docs/advanced/openapi-webhooks.md",
+      "title": "openapi-webhooks",
+      "lines": 55
+    },
+    {
+      "path": "docs/tr/docs/advanced/advanced-python-types.md",
+      "title": "advanced-python-types",
+      "lines": 61
+    },
+    {
+      "path": "docs/tr/docs/advanced/wsgi.md",
+      "title": "wsgi",
+      "lines": 51
+    },
+    {
+      "path": "docs/tr/docs/advanced/custom-response.md",
+      "title": "custom-response",
+      "lines": 272
+    },
+    {
+      "path": "docs/tr/docs/advanced/strict-content-type.md",
+      "title": "strict-content-type",
+      "lines": 88
+    },
+    {
+      "path": "docs/tr/docs/advanced/using-request-directly.md",
+      "title": "using-request-directly",
+      "lines": 56
+    },
+    {
+      "path": "docs/tr/docs/advanced/stream-data.md",
+      "title": "stream-data",
+      "lines": 117
+    },
+    {
+      "path": "docs/tr/docs/advanced/json-base64-bytes.md",
+      "title": "json-base64-bytes",
+      "lines": 63
+    },
+    {
+      "path": "docs/tr/docs/advanced/response-change-status-code.md",
+      "title": "response-change-status-code",
+      "lines": 31
+    },
+    {
+      "path": "docs/tr/docs/advanced/response-headers.md",
+      "title": "response-headers",
+      "lines": 41
+    },
+    {
+      "path": "docs/tr/docs/advanced/security/index.md",
+      "title": "index",
+      "lines": 19
+    }
+  ],
+  "metadata": {
+    "has_readme": true,
+    "has_architecture": false,
+    "has_contributing": true,
+    "doc_count": 51,
+    "total_doc_lines": 549,
+    "patterns_mentioned": [
+      "Middleware",
+      "Strategy",
+      "ORM",
+      "Pydantic",
+      "REST",
+      "Async",
+      "GraphQL",
+      "Dependency Injection",
+      "Repository",
+      "Asynchronous"
+    ],
+    "components_mentioned": [
+      "admin",
+      "middleware",
+      "handlers",
+      "backend",
+      "routes",
+      "core",
+      "api",
+      "database",
+      "auth",
+      "models",
+      "frontend",
+      "server",
+      "components",
+      "client",
+      "services"
+    ],
+    "architecture_type": "full-stack"
+  }
+}

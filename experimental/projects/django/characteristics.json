@@ -1,0 +1,44 @@
+{
+  "project": "django",
+  "files": {
+    "total": 7027,
+    "by_language": {
+      "YAML": 21,
+      "JavaScript": 114,
+      "JSON": 54,
+      "Python": 2894,
+      "HTML": 372,
+      "Markdown": 9,
+      "XML": 16,
+      "CSS": 48,
+      "Shell": 2
+    }
+  },
+  "languages": {
+    "count": 8,
+    "detected": [
+      "YAML",
+      "JavaScript",
+      "JSON",
+      "Python",
+      "HTML",
+      "Markdown",
+      "XML",
+      "CSS",
+      "Shell"
+    ]
+  },
+  "components": {
+    "count": 3,
+    "names": [
+      "tests",
+      "docs",
+      "scripts"
+    ]
+  },
+  "metrics": {
+    "lines_of_code": 555557,
+    "complexity_score": 3599.5,
+    "recommended_depth": "shallow"
+  }
+}

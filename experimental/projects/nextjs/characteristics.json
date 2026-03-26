@@ -1,0 +1,50 @@
+{
+  "project": "nextjs",
+  "files": {
+    "total": 27271,
+    "by_language": {
+      "JavaScript": 10429,
+      "JSON": 1478,
+      "YAML": 105,
+      "Markdown": 479,
+      "TypeScript": 10254,
+      "CSS": 882,
+      "Rust": 964,
+      "XML": 30,
+      "HTML": 14,
+      "SQL": 1,
+      "Shell": 27,
+      "Python": 1
+    }
+  },
+  "languages": {
+    "count": 10,
+    "detected": [
+      "JavaScript",
+      "JSON",
+      "YAML",
+      "Markdown",
+      "TypeScript",
+      "CSS",
+      "Rust",
+      "XML",
+      "HTML",
+      "SQL",
+      "Shell",
+      "Python"
+    ]
+  },
+  "components": {
+    "count": 3,
+    "names": [
+      "docs",
+      "scripts",
+      "test"
+    ]
+  },
+  "metrics": {
+    "lines_of_code": 2467888,
+    "complexity_score": 13741.5,
+    "recommended_depth": "shallow"
+  }
+}

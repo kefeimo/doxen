@@ -1,0 +1,97 @@
+{
+  "project": "express",
+  "readme": {
+    "path": "Readme.md",
+    "lines": 278,
+    "char_count": 10177,
+    "sections": [
+      {
+        "level": 2,
+        "title": "Table of contents"
+      },
+      {
+        "level": 2,
+        "title": "Installation"
+      },
+      {
+        "level": 2,
+        "title": "Features"
+      },
+      {
+        "level": 2,
+        "title": "Docs & Community"
+      },
+      {
+        "level": 2,
+        "title": "Quick Start"
+      },
+      {
+        "level": 2,
+        "title": "Philosophy"
+      },
+      {
+        "level": 2,
+        "title": "Examples"
+      },
+      {
+        "level": 2,
+        "title": "Contributing"
+      },
+      {
+        "level": 3,
+        "title": "Security Issues"
+      },
+      {
+        "level": 3,
+        "title": "Running Tests"
+      },
+      {
+        "level": 2,
+        "title": "Current project team members"
+      },
+      {
+        "level": 3,
+        "title": "TC (Technical Committee)"
+      },
+      {
+        "level": 4,
+        "title": "TC emeriti members"
+      },
+      {
+        "level": 3,
+        "title": "Triagers"
+      },
+      {
+        "level": 4,
+        "title": "Emeritus Triagers"
+      },
+      {
+        "level": 2,
+        "title": "License"
+      }
+    ],
+    "has_badges": true,
+    "has_code_examples": true
+  },
+  "architecture": null,
+  "contributing": null,
+  "guides": [],
+  "metadata": {
+    "has_readme": true,
+    "has_architecture": false,
+    "has_contributing": false,
+    "doc_count": 1,
+    "total_doc_lines": 278,
+    "patterns_mentioned": [
+      "Middleware",
+      "Repository",
+      "ORM"
+    ],
+    "components_mentioned": [
+      "middleware",
+      "server",
+      "api"
+    ],
+    "architecture_type": null
+  }
+}

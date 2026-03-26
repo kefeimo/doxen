@@ -16,7 +16,26 @@
 
 ---
 
-## Recently Completed (2026-03-26)
+## Recently Completed
+
+### Experimental Framework - Day 1 ✅ (2026-03-26)
+- [x] Created `.doxen/experimental/` directory structure
+- [x] Wrote automation scripts:
+  - `clone_projects.sh` - Clones all 4 pilot projects from GitHub
+  - `extract_ground_truth.py` - Extracts documentation (README, ARCHITECTURE, CONTRIBUTING, docs/)
+  - `calculate_characteristics.py` - Calculates complexity scores and recommends depth
+- [x] Cloned all 4 projects successfully (27 files → 27,271 files)
+- [x] Extracted ground truth documentation from all projects
+- [x] Calculated repository characteristics and complexity scores
+
+**Key Findings:**
+- Express (140.5 complexity) → deep analysis
+- FastAPI (1,536.5), Django (3,599.5), Next.js (13,741.5) → shallow analysis
+- Django uses .rst/.txt format (handled)
+- Complexity formula working as expected
+- Ground truth data captured successfully
+
+### 2026-03-26
 
 ### Phase 1: Discovery Pipeline ✅ (Complete)
 - [x] **RepositoryAnalyzer** - File structure, dependencies, framework detection
@@ -67,16 +86,23 @@
 
 ---
 
-## In Progress (Day 1 of Pilot)
+## In Progress (Day 2 of Pilot)
 
-**Current Focus:** Experimental Framework Setup
+**Current Focus:** Baseline Analysis
 
-- [ ] Create experimental directory structure
-- [ ] Write project cloning script
-- [ ] Write ground truth extraction script
-- [ ] Clone 4 pilot projects (FastAPI, Express, Django, Next.js)
-- [ ] Extract ground truth documentation
-- [ ] Calculate repository characteristics
+**Day 1 Complete ✅:**
+- [x] Create experimental directory structure
+- [x] Write project cloning script
+- [x] Write ground truth extraction script
+- [x] Write characteristics calculation script
+- [x] Clone 4 pilot projects (FastAPI, Express, Django, Next.js)
+- [x] Extract ground truth documentation
+- [x] Calculate repository characteristics
+
+**Day 2 Tasks:**
+- [ ] Run Doxen Phase 1 on all 4 projects
+- [ ] Collect performance metrics
+- [ ] Verify all outputs are valid
 
 **See:** `docs/.progress/PILOT-PHASE-PLAN.md` for detailed day-by-day plan
 
