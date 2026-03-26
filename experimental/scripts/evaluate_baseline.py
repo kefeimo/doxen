@@ -162,6 +162,51 @@ def classify_pattern(
     return ("unsupported", 0.5)
 
 
+def extract_patterns_from_architecture_analysis(arch_md_content: str) -> Set[str]:
+    """Extract design patterns from ARCHITECTURE-ANALYSIS.md.
+
+    This parses the structured markdown to extract patterns detected
+    by the architecture analyzer, rather than searching text.
+
+    Args:
+        arch_md_content: Content of ARCHITECTURE-ANALYSIS.md
+
+    Returns:
+        Set of pattern names detected
+    """
+    patterns = set()
+
+    # Check if Design Patterns section exists
+    if '## Design Patterns' not in arch_md_content:
+        return patterns
+
+    # Extract the Design Patterns section
+    pattern_section = arch_md_content.split('## Design Patterns')[1]
+
+    # Stop at next ## heading
+    if '\n##' in pattern_section:
+        pattern_section = pattern_section.split('\n##')[0]
+
+    # Parse pattern names from ### headings
+    for line in pattern_section.split('\n'):
+        line = line.strip()
+
+        # Pattern headings start with ###
+        if line.startswith('### '):
+            pattern_name = line.replace('### ', '').strip()
+
+            # Skip meta-patterns and "no patterns" statements
+            if pattern_name and pattern_name.lower() not in [
+                'layered architecture',  # Structural, not design pattern
+                'none detected',
+                'no specific design patterns detected',
+                'not detected'
+            ]:
+                patterns.add(pattern_name)
+
+    return patterns
+
+
 def extract_mentioned_patterns(text: str) -> Set[str]:
     """Extract design patterns mentioned in text.
 
@@ -249,9 +294,16 @@ def evaluate_correctness(
     # Pattern detection (from ground truth mentions)
     gt_patterns = set(ground_truth["metadata"].get("patterns_mentioned", []))
 
-    # Extract patterns from Doxen's generated docs
+    # Extract patterns from ARCHITECTURE-ANALYSIS.md (structured parsing)
+    arch_analysis_content = doxen_output.get("architecture_analysis", "")
+    detected_patterns_structured = extract_patterns_from_architecture_analysis(arch_analysis_content)
+
+    # Also extract from generated docs (text search fallback)
     doxen_text = doxen_output["readme"] + "\n" + doxen_output["architecture"]
-    detected_patterns = extract_mentioned_patterns(doxen_text)
+    detected_patterns_text = extract_mentioned_patterns(doxen_text)
+
+    # Combine both sources (structured takes priority)
+    detected_patterns = detected_patterns_structured | detected_patterns_text
 
     # Get manually verified patterns for this project
     verified_patterns = VERIFIED_PATTERNS.get(project_name.lower(), set())

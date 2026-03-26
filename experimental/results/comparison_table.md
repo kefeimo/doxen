@@ -18,7 +18,7 @@
 **Ground Truth:**
 - Documentation: 51 files
 - Architecture type: full-stack
-- Patterns mentioned: Middleware, Strategy, ORM, Pydantic, REST
+- Patterns mentioned: ORM, REST, Pydantic, Middleware, Asynchronous
 
 **Correctness:**
 - Architecture detected: True
@@ -42,7 +42,7 @@
 **Ground Truth:**
 - Documentation: 1 files
 - Architecture type: not detected
-- Patterns mentioned: Middleware, Repository, ORM
+- Patterns mentioned: Repository, Middleware, ORM
 
 **Correctness:**
 - Architecture detected: True
@@ -67,7 +67,7 @@
 **Ground Truth:**
 - Documentation: 51 files
 - Architecture type: mvc
-- Patterns mentioned: Middleware, Strategy, ORM, Async, Model-View-Controller
+- Patterns mentioned: Factory, ORM, REST, Middleware, Model-View-Controller
 
 **Correctness:**
 - Architecture detected: True

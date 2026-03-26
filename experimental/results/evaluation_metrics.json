@@ -6,16 +6,16 @@
       "has_architecture": false,
       "doc_count": 51,
       "patterns_mentioned": [
-        "Middleware",
-        "Strategy",
         "ORM",
-        "Pydantic",
         "REST",
-        "Async",
+        "Pydantic",
+        "Middleware",
+        "Asynchronous",
+        "Repository",
         "GraphQL",
         "Dependency Injection",
-        "Repository",
-        "Asynchronous"
+        "Strategy",
+        "Async"
       ],
       "architecture_type": "full-stack"
     },
@@ -37,11 +37,11 @@
       "patterns_verified": 0,
       "patterns_unsupported": 0,
       "patterns_supported_list": [
-        "Strategy",
-        "Dependency Injection",
         "Async",
+        "ORM",
         "Pydantic",
-        "ORM"
+        "Strategy",
+        "Dependency Injection"
       ],
       "patterns_verified_list": [],
       "patterns_unsupported_list": [],
@@ -61,9 +61,9 @@
       "has_architecture": true
     },
     "scores": {
-      "correctness": 0.5722222222222223,
+      "correctness": 0.5722222222222222,
       "completeness": 0.6071428571428571,
-      "combined": 0.5896825396825397
+      "combined": 0.5896825396825396
     }
   },
   "express": {
@@ -73,8 +73,8 @@
       "has_architecture": false,
       "doc_count": 1,
       "patterns_mentioned": [
-        "Middleware",
         "Repository",
+        "Middleware",
         "ORM"
       ],
       "architecture_type": null
@@ -97,13 +97,13 @@
       "patterns_verified": 0,
       "patterns_unsupported": 2,
       "patterns_supported_list": [
-        "Middleware",
-        "ORM"
+        "ORM",
+        "Middleware"
       ],
       "patterns_verified_list": [],
       "patterns_unsupported_list": [
-        "REST",
-        "RESTful"
+        "RESTful",
+        "REST"
       ],
       "component_recall": 1.0,
       "components_detected": 7,
@@ -133,16 +133,16 @@
       "has_architecture": false,
       "doc_count": 51,
       "patterns_mentioned": [
-        "Middleware",
-        "Strategy",
+        "Factory",
         "ORM",
-        "Async",
-        "Model-View-Controller",
         "REST",
+        "Middleware",
+        "Model-View-Controller",
         "MVC",
-        "Repository",
         "Asynchronous",
-        "Factory"
+        "Repository",
+        "Async",
+        "Strategy"
       ],
       "architecture_type": "mvc"
     },
@@ -164,10 +164,10 @@
       "patterns_verified": 0,
       "patterns_unsupported": 0,
       "patterns_supported_list": [
-        "MVC",
-        "Strategy",
         "Model-View-Controller",
-        "ORM"
+        "MVC",
+        "ORM",
+        "Strategy"
       ],
       "patterns_verified_list": [],
       "patterns_unsupported_list": [],
@@ -221,8 +221,8 @@
       "patterns_supported_list": [],
       "patterns_verified_list": [],
       "patterns_unsupported_list": [
-        "Monolith",
-        "ORM"
+        "ORM",
+        "Monolith"
       ],
       "component_recall": 1.0,
       "components_detected": 8,
