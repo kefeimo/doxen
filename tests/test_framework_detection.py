@@ -1,15 +1,26 @@
 """Test LLM-based framework detection."""
 
 import os
+import sys
 from pathlib import Path
+from typing import Any, Dict
 
 from doxen.agents.repository_analyzer import RepositoryAnalyzer
 from doxen.analyzer.llm_analyzer import LLMAnalyzer
 
 
-def test_framework_detection():
-    """Test framework detection on audit-template."""
-    repo_path = Path("/home/kefei/project/tspr-stash/audit-template")
+def test_framework_detection(repo_path: Path) -> Dict[str, Any]:
+    """Test framework detection on a repository.
+
+    Args:
+        repo_path: Path to repository to analyze
+
+    Returns:
+        Framework detection results
+    """
+    if not repo_path.exists():
+        print(f"❌ Repository not found: {repo_path}")
+        return {}
 
     # Initialize with LLM
     use_bedrock = os.environ.get("CLAUDE_CODE_USE_BEDROCK") == "1"
@@ -19,6 +30,7 @@ def test_framework_detection():
 
     print("🔍 Testing framework detection...")
     print(f"   Repository: {repo_path.name}")
+    print(f"   Path: {repo_path}")
     print(f"   LLM available: {llm is not None}")
     print()
 
@@ -61,6 +73,47 @@ def test_framework_detection():
 
     print("\n✅ Framework detection test complete!")
 
+    return framework_info
+
+
+# Test repository configurations
+TEST_REPOS = {
+    "audit-template": Path("/home/kefei/project/audit-template"),
+    "rag-demo": Path("/home/kefei/project/rag-demo"),
+}
+
 
 if __name__ == "__main__":
-    test_framework_detection()
+    # Parse command line arguments
+    if len(sys.argv) > 1:
+        # Test specific repository
+        repo_arg = sys.argv[1]
+
+        if repo_arg in TEST_REPOS:
+            # Named repository
+            repo_path = TEST_REPOS[repo_arg]
+            if not repo_path.exists():
+                print(f"❌ Repository not found: {repo_path}")
+                print(f"   Update TEST_REPOS in {__file__}")
+                sys.exit(1)
+            test_framework_detection(repo_path)
+        else:
+            # Custom path
+            repo_path = Path(repo_arg)
+            if not repo_path.exists():
+                print(f"❌ Repository not found: {repo_path}")
+                sys.exit(1)
+            test_framework_detection(repo_path)
+    else:
+        # Show usage
+        print("Usage:")
+        print(f"  python {Path(__file__).name} <repo_name_or_path>")
+        print("\nConfigured repositories:")
+        for name, path in TEST_REPOS.items():
+            exists = "✓" if path.exists() else "✗"
+            print(f"  {exists} {name}: {path}")
+        print("\nExamples:")
+        print(f"  python {Path(__file__).name} rag-demo")
+        print(f"  python {Path(__file__).name} audit-template")
+        print(f"  python {Path(__file__).name} /path/to/custom/repo")
+        sys.exit(1)
