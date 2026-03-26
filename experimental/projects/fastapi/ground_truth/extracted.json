@@ -138,6 +138,56 @@
       "lines": 68
     },
     {
+      "path": "docs/zh-hant/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 60
+    },
+    {
+      "path": "docs/fr/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 132
+    },
+    {
+      "path": "docs/ko/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 55
+    },
+    {
+      "path": "docs/de/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 324
+    },
+    {
+      "path": "docs/pt/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 87
+    },
+    {
+      "path": "docs/uk/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 113
+    },
+    {
+      "path": "docs/es/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 99
+    },
+    {
+      "path": "docs/ja/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 46
+    },
+    {
+      "path": "docs/zh/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 46
+    },
+    {
+      "path": "docs/ru/llm-prompt.md",
+      "title": "llm-prompt",
+      "lines": 101
+    },
+    {
       "path": "docs/tr/docs/python-types.md",
       "title": "python-types",
       "lines": 348
@@ -326,56 +376,6 @@
       "path": "docs/tr/docs/advanced/openapi-webhooks.md",
       "title": "openapi-webhooks",
       "lines": 55
-    },
-    {
-      "path": "docs/tr/docs/advanced/advanced-python-types.md",
-      "title": "advanced-python-types",
-      "lines": 61
-    },
-    {
-      "path": "docs/tr/docs/advanced/wsgi.md",
-      "title": "wsgi",
-      "lines": 51
-    },
-    {
-      "path": "docs/tr/docs/advanced/custom-response.md",
-      "title": "custom-response",
-      "lines": 272
-    },
-    {
-      "path": "docs/tr/docs/advanced/strict-content-type.md",
-      "title": "strict-content-type",
-      "lines": 88
-    },
-    {
-      "path": "docs/tr/docs/advanced/using-request-directly.md",
-      "title": "using-request-directly",
-      "lines": 56
-    },
-    {
-      "path": "docs/tr/docs/advanced/stream-data.md",
-      "title": "stream-data",
-      "lines": 117
-    },
-    {
-      "path": "docs/tr/docs/advanced/json-base64-bytes.md",
-      "title": "json-base64-bytes",
-      "lines": 63
-    },
-    {
-      "path": "docs/tr/docs/advanced/response-change-status-code.md",
-      "title": "response-change-status-code",
-      "lines": 31
-    },
-    {
-      "path": "docs/tr/docs/advanced/response-headers.md",
-      "title": "response-headers",
-      "lines": 41
-    },
-    {
-      "path": "docs/tr/docs/advanced/security/index.md",
-      "title": "index",
-      "lines": 19
     }
   ],
   "metadata": {
@@ -385,33 +385,33 @@
     "doc_count": 51,
     "total_doc_lines": 549,
     "patterns_mentioned": [
-      "Middleware",
-      "Strategy",
       "ORM",
-      "Pydantic",
       "REST",
-      "Async",
+      "Pydantic",
+      "Middleware",
+      "Asynchronous",
+      "Repository",
       "GraphQL",
       "Dependency Injection",
-      "Repository",
-      "Asynchronous"
+      "Strategy",
+      "Async"
     ],
     "components_mentioned": [
-      "admin",
-      "middleware",
-      "handlers",
-      "backend",
-      "routes",
-      "core",
-      "api",
-      "database",
-      "auth",
       "models",
-      "frontend",
+      "api",
+      "middleware",
+      "core",
+      "handlers",
       "server",
-      "components",
+      "admin",
+      "backend",
       "client",
-      "services"
+      "frontend",
+      "database",
+      "routes",
+      "auth",
+      "services",
+      "components"
     ],
     "architecture_type": "full-stack"
   }

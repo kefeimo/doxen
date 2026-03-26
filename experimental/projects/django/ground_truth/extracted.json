@@ -225,44 +225,44 @@
       "lines": 311
     },
     {
-      "path": "docs/howto/deployment/index.txt",
+      "path": "docs/internals/release-process.txt",
+      "title": "release-process",
+      "lines": 261
+    },
+    {
+      "path": "docs/internals/mailing-lists.txt",
+      "title": "mailing-lists",
+      "lines": 106
+    },
+    {
+      "path": "docs/internals/howto-release-django.txt",
+      "title": "howto-release-django",
+      "lines": 770
+    },
+    {
+      "path": "docs/internals/deprecation.txt",
+      "title": "deprecation",
+      "lines": 1482
+    },
+    {
+      "path": "docs/internals/index.txt",
       "title": "index",
-      "lines": 43
+      "lines": 18
     },
     {
-      "path": "docs/howto/deployment/checklist.txt",
-      "title": "checklist",
-      "lines": 276
+      "path": "docs/internals/security.txt",
+      "title": "security",
+      "lines": 538
     },
     {
-      "path": "docs/howto/deployment/asgi/daphne.txt",
-      "title": "daphne",
-      "lines": 52
+      "path": "docs/internals/git.txt",
+      "title": "git",
+      "lines": 225
     },
     {
-      "path": "docs/howto/deployment/asgi/granian.txt",
-      "title": "granian",
-      "lines": 37
-    },
-    {
-      "path": "docs/howto/deployment/asgi/uvicorn.txt",
-      "title": "uvicorn",
-      "lines": 60
-    },
-    {
-      "path": "docs/howto/deployment/asgi/index.txt",
-      "title": "index",
-      "lines": 74
-    },
-    {
-      "path": "docs/howto/deployment/asgi/hypercorn.txt",
-      "title": "hypercorn",
-      "lines": 38
-    },
-    {
-      "path": "docs/howto/deployment/wsgi/gunicorn.txt",
-      "title": "gunicorn",
-      "lines": 36
+      "path": "docs/internals/organization.txt",
+      "title": "organization",
+      "lines": 297
     }
   ],
   "metadata": {
@@ -272,34 +272,34 @@
     "doc_count": 51,
     "total_doc_lines": 84,
     "patterns_mentioned": [
-      "Middleware",
-      "Strategy",
+      "Factory",
       "ORM",
-      "Async",
-      "Model-View-Controller",
       "REST",
+      "Middleware",
+      "Model-View-Controller",
       "MVC",
-      "Repository",
       "Asynchronous",
-      "Factory"
+      "Repository",
+      "Async",
+      "Strategy"
     ],
     "components_mentioned": [
-      "admin",
-      "middleware",
-      "handlers",
-      "backend",
-      "core",
+      "models",
       "api",
+      "middleware",
+      "core",
+      "handlers",
+      "server",
+      "views",
       "utils",
+      "backend",
+      "db",
+      "client",
+      "admin",
       "database",
       "auth",
-      "models",
-      "server",
-      "db",
-      "components",
-      "client",
       "services",
-      "views"
+      "components"
     ],
     "architecture_type": "mvc"
   }

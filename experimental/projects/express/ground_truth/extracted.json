@@ -83,13 +83,13 @@
     "doc_count": 1,
     "total_doc_lines": 278,
     "patterns_mentioned": [
-      "Middleware",
       "Repository",
+      "Middleware",
       "ORM"
     ],
     "components_mentioned": [
-      "middleware",
       "server",
+      "middleware",
       "api"
     ],
     "architecture_type": null

@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-03-26 13:47:12",
-  "total_duration_seconds": 139.6185598373413,
+  "timestamp": "2026-03-26 15:58:56",
+  "total_duration_seconds": 159.25450348854065,
   "projects": {
-    "fastapi": {
-      "project": "fastapi",
-      "repo_path": "/home/kefei/project/doxen/experimental/projects/fastapi/repo",
-      "output_dir": "/home/kefei/project/doxen/experimental/projects/fastapi/doxen_output",
+    "flask": {
+      "project": "flask",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/flask/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/flask/doxen_output",
       "success": true,
       "phases": {
         "discovery": {
           "success": true,
-          "duration_seconds": 3.66621732711792,
+          "duration_seconds": 5.813533782958984,
           "outputs": {
             "summary": true,
             "repository": true,
@@ -20,31 +20,31 @@
         },
         "documentation": {
           "success": true,
-          "duration_seconds": 19.88619375228882,
+          "duration_seconds": 24.177109003067017,
           "readme": {
-            "lines": 56,
-            "bytes": 2607,
-            "duration_seconds": 7.062933444976807
+            "lines": 54,
+            "bytes": 2228,
+            "duration_seconds": 6.855938196182251
           },
           "architecture": {
-            "lines": 123,
-            "bytes": 4719,
-            "duration_seconds": 12.821222066879272
+            "lines": 102,
+            "bytes": 4129,
+            "duration_seconds": 17.320749044418335
           }
         }
       },
       "errors": [],
-      "total_duration_seconds": 23.55241107940674
+      "total_duration_seconds": 29.990642786026
     },
-    "express": {
-      "project": "express",
-      "repo_path": "/home/kefei/project/doxen/experimental/projects/express/repo",
-      "output_dir": "/home/kefei/project/doxen/experimental/projects/express/doxen_output",
+    "rails": {
+      "project": "rails",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/rails/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/rails/doxen_output",
       "success": true,
       "phases": {
         "discovery": {
           "success": true,
-          "duration_seconds": 3.4572293758392334,
+          "duration_seconds": 4.649674654006958,
           "outputs": {
             "summary": true,
             "repository": true,
@@ -54,31 +54,31 @@
         },
         "documentation": {
           "success": true,
-          "duration_seconds": 29.44517993927002,
+          "duration_seconds": 19.304587364196777,
           "readme": {
-            "lines": 72,
-            "bytes": 2480,
-            "duration_seconds": 10.480885982513428
+            "lines": 61,
+            "bytes": 2185,
+            "duration_seconds": 6.430333614349365
           },
           "architecture": {
             "lines": 107,
-            "bytes": 4232,
-            "duration_seconds": 18.96380376815796
+            "bytes": 4280,
+            "duration_seconds": 12.872352123260498
           }
         }
       },
       "errors": [],
-      "total_duration_seconds": 32.90240931510925
+      "total_duration_seconds": 23.954262018203735
     },
-    "django": {
-      "project": "django",
-      "repo_path": "/home/kefei/project/doxen/experimental/projects/django/repo",
-      "output_dir": "/home/kefei/project/doxen/experimental/projects/django/doxen_output",
+    "vue": {
+      "project": "vue",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/vue/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/vue/doxen_output",
       "success": true,
       "phases": {
         "discovery": {
           "success": true,
-          "duration_seconds": 4.530542612075806,
+          "duration_seconds": 1.988067865371704,
           "outputs": {
             "summary": true,
             "repository": true,
@@ -88,55 +88,123 @@
         },
         "documentation": {
           "success": true,
-          "duration_seconds": 29.191933155059814,
+          "duration_seconds": 17.424452304840088,
           "readme": {
-            "lines": 60,
-            "bytes": 2588,
-            "duration_seconds": 11.62711787223816
-          },
-          "architecture": {
-            "lines": 91,
-            "bytes": 3875,
-            "duration_seconds": 17.56044054031372
-          }
-        }
-      },
-      "errors": [],
-      "total_duration_seconds": 33.72247576713562
-    },
-    "nextjs": {
-      "project": "nextjs",
-      "repo_path": "/home/kefei/project/doxen/experimental/projects/nextjs/repo",
-      "output_dir": "/home/kefei/project/doxen/experimental/projects/nextjs/doxen_output",
-      "success": true,
-      "phases": {
-        "discovery": {
-          "success": true,
-          "duration_seconds": 15.630127191543579,
-          "outputs": {
-            "summary": true,
-            "repository": true,
-            "workflow": true,
-            "architecture": true
-          }
-        },
-        "documentation": {
-          "success": true,
-          "duration_seconds": 33.80574059486389,
-          "readme": {
-            "lines": 97,
-            "bytes": 3236,
-            "duration_seconds": 15.098314046859741
+            "lines": 71,
+            "bytes": 2296,
+            "duration_seconds": 6.881467819213867
           },
           "architecture": {
             "lines": 99,
-            "bytes": 4070,
-            "duration_seconds": 18.701237201690674
+            "bytes": 3539,
+            "duration_seconds": 10.542453527450562
           }
         }
       },
       "errors": [],
-      "total_duration_seconds": 49.43586778640747
+      "total_duration_seconds": 19.412520170211792
+    },
+    "click": {
+      "project": "click",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/click/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/click/doxen_output",
+      "success": true,
+      "phases": {
+        "discovery": {
+          "success": true,
+          "duration_seconds": 3.505681037902832,
+          "outputs": {
+            "summary": true,
+            "repository": true,
+            "workflow": true,
+            "architecture": true
+          }
+        },
+        "documentation": {
+          "success": true,
+          "duration_seconds": 19.693399667739868,
+          "readme": {
+            "lines": 50,
+            "bytes": 1893,
+            "duration_seconds": 8.678145170211792
+          },
+          "architecture": {
+            "lines": 103,
+            "bytes": 4033,
+            "duration_seconds": 11.014947891235352
+          }
+        }
+      },
+      "errors": [],
+      "total_duration_seconds": 23.1990807056427
+    },
+    "requests": {
+      "project": "requests",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/requests/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/requests/doxen_output",
+      "success": true,
+      "phases": {
+        "discovery": {
+          "success": true,
+          "duration_seconds": 1.89186692237854,
+          "outputs": {
+            "summary": true,
+            "repository": true,
+            "workflow": true,
+            "architecture": true
+          }
+        },
+        "documentation": {
+          "success": true,
+          "duration_seconds": 26.521358489990234,
+          "readme": {
+            "lines": 60,
+            "bytes": 2041,
+            "duration_seconds": 8.473397493362427
+          },
+          "architecture": {
+            "lines": 97,
+            "bytes": 4138,
+            "duration_seconds": 18.047634840011597
+          }
+        }
+      },
+      "errors": [],
+      "total_duration_seconds": 28.413225412368774
+    },
+    "docker": {
+      "project": "docker",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/docker/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/docker/doxen_output",
+      "success": true,
+      "phases": {
+        "discovery": {
+          "success": true,
+          "duration_seconds": 3.3202741146087646,
+          "outputs": {
+            "summary": true,
+            "repository": true,
+            "workflow": true,
+            "architecture": true
+          }
+        },
+        "documentation": {
+          "success": true,
+          "duration_seconds": 30.959812879562378,
+          "readme": {
+            "lines": 75,
+            "bytes": 2749,
+            "duration_seconds": 12.582422971725464
+          },
+          "architecture": {
+            "lines": 110,
+            "bytes": 4339,
+            "duration_seconds": 18.374847412109375
+          }
+        }
+      },
+      "errors": [],
+      "total_duration_seconds": 34.28008699417114
     }
   }
 }
