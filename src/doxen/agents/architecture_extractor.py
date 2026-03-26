@@ -332,7 +332,7 @@ class ArchitectureExtractor:
                 framework_name,
                 repo_path,
                 verify_in_code=True,
-                max_files_to_scan=100
+                max_files_to_scan=500  # Balanced depth: good recall, affordable cost
             )
 
             for pattern_name, details in framework_patterns.items():
