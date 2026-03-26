@@ -1,0 +1,325 @@
+{
+  "project": "flask",
+  "readme": {
+    "path": "README.md",
+    "lines": 53,
+    "char_count": 1639,
+    "sections": [
+      {
+        "level": 1,
+        "title": "Flask"
+      },
+      {
+        "level": 2,
+        "title": "A Simple Example"
+      },
+      {
+        "level": 1,
+        "title": "save this as app.py"
+      },
+      {
+        "level": 2,
+        "title": "Donate"
+      },
+      {
+        "level": 2,
+        "title": "Contributing"
+      }
+    ],
+    "has_badges": false,
+    "has_code_examples": true
+  },
+  "architecture": null,
+  "contributing": null,
+  "guides": [
+    {
+      "path": "docs/templating.rst",
+      "title": "templating",
+      "lines": 261
+    },
+    {
+      "path": "docs/extensiondev.rst",
+      "title": "extensiondev",
+      "lines": 305
+    },
+    {
+      "path": "docs/license.rst",
+      "title": "license",
+      "lines": 5
+    },
+    {
+      "path": "docs/logging.rst",
+      "title": "logging",
+      "lines": 183
+    },
+    {
+      "path": "docs/server.rst",
+      "title": "server",
+      "lines": 115
+    },
+    {
+      "path": "docs/extensions.rst",
+      "title": "extensions",
+      "lines": 48
+    },
+    {
+      "path": "docs/signals.rst",
+      "title": "signals",
+      "lines": 166
+    },
+    {
+      "path": "docs/testing.rst",
+      "title": "testing",
+      "lines": 318
+    },
+    {
+      "path": "docs/config.rst",
+      "title": "config",
+      "lines": 839
+    },
+    {
+      "path": "docs/web-security.rst",
+      "title": "web-security",
+      "lines": 316
+    },
+    {
+      "path": "docs/shell.rst",
+      "title": "shell",
+      "lines": 81
+    },
+    {
+      "path": "docs/changes.rst",
+      "title": "changes",
+      "lines": 4
+    },
+    {
+      "path": "docs/design.rst",
+      "title": "design",
+      "lines": 229
+    },
+    {
+      "path": "docs/async-await.rst",
+      "title": "async-await",
+      "lines": 119
+    },
+    {
+      "path": "docs/cli.rst",
+      "title": "cli",
+      "lines": 556
+    },
+    {
+      "path": "docs/appcontext.rst",
+      "title": "appcontext",
+      "lines": 187
+    },
+    {
+      "path": "docs/gevent.rst",
+      "title": "gevent",
+      "lines": 125
+    },
+    {
+      "path": "docs/blueprints.rst",
+      "title": "blueprints",
+      "lines": 315
+    },
+    {
+      "path": "docs/lifecycle.rst",
+      "title": "lifecycle",
+      "lines": 171
+    },
+    {
+      "path": "docs/quickstart.rst",
+      "title": "quickstart",
+      "lines": 858
+    },
+    {
+      "path": "docs/views.rst",
+      "title": "views",
+      "lines": 324
+    },
+    {
+      "path": "docs/api.rst",
+      "title": "api",
+      "lines": 708
+    },
+    {
+      "path": "docs/reqcontext.rst",
+      "title": "reqcontext",
+      "lines": 6
+    },
+    {
+      "path": "docs/errorhandling.rst",
+      "title": "errorhandling",
+      "lines": 523
+    },
+    {
+      "path": "docs/contributing.rst",
+      "title": "contributing",
+      "lines": 8
+    },
+    {
+      "path": "docs/index.rst",
+      "title": "index",
+      "lines": 89
+    },
+    {
+      "path": "docs/installation.rst",
+      "title": "installation",
+      "lines": 143
+    },
+    {
+      "path": "docs/debugging.rst",
+      "title": "debugging",
+      "lines": 99
+    },
+    {
+      "path": "docs/deploying/asgi.rst",
+      "title": "asgi",
+      "lines": 27
+    },
+    {
+      "path": "docs/deploying/nginx.rst",
+      "title": "nginx",
+      "lines": 69
+    },
+    {
+      "path": "docs/deploying/waitress.rst",
+      "title": "waitress",
+      "lines": 75
+    },
+    {
+      "path": "docs/deploying/gunicorn.rst",
+      "title": "gunicorn",
+      "lines": 116
+    },
+    {
+      "path": "docs/deploying/gevent.rst",
+      "title": "gevent",
+      "lines": 76
+    },
+    {
+      "path": "docs/deploying/eventlet.rst",
+      "title": "eventlet",
+      "lines": 8
+    },
+    {
+      "path": "docs/deploying/apache-httpd.rst",
+      "title": "apache-httpd",
+      "lines": 66
+    },
+    {
+      "path": "docs/deploying/uwsgi.rst",
+      "title": "uwsgi",
+      "lines": 143
+    },
+    {
+      "path": "docs/deploying/mod_wsgi.rst",
+      "title": "mod_wsgi",
+      "lines": 94
+    },
+    {
+      "path": "docs/deploying/proxy_fix.rst",
+      "title": "proxy_fix",
+      "lines": 33
+    },
+    {
+      "path": "docs/deploying/index.rst",
+      "title": "index",
+      "lines": 78
+    },
+    {
+      "path": "docs/patterns/deferredcallbacks.rst",
+      "title": "deferredcallbacks",
+      "lines": 44
+    },
+    {
+      "path": "docs/patterns/sqlite3.rst",
+      "title": "sqlite3",
+      "lines": 147
+    },
+    {
+      "path": "docs/patterns/celery.rst",
+      "title": "celery",
+      "lines": 242
+    },
+    {
+      "path": "docs/patterns/packages.rst",
+      "title": "packages",
+      "lines": 133
+    },
+    {
+      "path": "docs/patterns/urlprocessors.rst",
+      "title": "urlprocessors",
+      "lines": 126
+    },
+    {
+      "path": "docs/patterns/wtforms.rst",
+      "title": "wtforms",
+      "lines": 126
+    },
+    {
+      "path": "docs/patterns/singlepageapplications.rst",
+      "title": "singlepageapplications",
+      "lines": 24
+    },
+    {
+      "path": "docs/patterns/flashing.rst",
+      "title": "flashing",
+      "lines": 148
+    },
+    {
+      "path": "docs/patterns/requestchecksum.rst",
+      "title": "requestchecksum",
+      "lines": 55
+    },
+    {
+      "path": "docs/patterns/methodoverrides.rst",
+      "title": "methodoverrides",
+      "lines": 42
+    },
+    {
+      "path": "docs/patterns/streaming.rst",
+      "title": "streaming",
+      "lines": 100
+    }
+  ],
+  "metadata": {
+    "has_readme": true,
+    "has_architecture": false,
+    "has_contributing": false,
+    "doc_count": 51,
+    "total_doc_lines": 53,
+    "patterns_mentioned": [
+      "Factory",
+      "GraphQL",
+      "ORM",
+      "Middleware",
+      "Asynchronous",
+      "REST",
+      "Repository",
+      "Async"
+    ],
+    "components_mentioned": [
+      "api",
+      "client",
+      "middleware",
+      "database",
+      "views",
+      "frontend",
+      "auth",
+      "backend",
+      "core",
+      "models",
+      "lib",
+      "routes",
+      "server",
+      "components",
+      "admin",
+      "utils",
+      "handlers",
+      "services",
+      "db"
+    ],
+    "architecture_type": null
+  }
+}

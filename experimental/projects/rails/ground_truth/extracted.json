@@ -1,0 +1,76 @@
+{
+  "project": "rails",
+  "readme": {
+    "path": "README.md",
+    "lines": 102,
+    "char_count": 4798,
+    "sections": [
+      {
+        "level": 1,
+        "title": "Welcome to Rails"
+      },
+      {
+        "level": 2,
+        "title": "What's Rails?"
+      },
+      {
+        "level": 2,
+        "title": "Model layer"
+      },
+      {
+        "level": 2,
+        "title": "View layer"
+      },
+      {
+        "level": 2,
+        "title": "Controller layer"
+      },
+      {
+        "level": 2,
+        "title": "Frameworks and libraries"
+      },
+      {
+        "level": 2,
+        "title": "Getting Started"
+      },
+      {
+        "level": 2,
+        "title": "Contributing"
+      },
+      {
+        "level": 2,
+        "title": "License"
+      }
+    ],
+    "has_badges": false,
+    "has_code_examples": true
+  },
+  "architecture": null,
+  "contributing": {
+    "path": "CONTRIBUTING.md",
+    "lines": 62
+  },
+  "guides": [],
+  "metadata": {
+    "has_readme": true,
+    "has_architecture": false,
+    "has_contributing": true,
+    "doc_count": 1,
+    "total_doc_lines": 164,
+    "patterns_mentioned": [
+      "Active Record",
+      "MVC",
+      "ORM",
+      "Model-View-Controller"
+    ],
+    "components_mentioned": [
+      "api",
+      "controllers",
+      "database",
+      "models",
+      "server",
+      "views"
+    ],
+    "architecture_type": "mvc"
+  }
+}

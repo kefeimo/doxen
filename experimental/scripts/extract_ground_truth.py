@@ -265,14 +265,26 @@ def extract_ground_truth(repo_path: Path, project_name: str) -> Dict[str, Any]:
 
 
 def main():
-    """Extract ground truth from all pilot projects."""
+    """Extract ground truth from projects."""
+    import sys
+
     script_dir = Path(__file__).parent
     projects_dir = script_dir.parent / "projects"
 
-    projects = ["fastapi", "express", "django", "nextjs"]
+    # Accept project names from command line, or discover all projects
+    if len(sys.argv) > 1:
+        projects = sys.argv[1:]
+    else:
+        # Auto-discover all projects (directories with a 'repo' subdirectory)
+        projects = [
+            p.name for p in projects_dir.iterdir()
+            if p.is_dir() and (p / "repo").exists()
+        ]
+        projects.sort()
 
     print("="*60)
     print("Ground Truth Extraction")
+    print(f"Projects: {', '.join(projects)}")
     print("="*60)
 
     for project_name in projects:

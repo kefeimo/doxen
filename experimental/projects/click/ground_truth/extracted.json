@@ -1,0 +1,231 @@
+{
+  "project": "click",
+  "readme": {
+    "path": "README.md",
+    "lines": 62,
+    "char_count": 1778,
+    "sections": [
+      {
+        "level": 1,
+        "title": "Click"
+      },
+      {
+        "level": 2,
+        "title": "A Simple Example"
+      },
+      {
+        "level": 2,
+        "title": "Donate"
+      },
+      {
+        "level": 2,
+        "title": "Contributing"
+      }
+    ],
+    "has_badges": false,
+    "has_code_examples": true
+  },
+  "architecture": null,
+  "contributing": null,
+  "guides": [
+    {
+      "path": "docs/parameters.md",
+      "title": "parameters",
+      "lines": 55
+    },
+    {
+      "path": "docs/exceptions.md",
+      "title": "exceptions",
+      "lines": 136
+    },
+    {
+      "path": "docs/complex.md",
+      "title": "complex",
+      "lines": 386
+    },
+    {
+      "path": "docs/shell-completion.md",
+      "title": "shell-completion",
+      "lines": 249
+    },
+    {
+      "path": "docs/wincmd.md",
+      "title": "wincmd",
+      "lines": 47
+    },
+    {
+      "path": "docs/support-multiple-versions.md",
+      "title": "support-multiple-versions",
+      "lines": 62
+    },
+    {
+      "path": "docs/faqs.md",
+      "title": "faqs",
+      "lines": 39
+    },
+    {
+      "path": "docs/upgrade-guides.md",
+      "title": "upgrade-guides",
+      "lines": 34
+    },
+    {
+      "path": "docs/option-decorators.md",
+      "title": "option-decorators",
+      "lines": 86
+    },
+    {
+      "path": "docs/quickstart.md",
+      "title": "quickstart",
+      "lines": 196
+    },
+    {
+      "path": "docs/utils.md",
+      "title": "utils",
+      "lines": 392
+    },
+    {
+      "path": "docs/options.md",
+      "title": "options",
+      "lines": 504
+    },
+    {
+      "path": "docs/documentation.md",
+      "title": "documentation",
+      "lines": 293
+    },
+    {
+      "path": "docs/api.md",
+      "title": "api",
+      "lines": 353
+    },
+    {
+      "path": "docs/parameter-types.md",
+      "title": "parameter-types",
+      "lines": 186
+    },
+    {
+      "path": "docs/setuptools.md",
+      "title": "setuptools",
+      "lines": 7
+    },
+    {
+      "path": "docs/command-line-reference.md",
+      "title": "command-line-reference",
+      "lines": 50
+    },
+    {
+      "path": "docs/virtualenv.md",
+      "title": "virtualenv",
+      "lines": 58
+    },
+    {
+      "path": "docs/advanced.md",
+      "title": "advanced",
+      "lines": 415
+    },
+    {
+      "path": "docs/extending-click.md",
+      "title": "extending-click",
+      "lines": 132
+    },
+    {
+      "path": "docs/testing.md",
+      "title": "testing",
+      "lines": 198
+    },
+    {
+      "path": "docs/handling-files.md",
+      "title": "handling-files",
+      "lines": 102
+    },
+    {
+      "path": "docs/contrib.md",
+      "title": "contrib",
+      "lines": 45
+    },
+    {
+      "path": "docs/why.md",
+      "title": "why",
+      "lines": 106
+    },
+    {
+      "path": "docs/license.md",
+      "title": "license",
+      "lines": 7
+    },
+    {
+      "path": "docs/prompts.md",
+      "title": "prompts",
+      "lines": 168
+    },
+    {
+      "path": "docs/entry-points.md",
+      "title": "entry-points",
+      "lines": 88
+    },
+    {
+      "path": "docs/design-opinions.md",
+      "title": "design-opinions",
+      "lines": 19
+    },
+    {
+      "path": "docs/unicode-support.md",
+      "title": "unicode-support",
+      "lines": 100
+    },
+    {
+      "path": "docs/commands-and-groups.rst",
+      "title": "commands-and-groups",
+      "lines": 342
+    },
+    {
+      "path": "docs/changes.rst",
+      "title": "changes",
+      "lines": 4
+    },
+    {
+      "path": "docs/commands.rst",
+      "title": "commands",
+      "lines": 428
+    },
+    {
+      "path": "docs/click-concepts.rst",
+      "title": "click-concepts",
+      "lines": 67
+    },
+    {
+      "path": "docs/arguments.rst",
+      "title": "arguments",
+      "lines": 158
+    },
+    {
+      "path": "docs/index.rst",
+      "title": "index",
+      "lines": 145
+    }
+  ],
+  "metadata": {
+    "has_readme": true,
+    "has_architecture": false,
+    "has_contributing": false,
+    "doc_count": 36,
+    "total_doc_lines": 62,
+    "patterns_mentioned": [
+      "Factory",
+      "REST",
+      "ORM",
+      "Repository"
+    ],
+    "components_mentioned": [
+      "utils",
+      "api",
+      "core",
+      "backend",
+      "lib",
+      "server",
+      "database",
+      "db"
+    ],
+    "architecture_type": "serverless"
+  }
+}

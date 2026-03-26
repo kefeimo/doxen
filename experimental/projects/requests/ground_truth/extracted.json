@@ -1,0 +1,144 @@
+{
+  "project": "requests",
+  "readme": {
+    "path": "README.md",
+    "lines": 79,
+    "char_count": 3034,
+    "sections": [
+      {
+        "level": 1,
+        "title": "Requests"
+      },
+      {
+        "level": 2,
+        "title": "Installing Requests and Supported Versions"
+      },
+      {
+        "level": 2,
+        "title": "Supported Features & Best\u2013Practices"
+      },
+      {
+        "level": 2,
+        "title": "API Reference and User Guide available on [Read the Docs](https://requests.readthedocs.io)"
+      },
+      {
+        "level": 2,
+        "title": "Cloning the repository"
+      }
+    ],
+    "has_badges": true,
+    "has_code_examples": true
+  },
+  "architecture": null,
+  "contributing": null,
+  "guides": [
+    {
+      "path": "docs/api.rst",
+      "title": "api",
+      "lines": 261
+    },
+    {
+      "path": "docs/index.rst",
+      "title": "index",
+      "lines": 140
+    },
+    {
+      "path": "docs/user/authentication.rst",
+      "title": "authentication",
+      "lines": 155
+    },
+    {
+      "path": "docs/user/install.rst",
+      "title": "install",
+      "lines": 36
+    },
+    {
+      "path": "docs/user/quickstart.rst",
+      "title": "quickstart",
+      "lines": 573
+    },
+    {
+      "path": "docs/user/advanced.rst",
+      "title": "advanced",
+      "lines": 1136
+    },
+    {
+      "path": "docs/dev/authors.rst",
+      "title": "authors",
+      "lines": 4
+    },
+    {
+      "path": "docs/dev/contributing.rst",
+      "title": "contributing",
+      "lines": 165
+    },
+    {
+      "path": "docs/community/release-process.rst",
+      "title": "release-process",
+      "lines": 53
+    },
+    {
+      "path": "docs/community/vulnerabilities.rst",
+      "title": "vulnerabilities",
+      "lines": 5
+    },
+    {
+      "path": "docs/community/recommended.rst",
+      "title": "recommended",
+      "lines": 62
+    },
+    {
+      "path": "docs/community/support.rst",
+      "title": "support",
+      "lines": 31
+    },
+    {
+      "path": "docs/community/out-there.rst",
+      "title": "out-there",
+      "lines": 10
+    },
+    {
+      "path": "docs/community/faq.rst",
+      "title": "faq",
+      "lines": 90
+    },
+    {
+      "path": "docs/community/updates.rst",
+      "title": "updates",
+      "lines": 18
+    },
+    {
+      "path": "docs/requirements.txt",
+      "title": "requirements",
+      "lines": 3
+    }
+  ],
+  "metadata": {
+    "has_readme": true,
+    "has_architecture": false,
+    "has_contributing": false,
+    "doc_count": 17,
+    "total_doc_lines": 79,
+    "patterns_mentioned": [
+      "REST",
+      "ORM",
+      "Repository",
+      "Async"
+    ],
+    "components_mentioned": [
+      "utils",
+      "api",
+      "client",
+      "backend",
+      "auth",
+      "core",
+      "lib",
+      "handlers",
+      "server",
+      "services",
+      "models",
+      "admin"
+    ],
+    "architecture_type": null
+  }
+}

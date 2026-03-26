@@ -107,12 +107,12 @@
 
 **Day 1 (Today):**
 - [x] Project selection
-- [ ] Clone repositories (~10-15 min)
-- [ ] Extract ground truth documentation
-- [ ] Calculate complexity scores
+- [x] Clone repositories (~10-15 min)
+- [x] Extract ground truth documentation
+- [x] Calculate complexity scores
 
 **Day 2:**
-- [ ] Run Doxen analysis on all 6 projects
+- [x] Run Doxen analysis on all 6 projects (in progress)
 - [ ] Verify outputs
 - [ ] Collect metrics
 
@@ -175,6 +175,29 @@ python scripts/evaluate_baseline.py
 # Calculate aggregate metrics
 # Document findings
 ```
+
+---
+
+## Actual Complexity Results
+
+**Completed:** 2026-03-26
+
+| Project | Files | Languages | Components | Complexity | Recommended Depth |
+|---------|-------|-----------|------------|------------|-------------------|
+| Flask | 236 | 4 | 3 | 164.0 | deep |
+| Rails | 4,897 | 7 | 1 | 2,520.5 | shallow |
+| Vue | 703 | 6 | 1 | 413.5 | medium |
+| Click | 146 | 3 | 3 | 109.0 | deep |
+| Requests | 130 | 3 | 3 | 101.0 | deep |
+| Docker | 12,387 | 6 | 5 | 6,263.5 | shallow |
+
+**Analysis:**
+- **Small projects (deep):** Flask, Click, Requests - Good candidates for thorough analysis
+- **Medium (medium):** Vue - Moderate complexity
+- **Large projects (shallow):** Rails, Docker - Need shallow analysis due to size
+
+**Observation:** Django has "complexity" 3,599.5 (shallow), Docker is 6,263.5 (even larger).
+Rails at 2,520.5 is comparable to Django. These align with expectations.
 
 ---
 

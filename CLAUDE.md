@@ -14,6 +14,19 @@
 - **Visualization:** Use Mermaid diagrams for workflows, architecture, data flows
 - **Design Principle:** RAG-native from day one
 
+## Development Environment
+
+### Python Virtual Environment
+- **ALWAYS use venv** - Do not use system Python
+- Virtual environment located at `./venv/`
+- Activate before running any Python code: `source venv/bin/activate`
+- Dependencies managed via `pyproject.toml`
+- Install dependencies: `pip install -e .` (within activated venv)
+
+### Alternative: Docker
+- For isolated environment, use Docker containers
+- Avoids system-level Python dependency conflicts
+
 ## Development Conventions
 
 ### Code Style

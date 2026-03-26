@@ -1,0 +1,36 @@
+{
+  "project": "click",
+  "files": {
+    "total": 146,
+    "by_language": {
+      "YAML": 8,
+      "Markdown": 33,
+      "Python": 62,
+      "JSON": 1,
+      "Shell": 1
+    }
+  },
+  "languages": {
+    "count": 3,
+    "detected": [
+      "YAML",
+      "Markdown",
+      "Python",
+      "JSON",
+      "Shell"
+    ]
+  },
+  "components": {
+    "count": 3,
+    "names": [
+      "tests",
+      "docs",
+      "src"
+    ]
+  },
+  "metrics": {
+    "lines_of_code": 26489,
+    "complexity_score": 109.0,
+    "recommended_depth": "deep"
+  }
+}

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Run baseline Doxen analysis on all pilot projects."""
+"""Run baseline Doxen analysis on projects."""
 
+import argparse
 import json
 import os
 import sys
 import time
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
@@ -175,15 +176,21 @@ def run_project_analysis(
     return metrics
 
 
-def run_baseline_analysis():
-    """Run baseline analysis on all pilot projects."""
+def run_baseline_analysis(projects: Optional[List[str]] = None):
+    """Run baseline analysis on projects.
+
+    Args:
+        projects: List of project names to analyze. If None, analyzes all pilot projects.
+    """
     script_dir = Path(__file__).parent
     projects_dir = script_dir.parent / "projects"
 
-    projects = ["fastapi", "express", "django", "nextjs"]
+    # Default to pilot projects if not specified
+    if projects is None:
+        projects = ["fastapi", "express", "django", "nextjs"]
 
     print("="*60)
-    print("Doxen Baseline Analysis - Pilot Phase")
+    print("Doxen Baseline Analysis")
     print("="*60)
     print(f"\nProjects: {', '.join(projects)}")
     print(f"Output: experimental/projects/*/doxen_output/")
@@ -290,4 +297,17 @@ def run_baseline_analysis():
 
 
 if __name__ == "__main__":
-    run_baseline_analysis()
+    parser = argparse.ArgumentParser(description="Run Doxen analysis on projects")
+    parser.add_argument(
+        "--projects",
+        type=str,
+        help="Comma-separated list of project names (e.g., 'flask,rails,vue')"
+    )
+    args = parser.parse_args()
+
+    # Parse projects argument
+    projects = None
+    if args.projects:
+        projects = [p.strip() for p in args.projects.split(",")]
+
+    run_baseline_analysis(projects)

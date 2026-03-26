@@ -10,15 +10,45 @@
 
 **Goal:** Validate improvements across diverse projects
 
-**Timeline:** Starting after quick wins implementation (2-3 hours)
+**Timeline:** Week 1 - Setup and Analysis
 
-**Status:** Ready to proceed - implementing framework-aware pattern catalogs first
+**Status:** Day 1 Complete ✅ - Day 2 In Progress (Doxen analysis running)
 
-**Documentation:** See `experimental/results/PILOT_SUMMARY.md` and `experimental/results/improvement_roadmap.md`
+**Documentation:** See `experimental/results/PILOT_SUMMARY.md`, `experimental/results/pattern_improvement_summary.md`, and `experimental/results/expansion_day1_summary.md`
 
 ---
 
 ## Recently Completed
+
+### Expansion Phase - Day 1 ✅ COMPLETE (2026-03-26)
+
+**Projects Selected:** 6 additional projects for diversity validation
+- Flask (Python micro-framework) - 236 files, deep analysis
+- Rails (Ruby full-stack) - 4,897 files, shallow analysis
+- Vue.js (JavaScript frontend) - 703 files, medium analysis
+- Click (Python CLI) - 146 files, deep analysis
+- Requests (Python HTTP library) - 130 files, deep analysis
+- Docker (Go infrastructure) - 12,387 files, shallow analysis
+
+**Completed Tasks:**
+- [x] Modified scripts to accept project arguments (extract_ground_truth.py, calculate_characteristics.py)
+- [x] Cloned all 6 expansion projects successfully
+- [x] Extracted ground truth documentation (51-1 docs per project)
+- [x] Calculated complexity scores and depth recommendations
+- [x] Quick pattern validation (Flask/Rails have catalogs, others need full analysis)
+- [x] Updated CLAUDE.md to require venv usage (not system Python)
+- [x] Started Doxen analysis on all 6 projects (running)
+
+**Key Findings:**
+- Diversity achieved: 4 languages, 5 domains, 4 size categories
+- GT quality varies: Flask/Click/Requests have extensive docs, Vue/Rails minimal
+- Framework catalogs exist for Flask and Rails, need full analysis for others
+- Complexity formula working well: 3 deep, 1 medium, 2 shallow
+
+**Documentation Created:**
+- `experimental/results/expansion_day1_summary.md` - Comprehensive Day 1 summary
+
+**Next:** Day 2 - Verify outputs, collect metrics
 
 ### Experimental Framework - Pilot Phase (Days 1-5) ✅ COMPLETE (2026-03-26)
 
