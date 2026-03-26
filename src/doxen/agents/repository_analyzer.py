@@ -1,6 +1,7 @@
 """Repository structure analyzer agent."""
 
 import json
+import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -10,15 +11,29 @@ from doxen.analyzer.llm_analyzer import LLMAnalyzer
 class RepositoryAnalyzer:
     """Analyze repository structure and classify components."""
 
-    # Common entry point filenames
+    # Common entry point filenames by framework
     ENTRY_POINTS = [
+        # Python
         "main.py", "app.py", "server.py", "__main__.py",
-        "index.js", "server.js", "app.js", "main.js",
+        "manage.py",           # Django management script
+        "wsgi.py",             # WSGI application
+        # JavaScript/Node.js (keep for Node apps, but not primary for Rails)
+        "server.js", "app.js", "main.js",
+        # Go
         "main.go", "cmd/main.go",
+        # Rust
         "main.rs", "src/main.rs",
+        # Ruby on Rails
+        "config.ru",           # Rack configuration (web server entry)
+        "bin/rails",           # Rails CLI entry point
+        "config/application.rb",  # Rails app initialization
     ]
 
     # Package/dependency files
+    # TODO: EXTENSIBILITY - This hardcoded dictionary is NOT scalable.
+    # Future: Replace with plugin/registry pattern or LLM-based detection
+    # to support new languages without modifying this class.
+    # See: docs/.progress/FRAMEWORK-AWARE-CONFIG-TODO.md
     PACKAGE_FILES = {
         "python": ["requirements.txt", "setup.py", "pyproject.toml", "Pipfile"],
         "javascript": ["package.json", "package-lock.json", "yarn.lock"],
@@ -52,6 +67,162 @@ class RepositoryAnalyzer:
             llm_analyzer: Optional LLM analyzer for semantic understanding
         """
         self.llm = llm_analyzer
+        self._framework_cache = {}  # Cache framework detection results
+
+    def _detect_framework(self, repo_path: Path) -> Dict[str, Any]:
+        """Detect framework and conventions using LLM.
+
+        Args:
+            repo_path: Repository root path
+
+        Returns:
+            Framework detection results with name, entry points, conventions
+        """
+        # Check cache
+        repo_key = str(repo_path.resolve())
+        if repo_key in self._framework_cache:
+            return self._framework_cache[repo_key]
+
+        # Fallback if no LLM available
+        if not self.llm:
+            return self._detect_framework_heuristic(repo_path)
+
+        # Gather evidence for LLM
+        evidence = []
+
+        # Top-level files and directories
+        top_level = [f.name for f in repo_path.iterdir() if not f.name.startswith('.')]
+        evidence.append(f"Top-level files/dirs: {', '.join(sorted(top_level)[:20])}")
+
+        # Check for framework-specific indicators
+        indicators = {
+            "Gemfile": "Ruby",
+            "config.ru": "Ruby/Rack",
+            "config/routes.rb": "Ruby on Rails",
+            "package.json": "JavaScript/Node.js",
+            "requirements.txt": "Python",
+            "manage.py": "Django",
+            "go.mod": "Go",
+            "Cargo.toml": "Rust",
+        }
+
+        found_indicators = []
+        for indicator, framework_hint in indicators.items():
+            if (repo_path / indicator).exists():
+                found_indicators.append(f"{indicator} ({framework_hint})")
+
+        if found_indicators:
+            evidence.append(f"Framework indicators: {', '.join(found_indicators)}")
+
+        # Build LLM prompt
+        prompt = f"""Analyze this project structure and identify the framework/platform.
+
+Evidence:
+{chr(10).join(f'- {e}' for e in evidence)}
+
+Tasks:
+1. Identify the primary framework (e.g., "Ruby on Rails", "Django", "Express.js", "FastAPI")
+2. Estimate version if detectable (e.g., "Rails 6.x", "Django 4.x")
+3. List PRIMARY entry points for this framework (files that start the application)
+4. Identify route definition file location (where API endpoints are defined)
+
+Return ONLY a JSON object:
+{{
+  "framework": "Framework Name",
+  "version": "version or unknown",
+  "primary_language": "language",
+  "entry_points": ["file1", "file2"],
+  "route_file": "path/to/routes",
+  "conventions": {{
+    "config_dir": "config/",
+    "app_dir": "app/"
+  }}
+}}
+
+If unclear, make best guess based on evidence."""
+
+        try:
+            response = self.llm.generate(
+                prompt=prompt,
+                max_tokens=1000,
+                temperature=0.1,
+            )
+
+            # Parse JSON response
+            import json
+            response = response.strip()
+            if response.startswith("```"):
+                response = re.sub(r"```(?:json)?\n?", "", response)
+                if response.endswith("```"):
+                    response = response[:-3].strip()
+
+            framework_info = json.loads(response)
+
+            # Validate and cache
+            result = {
+                "framework": framework_info.get("framework", "unknown"),
+                "version": framework_info.get("version", "unknown"),
+                "primary_language": framework_info.get("primary_language", "unknown"),
+                "entry_points": framework_info.get("entry_points", []),
+                "route_file": framework_info.get("route_file"),
+                "conventions": framework_info.get("conventions", {}),
+                "detection_method": "llm",
+            }
+
+            self._framework_cache[repo_key] = result
+            print(f"✓ Detected framework via LLM: {result['framework']}")
+            return result
+
+        except Exception as e:
+            print(f"⚠️  LLM framework detection failed: {e}")
+            return self._detect_framework_heuristic(repo_path)
+
+    def _detect_framework_heuristic(self, repo_path: Path) -> Dict[str, Any]:
+        """Fallback heuristic framework detection without LLM.
+
+        Args:
+            repo_path: Repository root path
+
+        Returns:
+            Basic framework detection results
+        """
+        # Simple heuristic based on file existence
+        if (repo_path / "config.ru").exists() and (repo_path / "config" / "routes.rb").exists():
+            return {
+                "framework": "Ruby on Rails",
+                "version": "unknown",
+                "primary_language": "ruby",
+                "entry_points": ["config.ru", "bin/rails", "config/application.rb"],
+                "route_file": "config/routes.rb",
+                "detection_method": "heuristic",
+            }
+        elif (repo_path / "manage.py").exists():
+            return {
+                "framework": "Django",
+                "version": "unknown",
+                "primary_language": "python",
+                "entry_points": ["manage.py", "wsgi.py"],
+                "route_file": "urls.py",
+                "detection_method": "heuristic",
+            }
+        elif (repo_path / "package.json").exists():
+            return {
+                "framework": "Node.js/JavaScript",
+                "version": "unknown",
+                "primary_language": "javascript",
+                "entry_points": ["server.js", "app.js", "index.js"],
+                "route_file": "routes/*.js",
+                "detection_method": "heuristic",
+            }
+        else:
+            return {
+                "framework": "unknown",
+                "version": "unknown",
+                "primary_language": "unknown",
+                "entry_points": [],
+                "route_file": None,
+                "detection_method": "heuristic",
+            }
 
     def analyze(self, repo_path: Path) -> Dict[str, Any]:
         """Analyze repository structure and components.
@@ -65,17 +236,21 @@ class RepositoryAnalyzer:
         if not repo_path.exists():
             raise ValueError(f"Repository path does not exist: {repo_path}")
 
+        # Step 1: Detect framework (LLM-assisted, cached)
+        framework_info = self._detect_framework(repo_path)
+
         analysis = {
             "repo_path": str(repo_path),
             "repo_name": repo_path.name,
+            "framework": framework_info,  # Add framework metadata
             "structure": self._scan_structure(repo_path),
-            "entry_points": self._find_entry_points(repo_path),
+            "entry_points": self._find_entry_points(repo_path, framework_info),  # Pass framework context
             "languages": self._detect_languages(repo_path),
-            "dependencies": self._extract_dependencies(repo_path),
+            "dependencies": self._extract_dependencies(repo_path, framework_info),  # Pass framework context
             "config_files": self._find_config_files(repo_path),
-            "file_roles": self._classify_file_roles(repo_path),  # NEW: Classify all files by role
+            "file_roles": self._classify_file_roles(repo_path),
             "components": self._classify_components(repo_path),
-            "configuration": self._extract_configuration_intelligent(repo_path),
+            "configuration": self._extract_configuration_intelligent(repo_path, framework_info),  # Pass framework context
         }
 
         # Add LLM-powered semantic analysis if available
@@ -127,30 +302,53 @@ class RepositoryAnalyzer:
 
         return scan_dir(repo_path)
 
-    def _find_entry_points(self, repo_path: Path) -> List[Dict[str, str]]:
-        """Find likely entry points in the repository.
+    def _find_entry_points(self, repo_path: Path, framework_info: Dict[str, Any]) -> List[Dict[str, str]]:
+        """Find entry points using framework-specific conventions.
 
         Args:
             repo_path: Repository root path
+            framework_info: Framework detection results with conventions
 
         Returns:
             List of entry points with path and type
         """
         entry_points = []
 
-        for entry_file in self.ENTRY_POINTS:
-            matches = list(repo_path.rglob(entry_file))
-            for match in matches:
-                # Skip excluded directories
-                if any(excluded in match.parts for excluded in self.EXCLUDE_DIRS):
-                    continue
+        # Use framework-specific entry points if available
+        framework_entry_points = framework_info.get("entry_points", [])
 
-                entry_points.append({
-                    "file": entry_file,
-                    "path": str(match.relative_to(repo_path)),
-                    "full_path": str(match),
-                    "language": self._detect_language_from_file(match),
-                })
+        if framework_entry_points:
+            # Use framework conventions (preferred)
+            print(f"   Looking for {framework_info['framework']} entry points: {framework_entry_points}")
+            for entry_file in framework_entry_points:
+                # Check if file exists at expected location
+                expected_path = repo_path / entry_file
+                if expected_path.exists():
+                    entry_points.append({
+                        "file": entry_file,
+                        "path": str(expected_path.relative_to(repo_path)),
+                        "full_path": str(expected_path),
+                        "language": self._detect_language_from_file(expected_path),
+                        "framework": framework_info["framework"],
+                        "detection_method": "framework_convention",
+                    })
+        else:
+            # Fallback to generic search (backward compatibility)
+            print(f"   Using generic entry point search (no framework conventions)")
+            for entry_file in self.ENTRY_POINTS:
+                matches = list(repo_path.rglob(entry_file))
+                for match in matches:
+                    # Skip excluded directories
+                    if any(excluded in match.parts for excluded in self.EXCLUDE_DIRS):
+                        continue
+
+                    entry_points.append({
+                        "file": entry_file,
+                        "path": str(match.relative_to(repo_path)),
+                        "full_path": str(match),
+                        "language": self._detect_language_from_file(match),
+                        "detection_method": "generic_search",
+                    })
 
         return entry_points
 
@@ -193,7 +391,7 @@ class RepositoryAnalyzer:
 
         return dict(sorted(language_counts.items(), key=lambda x: x[1], reverse=True))
 
-    def _extract_dependencies(self, repo_path: Path) -> Dict[str, List[str]]:
+    def _extract_dependencies(self, repo_path: Path, framework_info: Optional[Dict[str, Any]] = None) -> Dict[str, List[str]]:
         """Extract dependencies from package files.
 
         Args:
@@ -201,6 +399,10 @@ class RepositoryAnalyzer:
 
         Returns:
             Dictionary of language: [dependencies]
+
+        NOTE: This method contains HARDCODED loops for each language.
+        TODO: Refactor to use plugin/registry pattern for extensibility.
+        See: docs/.progress/FRAMEWORK-AWARE-CONFIG-TODO.md
         """
         dependencies: Dict[str, List[str]] = {}
 
@@ -255,6 +457,34 @@ class RepositoryAnalyzer:
                             dependencies["javascript"] = deps
                             break
 
+        # Ruby dependencies (Gemfile)
+        for pkg_file in self.PACKAGE_FILES["ruby"]:
+            # Search in root
+            file_path = repo_path / pkg_file
+            if file_path.exists() and pkg_file == "Gemfile":
+                deps = self._parse_ruby_deps(file_path)
+                if deps:
+                    dependencies["ruby"] = deps
+                    break
+
+            # Search in subdirectories
+            if not dependencies.get("ruby"):
+                for match in repo_path.glob(f"*/{pkg_file}"):
+                    if any(excluded in match.parts for excluded in self.EXCLUDE_DIRS):
+                        continue
+                    if match.name == "Gemfile":
+                        deps = self._parse_ruby_deps(match)
+                        if deps:
+                            dependencies["ruby"] = deps
+                            break
+
+        # Framework-aware filtering: prioritize primary language
+        if framework_info:
+            primary_lang = framework_info.get("primary_language", "").lower()
+            if primary_lang and primary_lang in dependencies:
+                # Move primary language dependencies first (already there, just note for future prioritization)
+                print(f"   Primary framework language: {primary_lang}")
+
         return dependencies
 
     def _parse_python_deps(self, file_path: Path) -> List[str]:
@@ -308,6 +538,30 @@ class RepositoryAnalyzer:
                 deps.extend(package["dependencies"].keys())
             if "devDependencies" in package:
                 deps.extend(package["devDependencies"].keys())
+            return deps
+        except Exception:
+            return []
+
+    def _parse_ruby_deps(self, file_path: Path) -> List[str]:
+        """Parse Ruby dependencies from Gemfile.
+
+        NOTE: This is a HARDCODED parser for Ruby/Gemfile.
+        TODO: Replace with extensible plugin system for new languages.
+        See: docs/.progress/FRAMEWORK-AWARE-CONFIG-TODO.md
+        """
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                lines = f.readlines()
+            deps = []
+            for line in lines:
+                line = line.strip()
+                # Match gem lines: gem 'name' or gem "name"
+                if line.startswith("gem "):
+                    # Extract gem name
+                    parts = line.split()
+                    if len(parts) >= 2:
+                        gem_name = parts[1].strip("'\"").strip(",")
+                        deps.append(gem_name)
             return deps
         except Exception:
             return []
@@ -508,11 +762,12 @@ class RepositoryAnalyzer:
 
         return roles
 
-    def _extract_configuration_intelligent(self, repo_path: Path) -> Dict[str, Any]:
-        """Extract configuration using file role classification and LLM guidance.
+    def _extract_configuration_intelligent(self, repo_path: Path, framework_info: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """Extract configuration using file role classification and LLM guidance, framework-aware.
 
         Args:
             repo_path: Repository root
+            framework_info: Detected framework information (optional)
 
         Returns:
             Configuration dictionary
@@ -534,16 +789,28 @@ class RepositoryAnalyzer:
                 ports = self._extract_ports_from_file(repo_path / docker_file["path"])
                 config["ports"].extend(ports)
 
-        # 2. Package configs for scripts
-        for package_file in file_roles.get("package_config", []):
-            if package_file["name"] == "package.json":
-                scripts = self._extract_scripts_from_package_json(repo_path / package_file["path"])
-                config["scripts"].update(scripts)
+        # 2. Framework-aware script extraction
+        if framework_info:
+            scripts = self._extract_scripts_framework_aware(repo_path, framework_info, file_roles)
+            config["scripts"].update(scripts)
+        else:
+            # Fallback: extract from package.json
+            for package_file in file_roles.get("package_config", []):
+                if package_file["name"] == "package.json":
+                    scripts = self._extract_scripts_from_package_json(repo_path / package_file["path"])
+                    config["scripts"].update(scripts)
 
-        # 3. Environment templates
+        # 3. Environment templates (collect all, summarize later if LLM available)
+        all_env_vars = []
         for env_file in file_roles.get("env_template", []):
             env_vars = self._parse_env_file(repo_path / env_file["path"])
-            config["environment_variables"].extend(env_vars)
+            all_env_vars.extend(env_vars)
+
+        # Summarize environment variables if LLM available
+        if self.llm and len(all_env_vars) > 20:
+            config["environment_variables"] = self._summarize_env_vars_with_llm(all_env_vars)
+        else:
+            config["environment_variables"] = all_env_vars
 
         # 4. Startup scripts and Dockerfiles
         for startup_file in file_roles.get("startup_script", []):
@@ -673,6 +940,179 @@ class RepositoryAnalyzer:
         except Exception:
             pass
         return commands
+
+    def _extract_scripts_framework_aware(
+        self, repo_path: Path, framework_info: Dict[str, Any], file_roles: Dict[str, List[Dict[str, str]]]
+    ) -> Dict[str, str]:
+        """Extract scripts/tasks based on detected framework.
+
+        Args:
+            repo_path: Repository root
+            framework_info: Detected framework information
+            file_roles: Classified file roles
+
+        Returns:
+            Dictionary of script_name: command
+        """
+        scripts = {}
+        framework = framework_info.get("framework", "").lower()
+        primary_lang = framework_info.get("primary_language", "").lower()
+
+        # Rails: Extract Rake tasks
+        if "rails" in framework or "ruby" in primary_lang:
+            rakefile = repo_path / "Rakefile"
+            if rakefile.exists():
+                rake_tasks = self._extract_rake_tasks(rakefile)
+                scripts.update(rake_tasks)
+        # Django: Extract management commands
+        elif "django" in framework:
+            # Django management commands are in manage.py
+            manage_py = repo_path / "manage.py"
+            if manage_py.exists():
+                scripts["django/runserver"] = "python manage.py runserver"
+                scripts["django/migrate"] = "python manage.py migrate"
+                scripts["django/test"] = "python manage.py test"
+        # Node.js/JavaScript: Extract npm scripts
+        elif "javascript" in primary_lang or "node" in framework.lower():
+            for package_file in file_roles.get("package_config", []):
+                if package_file["name"] == "package.json":
+                    npm_scripts = self._extract_scripts_from_package_json(repo_path / package_file["path"])
+                    scripts.update(npm_scripts)
+        # Go: Extract Makefile targets
+        elif "go" in primary_lang:
+            makefile = repo_path / "Makefile"
+            if makefile.exists():
+                scripts["go/build"] = "go build"
+                scripts["go/test"] = "go test ./..."
+                scripts["go/run"] = "go run ."
+        # Python (non-Django): Check for Makefile or setup.py
+        elif "python" in primary_lang:
+            makefile = repo_path / "Makefile"
+            if makefile.exists():
+                # Try to extract make targets (simple approach)
+                scripts["python/install"] = "pip install -r requirements.txt"
+                scripts["python/test"] = "pytest"
+
+        return scripts
+
+    def _extract_rake_tasks(self, rakefile: Path) -> Dict[str, str]:
+        """Extract Rake tasks from Rakefile.
+
+        Args:
+            rakefile: Path to Rakefile
+
+        Returns:
+            Dictionary of task_name: description
+        """
+        tasks = {}
+        try:
+            with open(rakefile, "r", encoding="utf-8") as f:
+                lines = f.readlines()
+
+            current_task = None
+            for line in lines:
+                line = line.strip()
+                # Match task definitions: task :name do
+                if line.startswith("task "):
+                    parts = line.split()
+                    if len(parts) >= 2:
+                        task_name = parts[1].strip(":").strip(",")
+                        # Common Rails tasks
+                        if task_name in ["db:migrate", "db:seed", "db:setup", "db:reset",
+                                        "test", "spec", "assets:precompile", "routes"]:
+                            tasks[f"rake/{task_name}"] = f"rake {task_name}"
+                        current_task = task_name
+
+            # Add common Rails tasks even if not explicitly defined
+            if not tasks:
+                tasks["rake/db:migrate"] = "rake db:migrate"
+                tasks["rake/db:seed"] = "rake db:seed"
+                tasks["rake/test"] = "rake test"
+                tasks["rake/routes"] = "rake routes"
+
+        except Exception:
+            # Fallback: provide common Rails tasks
+            tasks["rake/db:migrate"] = "rake db:migrate"
+            tasks["rake/db:seed"] = "rake db:seed"
+            tasks["rake/test"] = "rake test"
+
+        return tasks
+
+    def _summarize_env_vars_with_llm(self, all_env_vars: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Use LLM to intelligently summarize environment variables.
+
+        Args:
+            all_env_vars: List of all extracted environment variables
+
+        Returns:
+            Summarized environment variable structure
+        """
+        if not self.llm:
+            return {"raw": all_env_vars}
+
+        try:
+            # Sample vars for LLM (don't send all if too many)
+            sample_size = min(50, len(all_env_vars))
+            sample_vars = all_env_vars[:sample_size]
+
+            # Build prompt
+            var_names = [v["name"] for v in sample_vars]
+            prompt = f"""Analyze these {len(all_env_vars)} environment variables and create a concise categorized summary.
+
+Environment variables found (sample of {len(var_names)}):
+{', '.join(var_names)}
+
+Tasks:
+1. Group variables by category (Database, API Keys, App Config, Email, Storage, etc.)
+2. Identify CRITICAL/REQUIRED variables (API keys, database credentials, secrets)
+3. Use wildcards for patterns (e.g., "DB_*" for DB_HOST, DB_PORT, DB_NAME)
+4. Keep summary concise - group similar vars
+
+Return ONLY a JSON object:
+{{
+  "total_count": {len(all_env_vars)},
+  "critical_required": ["DB_PASSWORD", "SECRET_KEY_BASE", "API_KEY"],
+  "categories": {{
+    "Database": ["DB_HOST", "DB_PORT", "DB_NAME", "DB_PASSWORD", "DB_USERNAME"],
+    "Email/SMTP": ["SMTP_*"],
+    "Cloud Storage": ["S3_*", "STORAGE_*"],
+    "Application": ["APP_NAME", "APP_VERSION", "RAILS_ENV"]
+  }}
+}}
+
+Be specific with category names. Group logically.
+"""
+
+            response = self.llm.generate(
+                prompt=prompt,
+                max_tokens=1000,
+                temperature=0.1,
+            )
+
+            # Parse JSON response
+            response = response.strip()
+            if response.startswith("```"):
+                response = re.sub(r"```(?:json)?\n?", "", response)
+            if response.endswith("```"):
+                response = response[:-3].strip()
+
+            summary = json.loads(response)
+
+            # Add metadata
+            summary["extraction_method"] = "llm_summarized"
+            summary["source_files"] = list(set(v["source"] for v in all_env_vars if "source" in v))
+
+            return summary
+
+        except Exception as e:
+            print(f"⚠️  Failed to summarize env vars with LLM: {e}")
+            # Fallback: return raw data
+            return {
+                "extraction_method": "raw_extraction",
+                "total_count": len(all_env_vars),
+                "variables": all_env_vars[:20],  # Limit to first 20
+                "note": f"Full list too long ({len(all_env_vars)} vars), showing first 20"
+            }
 
     def _extract_configuration(self, repo_path: Path) -> Dict[str, Any]:
         """Extract runtime configuration from various sources.

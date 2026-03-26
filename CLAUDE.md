@@ -11,6 +11,7 @@
 - **Language:** TBD (Python/Rust/TypeScript - to be decided)
 - **Core Engine:** Code analysis → knowledge extraction → structured output
 - **Output Format:** Structured specs, schemas, flows, graphs (not prose documentation)
+- **Visualization:** Use Mermaid diagrams for workflows, architecture, data flows
 - **Design Principle:** RAG-native from day one
 
 ## Development Conventions

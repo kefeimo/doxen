@@ -103,9 +103,18 @@ class DocGenerator:
             ports_info.append(f"{port['service']}: {port['host_port']}")
 
         env_vars_info = []
-        for var in configuration.get("environment_variables", []):
-            if var['required']:
-                env_vars_info.append(f"{var['name']} (required)")
+        env_vars = configuration.get("environment_variables", [])
+
+        # Handle both old format (list) and new format (dict with summary)
+        if isinstance(env_vars, dict):
+            # New format: LLM-summarized
+            if "critical_required" in env_vars:
+                env_vars_info = [f"{var} (required)" for var in env_vars.get("critical_required", [])]
+        elif isinstance(env_vars, list):
+            # Old format: list of var dicts
+            for var in env_vars:
+                if var.get('required'):
+                    env_vars_info.append(f"{var['name']} (required)")
 
         startup_cmds_info = []
         for cmd in configuration.get("startup_commands", []):

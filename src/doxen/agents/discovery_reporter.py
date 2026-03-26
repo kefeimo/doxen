@@ -19,38 +19,46 @@ class DiscoveryReporter:
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
     def save_repository_analysis(self, analysis: Dict[str, Any]) -> Path:
-        """Save repository analysis as markdown.
+        """Save repository analysis as markdown and JSON.
 
         Args:
             analysis: RepositoryAnalyzer output
 
         Returns:
-            Path to saved report
+            Path to saved markdown report
         """
+        # Save markdown report
         report_path = self.output_dir / "REPOSITORY-ANALYSIS.md"
-
         content = self._format_repository_analysis(analysis)
-
         with open(report_path, "w", encoding="utf-8") as f:
             f.write(content)
+
+        # Save detailed JSON
+        json_path = self.output_dir / "REPOSITORY-ANALYSIS.json"
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(analysis, f, indent=2)
 
         return report_path
 
     def save_workflow_analysis(self, analysis: Dict[str, Any]) -> Path:
-        """Save workflow analysis as markdown.
+        """Save workflow analysis as markdown and JSON.
 
         Args:
             analysis: WorkflowMapper output
 
         Returns:
-            Path to saved report
+            Path to saved markdown report
         """
+        # Save markdown summary
         report_path = self.output_dir / "WORKFLOW-ANALYSIS.md"
-
         content = self._format_workflow_analysis(analysis)
-
         with open(report_path, "w", encoding="utf-8") as f:
             f.write(content)
+
+        # Save detailed JSON (full endpoint catalog)
+        json_path = self.output_dir / "WORKFLOW-ANALYSIS.json"
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(analysis, f, indent=2)
 
         return report_path
 
@@ -73,18 +81,57 @@ class DiscoveryReporter:
         return report_path
 
     def save_discovery_summary(self, combined_analysis: Dict[str, Any]) -> Path:
-        """Save combined discovery data as JSON.
+        """Save lightweight discovery index as JSON.
+
+        Creates a manifest with high-level counts and pointers to detailed files.
+        Detailed data is in REPOSITORY-ANALYSIS.json and WORKFLOW-ANALYSIS.json.
 
         Args:
             combined_analysis: All analysis outputs combined
 
         Returns:
-            Path to saved JSON
+            Path to saved JSON index
         """
         summary_path = self.output_dir / "DISCOVERY-SUMMARY.json"
 
+        # Extract high-level metadata
+        repo = combined_analysis.get("repository", {})
+        workflows = combined_analysis.get("workflows", {})
+
+        # Build lightweight index
+        index = {
+            "metadata": {
+                "generated": datetime.now().isoformat(),
+                "doxen_version": "0.1.0",
+                "repository": repo.get("repo_name", "unknown"),
+                "path": repo.get("repo_path", "unknown"),
+            },
+            "summary": {
+                "languages": {
+                    lang: count for lang, count in repo.get("languages", {}).items()
+                },
+                "components": len(repo.get("components", [])),
+                "entry_points": len(repo.get("entry_points", [])),
+                "api_endpoints": len(workflows.get("api_endpoints", [])),
+                "user_flows": len(workflows.get("user_flows", [])),
+                "integrations": len(workflows.get("integrations", [])),
+            },
+            "files": {
+                "repository_details": "REPOSITORY-ANALYSIS.json",
+                "repository_overview": "REPOSITORY-ANALYSIS.md",
+                "workflow_details": "WORKFLOW-ANALYSIS.json",
+                "workflow_overview": "WORKFLOW-ANALYSIS.md",
+            },
+            "notes": {
+                "repository": "Detailed repository structure, dependencies, and configuration in REPOSITORY-ANALYSIS.json",
+                "workflows": "Full endpoint catalog (all {} endpoints with metadata) in WORKFLOW-ANALYSIS.json".format(
+                    len(workflows.get("api_endpoints", []))
+                ),
+            }
+        }
+
         with open(summary_path, "w", encoding="utf-8") as f:
-            json.dump(combined_analysis, f, indent=2)
+            json.dump(index, f, indent=2)
 
         return summary_path
 
@@ -146,6 +193,27 @@ class DiscoveryReporter:
         lines.append("---")
         lines.append("")
 
+        # Framework Detection
+        framework = analysis.get("framework", {})
+        if framework and framework.get("framework") != "unknown":
+            lines.append("## Detected Framework")
+            lines.append("")
+            lines.append(f"**Framework:** {framework['framework']}")
+            if framework.get("version") != "unknown":
+                lines.append(f"**Version:** {framework['version']}")
+            lines.append(f"**Primary Language:** {framework.get('primary_language', 'unknown').title()}")
+            lines.append(f"**Detection Method:** {framework.get('detection_method', 'unknown')}")
+            if framework.get("route_file"):
+                lines.append(f"**Route Definition:** `{framework['route_file']}`")
+            lines.append("")
+            if framework.get("conventions"):
+                lines.append("**Framework Conventions:**")
+                for key, value in framework.get("conventions", {}).items():
+                    lines.append(f"- {key.replace('_', ' ').title()}: `{value}`")
+                lines.append("")
+            lines.append("---")
+            lines.append("")
+
         # Languages
         lines.append("## Languages Detected")
         lines.append("")
@@ -162,10 +230,19 @@ class DiscoveryReporter:
         lines.append("")
         entry_points = analysis.get("entry_points", [])
         if entry_points:
+            # Show framework context if available
+            if framework and framework.get("framework") != "unknown":
+                lines.append(f"*Entry points identified based on {framework['framework']} conventions*")
+                lines.append("")
+
             for ep in entry_points:
                 lines.append(f"### {ep['file']}")
                 lines.append(f"- **Path:** `{ep['path']}`")
                 lines.append(f"- **Language:** {ep['language']}")
+                if ep.get("framework"):
+                    lines.append(f"- **Framework:** {ep['framework']}")
+                if ep.get("detection_method"):
+                    lines.append(f"- **Detection:** {ep['detection_method']}")
                 lines.append("")
         else:
             lines.append("No entry points found")
@@ -241,23 +318,65 @@ class DiscoveryReporter:
         if env_vars:
             lines.append("### Environment Variables")
             lines.append("")
-            # Group by component
-            by_component = {}
-            for var in env_vars:
-                comp = var['component']
-                if comp not in by_component:
-                    by_component[comp] = []
-                by_component[comp].append(var)
 
-            for component, vars_list in by_component.items():
-                if component != "root":
-                    lines.append(f"**{component}:**")
+            # Check if it's LLM-summarized format or raw format
+            if isinstance(env_vars, dict) and "extraction_method" in env_vars:
+                # LLM-summarized format
+                if env_vars.get("extraction_method") == "llm_summarized":
+                    lines.append(f"**Total Variables:** {env_vars.get('total_count', 'unknown')}")
                     lines.append("")
-                for var in vars_list:
-                    required_text = " (required)" if var['required'] else ""
-                    example = f" = `{var['example_value']}`" if var['example_value'] else ""
-                    lines.append(f"- `{var['name']}`{example}{required_text}")
-                lines.append("")
+
+                    # Critical/Required variables
+                    critical = env_vars.get("critical_required", [])
+                    if critical:
+                        lines.append(f"**Critical/Required:** {', '.join(f'`{v}`' for v in critical)}")
+                        lines.append("")
+
+                    # Categorized variables
+                    categories = env_vars.get("categories", {})
+                    if categories:
+                        lines.append("**By Category:**")
+                        lines.append("")
+                        for category, var_list in categories.items():
+                            var_display = ", ".join(f"`{v}`" for v in var_list)
+                            lines.append(f"- **{category}**: {var_display}")
+                        lines.append("")
+                else:
+                    # Raw format with limit
+                    total = env_vars.get("total_count", 0)
+                    variables = env_vars.get("variables", [])
+                    lines.append(f"**Total Variables:** {total}")
+                    lines.append("")
+                    if variables:
+                        lines.append(f"**Sample ({len(variables)} shown):**")
+                        lines.append("")
+                        for var in variables[:10]:
+                            lines.append(f"- `{var['name']}`")
+                        lines.append("")
+                        if len(variables) > 10:
+                            lines.append(f"*... and {len(variables) - 10} more*")
+                            lines.append("")
+            else:
+                # Old raw format (list)
+                # Group by component
+                by_component = {}
+                for var in env_vars:
+                    comp = var['component']
+                    if comp not in by_component:
+                        by_component[comp] = []
+                    by_component[comp].append(var)
+
+                for component, vars_list in by_component.items():
+                    if component != "root":
+                        lines.append(f"**{component}:**")
+                        lines.append("")
+                    for var in vars_list[:20]:  # Limit to 20 per component
+                        required_text = " (required)" if var['required'] else ""
+                        example = f" = `{var['example_value']}`" if var['example_value'] else ""
+                        lines.append(f"- `{var['name']}`{example}{required_text}")
+                    if len(vars_list) > 20:
+                        lines.append(f"*... and {len(vars_list) - 20} more*")
+                    lines.append("")
 
         # Startup Commands
         startup_commands = configuration.get("startup_commands", [])
@@ -334,7 +453,13 @@ class DiscoveryReporter:
         lines.append("---")
         lines.append("")
 
-        # API Endpoints
+        # Add note about detailed data in JSON
+        lines.append("> **Note:** This is a high-level summary. Full endpoint catalog with metadata available in `WORKFLOW-ANALYSIS.json`")
+        lines.append("")
+        lines.append("---")
+        lines.append("")
+
+        # API Endpoints Summary
         lines.append("## API Endpoints")
         lines.append("")
         endpoints = analysis.get("api_endpoints", [])
@@ -342,7 +467,30 @@ class DiscoveryReporter:
             lines.append(f"**Total endpoints:** {len(endpoints)}")
             lines.append("")
 
-            # Group by method
+            # Add transparency note about extraction methods
+            extraction_methods = set(ep.get("extraction_method") for ep in endpoints)
+            if "llm" in extraction_methods:
+                lines.append("*Note: Some endpoints extracted via LLM from route definition files (not validated against controllers)*")
+                lines.append("")
+
+            # Summary by HTTP method
+            from collections import Counter
+            method_counts = Counter(ep.get("method", "UNKNOWN") for ep in endpoints)
+
+            lines.append("### Endpoint Summary by Method")
+            lines.append("")
+            for method in ["GET", "POST", "PUT", "PATCH", "DELETE", "UNKNOWN"]:
+                if method in method_counts:
+                    count = method_counts[method]
+                    lines.append(f"- **{method}**: {count} endpoint{'s' if count != 1 else ''}")
+            lines.append("")
+
+            # Show sample endpoints for each method (top 5)
+            lines.append("### Sample Endpoints")
+            lines.append("")
+            lines.append("*Full endpoint catalog available in `DISCOVERY-SUMMARY.json`*")
+            lines.append("")
+
             methods = {}
             for ep in endpoints:
                 method = ep.get("method", "UNKNOWN")
@@ -352,32 +500,40 @@ class DiscoveryReporter:
 
             for method in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
                 if method in methods:
-                    lines.append(f"### {method} Endpoints")
+                    lines.append(f"#### {method} Endpoints (showing 5 of {len(methods[method])})")
                     lines.append("")
-                    for ep in methods[method]:
-                        lines.append(f"#### `{ep['path']}`")
-                        lines.append(f"- **Handler:** `{ep['handler']}`")
-                        lines.append(f"- **File:** `{ep['file']}:{ep['line']}`")
+                    for ep in methods[method][:5]:  # Only show first 5
+                        lines.append(f"- `{ep['method']} {ep['path']}` → `{ep['handler']}`")
+                    if len(methods[method]) > 5:
+                        lines.append(f"- *... and {len(methods[method]) - 5} more*")
+                    lines.append("")
 
-                        # Add git history for this file
-                        git_info = self._get_file_git_info(ep.get('full_path'))
-                        if git_info:
-                            lines.append(f"- **Last Modified:** {git_info.get('last_modified', 'unknown')}")
-                            lines.append(f"- **Git Commit:** `{git_info.get('commit_hash', 'unknown')}`")
-                            lines.append(f"- **Author:** {git_info.get('author', 'unknown')}")
-                            # Calculate age
-                            age = self._calculate_code_age(git_info.get('last_modified'))
-                            if age:
-                                lines.append(f"- **Code Age:** {age}")
+            # Extraction metadata summary
+            lines.append("### Extraction Metadata")
+            lines.append("")
 
-                        if ep.get("docstring"):
-                            doc_lines = ep["docstring"].split("\n")
-                            lines.append(f"- **Description:** {doc_lines[0]}")
-                        lines.append("")
+            source_counts = Counter(ep.get("source", "unknown") for ep in endpoints)
+            lines.append("**Sources:**")
+            for source, count in source_counts.most_common():
+                lines.append(f"- `{source}`: {count} endpoint{'s' if count != 1 else ''}")
+            lines.append("")
+
+            method_counts_extraction = Counter(ep.get("extraction_method", "unknown") for ep in endpoints)
+            lines.append("**Extraction Methods:**")
+            for method, count in method_counts_extraction.items():
+                lines.append(f"- {method}: {count} endpoint{'s' if count != 1 else ''}")
+            lines.append("")
+
+            validated_count = sum(1 for ep in endpoints if ep.get("validated"))
+            lines.append(f"**Validation Status:** {validated_count} validated, {len(endpoints) - validated_count} unvalidated")
+            lines.append("")
+
         else:
             lines.append("No API endpoints detected")
             lines.append("")
-            lines.append("*Note: Endpoint detection may need debugging*")
+            lines.append("*Note: Endpoint detection requires either:*")
+            lines.append("*- FastAPI/Flask decorators in Python backend, or*")
+            lines.append("*- Rails routes.rb file with LLM analyzer enabled*")
             lines.append("")
 
         # User Workflows
@@ -389,7 +545,13 @@ class DiscoveryReporter:
                 lines.append(f"### {wf['name']}")
                 lines.append(f"- **Type:** {wf['type']}")
                 lines.append(f"- **Resource:** `{wf['resource']}`")
-                lines.append(f"- **Operations:** {', '.join(wf['operations'])}")
+
+                # Show unique operations with counts
+                from collections import Counter
+                op_counts = Counter(wf['operations'])
+                op_summary = ', '.join(f"{method} ({count})" for method, count in sorted(op_counts.items()))
+                lines.append(f"- **Operations:** {op_summary}")
+
                 lines.append(f"- **Endpoints:** {len(wf['endpoints'])}")
                 lines.append("")
         else:

@@ -34,9 +34,16 @@ class DiscoveryOrchestrator:
         self.output_dir = output_dir
         self.llm = llm_analyzer
 
+        # Create cache directory for intermediate results
+        self.cache_dir = output_dir / ".cache"
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+
         # Initialize agents
         self.repo_analyzer = RepositoryAnalyzer(llm_analyzer=llm_analyzer)
-        self.workflow_mapper = WorkflowMapper(llm_analyzer=llm_analyzer)
+        self.workflow_mapper = WorkflowMapper(
+            llm_analyzer=llm_analyzer,
+            cache_dir=self.cache_dir
+        )
         # self.arch_extractor = ArchitectureExtractor(llm_analyzer=llm_analyzer)  # TODO
 
         # Initialize reporter
