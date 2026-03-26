@@ -5,6 +5,7 @@ from typing import Any, Dict, List, Optional, Set
 from collections import defaultdict
 
 from doxen.analyzer.llm_analyzer import LLMAnalyzer
+from doxen.extractors.framework_patterns import detect_framework_patterns
 
 
 class ArchitectureExtractor:
@@ -40,7 +41,7 @@ class ArchitectureExtractor:
             "pattern": self._detect_architectural_pattern(repo_analysis, workflow_analysis),
             "components": self._analyze_components(repo_analysis, workflow_analysis),
             "data_flow": self._analyze_data_flow(repo_analysis, workflow_analysis),
-            "design_patterns": self._detect_design_patterns(repo_analysis, workflow_analysis),
+            "design_patterns": self._detect_design_patterns(repo_path, repo_analysis, workflow_analysis),
             "integrations": self._analyze_integrations(workflow_analysis),
             "tech_stack": self._build_tech_stack(repo_analysis),
         }
@@ -306,11 +307,12 @@ class ArchitectureExtractor:
         }
 
     def _detect_design_patterns(
-        self, repo_analysis: Dict[str, Any], workflow_analysis: Dict[str, Any]
+        self, repo_path: Path, repo_analysis: Dict[str, Any], workflow_analysis: Dict[str, Any]
     ) -> List[Dict[str, str]]:
         """Detect common design patterns in use.
 
         Args:
+            repo_path: Repository root path
             repo_analysis: Repository structure
             workflow_analysis: Workflow analysis
 
@@ -319,6 +321,30 @@ class ArchitectureExtractor:
         """
         components = repo_analysis.get("components", [])
         patterns = []
+
+        # Framework-aware pattern detection (NEW!)
+        framework_info = repo_analysis.get("framework", {})
+        framework_name = framework_info.get("framework", "")
+
+        if framework_name:
+            print(f"   Using framework-aware detection for: {framework_name}")
+            framework_patterns = detect_framework_patterns(
+                framework_name,
+                repo_path,
+                verify_in_code=True,
+                max_files_to_scan=100
+            )
+
+            for pattern_name, details in framework_patterns.items():
+                patterns.append({
+                    "name": pattern_name,
+                    "description": f"{details['confidence'].capitalize()} pattern",
+                    "evidence": details['evidence'],
+                    "confidence": details['confidence'],
+                    "source": details['source']
+                })
+
+            print(f"   Framework patterns detected: {len(framework_patterns)}")
 
         # Check for MVC
         has_models = any("model" in c["name"].lower() for c in components)
