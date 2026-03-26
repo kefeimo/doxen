@@ -18,6 +18,29 @@
 
 ## Recently Completed
 
+### Experimental Framework - Day 2 ✅ (2026-03-26)
+- [x] Ran baseline Doxen analysis on all 4 pilot projects
+- [x] All 4 projects completed successfully (100% success rate)
+- [x] Performance: 139.6s total (~2.3 min) - 10x faster than estimated!
+- [x] Generated full documentation suite for each project:
+  - Discovery: REPOSITORY, WORKFLOW, ARCHITECTURE analysis
+  - Documentation: README.md, ARCHITECTURE.md
+- [x] Captured comprehensive metrics (timing, LLM usage, output sizes)
+- [x] Wrote baseline analysis runner script (`run_baseline.py`)
+
+**Performance Summary:**
+- FastAPI: 23.6s (3.7s discovery + 19.9s docs)
+- Express: 32.9s (3.5s discovery + 29.4s docs)
+- Django: 33.7s (4.5s discovery + 29.2s docs)
+- Next.js: 49.4s (15.6s discovery + 33.8s docs)
+
+**Key Findings:**
+- Framework detection: 100% accurate (FastAPI, Express, Django, Next.js)
+- LLM usage: 13 calls, ~$0.13 total cost
+- All outputs valid and well-formed
+- 0 API endpoints detected (expected - analyzing framework source, not applications)
+- Documentation quality: 56-97 lines README, 91-123 lines ARCHITECTURE per project
+
 ### Experimental Framework - Day 1 ✅ (2026-03-26)
 - [x] Created `.doxen/experimental/` directory structure
 - [x] Wrote automation scripts:
@@ -86,23 +109,22 @@
 
 ---
 
-## In Progress (Day 2 of Pilot)
+## In Progress (Day 3 of Pilot)
 
-**Current Focus:** Baseline Analysis
+**Current Focus:** Automated Evaluation
 
-**Day 1 Complete ✅:**
-- [x] Create experimental directory structure
-- [x] Write project cloning script
-- [x] Write ground truth extraction script
-- [x] Write characteristics calculation script
-- [x] Clone 4 pilot projects (FastAPI, Express, Django, Next.js)
-- [x] Extract ground truth documentation
-- [x] Calculate repository characteristics
+**Day 2 Complete ✅:**
+- [x] Run Doxen Phase 1 on all 4 projects (100% success)
+- [x] Run Doxen Phase 2 on all 4 projects (documentation generation)
+- [x] Collect performance metrics (13 LLM calls, 139.6s total)
+- [x] Verify all outputs are valid (JSON + markdown)
+- [x] Create baseline summary
 
-**Day 2 Tasks:**
-- [ ] Run Doxen Phase 1 on all 4 projects
-- [ ] Collect performance metrics
-- [ ] Verify all outputs are valid
+**Day 3 Tasks:**
+- [ ] Implement correctness metrics (architecture, components, patterns, tech stack)
+- [ ] Implement completeness metrics (sections, dependencies, coverage)
+- [ ] Generate comparison tables
+- [ ] Create automated evaluation script
 
 **See:** `docs/.progress/PILOT-PHASE-PLAN.md` for detailed day-by-day plan
 

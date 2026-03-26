@@ -1,6 +1,6 @@
 # Doxen Experimental Framework - Pilot Phase
 
-**Status:** Day 1 Complete ✅
+**Status:** Day 2 Complete ✅
 **Phase:** Pilot (4 Projects, 5 Days)
 **Goal:** Validate methodology and optimize Phase 1 quality
 
@@ -98,6 +98,32 @@ Calculates repository characteristics and complexity scores.
 python3 scripts/calculate_characteristics.py
 ```
 
+### 4. `run_baseline.py`
+Runs full Doxen analysis (Phase 1 + Phase 2) on all pilot projects.
+
+**What it does:**
+- Phase 1: Discovery (RepositoryAnalyzer, WorkflowMapper, ArchitectureExtractor)
+- Phase 2: Documentation Generation (README.md, ARCHITECTURE.md)
+- Captures timing metrics for each phase
+- Saves individual and aggregate metrics
+
+**Output:**
+- `projects/*/doxen_output/analysis/` - Discovery JSON and markdown
+- `projects/*/doxen_output/docs/` - Generated documentation
+- `projects/*/doxen_output/metrics.json` - Project metrics
+- `results/baseline_metrics.json` - Aggregate metrics
+- `results/baseline_run.log` - Full execution log
+
+**Usage:**
+```bash
+cd experimental
+python3 scripts/run_baseline.py
+```
+
+**Requirements:**
+- AWS Bedrock access (CLAUDE_CODE_USE_BEDROCK=1 + AWS_PROFILE set)
+- OR Anthropic API key (ANTHROPIC_API_KEY)
+
 ## Ground Truth Data
 
 ### FastAPI
@@ -139,9 +165,32 @@ python3 scripts/calculate_characteristics.py
 - Django uses .rst/.txt files (handled)
 - Express and Next.js have minimal extracted docs (fewer guide files)
 
-## Next: Day 2 - Baseline Analysis
+## Day 2 Deliverables ✅
 
-**Goal:** Run Doxen on all 4 projects and collect baseline metrics
+- [x] Ran Doxen analysis on all 4 projects
+- [x] 100% success rate (4/4 projects completed)
+- [x] Total time: 139.6s (~2.3 min) - 10x faster than estimated!
+- [x] All outputs generated and validated
+- [x] Metrics captured comprehensively
+
+**Performance:**
+| Project | Discovery | Docs | Total |
+|---------|-----------|------|-------|
+| FastAPI | 3.7s | 19.9s | 23.6s |
+| Express | 3.5s | 29.4s | 32.9s |
+| Django | 4.5s | 29.2s | 33.7s |
+| Next.js | 15.6s | 33.8s | 49.4s |
+
+**Key Findings:**
+- Framework detection: 100% accurate
+- LLM usage: 13 calls, ~$0.13 total cost
+- 0 API endpoints (expected for framework source repos)
+- Documentation: 56-97 lines README, 91-123 lines ARCHITECTURE
+- All JSON/markdown outputs valid
+
+## Next: Day 3 - Automated Evaluation
+
+**Goal:** Compare outputs to ground truth and calculate quality metrics
 
 **Tasks:**
 1. Run Doxen Phase 1 on each project
@@ -192,4 +241,5 @@ python3 scripts/calculate_characteristics.py
 ---
 
 **Last Updated:** 2026-03-26
-**Phase:** Day 1 Complete ✅
+**Phase:** Day 2 Complete ✅
+**Next:** Day 3 - Automated Evaluation

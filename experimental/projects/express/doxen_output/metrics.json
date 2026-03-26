@@ -1,0 +1,34 @@
+{
+  "project": "express",
+  "repo_path": "/home/kefei/project/doxen/experimental/projects/express/repo",
+  "output_dir": "/home/kefei/project/doxen/experimental/projects/express/doxen_output",
+  "success": true,
+  "phases": {
+    "discovery": {
+      "success": true,
+      "duration_seconds": 3.4572293758392334,
+      "outputs": {
+        "summary": true,
+        "repository": true,
+        "workflow": true,
+        "architecture": true
+      }
+    },
+    "documentation": {
+      "success": true,
+      "duration_seconds": 29.44517993927002,
+      "readme": {
+        "lines": 72,
+        "bytes": 2480,
+        "duration_seconds": 10.480885982513428
+      },
+      "architecture": {
+        "lines": 107,
+        "bytes": 4232,
+        "duration_seconds": 18.96380376815796
+      }
+    }
+  },
+  "errors": [],
+  "total_duration_seconds": 32.90240931510925
+}

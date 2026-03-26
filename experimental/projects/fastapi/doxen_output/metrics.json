@@ -1,0 +1,34 @@
+{
+  "project": "fastapi",
+  "repo_path": "/home/kefei/project/doxen/experimental/projects/fastapi/repo",
+  "output_dir": "/home/kefei/project/doxen/experimental/projects/fastapi/doxen_output",
+  "success": true,
+  "phases": {
+    "discovery": {
+      "success": true,
+      "duration_seconds": 3.66621732711792,
+      "outputs": {
+        "summary": true,
+        "repository": true,
+        "workflow": true,
+        "architecture": true
+      }
+    },
+    "documentation": {
+      "success": true,
+      "duration_seconds": 19.88619375228882,
+      "readme": {
+        "lines": 56,
+        "bytes": 2607,
+        "duration_seconds": 7.062933444976807
+      },
+      "architecture": {
+        "lines": 123,
+        "bytes": 4719,
+        "duration_seconds": 12.821222066879272
+      }
+    }
+  },
+  "errors": [],
+  "total_duration_seconds": 23.55241107940674
+}

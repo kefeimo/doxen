@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-03-26 13:47:12",
+  "total_duration_seconds": 139.6185598373413,
+  "projects": {
+    "fastapi": {
+      "project": "fastapi",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/fastapi/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/fastapi/doxen_output",
+      "success": true,
+      "phases": {
+        "discovery": {
+          "success": true,
+          "duration_seconds": 3.66621732711792,
+          "outputs": {
+            "summary": true,
+            "repository": true,
+            "workflow": true,
+            "architecture": true
+          }
+        },
+        "documentation": {
+          "success": true,
+          "duration_seconds": 19.88619375228882,
+          "readme": {
+            "lines": 56,
+            "bytes": 2607,
+            "duration_seconds": 7.062933444976807
+          },
+          "architecture": {
+            "lines": 123,
+            "bytes": 4719,
+            "duration_seconds": 12.821222066879272
+          }
+        }
+      },
+      "errors": [],
+      "total_duration_seconds": 23.55241107940674
+    },
+    "express": {
+      "project": "express",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/express/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/express/doxen_output",
+      "success": true,
+      "phases": {
+        "discovery": {
+          "success": true,
+          "duration_seconds": 3.4572293758392334,
+          "outputs": {
+            "summary": true,
+            "repository": true,
+            "workflow": true,
+            "architecture": true
+          }
+        },
+        "documentation": {
+          "success": true,
+          "duration_seconds": 29.44517993927002,
+          "readme": {
+            "lines": 72,
+            "bytes": 2480,
+            "duration_seconds": 10.480885982513428
+          },
+          "architecture": {
+            "lines": 107,
+            "bytes": 4232,
+            "duration_seconds": 18.96380376815796
+          }
+        }
+      },
+      "errors": [],
+      "total_duration_seconds": 32.90240931510925
+    },
+    "django": {
+      "project": "django",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/django/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/django/doxen_output",
+      "success": true,
+      "phases": {
+        "discovery": {
+          "success": true,
+          "duration_seconds": 4.530542612075806,
+          "outputs": {
+            "summary": true,
+            "repository": true,
+            "workflow": true,
+            "architecture": true
+          }
+        },
+        "documentation": {
+          "success": true,
+          "duration_seconds": 29.191933155059814,
+          "readme": {
+            "lines": 60,
+            "bytes": 2588,
+            "duration_seconds": 11.62711787223816
+          },
+          "architecture": {
+            "lines": 91,
+            "bytes": 3875,
+            "duration_seconds": 17.56044054031372
+          }
+        }
+      },
+      "errors": [],
+      "total_duration_seconds": 33.72247576713562
+    },
+    "nextjs": {
+      "project": "nextjs",
+      "repo_path": "/home/kefei/project/doxen/experimental/projects/nextjs/repo",
+      "output_dir": "/home/kefei/project/doxen/experimental/projects/nextjs/doxen_output",
+      "success": true,
+      "phases": {
+        "discovery": {
+          "success": true,
+          "duration_seconds": 15.630127191543579,
+          "outputs": {
+            "summary": true,
+            "repository": true,
+            "workflow": true,
+            "architecture": true
+          }
+        },
+        "documentation": {
+          "success": true,
+          "duration_seconds": 33.80574059486389,
+          "readme": {
+            "lines": 97,
+            "bytes": 3236,
+            "duration_seconds": 15.098314046859741
+          },
+          "architecture": {
+            "lines": 99,
+            "bytes": 4070,
+            "duration_seconds": 18.701237201690674
+          }
+        }
+      },
+      "errors": [],
+      "total_duration_seconds": 49.43586778640747
+    }
+  }
+}

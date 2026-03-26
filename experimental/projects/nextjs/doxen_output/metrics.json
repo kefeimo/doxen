@@ -1,0 +1,34 @@
+{
+  "project": "nextjs",
+  "repo_path": "/home/kefei/project/doxen/experimental/projects/nextjs/repo",
+  "output_dir": "/home/kefei/project/doxen/experimental/projects/nextjs/doxen_output",
+  "success": true,
+  "phases": {
+    "discovery": {
+      "success": true,
+      "duration_seconds": 15.630127191543579,
+      "outputs": {
+        "summary": true,
+        "repository": true,
+        "workflow": true,
+        "architecture": true
+      }
+    },
+    "documentation": {
+      "success": true,
+      "duration_seconds": 33.80574059486389,
+      "readme": {
+        "lines": 97,
+        "bytes": 3236,
+        "duration_seconds": 15.098314046859741
+      },
+      "architecture": {
+        "lines": 99,
+        "bytes": 4070,
+        "duration_seconds": 18.701237201690674
+      }
+    }
+  },
+  "errors": [],
+  "total_duration_seconds": 49.43586778640747
+}
