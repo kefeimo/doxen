@@ -34,7 +34,17 @@
       "Bash(python3 tests/test_report_structure.py)",
       "Bash(python3 tests/test_framework_detection.py)",
       "Bash(ls -la tests/test_*discovery*.py)",
-      "Bash(ls tests/test_*doc*.py)"
+      "Bash(ls tests/test_*doc*.py)",
+      "Bash(python3 tests/test_architecture_extractor.py)",
+      "Bash(python3 tests/test_architecture_extractor.py rag-demo)",
+      "Bash(python3 tests/test_audit_template_docs.py rag-demo)",
+      "Bash(mv test_audit_template_discovery.py test_discovery.py)",
+      "Bash(mv test_audit_template_docs.py test_docs.py)",
+      "Bash(ls -1 tests/test_*.py)",
+      "Bash(ls -1 /home/kefei/project/doxen/tests/test_*.py)",
+      "Bash(python3 tests/test_discovery.py)",
+      "Bash(python3 tests/test_docs.py)",
+      "Bash(ls -1 tests/test*.py)"
     ],
     "additionalDirectories": [
       "/home/kefei/project/doxen/.doxen/docs",
