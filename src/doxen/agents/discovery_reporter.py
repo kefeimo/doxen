@@ -611,11 +611,108 @@ class DiscoveryReporter:
         lines.append("---")
         lines.append("")
 
-        # Placeholder for now
-        lines.append("## Analysis Status")
+        # Architectural Pattern
+        lines.append("## Architectural Pattern")
         lines.append("")
-        lines.append("ArchitectureExtractor not yet implemented.")
+        pattern = analysis.get("pattern", "Unknown")
+        lines.append(f"**Pattern:** {pattern.title()}")
         lines.append("")
+
+        # Data Flow
+        data_flow = analysis.get("data_flow", {})
+        if data_flow:
+            lines.append("### Data Flow")
+            lines.append("")
+            lines.append(f"**Primary Flow:** {data_flow.get('primary_flow', 'Not detected')}")
+            lines.append(f"**API Communication:** {data_flow.get('api_communication', 'None')}")
+            lines.append(f"**Data Persistence:** {data_flow.get('data_persistence', 'Not detected')}")
+            if data_flow.get('external_integrations', 0) > 0:
+                lines.append(f"**External Integrations:** {data_flow['external_integrations']} detected")
+            lines.append("")
+
+        # Components
+        lines.append("## Components")
+        lines.append("")
+        components = analysis.get("components", [])
+        if components:
+            for component in components:
+                lines.append(f"### {component['name'].title()}")
+                lines.append("")
+                lines.append(f"- **Path:** `{component['path']}`")
+                lines.append(f"- **Language:** {component['language']}")
+                lines.append(f"- **Type:** {component['type']}")
+                lines.append(f"- **Purpose:** {component['purpose']}")
+
+                if component.get('entry_points'):
+                    lines.append(f"- **Entry Points:** {', '.join(f'`{ep}`' for ep in component['entry_points'])}")
+
+                if component.get('api_endpoint_count', 0) > 0:
+                    lines.append(f"- **API Endpoints:** {component['api_endpoint_count']}")
+
+                if component.get('dependencies'):
+                    lines.append(f"- **Dependencies:** {', '.join(component['dependencies'])}")
+
+                if component.get('exports'):
+                    lines.append(f"- **Exports:** {', '.join(component['exports'])}")
+
+                lines.append("")
+        else:
+            lines.append("No components identified")
+            lines.append("")
+
+        # Design Patterns
+        lines.append("## Design Patterns")
+        lines.append("")
+        patterns = analysis.get("design_patterns", [])
+        if patterns:
+            for pattern in patterns:
+                lines.append(f"### {pattern['name']}")
+                lines.append("")
+                lines.append(f"**Description:** {pattern['description']}")
+                lines.append("")
+                lines.append(f"**Evidence:** {pattern['evidence']}")
+                lines.append("")
+        else:
+            lines.append("No specific design patterns detected")
+            lines.append("")
+
+        # Tech Stack
+        lines.append("## Technology Stack")
+        lines.append("")
+        tech_stack = analysis.get("tech_stack", {})
+        if tech_stack:
+            lines.append(f"**Framework:** {tech_stack.get('framework', 'Unknown')}")
+            lines.append(f"**Primary Language:** {tech_stack.get('primary_language', 'Unknown')}")
+            lines.append("")
+
+            languages = tech_stack.get("languages", {})
+            if languages:
+                lines.append("### Languages")
+                lines.append("")
+                for lang, count in languages.items():
+                    lines.append(f"- **{lang.title()}:** {count} files")
+                lines.append("")
+
+            key_deps = tech_stack.get("key_dependencies", {})
+            if key_deps:
+                lines.append("### Key Dependencies")
+                lines.append("")
+                for lang, deps in key_deps.items():
+                    if deps:
+                        lines.append(f"**{lang.title()}:**")
+                        for dep in deps[:10]:
+                            lines.append(f"- {dep}")
+                        lines.append("")
+
+        # Integration Points
+        integrations = analysis.get("integrations", [])
+        if integrations:
+            lines.append("## Integration Points")
+            lines.append("")
+            for integration in integrations:
+                lines.append(f"- **{integration['type'].title()}:** {integration['count']} call(s)")
+                lines.append(f"  - {integration['description']}")
+            lines.append("")
 
         return "\n".join(lines)
 

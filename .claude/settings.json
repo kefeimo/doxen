@@ -21,7 +21,20 @@
       "Bash(python3 tests/test_repository_analyzer.py)",
       "Bash(python3 tests/test_workflow_mapper.py)",
       "Bash(python3 -c \":*)",
-      "Bash(python3 tests/test_discovery_pipeline.py)"
+      "Bash(python3 tests/test_discovery_pipeline.py)",
+      "Bash(/home/kefei/project/doxen/.doxen/analysis/PHASE1-QUALITY-FINAL.md:*)",
+      "Bash(/home/kefei/project/doxen/docs/SESSION-2026-03-25.md:*)",
+      "Bash(python3 tests/test_doc_generator.py)",
+      "Bash(python3 -c \"import json; data = json.load\\(open\\(''''/home/kefei/project/doxen/.doxen/rag-demo-docs/analysis/DISCOVERY-SUMMARY.json''''\\)\\); print\\(json.dumps\\(data[''''repository''''].get\\(''''file_roles'''', {}\\), indent=2\\)\\)\")",
+      "Bash(python3 -c \"import json; data = json.load\\(open\\(''/home/kefei/project/doxen/.doxen/rag-demo-docs/analysis/DISCOVERY-SUMMARY.json''\\)\\); print\\(''=== ENV TEMPLATES ===''\\); print\\(json.dumps\\(data[''repository''].get\\(''file_roles'', {}\\).get\\(''env_template'', []\\), indent=2\\)\\); print\\(''\\\\n=== STARTUP SCRIPTS ===''\\); print\\(json.dumps\\(data[''repository''].get\\(''file_roles'', {}\\).get\\(''startup_script'', []\\), indent=2\\)\\); print\\(''\\\\n=== PACKAGE CONFIGS ===''\\); print\\(json.dumps\\(data[''repository''].get\\(''file_roles'', {}\\).get\\(''package_config'', []\\), indent=2\\)\\)\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3 tests/test_architecture_generator.py)",
+      "Bash(python3 tests/test_audit_template_discovery.py)",
+      "Bash(python3 tests/test_audit_template_docs.py)",
+      "Bash(python3 tests/test_report_structure.py)",
+      "Bash(python3 tests/test_framework_detection.py)",
+      "Bash(ls -la tests/test_*discovery*.py)",
+      "Bash(ls tests/test_*doc*.py)"
     ],
     "additionalDirectories": [
       "/home/kefei/project/doxen/.doxen/docs",

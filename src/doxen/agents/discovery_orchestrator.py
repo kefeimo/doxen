@@ -8,6 +8,7 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 
 from doxen.agents.repository_analyzer import RepositoryAnalyzer
 from doxen.agents.workflow_mapper import WorkflowMapper
+from doxen.agents.architecture_extractor import ArchitectureExtractor
 from doxen.agents.discovery_reporter import DiscoveryReporter
 from doxen.analyzer.llm_analyzer import LLMAnalyzer
 
@@ -44,7 +45,7 @@ class DiscoveryOrchestrator:
             llm_analyzer=llm_analyzer,
             cache_dir=self.cache_dir
         )
-        # self.arch_extractor = ArchitectureExtractor(llm_analyzer=llm_analyzer)  # TODO
+        self.arch_extractor = ArchitectureExtractor(llm_analyzer=llm_analyzer)
 
         # Initialize reporter
         self.reporter = DiscoveryReporter(output_dir)
@@ -83,14 +84,14 @@ class DiscoveryOrchestrator:
             progress.remove_task(task2)
             console.print("✓ Workflow analysis complete")
 
-            # Step 3: Architecture Extraction (TODO)
-            # task3 = progress.add_task("Extracting architecture...", total=None)
-            # arch_analysis = self.arch_extractor.analyze(
-            #     self.repo_path, repo_analysis, workflow_analysis
-            # )
-            # self.results["architecture"] = arch_analysis
-            # progress.remove_task(task3)
-            # console.print("✓ Architecture analysis complete")
+            # Step 3: Architecture Extraction
+            task3 = progress.add_task("Extracting architecture...", total=None)
+            arch_analysis = self.arch_extractor.analyze(
+                self.repo_path, repo_analysis, workflow_analysis
+            )
+            self.results["architecture"] = arch_analysis
+            progress.remove_task(task3)
+            console.print("✓ Architecture analysis complete")
 
         # Save reports
         console.print("\n[bold cyan]Saving analysis reports...[/bold cyan]")
@@ -117,12 +118,12 @@ class DiscoveryOrchestrator:
             )
             console.print(f"  → {report_path.name}")
 
-        # Save architecture analysis (TODO)
-        # if "architecture" in self.results:
-        #     report_path = self.reporter.save_architecture_analysis(
-        #         self.results["architecture"]
-        #     )
-        #     console.print(f"  → {report_path.name}")
+        # Save architecture analysis
+        if "architecture" in self.results:
+            report_path = self.reporter.save_architecture_analysis(
+                self.results["architecture"]
+            )
+            console.print(f"  → {report_path.name}")
 
         # Save combined JSON
         summary_path = self.reporter.save_discovery_summary(self.results)
