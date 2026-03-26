@@ -3,10 +3,16 @@
 Quick test of framework pattern detection without full analysis.
 
 Usage:
-    python test_framework_patterns.py <project_name> <framework_name>
+    python test_framework_patterns.py <project_name> <framework_name> [depth]
 
 Example:
     python test_framework_patterns.py fastapi FastAPI
+    python test_framework_patterns.py fastapi FastAPI 500  # Deeper scan
+
+Depth levels:
+    100 (default) - Shallow scan
+    500 - Medium depth
+    2000 - Deep scan
 """
 
 import sys
@@ -20,13 +26,15 @@ from doxen.extractors.framework_patterns import detect_framework_patterns
 
 
 def main():
-    if len(sys.argv) != 3:
-        print("Usage: python test_framework_patterns.py <project_name> <framework_name>")
+    if len(sys.argv) < 3 or len(sys.argv) > 4:
+        print("Usage: python test_framework_patterns.py <project_name> <framework_name> [depth]")
         print("Example: python test_framework_patterns.py fastapi FastAPI")
+        print("        python test_framework_patterns.py fastapi FastAPI 500  # Deeper scan")
         sys.exit(1)
 
     project_name = sys.argv[1]
     framework_name = sys.argv[2]
+    max_files = int(sys.argv[3]) if len(sys.argv) == 4 else 100
 
     repo_path = Path(f"experimental/projects/{project_name}/repo")
     if not repo_path.exists():
@@ -47,13 +55,14 @@ def main():
     print(f"{'='*60}\n")
     print(f"Framework: {framework_name}")
     print(f"Repository: {repo_path}")
+    print(f"Max Files to Scan: {max_files}")
     print(f"Ground Truth Patterns: {len(gt_patterns)}")
     if gt_patterns:
         for p in sorted(gt_patterns):
             print(f"  - {p}")
 
     print(f"\n{'='*60}")
-    print("Detecting Framework Patterns...")
+    print(f"Detecting Framework Patterns (depth: {max_files} files)...")
     print(f"{'='*60}\n")
 
     # Run detection
@@ -61,7 +70,7 @@ def main():
         framework_name,
         repo_path,
         verify_in_code=True,
-        max_files_to_scan=100
+        max_files_to_scan=max_files
     )
 
     # Display results

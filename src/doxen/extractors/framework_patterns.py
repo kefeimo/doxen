@@ -4,6 +4,14 @@ Framework-aware pattern detection catalog.
 This module provides a catalog of expected patterns for common frameworks,
 enabling automatic detection based on framework knowledge rather than just
 code analysis.
+
+DESIGN PRINCIPLE:
+- "guaranteed": Inherent to framework (REST in FastAPI, Middleware in Express)
+- "likely": Common but verify if possible (REST in Django apps)
+- "evidence_required": Only include if found in code (ORM, GraphQL, etc.)
+
+DO NOT hardcode to match specific ground truth - let code scanning find patterns!
+Increasing max_files_to_scan is how we do "deeper analysis", not adding more guaranteed patterns.
 """
 
 from typing import Dict, List, Set, Optional
@@ -34,34 +42,34 @@ FRAMEWORK_PATTERNS = {
     },
     "Django": {
         "guaranteed": [
-            "MVT (Model-View-Template)",
-            "ORM (Object-Relational Mapping)",
-            "Middleware",
+            "MVC",  # Django's MVT (Model-View-Template), commonly called MVC
+            "ORM",  # Django ORM is built-in
+            "Middleware",  # Middleware system is core
         ],
         "likely": [
-            "REST API",
-            "Admin Interface",
-            "Template Engine",
+            "REST",  # Common with Django REST Framework
         ],
         "evidence_required": [
-            "GraphQL",
-            "Celery",
-            "Strategy Pattern",
+            "Async",  # Django 3.0+ async support
+            "Strategy",  # Pluggable backends (if found in code)
+            "Repository",  # If implemented by users
+            "GraphQL",  # Via extensions
         ]
     },
     "Express": {
         "guaranteed": [
-            "Middleware",
-            "Routing",
+            "Middleware",  # Middleware is core to Express
+            "Routing",  # Routing is core
         ],
         "likely": [
-            "REST API",
+            "REST",  # Most Express apps are REST APIs
         ],
         "evidence_required": [
-            "Async/Await",
-            "ORM",
-            "GraphQL",
-            "WebSocket",
+            "Async",  # Async/await in handlers (if found)
+            "ORM",  # Database ORMs (if found in code)
+            "Repository",  # Repository pattern (if implemented)
+            "GraphQL",  # Via extensions
+            "WebSocket",  # Via extensions
         ]
     },
     "Next.js": {
