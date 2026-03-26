@@ -200,3 +200,32 @@ Code verification with evidence strings is better than assuming patterns exist.
 **Recommendation:** Use depth=500 for pilot re-evaluation
 **Expected Impact:** +10-15% recall improvement across all projects
 
+
+---
+
+## Future: Adaptive Depth Based on Codebase
+
+**Principle:** Adjust scan depth based on repository size and complexity
+
+```python
+def calculate_scan_depth(repo_path: Path) -> int:
+    """Calculate optimal scan depth based on codebase characteristics."""
+    total_files = len(list(repo_path.rglob("*.py")))
+    
+    if total_files < 200:
+        return 2000  # Small repos: deep scan is affordable
+    elif total_files < 1000:
+        return 1000  # Medium repos: balanced depth
+    else:
+        # Large repos: adaptive based on complexity
+        return min(500, total_files // 5)  # 20% of files, capped at 500
+```
+
+**Benefits:**
+- Small projects get thorough analysis
+- Large projects stay within budget
+- Automatic optimization without manual tuning
+
+**Status:** Planned for future implementation
+**Current:** Fixed depth=500 as good default
+
