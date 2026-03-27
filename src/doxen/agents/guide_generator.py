@@ -75,8 +75,6 @@ class GuideGenerator:
         )
 
     def _load_template(self) -> Template:
-
-    def _load_template(self) -> Template:
         """Load Jinja2 template."""
         if not self.template_path.exists():
             raise FileNotFoundError(f"Template not found: {self.template_path}")
