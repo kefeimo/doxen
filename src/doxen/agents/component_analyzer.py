@@ -268,15 +268,46 @@ class ComponentAnalyzer:
 
         language = api_data.get("language", "unknown")
 
-        # Ruby doesn't have easily accessible docstrings via Ripper
-        # Assume all extracted APIs are "documented" (structure is documented)
+        # Ruby: YARD extracts docstrings, calculate real coverage
         if language == "ruby":
-            total_apis = (
-                api_data.get("total_classes", 0) +
-                api_data.get("total_modules", 0) +
-                api_data.get("total_methods", 0)
-            )
-            return 100.0 if total_apis > 0 else 0.0
+            total_apis = 0
+            documented_apis = 0
+
+            # Count classes and their methods
+            for cls in api_data.get("classes", []):
+                total_apis += 1
+                if cls.get("docstring"):
+                    documented_apis += 1
+
+                for method in cls.get("methods", []):
+                    total_apis += 1
+                    if method.get("docstring"):
+                        documented_apis += 1
+
+            # Count modules and their methods
+            for mod in api_data.get("modules", []):
+                total_apis += 1
+                if mod.get("docstring"):
+                    documented_apis += 1
+
+                for method in mod.get("methods", []):
+                    total_apis += 1
+                    if method.get("docstring"):
+                        documented_apis += 1
+
+            # Count top-level methods
+            for method in api_data.get("methods", []):
+                total_apis += 1
+                if method.get("docstring"):
+                    documented_apis += 1
+
+            # Constants (usually not documented)
+            for const in api_data.get("constants", []):
+                total_apis += 1
+                if const.get("docstring"):
+                    documented_apis += 1
+
+            return (documented_apis / total_apis * 100.0) if total_apis > 0 else 0.0
 
         # Python: count docstrings
         total_apis = 0

@@ -24,23 +24,29 @@
 
 **Implemented:**
 - rbenv environment setup (Ruby 3.4.1, .ruby-version, Gemfile)
-- Ruby API extraction via Ripper (built-in AST parser)
-- `ruby_parser.rb` (450 lines) - Classes, modules, methods, parameters
+- Ruby API extraction via YARD (Yet Another Ruby Documentation)
+- `ruby_parser_yard.rb` (240 lines) - Full docstring extraction with @param, @return, @example tags
 - `ruby_api_extractor.py` (150 lines) - Python wrapper
 - Template enhanced for Ruby (modules section)
-- ComponentAnalyzer enhanced for Ruby
+- ComponentAnalyzer enhanced for Ruby with real coverage metrics
 
 **Tested on discourse (Ruby on Rails):**
 - ✅ 8 Rails components detected (models, controllers, serializers, jobs, services, helpers, mailers, queries)
-- ✅ 3 components documented: helpers (12 modules, 144 methods), mailers (9 classes, 51 methods), queries (2 classes, 39 methods)
-- ✅ 257 APIs documented, 47.5 KB generated
-- ✅ 100% coverage (Ruby structure coverage, no docstring dependency)
+- ✅ 3 components documented: helpers (11 modules, 54 methods), mailers (9 classes, 60 methods)
+- ✅ 114 APIs documented, 33.6 KB generated
+- ✅ Real coverage metrics: 0-1.64% (realistic - discourse uses TomDoc, not YARD format)
 
 **Setup:**
 - rbenv installed and configured
 - Ruby 3.4.1 installed (supports modern Rails 7+ syntax)
-- Gemfile created (no external gems, using built-in Ripper)
-- CLAUDE.md updated with rbenv instructions
+- Gemfile updated (adds YARD gem for docstring extraction)
+- CLAUDE.md updated with rbenv and YARD instructions
+
+**YARD vs TomDoc:**
+- YARD extracts @param, @return, @example tags from comments
+- discourse uses TomDoc format (# param - description), which YARD extracts as plain text
+- Coverage is low on discourse because most methods lack any docstrings
+- For projects with YARD-formatted comments, coverage will be higher
 
 **Files Generated:**
 - `REFERENCE-HELPERS.md` (27.8 KB) - 12 modules

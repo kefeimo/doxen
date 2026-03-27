@@ -33,7 +33,11 @@
 - **rbenv automatically switches Ruby version when you cd to this directory**
 - **For all Ruby commands:**
   - Just use `ruby` command (rbenv shim auto-routes to correct version)
-  - Example: `ruby src/doxen/extractors/ruby_parser.rb file.rb`
+  - Example: `ruby src/doxen/extractors/ruby_parser_yard.rb file.rb`
+- **Ruby API Extraction:**
+  - Uses YARD (Yet Another Ruby Documentation) for extracting docstrings
+  - Extracts: classes, modules, methods, @param tags, @return types, @examples
+  - Install YARD: `gem install yard` (or via Gemfile: `bundle install`)
 - **Setup (one-time):**
   1. Install rbenv: `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`
   2. Add to shell: `echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc && source ~/.bashrc`

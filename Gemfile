@@ -6,5 +6,5 @@ source "https://rubygems.org"
 # Using Ruby 3.4+ for modern syntax support (discourse requires ~> 3.4)
 ruby "~> 3.4"
 
-# No external gems needed - we use Ripper (built-in)
-# Add Ruby gems here if needed in the future
+# YARD - Ruby documentation tool for API extraction
+gem "yard", "~> 0.9"

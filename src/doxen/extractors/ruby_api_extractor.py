@@ -1,4 +1,4 @@
-"""Ruby API extractor using Ripper (via subprocess)."""
+"""Ruby API extractor using YARD (via subprocess)."""
 
 import json
 import subprocess
@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional
 
 
 class RubyAPIExtractor:
-    """Extract API elements from Ruby source code using Ripper."""
+    """Extract API elements from Ruby source code using YARD."""
 
     def __init__(self, ruby_path: str = "ruby"):
         """Initialize Ruby API extractor.
@@ -17,7 +17,7 @@ class RubyAPIExtractor:
                       rbenv automatically routes to correct Ruby version based on .ruby-version
         """
         self.ruby_path = ruby_path
-        self.parser_script = Path(__file__).parent / "ruby_parser.rb"
+        self.parser_script = Path(__file__).parent / "ruby_parser_yard.rb"
 
         if not self.parser_script.exists():
             raise FileNotFoundError(f"Ruby parser script not found: {self.parser_script}")
