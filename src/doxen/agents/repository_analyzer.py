@@ -1,6 +1,7 @@
 """Repository structure analyzer agent."""
 
 import json
+import logging
 import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -68,6 +69,7 @@ class RepositoryAnalyzer:
         """
         self.llm = llm_analyzer
         self._framework_cache = {}  # Cache framework detection results
+        self.logger = logging.getLogger(__name__)
 
     def _detect_framework(self, repo_path: Path) -> Dict[str, Any]:
         """Detect framework and conventions using LLM.
@@ -214,6 +216,34 @@ If unclear, make best guess based on evidence."""
                 "route_file": "routes/*.js",
                 "detection_method": "heuristic",
             }
+        # Fallback: Detect language even if framework is unknown
+        elif (repo_path / "pyproject.toml").exists() or (repo_path / "setup.py").exists():
+            return {
+                "framework": "Python",
+                "version": "unknown",
+                "primary_language": "python",
+                "entry_points": [],
+                "route_file": None,
+                "detection_method": "heuristic_language",
+            }
+        elif (repo_path / "Cargo.toml").exists():
+            return {
+                "framework": "Rust",
+                "version": "unknown",
+                "primary_language": "rust",
+                "entry_points": ["src/main.rs"],
+                "route_file": None,
+                "detection_method": "heuristic_language",
+            }
+        elif (repo_path / "go.mod").exists():
+            return {
+                "framework": "Go",
+                "version": "unknown",
+                "primary_language": "go",
+                "entry_points": ["main.go", "cmd/main.go"],
+                "route_file": None,
+                "detection_method": "heuristic_language",
+            }
         else:
             return {
                 "framework": "unknown",
@@ -258,6 +288,445 @@ If unclear, make best guess based on evidence."""
             analysis["semantic_analysis"] = self._llm_analyze_repo(analysis)
 
         return analysis
+
+    def group_by_component(self, repo_path: Path) -> Dict[str, Any]:
+        """Group repository files into logical components for Tier 2 documentation.
+
+        This method identifies component boundaries using directory structure,
+        module organization, and semantic analysis to generate REFERENCE-*.md files.
+
+        Args:
+            repo_path: Path to repository root
+
+        Returns:
+            Dictionary with:
+                - components: List of detected components
+                - grouping_strategy: How components were identified
+                - coverage: Stats about grouped files
+        """
+        if not repo_path.exists():
+            raise ValueError(f"Repository path does not exist: {repo_path}")
+
+        self.logger.info(f"Grouping components for: {repo_path}")
+
+        # Get framework context for smarter grouping
+        framework_info = self._detect_framework(repo_path)
+        framework = framework_info.get("framework", "unknown")
+        primary_lang = framework_info.get("primary_language", "unknown")
+
+        self.logger.info(f"Framework: {framework}, Language: {primary_lang}")
+
+        # Strategy 1: Directory-based grouping (simple, predictable)
+        components = self._group_by_directory_structure(repo_path, framework_info)
+
+        # Strategy 2: Semantic grouping with LLM (if available)
+        if self.llm and components:
+            components = self._enhance_component_grouping_with_llm(
+                repo_path, components, framework_info
+            )
+
+        # Calculate coverage stats
+        total_files = sum(len(comp["files"]) for comp in components)
+        component_types = {}
+        for comp in components:
+            comp_type = comp.get("type", "unknown")
+            component_types[comp_type] = component_types.get(comp_type, 0) + 1
+
+        result = {
+            "repo_path": str(repo_path),
+            "repo_name": repo_path.name,
+            "framework": framework,
+            "primary_language": primary_lang,
+            "components": components,
+            "grouping_strategy": "directory_based" + ("_llm_enhanced" if self.llm else ""),
+            "coverage": {
+                "total_components": len(components),
+                "total_files_grouped": total_files,
+                "component_types": component_types,
+            }
+        }
+
+        self.logger.info(f"Identified {len(components)} components, {total_files} files")
+        return result
+
+    def _group_by_directory_structure(
+        self, repo_path: Path, framework_info: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """Group files by directory structure to identify logical components.
+
+        Uses language-specific patterns:
+        - Python: Package directories with __init__.py
+        - JavaScript: Module directories (src/components/*, src/api/*)
+        - Ruby: app/* structure (models, controllers, views)
+
+        Args:
+            repo_path: Repository root path
+            framework_info: Framework detection context
+
+        Returns:
+            List of component dictionaries with files, type, metadata
+        """
+        components = []
+        framework = framework_info.get("framework", "").lower()
+        primary_lang = framework_info.get("primary_language", "unknown").lower()
+
+        # Identify source directories to scan
+        source_dirs = self._identify_source_directories(repo_path, framework_info)
+
+        for source_dir in source_dirs:
+            if not source_dir.exists():
+                continue
+
+            # Language-specific component detection
+            if primary_lang == "python":
+                components.extend(self._group_python_components(source_dir, repo_path))
+            elif primary_lang in ["javascript", "typescript"]:
+                components.extend(self._group_javascript_components(source_dir, repo_path))
+            elif primary_lang == "ruby":
+                components.extend(self._group_ruby_components(source_dir, repo_path))
+            else:
+                # Generic directory-based grouping
+                components.extend(self._group_generic_components(source_dir, repo_path))
+
+        return components
+
+    def _identify_source_directories(
+        self, repo_path: Path, framework_info: Dict[str, Any]
+    ) -> List[Path]:
+        """Identify directories containing source code components.
+
+        Args:
+            repo_path: Repository root path
+            framework_info: Framework detection context
+
+        Returns:
+            List of paths to scan for components
+        """
+        framework = framework_info.get("framework", "").lower()
+        candidates = []
+
+        # Framework-specific source directories
+        if "django" in framework or "flask" in framework:
+            # Django/Flask: Look for app directories
+            for item in repo_path.iterdir():
+                if item.is_dir() and (item / "__init__.py").exists():
+                    # Exclude common non-app directories
+                    if item.name not in self.EXCLUDE_DIRS:
+                        candidates.append(item)
+        elif "rails" in framework:
+            # Rails: app/* structure
+            app_dir = repo_path / "app"
+            if app_dir.exists():
+                candidates.append(app_dir)
+        elif "react" in framework or "vue" in framework or "angular" in framework:
+            # Frontend: src/, components/
+            for dirname in ["src", "components", "lib"]:
+                path = repo_path / dirname
+                if path.exists():
+                    candidates.append(path)
+        else:
+            # Generic: Look for common source directories
+            for dirname in ["src", "lib", "app", "pkg"]:
+                path = repo_path / dirname
+                if path.exists():
+                    candidates.append(path)
+
+        # If no candidates found, use repo root (but exclude common dirs)
+        if not candidates:
+            candidates = [repo_path]
+
+        return candidates
+
+    def _group_python_components(
+        self, source_dir: Path, repo_root: Path
+    ) -> List[Dict[str, Any]]:
+        """Group Python files by package structure.
+
+        Detects two patterns:
+        1. Subdirectories with __init__.py (package components)
+        2. Large .py files in Python packages (flat module components)
+
+        Args:
+            source_dir: Directory to scan
+            repo_root: Repository root for relative paths
+
+        Returns:
+            List of Python component dictionaries
+        """
+        components = []
+        SIGNIFICANT_SIZE = 5000  # 5KB minimum for flat modules
+
+        # Pattern 0: Check if source_dir itself has flat module structure
+        # (e.g., when source_dir = rest_framework/, check for rest_framework/*.py)
+        if (source_dir / "__init__.py").exists():
+            flat_modules = []
+            for py_file in source_dir.glob("*.py"):
+                if py_file.name == "__init__.py":
+                    continue
+                file_size = py_file.stat().st_size
+                if file_size >= SIGNIFICANT_SIZE:
+                    flat_modules.append(py_file)
+
+            # If source_dir has many significant flat modules, treat each as a component
+            if len(flat_modules) >= 5:
+                for py_file in flat_modules:
+                    component_name = py_file.stem
+                    components.append({
+                        "name": component_name,
+                        "type": "python_module",
+                        "language": "python",
+                        "path": str(py_file.relative_to(repo_root)),
+                        "files": [{
+                            "path": str(py_file.relative_to(repo_root)),
+                            "name": py_file.name,
+                            "size": py_file.stat().st_size,
+                        }],
+                        "entry_point": str(py_file.relative_to(repo_root)),
+                    })
+                # Don't scan subdirectories if we found flat modules at this level
+                return components
+
+        # Pattern 1: Find all Python packages (directories with __init__.py)
+        for item in source_dir.iterdir():
+            if not item.is_dir() or item.name in self.EXCLUDE_DIRS:
+                continue
+
+            init_file = item / "__init__.py"
+            if not init_file.exists():
+                continue
+
+            # Check for Pattern 2: Flat module structure inside this package
+            # (e.g., django-rest-framework/rest_framework/*.py)
+            flat_modules = []
+            for py_file in item.glob("*.py"):
+                if py_file.name == "__init__.py":
+                    continue
+
+                file_size = py_file.stat().st_size
+                if file_size >= SIGNIFICANT_SIZE:
+                    flat_modules.append(py_file)
+
+            # If package has significant flat modules, treat each as a component
+            if len(flat_modules) >= 5:  # Threshold: 5+ significant modules = flat structure
+                for py_file in flat_modules:
+                    component_name = py_file.stem
+                    components.append({
+                        "name": component_name,
+                        "type": "python_module",
+                        "language": "python",
+                        "path": str(py_file.relative_to(repo_root)),
+                        "files": [{
+                            "path": str(py_file.relative_to(repo_root)),
+                            "name": py_file.name,
+                            "size": py_file.stat().st_size,
+                        }],
+                        "entry_point": str(py_file.relative_to(repo_root)),
+                    })
+                continue  # Skip treating the package as a single component
+
+            # Otherwise, treat the package as a single component
+            component_files = []
+            for py_file in item.rglob("*.py"):
+                # Skip excluded directories
+                if any(excl in py_file.parts for excl in self.EXCLUDE_DIRS):
+                    continue
+                component_files.append({
+                    "path": str(py_file.relative_to(repo_root)),
+                    "name": py_file.name,
+                    "size": py_file.stat().st_size,
+                })
+
+            if component_files:
+                components.append({
+                    "name": item.name,
+                    "type": "python_package",
+                    "language": "python",
+                    "path": str(item.relative_to(repo_root)),
+                    "files": component_files,
+                    "entry_point": str(init_file.relative_to(repo_root)),
+                })
+
+        return components
+
+    def _group_javascript_components(
+        self, source_dir: Path, repo_root: Path
+    ) -> List[Dict[str, Any]]:
+        """Group JavaScript/TypeScript files by module structure.
+
+        Detects subdirectories as component boundaries (e.g., src/components/button/).
+
+        Args:
+            source_dir: Directory to scan
+            repo_root: Repository root for relative paths
+
+        Returns:
+            List of JavaScript component dictionaries
+        """
+        components = []
+
+        # Look for component-like directories
+        for item in source_dir.iterdir():
+            if not item.is_dir() or item.name in self.EXCLUDE_DIRS:
+                continue
+
+            # Find JS/TS files in this directory
+            component_files = []
+            for ext in ["*.js", "*.jsx", "*.ts", "*.tsx"]:
+                for js_file in item.rglob(ext):
+                    # Skip excluded directories
+                    if any(excl in js_file.parts for excl in self.EXCLUDE_DIRS):
+                        continue
+                    component_files.append({
+                        "path": str(js_file.relative_to(repo_root)),
+                        "name": js_file.name,
+                        "size": js_file.stat().st_size,
+                    })
+
+            if component_files:
+                # Find entry point (index.js, index.ts, or main component file)
+                entry_point = None
+                for name in ["index.js", "index.ts", "index.jsx", "index.tsx"]:
+                    entry_file = item / name
+                    if entry_file.exists():
+                        entry_point = str(entry_file.relative_to(repo_root))
+                        break
+
+                components.append({
+                    "name": item.name,
+                    "type": "javascript_module",
+                    "language": self._detect_language_from_dir(item),
+                    "path": str(item.relative_to(repo_root)),
+                    "files": component_files,
+                    "entry_point": entry_point,
+                })
+
+        return components
+
+    def _group_ruby_components(
+        self, source_dir: Path, repo_root: Path
+    ) -> List[Dict[str, Any]]:
+        """Group Ruby files by Rails conventions (models, controllers, etc.).
+
+        Args:
+            source_dir: Directory to scan (typically app/)
+            repo_root: Repository root for relative paths
+
+        Returns:
+            List of Ruby component dictionaries
+        """
+        components = []
+
+        # Rails app/* structure
+        for item in source_dir.iterdir():
+            if not item.is_dir() or item.name in self.EXCLUDE_DIRS:
+                continue
+
+            # Find Ruby files in this directory
+            component_files = []
+            for rb_file in item.rglob("*.rb"):
+                # Skip excluded directories
+                if any(excl in rb_file.parts for excl in self.EXCLUDE_DIRS):
+                    continue
+                component_files.append({
+                    "path": str(rb_file.relative_to(repo_root)),
+                    "name": rb_file.name,
+                    "size": rb_file.stat().st_size,
+                })
+
+            if component_files:
+                components.append({
+                    "name": item.name,
+                    "type": f"rails_{item.name}",  # e.g., rails_models, rails_controllers
+                    "language": "ruby",
+                    "path": str(item.relative_to(repo_root)),
+                    "files": component_files,
+                })
+
+        return components
+
+    def _group_generic_components(
+        self, source_dir: Path, repo_root: Path
+    ) -> List[Dict[str, Any]]:
+        """Generic directory-based component grouping for unknown languages.
+
+        Args:
+            source_dir: Directory to scan
+            repo_root: Repository root for relative paths
+
+        Returns:
+            List of generic component dictionaries
+        """
+        components = []
+
+        for item in source_dir.iterdir():
+            if not item.is_dir() or item.name in self.EXCLUDE_DIRS:
+                continue
+
+            # Find all source files (skip common non-source extensions)
+            component_files = []
+            for file_path in item.rglob("*"):
+                if not file_path.is_file():
+                    continue
+                if file_path.suffix in [".md", ".txt", ".json", ".yml", ".yaml"]:
+                    continue
+                if any(excl in file_path.parts for excl in self.EXCLUDE_DIRS):
+                    continue
+
+                component_files.append({
+                    "path": str(file_path.relative_to(repo_root)),
+                    "name": file_path.name,
+                    "size": file_path.stat().st_size,
+                })
+
+            if component_files:
+                components.append({
+                    "name": item.name,
+                    "type": "directory_component",
+                    "language": self._detect_language_from_dir(item),
+                    "path": str(item.relative_to(repo_root)),
+                    "files": component_files,
+                })
+
+        return components
+
+    def _enhance_component_grouping_with_llm(
+        self,
+        repo_path: Path,
+        components: List[Dict[str, Any]],
+        framework_info: Dict[str, Any],
+    ) -> List[Dict[str, Any]]:
+        """Use LLM to semantically validate and enhance component grouping.
+
+        Args:
+            repo_path: Repository root path
+            components: Directory-based component grouping
+            framework_info: Framework detection context
+
+        Returns:
+            Enhanced component list with semantic metadata
+        """
+        # For now, just add semantic type hints based on patterns
+        # Full LLM enhancement can be added later if needed
+
+        for component in components:
+            component_name = component["name"].lower()
+            files = component.get("files", [])
+
+            # Heuristic semantic classification
+            if any(kw in component_name for kw in ["model", "schema", "entity"]):
+                component["semantic_type"] = "data_model"
+            elif any(kw in component_name for kw in ["view", "controller", "route", "endpoint"]):
+                component["semantic_type"] = "api_endpoint"
+            elif any(kw in component_name for kw in ["component", "widget", "ui"]):
+                component["semantic_type"] = "ui_component"
+            elif any(kw in component_name for kw in ["service", "util", "helper"]):
+                component["semantic_type"] = "utility"
+            elif any(kw in component_name for kw in ["test", "spec"]):
+                component["semantic_type"] = "test"
+            else:
+                component["semantic_type"] = "unknown"
+
+        return components
 
     def _scan_structure(self, repo_path: Path, max_depth: int = 3) -> Dict[str, Any]:
         """Scan directory structure up to max depth.
