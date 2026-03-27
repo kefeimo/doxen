@@ -17,11 +17,15 @@
 ## Development Environment
 
 ### Python Virtual Environment
-- **ALWAYS use venv** - Do not use system Python
+- **CRITICAL: NEVER use system Python - ALWAYS use venv**
 - Virtual environment located at `./venv/`
-- Activate before running any Python code: `source venv/bin/activate`
+- **For all Python commands, use one of these two methods:**
+  1. **Direct execution (preferred):** `./venv/bin/python script.py`
+  2. **Activate then run:** `source venv/bin/activate && python script.py`
+- **WRONG:** `python script.py` (uses system Python)
+- **RIGHT:** `./venv/bin/python script.py` (uses venv Python)
 - Dependencies managed via `pyproject.toml`
-- Install dependencies: `pip install -e .` (within activated venv)
+- Install dependencies: `./venv/bin/pip install -e .` (within venv)
 
 ### Alternative: Docker
 - For isolated environment, use Docker containers

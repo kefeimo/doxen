@@ -1,9 +1,14 @@
 # Doxen Output (regular runs)
 .doxen/
 
-# Experimental Framework - ignore cloned repos and generated outputs
-experimental/projects/*/repo/
-experimental/projects/*/doxen_output/
+# Experimental Framework - ignore ALL cloned repos (they're external dependencies)
+experimental/projects/*/
+!experimental/projects/*/*.json
+!experimental/projects/*/ground_truth/
+!experimental/projects/*/doxen_output/
+
+# Archive of cloned repos - never commit these
+experimental/projects-archive/
 
 # Python
 __pycache__/

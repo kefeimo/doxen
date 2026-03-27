@@ -1,0 +1,3720 @@
+{
+  "summary": {
+    "total_projects": 37,
+    "projects_with_docs_folder": 16,
+    "total_docs_in_folders": 2517,
+    "tier_distribution": {
+      "0": 740,
+      "1": 277,
+      "2": 680,
+      "3": 308,
+      "4": 183,
+      "5": 329
+    },
+    "tier_percentages": {
+      "0": 29.4,
+      "1": 11.0,
+      "2": 27.0,
+      "3": 12.2,
+      "4": 7.3,
+      "5": 13.1
+    }
+  },
+  "project_coverage_by_tier": {
+    "tier_0": {
+      "count": 12,
+      "percentage": 32.4,
+      "projects": [
+        "airflow",
+        "celery",
+        "discourse",
+        "django-rest-framework",
+        "electron",
+        "fastapi-users",
+        "grafana",
+        "metabase",
+        "mui",
+        "plane",
+        "superset",
+        "wagtail"
+      ]
+    },
+    "tier_1": {
+      "count": 13,
+      "percentage": 35.1,
+      "projects": [
+        "airflow",
+        "cal.com",
+        "celery",
+        "discourse",
+        "django-rest-framework",
+        "electron",
+        "fastapi-users",
+        "ghost",
+        "grafana",
+        "metabase",
+        "mui",
+        "superset",
+        "wagtail"
+      ]
+    },
+    "tier_2": {
+      "count": 10,
+      "percentage": 27.0,
+      "projects": [
+        "celery",
+        "discourse",
+        "django-rest-framework",
+        "electron",
+        "fastapi-users",
+        "grafana",
+        "metabase",
+        "mui",
+        "superset",
+        "wagtail"
+      ]
+    },
+    "tier_3": {
+      "count": 10,
+      "percentage": 27.0,
+      "projects": [
+        "celery",
+        "discourse",
+        "django-rest-framework",
+        "electron",
+        "fastapi-users",
+        "grafana",
+        "metabase",
+        "mui",
+        "superset",
+        "wagtail"
+      ]
+    },
+    "tier_4": {
+      "count": 8,
+      "percentage": 21.6,
+      "projects": [
+        "celery",
+        "electron",
+        "fastapi-users",
+        "grafana",
+        "metabase",
+        "mui",
+        "superset",
+        "wagtail"
+      ]
+    },
+    "tier_5": {
+      "count": 11,
+      "percentage": 29.7,
+      "projects": [
+        "celery",
+        "discourse",
+        "django-rest-framework",
+        "electron",
+        "fastapi-users",
+        "grafana",
+        "mastodon",
+        "metabase",
+        "mui",
+        "superset",
+        "wagtail"
+      ]
+    }
+  },
+  "examples_by_tier": {
+    "0": [
+      {
+        "project": "airflow",
+        "path": "spelling_wordlist.txt",
+        "name": "spelling_wordlist.txt",
+        "keywords": []
+      },
+      {
+        "project": "celery",
+        "path": "spelling_wordlist.txt",
+        "name": "spelling_wordlist.txt",
+        "keywords": []
+      },
+      {
+        "project": "celery",
+        "path": "index.rst",
+        "name": "index.rst",
+        "keywords": []
+      },
+      {
+        "project": "celery",
+        "path": "glossary.rst",
+        "name": "glossary.rst",
+        "keywords": []
+      },
+      {
+        "project": "celery",
+        "path": "copyright.rst",
+        "name": "copyright.rst",
+        "keywords": []
+      },
+      {
+        "project": "celery",
+        "path": "community.rst",
+        "name": "community.rst",
+        "keywords": []
+      },
+      {
+        "project": "discourse",
+        "path": "PLUGINS.md",
+        "name": "PLUGINS.md",
+        "keywords": []
+      },
+      {
+        "project": "discourse",
+        "path": "code-of-conduct.md",
+        "name": "code-of-conduct.md",
+        "keywords": []
+      },
+      {
+        "project": "discourse",
+        "path": "SECURITY.md",
+        "name": "SECURITY.md",
+        "keywords": []
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "index.md",
+        "name": "index.md",
+        "keywords": []
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "topics/rest-hypermedia-hateoas.md",
+        "name": "rest-hypermedia-hateoas.md",
+        "keywords": []
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "topics/browser-enhancements.md",
+        "name": "browser-enhancements.md",
+        "keywords": []
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "topics/ajax-csrf-cors.md",
+        "name": "ajax-csrf-cors.md",
+        "keywords": []
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "topics/internationalization.md",
+        "name": "internationalization.md",
+        "keywords": []
+      },
+      {
+        "project": "electron",
+        "path": "breaking-changes.md",
+        "name": "breaking-changes.md",
+        "keywords": []
+      },
+      {
+        "project": "electron",
+        "path": "why-electron.md",
+        "name": "why-electron.md",
+        "keywords": []
+      },
+      {
+        "project": "electron",
+        "path": "experimental.md",
+        "name": "experimental.md",
+        "keywords": []
+      },
+      {
+        "project": "electron",
+        "path": "CLAUDE.md",
+        "name": "CLAUDE.md",
+        "keywords": []
+      },
+      {
+        "project": "electron",
+        "path": "glossary.md",
+        "name": "glossary.md",
+        "keywords": []
+      },
+      {
+        "project": "fastapi-users",
+        "path": "index.md",
+        "name": "index.md",
+        "keywords": []
+      }
+    ],
+    "1": [
+      {
+        "project": "airflow",
+        "path": "README.md",
+        "name": "README.md",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "cal.com",
+        "path": "README.md",
+        "name": "README.md",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "templates/readme.txt",
+        "name": "readme.txt",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "internals/app-overview.rst",
+        "name": "app-overview.rst",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "internals/reference/celery.backends.filesystem.rst",
+        "name": "celery.backends.filesystem.rst",
+        "keywords": [
+          "architecture|design|system"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "getting-started/resources.rst",
+        "name": "resources.rst",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "getting-started/next-steps.rst",
+        "name": "next-steps.rst",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "INSTALL-cloud.md",
+        "name": "INSTALL-cloud.md",
+        "keywords": [
+          "setup|installation|install"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "ADMIN-QUICK-START-GUIDE.md",
+        "name": "ADMIN-QUICK-START-GUIDE.md",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "INSTALL-email.md",
+        "name": "INSTALL-email.md",
+        "keywords": [
+          "setup|installation|install"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "INSTALL.md",
+        "name": "INSTALL.md",
+        "keywords": [
+          "setup|installation|install"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/README.md",
+        "name": "README.md",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "tutorial/quickstart.md",
+        "name": "quickstart.md",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "theme/src/README.md",
+        "name": "README.md",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "README.md",
+        "name": "README.md",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/README.md",
+        "name": "README.md",
+        "keywords": [
+          "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "api/system-preferences.md",
+        "name": "system-preferences.md",
+        "keywords": [
+          "architecture|design|system"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "api/structures/filesystem-permission-request.md",
+        "name": "filesystem-permission-request.md",
+        "keywords": [
+          "architecture|design|system"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "tutorial/installation.md",
+        "name": "installation.md",
+        "keywords": [
+          "setup|installation|install"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "installation.md",
+        "name": "installation.md",
+        "keywords": [
+          "setup|installation|install"
+        ]
+      }
+    ],
+    "2": [
+      {
+        "project": "celery",
+        "path": "AUTHORS.txt",
+        "name": "AUTHORS.txt",
+        "keywords": [
+          "backend|frontend|database|auth|search|storage"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "internals/reference/celery.concurrency.rst",
+        "name": "celery.concurrency.rst",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "internals/reference/celery.platforms.rst",
+        "name": "celery.platforms.rst",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "internals/reference/celery.utils.dispatch.signal.rst",
+        "name": "celery.utils.dispatch.signal.rst",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "internals/reference/celery.utils.nodenames.rst",
+        "name": "celery.utils.nodenames.rst",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "AUTHORS.md",
+        "name": "AUTHORS.md",
+        "keywords": [
+          "backend|frontend|database|auth|search|storage"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/docs/07-theme-developer-tutorial/05-components.md",
+        "name": "05-components.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/docs/07-theme-developer-tutorial/06-js-api.md",
+        "name": "06-js-api.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/docs/05-themes-components/01-developing-themes.md",
+        "name": "01-developing-themes.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/docs/05-themes-components/06-theme-structure.md",
+        "name": "06-theme-structure.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "topics/documenting-your-api.md",
+        "name": "documenting-your-api.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "topics/browsable-api.md",
+        "name": "browsable-api.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "tutorial/4-authentication-and-permissions.md",
+        "name": "4-authentication-and-permissions.md",
+        "keywords": [
+          "backend|frontend|database|auth|search|storage"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "tutorial/3-class-based-views.md",
+        "name": "3-class-based-views.md",
+        "keywords": [
+          "class|function|endpoint|schema|model"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "tutorial/5-relationships-and-hyperlinked-apis.md",
+        "name": "5-relationships-and-hyperlinked-apis.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/creating-api.md",
+        "name": "creating-api.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/api-history-migration-guide.md",
+        "name": "api-history-migration-guide.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "api/touch-bar-slider.md",
+        "name": "touch-bar-slider.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "api/command-line.md",
+        "name": "command-line.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "api/safe-storage.md",
+        "name": "safe-storage.md",
+        "keywords": [
+          "reference|api|components?|modules?"
+        ]
+      }
+    ],
+    "5": [
+      {
+        "project": "celery",
+        "path": "changelog.rst",
+        "name": "changelog.rst",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "contributing.rst",
+        "name": "contributing.rst",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "history/changelog-2.3.rst",
+        "name": "changelog-2.3.rst",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "history/changelog-4.0.rst",
+        "name": "changelog-4.0.rst",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "history/changelog-5.6.rst",
+        "name": "changelog-5.6.rst",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "TESTING.md",
+        "name": "TESTING.md",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "community/release-notes.md",
+        "name": "release-notes.md",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "community/contributing.md",
+        "name": "contributing.md",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/v8-development.md",
+        "name": "v8-development.md",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/chromium-development.md",
+        "name": "chromium-development.md",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/reclient.md",
+        "name": "reclient.md",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/pull-requests.md",
+        "name": "pull-requests.md",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/issues.md",
+        "name": "issues.md",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "migration/8x_to_9x.md",
+        "name": "8x_to_9x.md",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "migration/4x_to_5x.md",
+        "name": "4x_to_5x.md",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "migration/7x_to_8x.md",
+        "name": "7x_to_8x.md",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "migration/2x_to_3x.md",
+        "name": "2x_to_3x.md",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "migration/08_to_1x.md",
+        "name": "08_to_1x.md",
+        "keywords": [
+          "changelog|release|migration"
+        ]
+      },
+      {
+        "project": "grafana",
+        "path": "sources/developer-resources/_index.md",
+        "name": "_index.md",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      },
+      {
+        "project": "grafana",
+        "path": "sources/developer-resources/contribute/_index.md",
+        "name": "_index.md",
+        "keywords": [
+          "contribut|development|dev|testing|test"
+        ]
+      }
+    ],
+    "4": [
+      {
+        "project": "celery",
+        "path": "faq.rst",
+        "name": "faq.rst",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "faq.md",
+        "name": "faq.md",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/debugging-with-symbol-server.md",
+        "name": "debugging-with-symbol-server.md",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/debugging-on-windows.md",
+        "name": "debugging-on-windows.md",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/debugging-on-macos.md",
+        "name": "debugging-on-macos.md",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/debugging-with-xcode.md",
+        "name": "debugging-with-xcode.md",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "configuration/user-manager.md",
+        "name": "user-manager.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "configuration/password-hash.md",
+        "name": "password-hash.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "configuration/routers/users.md",
+        "name": "users.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "configuration/routers/register.md",
+        "name": "register.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "configuration/routers/reset.md",
+        "name": "reset.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      },
+      {
+        "project": "grafana",
+        "path": "sources/troubleshooting/_index.md",
+        "name": "_index.md",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "grafana",
+        "path": "sources/troubleshooting/har-captures/index.md",
+        "name": "index.md",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "grafana",
+        "path": "sources/troubleshooting/support-bundles/index.md",
+        "name": "index.md",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "grafana",
+        "path": "sources/troubleshooting/send-panel-to-grafana-support/index.md",
+        "name": "index.md",
+        "keywords": [
+          "troubleshoot|debug|faq|common[\\-_]issues"
+        ]
+      },
+      {
+        "project": "grafana",
+        "path": "sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md",
+        "name": "index.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      },
+      {
+        "project": "metabase",
+        "path": "ai/settings.md",
+        "name": "settings.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      },
+      {
+        "project": "metabase",
+        "path": "configuring-metabase/start.md",
+        "name": "start.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      },
+      {
+        "project": "metabase",
+        "path": "configuring-metabase/webhooks.md",
+        "name": "webhooks.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      },
+      {
+        "project": "metabase",
+        "path": "configuring-metabase/timezones.md",
+        "name": "timezones.md",
+        "keywords": [
+          "config|configuration|environment|settings"
+        ]
+      }
+    ],
+    "3": [
+      {
+        "project": "celery",
+        "path": "tutorials/task-cookbook.rst",
+        "name": "task-cookbook.rst",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "tutorials/index.rst",
+        "name": "index.rst",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "internals/guide.rst",
+        "name": "guide.rst",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "userguide/daemonizing.rst",
+        "name": "daemonizing.rst",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "celery",
+        "path": "userguide/sphinx.rst",
+        "name": "sphinx.rst",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/docs/index.md",
+        "name": "index.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/docs/07-theme-developer-tutorial/04-outlets.md",
+        "name": "04-outlets.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/docs/07-theme-developer-tutorial/index.md",
+        "name": "index.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/docs/07-theme-developer-tutorial/02-remote-theme.md",
+        "name": "02-remote-theme.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "discourse",
+        "path": "developer-guides/docs/07-theme-developer-tutorial/07-conclusion.md",
+        "name": "07-conclusion.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "tutorial/6-viewsets-and-routers.md",
+        "name": "6-viewsets-and-routers.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "tutorial/2-requests-and-responses.md",
+        "name": "2-requests-and-responses.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "tutorial/1-serialization.md",
+        "name": "1-serialization.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "django-rest-framework",
+        "path": "community/tutorials-and-resources.md",
+        "name": "tutorials-and-resources.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "development/style-guide.md",
+        "name": "style-guide.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "tutorial/native-code-and-electron-cpp-linux.md",
+        "name": "native-code-and-electron-cpp-linux.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "tutorial/devices.md",
+        "name": "devices.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "tutorial/menus.md",
+        "name": "menus.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "electron",
+        "path": "tutorial/application-debugging.md",
+        "name": "application-debugging.md",
+        "keywords": [
+          "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+        ]
+      },
+      {
+        "project": "fastapi-users",
+        "path": "configuration/full-example.md",
+        "name": "full-example.md",
+        "keywords": [
+          "case[\\-_]study|example|use[\\-_]case"
+        ]
+      }
+    ]
+  },
+  "project_analyses": {
+    "airflow": {
+      "has_docs_folder": true,
+      "total_docs": 12,
+      "root_docs": [
+        "INSTALL",
+        "LICENSE",
+        "INTHEWILD.md",
+        "INSTALLING.md",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "CODE_OF_CONDUCT.md",
+        "GOVERNANCE.md",
+        "CONTRIBUTING.rst",
+        "README.md"
+      ],
+      "tier_distribution": {
+        "0": 1,
+        "1": 1
+      },
+      "examples_by_tier": {
+        "0": [
+          {
+            "path": "spelling_wordlist.txt",
+            "name": "spelling_wordlist.txt",
+            "keywords": []
+          }
+        ],
+        "1": [
+          {
+            "path": "README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "INSTALL": 1,
+        "LICENSE": 1,
+        "other_markdown": 5,
+        "CODE_OF_CONDUCT": 1,
+        "CONTRIBUTING": 1,
+        "README": 2,
+        "other": 1
+      }
+    },
+    "cal.com": {
+      "has_docs_folder": true,
+      "total_docs": 10,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "SPEC-WORKFLOW.md",
+        "AGENTS.md",
+        "CODE_OF_CONDUCT.md",
+        "PERMISSIONS.md",
+        "headless-routing-to-booking-flow.md",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "1": 1
+      },
+      "examples_by_tier": {
+        "1": [
+          {
+            "path": "README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "LICENSE": 1,
+        "other_markdown": 4,
+        "CODE_OF_CONDUCT": 1,
+        "README": 2,
+        "SECURITY": 1
+      }
+    },
+    "celery": {
+      "has_docs_folder": true,
+      "total_docs": 245,
+      "root_docs": [
+        "LICENSE",
+        "Changelog.rst",
+        "CONTRIBUTING.rst",
+        "README.rst",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "2": 147,
+        "5": 22,
+        "0": 30,
+        "4": 1,
+        "3": 24,
+        "1": 16
+      },
+      "examples_by_tier": {
+        "2": [
+          {
+            "path": "AUTHORS.txt",
+            "name": "AUTHORS.txt",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "internals/reference/celery.concurrency.rst",
+            "name": "celery.concurrency.rst",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "internals/reference/celery.platforms.rst",
+            "name": "celery.platforms.rst",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "internals/reference/celery.utils.dispatch.signal.rst",
+            "name": "celery.utils.dispatch.signal.rst",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "internals/reference/celery.utils.nodenames.rst",
+            "name": "celery.utils.nodenames.rst",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          }
+        ],
+        "5": [
+          {
+            "path": "changelog.rst",
+            "name": "changelog.rst",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "contributing.rst",
+            "name": "contributing.rst",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "history/changelog-2.3.rst",
+            "name": "changelog-2.3.rst",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "history/changelog-4.0.rst",
+            "name": "changelog-4.0.rst",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "history/changelog-5.6.rst",
+            "name": "changelog-5.6.rst",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          }
+        ],
+        "0": [
+          {
+            "path": "spelling_wordlist.txt",
+            "name": "spelling_wordlist.txt",
+            "keywords": []
+          },
+          {
+            "path": "index.rst",
+            "name": "index.rst",
+            "keywords": []
+          },
+          {
+            "path": "glossary.rst",
+            "name": "glossary.rst",
+            "keywords": []
+          },
+          {
+            "path": "copyright.rst",
+            "name": "copyright.rst",
+            "keywords": []
+          },
+          {
+            "path": "community.rst",
+            "name": "community.rst",
+            "keywords": []
+          }
+        ],
+        "4": [
+          {
+            "path": "faq.rst",
+            "name": "faq.rst",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "tutorials/task-cookbook.rst",
+            "name": "task-cookbook.rst",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "tutorials/index.rst",
+            "name": "index.rst",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "internals/guide.rst",
+            "name": "guide.rst",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "userguide/daemonizing.rst",
+            "name": "daemonizing.rst",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "userguide/sphinx.rst",
+            "name": "sphinx.rst",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          }
+        ],
+        "1": [
+          {
+            "path": "templates/readme.txt",
+            "name": "readme.txt",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "internals/app-overview.rst",
+            "name": "app-overview.rst",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "internals/reference/celery.backends.filesystem.rst",
+            "name": "celery.backends.filesystem.rst",
+            "keywords": [
+              "architecture|design|system"
+            ]
+          },
+          {
+            "path": "getting-started/resources.rst",
+            "name": "resources.rst",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "getting-started/next-steps.rst",
+            "name": "next-steps.rst",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "LICENSE": 1,
+        "CHANGELOG": 2,
+        "CONTRIBUTING": 2,
+        "README": 2,
+        "SECURITY": 2,
+        "other": 232,
+        "FAQ": 1,
+        "guide": 1,
+        "TESTING": 1,
+        "INSTALL": 1
+      }
+    },
+    "click": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "discourse": {
+      "has_docs_folder": true,
+      "total_docs": 120,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "COPYRIGHT.md",
+        "AGENTS.md",
+        "AI-AGENTS.md",
+        "CLAUDE.md",
+        "GEMINI.md",
+        "LICENSE.txt",
+        "README.md"
+      ],
+      "tier_distribution": {
+        "5": 1,
+        "0": 3,
+        "1": 19,
+        "2": 43,
+        "3": 46
+      },
+      "examples_by_tier": {
+        "5": [
+          {
+            "path": "TESTING.md",
+            "name": "TESTING.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          }
+        ],
+        "0": [
+          {
+            "path": "PLUGINS.md",
+            "name": "PLUGINS.md",
+            "keywords": []
+          },
+          {
+            "path": "code-of-conduct.md",
+            "name": "code-of-conduct.md",
+            "keywords": []
+          },
+          {
+            "path": "SECURITY.md",
+            "name": "SECURITY.md",
+            "keywords": []
+          }
+        ],
+        "1": [
+          {
+            "path": "INSTALL-cloud.md",
+            "name": "INSTALL-cloud.md",
+            "keywords": [
+              "setup|installation|install"
+            ]
+          },
+          {
+            "path": "ADMIN-QUICK-START-GUIDE.md",
+            "name": "ADMIN-QUICK-START-GUIDE.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "INSTALL-email.md",
+            "name": "INSTALL-email.md",
+            "keywords": [
+              "setup|installation|install"
+            ]
+          },
+          {
+            "path": "INSTALL.md",
+            "name": "INSTALL.md",
+            "keywords": [
+              "setup|installation|install"
+            ]
+          },
+          {
+            "path": "developer-guides/README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "path": "AUTHORS.md",
+            "name": "AUTHORS.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "developer-guides/docs/07-theme-developer-tutorial/05-components.md",
+            "name": "05-components.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "developer-guides/docs/07-theme-developer-tutorial/06-js-api.md",
+            "name": "06-js-api.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "developer-guides/docs/05-themes-components/01-developing-themes.md",
+            "name": "01-developing-themes.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "developer-guides/docs/05-themes-components/06-theme-structure.md",
+            "name": "06-theme-structure.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "developer-guides/docs/index.md",
+            "name": "index.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "developer-guides/docs/07-theme-developer-tutorial/04-outlets.md",
+            "name": "04-outlets.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "developer-guides/docs/07-theme-developer-tutorial/index.md",
+            "name": "index.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "developer-guides/docs/07-theme-developer-tutorial/02-remote-theme.md",
+            "name": "02-remote-theme.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "developer-guides/docs/07-theme-developer-tutorial/07-conclusion.md",
+            "name": "07-conclusion.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "other_markdown": 112,
+        "LICENSE": 1,
+        "README": 2,
+        "TESTING": 1,
+        "INSTALL": 1,
+        "CODE_OF_CONDUCT": 1,
+        "SECURITY": 1
+      }
+    },
+    "django": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "django-rest-framework": {
+      "has_docs_folder": true,
+      "total_docs": 75,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "PULL_REQUEST_TEMPLATE.md",
+        "LICENSE.md",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "0": 29,
+        "2": 33,
+        "3": 4,
+        "1": 2,
+        "5": 2
+      },
+      "examples_by_tier": {
+        "0": [
+          {
+            "path": "index.md",
+            "name": "index.md",
+            "keywords": []
+          },
+          {
+            "path": "topics/rest-hypermedia-hateoas.md",
+            "name": "rest-hypermedia-hateoas.md",
+            "keywords": []
+          },
+          {
+            "path": "topics/browser-enhancements.md",
+            "name": "browser-enhancements.md",
+            "keywords": []
+          },
+          {
+            "path": "topics/ajax-csrf-cors.md",
+            "name": "ajax-csrf-cors.md",
+            "keywords": []
+          },
+          {
+            "path": "topics/internationalization.md",
+            "name": "internationalization.md",
+            "keywords": []
+          }
+        ],
+        "2": [
+          {
+            "path": "topics/documenting-your-api.md",
+            "name": "documenting-your-api.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "topics/browsable-api.md",
+            "name": "browsable-api.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "tutorial/4-authentication-and-permissions.md",
+            "name": "4-authentication-and-permissions.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "tutorial/3-class-based-views.md",
+            "name": "3-class-based-views.md",
+            "keywords": [
+              "class|function|endpoint|schema|model"
+            ]
+          },
+          {
+            "path": "tutorial/5-relationships-and-hyperlinked-apis.md",
+            "name": "5-relationships-and-hyperlinked-apis.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "tutorial/6-viewsets-and-routers.md",
+            "name": "6-viewsets-and-routers.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "tutorial/2-requests-and-responses.md",
+            "name": "2-requests-and-responses.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "tutorial/1-serialization.md",
+            "name": "1-serialization.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "community/tutorials-and-resources.md",
+            "name": "tutorials-and-resources.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          }
+        ],
+        "1": [
+          {
+            "path": "tutorial/quickstart.md",
+            "name": "quickstart.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "theme/src/README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ],
+        "5": [
+          {
+            "path": "community/release-notes.md",
+            "name": "release-notes.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "community/contributing.md",
+            "name": "contributing.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "CONTRIBUTING": 2,
+        "other_markdown": 66,
+        "LICENSE": 1,
+        "README": 2,
+        "SECURITY": 1,
+        "QUICKSTART": 1,
+        "tutorial": 1,
+        "TESTING": 1
+      }
+    },
+    "docker": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "electron": {
+      "has_docs_folder": true,
+      "total_docs": 281,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "CLAUDE.md",
+        "CODE_OF_CONDUCT.md",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "0": 5,
+        "4": 6,
+        "1": 8,
+        "2": 172,
+        "5": 14,
+        "3": 70
+      },
+      "examples_by_tier": {
+        "0": [
+          {
+            "path": "breaking-changes.md",
+            "name": "breaking-changes.md",
+            "keywords": []
+          },
+          {
+            "path": "why-electron.md",
+            "name": "why-electron.md",
+            "keywords": []
+          },
+          {
+            "path": "experimental.md",
+            "name": "experimental.md",
+            "keywords": []
+          },
+          {
+            "path": "CLAUDE.md",
+            "name": "CLAUDE.md",
+            "keywords": []
+          },
+          {
+            "path": "glossary.md",
+            "name": "glossary.md",
+            "keywords": []
+          }
+        ],
+        "4": [
+          {
+            "path": "faq.md",
+            "name": "faq.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          },
+          {
+            "path": "development/debugging-with-symbol-server.md",
+            "name": "debugging-with-symbol-server.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          },
+          {
+            "path": "development/debugging-on-windows.md",
+            "name": "debugging-on-windows.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          },
+          {
+            "path": "development/debugging-on-macos.md",
+            "name": "debugging-on-macos.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          },
+          {
+            "path": "development/debugging-with-xcode.md",
+            "name": "debugging-with-xcode.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          }
+        ],
+        "1": [
+          {
+            "path": "README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "development/README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "api/system-preferences.md",
+            "name": "system-preferences.md",
+            "keywords": [
+              "architecture|design|system"
+            ]
+          },
+          {
+            "path": "api/structures/filesystem-permission-request.md",
+            "name": "filesystem-permission-request.md",
+            "keywords": [
+              "architecture|design|system"
+            ]
+          },
+          {
+            "path": "tutorial/installation.md",
+            "name": "installation.md",
+            "keywords": [
+              "setup|installation|install"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "path": "development/creating-api.md",
+            "name": "creating-api.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "development/api-history-migration-guide.md",
+            "name": "api-history-migration-guide.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "api/touch-bar-slider.md",
+            "name": "touch-bar-slider.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "api/command-line.md",
+            "name": "command-line.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "api/safe-storage.md",
+            "name": "safe-storage.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          }
+        ],
+        "5": [
+          {
+            "path": "development/v8-development.md",
+            "name": "v8-development.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "development/chromium-development.md",
+            "name": "chromium-development.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "development/reclient.md",
+            "name": "reclient.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "development/pull-requests.md",
+            "name": "pull-requests.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "development/issues.md",
+            "name": "issues.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "development/style-guide.md",
+            "name": "style-guide.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "tutorial/native-code-and-electron-cpp-linux.md",
+            "name": "native-code-and-electron-cpp-linux.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "tutorial/devices.md",
+            "name": "devices.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "tutorial/menus.md",
+            "name": "menus.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "tutorial/application-debugging.md",
+            "name": "application-debugging.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "LICENSE": 1,
+        "other_markdown": 264,
+        "CODE_OF_CONDUCT": 1,
+        "README": 3,
+        "SECURITY": 2,
+        "FAQ": 1,
+        "TESTING": 1,
+        "tutorial": 6,
+        "INSTALL": 1
+      }
+    },
+    "express": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "fastapi": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "fastapi-users": {
+      "has_docs_folder": true,
+      "total_docs": 39,
+      "root_docs": [
+        "LICENSE",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "1": 2,
+        "0": 5,
+        "5": 9,
+        "3": 1,
+        "2": 12,
+        "4": 7
+      },
+      "examples_by_tier": {
+        "1": [
+          {
+            "path": "installation.md",
+            "name": "installation.md",
+            "keywords": [
+              "setup|installation|install"
+            ]
+          },
+          {
+            "path": "configuration/overview.md",
+            "name": "overview.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ],
+        "0": [
+          {
+            "path": "index.md",
+            "name": "index.md",
+            "keywords": []
+          },
+          {
+            "path": "cookbook/create-user-programmatically.md",
+            "name": "create-user-programmatically.md",
+            "keywords": []
+          },
+          {
+            "path": "usage/current-user.md",
+            "name": "current-user.md",
+            "keywords": []
+          },
+          {
+            "path": "usage/flow.md",
+            "name": "flow.md",
+            "keywords": []
+          },
+          {
+            "path": "usage/routes.md",
+            "name": "routes.md",
+            "keywords": []
+          }
+        ],
+        "5": [
+          {
+            "path": "migration/8x_to_9x.md",
+            "name": "8x_to_9x.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "migration/4x_to_5x.md",
+            "name": "4x_to_5x.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "migration/7x_to_8x.md",
+            "name": "7x_to_8x.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "migration/2x_to_3x.md",
+            "name": "2x_to_3x.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "migration/08_to_1x.md",
+            "name": "08_to_1x.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "configuration/full-example.md",
+            "name": "full-example.md",
+            "keywords": [
+              "case[\\-_]study|example|use[\\-_]case"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "path": "configuration/schemas.md",
+            "name": "schemas.md",
+            "keywords": [
+              "class|function|endpoint|schema|model"
+            ]
+          },
+          {
+            "path": "configuration/oauth.md",
+            "name": "oauth.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "configuration/databases/beanie.md",
+            "name": "beanie.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "configuration/databases/sqlalchemy.md",
+            "name": "sqlalchemy.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "configuration/authentication/index.md",
+            "name": "index.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          }
+        ],
+        "4": [
+          {
+            "path": "configuration/user-manager.md",
+            "name": "user-manager.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "configuration/password-hash.md",
+            "name": "password-hash.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "configuration/routers/users.md",
+            "name": "users.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "configuration/routers/register.md",
+            "name": "register.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "configuration/routers/reset.md",
+            "name": "reset.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "LICENSE": 1,
+        "README": 1,
+        "SECURITY": 1,
+        "INSTALL": 1,
+        "other_markdown": 35
+      }
+    },
+    "flask": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "fullstack-fastapi": {
+      "has_docs_folder": false,
+      "total_docs": 7,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "release-notes.md",
+        "deployment.md",
+        "development.md",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "LICENSE": 1,
+        "other_markdown": 1,
+        "DEPLOYMENT": 1,
+        "DEVELOPMENT": 1,
+        "README": 1,
+        "SECURITY": 1
+      }
+    },
+    "ghost": {
+      "has_docs_folder": true,
+      "total_docs": 6,
+      "root_docs": [
+        "LICENSE",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "1": 1
+      },
+      "examples_by_tier": {
+        "1": [
+          {
+            "path": "README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "LICENSE": 1,
+        "other_markdown": 2,
+        "README": 2,
+        "SECURITY": 1
+      }
+    },
+    "gitlabhq": {
+      "has_docs_folder": false,
+      "total_docs": 7,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "PHILOSOPHY.md",
+        "CHANGELOG.md",
+        "DEI.md",
+        "MAINTENANCE.md",
+        "README.md"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "LICENSE": 1,
+        "other_markdown": 3,
+        "CHANGELOG": 1,
+        "README": 1
+      }
+    },
+    "grafana": {
+      "has_docs_folder": true,
+      "total_docs": 730,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSING.md",
+        "LICENSE",
+        "WORKFLOW.md",
+        "SUPPORT.md",
+        "HALL_OF_FAME.md",
+        "AGENTS.md",
+        "ROADMAP.md",
+        "CLAUDE.md",
+        "CODE_OF_CONDUCT.md",
+        "CHANGELOG.md",
+        "MAINTAINERS.md",
+        "GOVERNANCE.md",
+        "README.md",
+        "NOTICE.md"
+      ],
+      "tier_distribution": {
+        "0": 322,
+        "1": 108,
+        "4": 128,
+        "5": 7,
+        "2": 78,
+        "3": 72
+      },
+      "examples_by_tier": {
+        "0": [
+          {
+            "path": "AGENTS.md",
+            "name": "AGENTS.md",
+            "keywords": []
+          },
+          {
+            "path": "sources/_index.md",
+            "name": "_index.md",
+            "keywords": []
+          },
+          {
+            "path": "sources/breaking-changes/breaking-changes-v10-0.md",
+            "name": "breaking-changes-v10-0.md",
+            "keywords": []
+          },
+          {
+            "path": "sources/breaking-changes/breaking-changes-v11-0.md",
+            "name": "breaking-changes-v11-0.md",
+            "keywords": []
+          },
+          {
+            "path": "sources/breaking-changes/_index.md",
+            "name": "_index.md",
+            "keywords": []
+          }
+        ],
+        "1": [
+          {
+            "path": "README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "sources/tutorials/install-grafana-on-raspberry-pi/index.md",
+            "name": "index.md",
+            "keywords": [
+              "setup|installation|install"
+            ]
+          },
+          {
+            "path": "sources/introduction/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "sources/introduction/grafana-cloud.md",
+            "name": "grafana-cloud.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "sources/introduction/grafana-enterprise.md",
+            "name": "grafana-enterprise.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ],
+        "4": [
+          {
+            "path": "sources/troubleshooting/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          },
+          {
+            "path": "sources/troubleshooting/har-captures/index.md",
+            "name": "index.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          },
+          {
+            "path": "sources/troubleshooting/support-bundles/index.md",
+            "name": "index.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          },
+          {
+            "path": "sources/troubleshooting/send-panel-to-grafana-support/index.md",
+            "name": "index.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          },
+          {
+            "path": "sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md",
+            "name": "index.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          }
+        ],
+        "5": [
+          {
+            "path": "sources/developer-resources/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "sources/developer-resources/contribute/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "sources/developer-resources/contribute/cla.md",
+            "name": "cla.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "sources/developer-resources/developer-tools/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "sources/shared/test.md",
+            "name": "test.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "path": "sources/developer-resources/api-reference/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "sources/developer-resources/api-reference/tracing-api/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "sources/developer-resources/api-reference/synthetic-monitoring-api/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "sources/developer-resources/api-reference/cloud-api/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "sources/developer-resources/api-reference/http-api/apis.md",
+            "name": "apis.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "sources/tutorials/_index.md",
+            "name": "_index.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "sources/tutorials/create-alerts-with-logs/index.md",
+            "name": "index.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "sources/tutorials/alerting-get-started-pt3/index.md",
+            "name": "index.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "sources/tutorials/grafana-fundamentals/index.md",
+            "name": "index.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "sources/tutorials/iis/index.md",
+            "name": "index.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "other_markdown": 719,
+        "LICENSE": 1,
+        "CODE_OF_CONDUCT": 1,
+        "CHANGELOG": 1,
+        "README": 3,
+        "TESTING": 1,
+        "tutorial": 1,
+        "reference": 2
+      }
+    },
+    "home-assistant": {
+      "has_docs_folder": false,
+      "total_docs": 7,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "CLA.md",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "LICENSE.md",
+        "CODE_OF_CONDUCT.md",
+        "README.rst"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "other_markdown": 3,
+        "LICENSE": 1,
+        "CODE_OF_CONDUCT": 1,
+        "README": 1
+      }
+    },
+    "kubernetes": {
+      "has_docs_folder": true,
+      "total_docs": 6,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "SUPPORT.md",
+        "code-of-conduct.md",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "LICENSE": 1,
+        "other_markdown": 1,
+        "CODE_OF_CONDUCT": 1,
+        "CHANGELOG": 1,
+        "README": 1
+      }
+    },
+    "mastodon": {
+      "has_docs_folder": true,
+      "total_docs": 9,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "AUTHORS.md",
+        "FEDERATION.md",
+        "CODE_OF_CONDUCT.md",
+        "CHANGELOG.md",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "5": 1
+      },
+      "examples_by_tier": {
+        "5": [
+          {
+            "path": "DEVELOPMENT.md",
+            "name": "DEVELOPMENT.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "LICENSE": 1,
+        "other_markdown": 2,
+        "CODE_OF_CONDUCT": 1,
+        "CHANGELOG": 1,
+        "README": 1,
+        "SECURITY": 1,
+        "DEVELOPMENT": 1
+      }
+    },
+    "metabase": {
+      "has_docs_folder": true,
+      "total_docs": 327,
+      "root_docs": [
+        "zen.md",
+        "CLAUDE.md",
+        "LICENSE.txt",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "5": 1,
+        "1": 40,
+        "0": 135,
+        "4": 32,
+        "2": 55,
+        "3": 59
+      },
+      "examples_by_tier": {
+        "5": [
+          {
+            "path": "CONTRIBUTING.md",
+            "name": "CONTRIBUTING.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          }
+        ],
+        "1": [
+          {
+            "path": "README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "data-studio/overview.md",
+            "name": "overview.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "data-studio/transforms/transforms-overview.md",
+            "name": "transforms-overview.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "actions/introduction.md",
+            "name": "introduction.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "questions/introduction.md",
+            "name": "introduction.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ],
+        "0": [
+          {
+            "path": "data-studio/library.md",
+            "name": "library.md",
+            "keywords": []
+          },
+          {
+            "path": "data-studio/data-structure.md",
+            "name": "data-structure.md",
+            "keywords": []
+          },
+          {
+            "path": "data-studio/dependency-graph.md",
+            "name": "dependency-graph.md",
+            "keywords": []
+          },
+          {
+            "path": "data-studio/dependency-diagnostics.md",
+            "name": "dependency-diagnostics.md",
+            "keywords": []
+          },
+          {
+            "path": "data-studio/transforms/transform-inspector.md",
+            "name": "transform-inspector.md",
+            "keywords": []
+          }
+        ],
+        "4": [
+          {
+            "path": "ai/settings.md",
+            "name": "settings.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "configuring-metabase/start.md",
+            "name": "start.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "configuring-metabase/webhooks.md",
+            "name": "webhooks.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "configuring-metabase/timezones.md",
+            "name": "timezones.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "configuring-metabase/fonts.md",
+            "name": "fonts.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "path": "ai/agent-api.md",
+            "name": "agent-api.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "databases/writable-connection.md",
+            "name": "writable-connection.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "databases/start.md",
+            "name": "start.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "databases/encrypting-details-at-rest.md",
+            "name": "encrypting-details-at-rest.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "databases/uploads.md",
+            "name": "uploads.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "developers-guide/start.md",
+            "name": "start.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "developers-guide/code-reviews.md",
+            "name": "code-reviews.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "developers-guide/emacs.md",
+            "name": "emacs.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "developers-guide/versioning.md",
+            "name": "versioning.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "developers-guide/mage.md",
+            "name": "mage.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "other_markdown": 318,
+        "LICENSE": 1,
+        "README": 3,
+        "SECURITY": 1,
+        "CONTRIBUTING": 1,
+        "QUICKSTART": 1,
+        "guide": 2
+      }
+    },
+    "mui": {
+      "has_docs_folder": true,
+      "total_docs": 329,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "AGENTS.md",
+        "CHANGELOG.old.md",
+        "CLAUDE.md",
+        "TYPESCRIPT_CONVENTION.md",
+        "CHANGELOG.md",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "1": 61,
+        "0": 140,
+        "5": 21,
+        "2": 80,
+        "3": 14,
+        "4": 4
+      },
+      "examples_by_tier": {
+        "1": [
+          {
+            "path": "README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "pages/blog/introducing-the-row-grouping-feature.md",
+            "name": "introducing-the-row-grouping-feature.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "pages/blog/2020-introducing-sketch.md",
+            "name": "2020-introducing-sketch.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "pages/blog/introducing-sync-plugin.md",
+            "name": "introducing-sync-plugin.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "pages/blog/introducing-pigment-css.md",
+            "name": "introducing-pigment-css.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ],
+        "0": [
+          {
+            "path": "pages/customers/moz.md",
+            "name": "moz.md",
+            "keywords": []
+          },
+          {
+            "path": "pages/customers/john-deere.md",
+            "name": "john-deere.md",
+            "keywords": []
+          },
+          {
+            "path": "pages/customers/qdrant.md",
+            "name": "qdrant.md",
+            "keywords": []
+          },
+          {
+            "path": "pages/customers/cgi.md",
+            "name": "cgi.md",
+            "keywords": []
+          },
+          {
+            "path": "pages/customers/tebra.md",
+            "name": "tebra.md",
+            "keywords": []
+          }
+        ],
+        "5": [
+          {
+            "path": "pages/blog/2020-developer-survey-results.md",
+            "name": "2020-developer-survey-results.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "pages/blog/2021-developer-survey-results.md",
+            "name": "2021-developer-survey-results.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "pages/blog/2019-developer-survey-results.md",
+            "name": "2019-developer-survey-results.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "pages/blog/premium-plan-release.md",
+            "name": "premium-plan-release.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "pages/blog/mui-core-v5-migration-update.md",
+            "name": "mui-core-v5-migration-update.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "path": "pages/blog/making-customizable-components.md",
+            "name": "making-customizable-components.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "pages/blog/bringing-consistency-to-material-ui-customization-apis.md",
+            "name": "bringing-consistency-to-material-ui-customization-apis.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "pages/blog/aggregation-functions.md",
+            "name": "aggregation-functions.md",
+            "keywords": [
+              "class|function|endpoint|schema|model"
+            ]
+          },
+          {
+            "path": "pages/experiments/docs/custom-components.md",
+            "name": "custom-components.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "data/material/integrations/styled-components/styled-components.md",
+            "name": "styled-components.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "pages/blog/toolpad-use-cases.md",
+            "name": "toolpad-use-cases.md",
+            "keywords": [
+              "case[\\-_]study|example|use[\\-_]case"
+            ]
+          },
+          {
+            "path": "pages/blog/mui-x-mid-v6-features.md",
+            "name": "mui-x-mid-v6-features.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "pages/blog/mui-x-end-v6-features.md",
+            "name": "mui-x-end-v6-features.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "pages/experiments/docs/pro-feature.md",
+            "name": "pro-feature.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "data/material/guides/testing/testing.md",
+            "name": "testing.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          }
+        ],
+        "4": [
+          {
+            "path": "pages/careers/head-of-operations.md",
+            "name": "head-of-operations.md",
+            "keywords": [
+              "deploy|deployment|production|operations|ops"
+            ]
+          },
+          {
+            "path": "data/material/migration/migration-v4/troubleshooting.md",
+            "name": "troubleshooting.md",
+            "keywords": [
+              "troubleshoot|debug|faq|common[\\-_]issues"
+            ]
+          },
+          {
+            "path": "data/material/customization/css-theme-variables/configuration.md",
+            "name": "configuration.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "src/pages/production-error/index.md",
+            "name": "index.md",
+            "keywords": [
+              "deploy|deployment|production|operations|ops"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "LICENSE": 1,
+        "other_markdown": 306,
+        "CHANGELOG": 2,
+        "README": 10,
+        "SECURITY": 1,
+        "other": 1,
+        "TROUBLESHOOTING": 1,
+        "TESTING": 1,
+        "API": 1,
+        "INSTALL": 2,
+        "FAQ": 1,
+        "howto": 1
+      }
+    },
+    "nextjs": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "pandas": {
+      "has_docs_folder": false,
+      "total_docs": 4,
+      "root_docs": [
+        "LICENSE",
+        "AGENTS.md",
+        "AUTHORS.md",
+        "README.md"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "LICENSE": 1,
+        "other_markdown": 2,
+        "README": 1
+      }
+    },
+    "plane": {
+      "has_docs_folder": true,
+      "total_docs": 8,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "AGENTS.md",
+        "COPYRIGHT_CHECK.md",
+        "CODE_OF_CONDUCT.md",
+        "LICENSE.txt",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {
+        "0": 1
+      },
+      "examples_by_tier": {
+        "0": [
+          {
+            "path": "linting.md",
+            "name": "linting.md",
+            "keywords": []
+          }
+        ]
+      },
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "other_markdown": 3,
+        "CODE_OF_CONDUCT": 1,
+        "LICENSE": 1,
+        "README": 1,
+        "SECURITY": 1
+      }
+    },
+    "pytest": {
+      "has_docs_folder": false,
+      "total_docs": 5,
+      "root_docs": [
+        "LICENSE",
+        "CHANGELOG.rst",
+        "CODE_OF_CONDUCT.md",
+        "CONTRIBUTING.rst",
+        "README.rst"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "LICENSE": 1,
+        "CHANGELOG": 1,
+        "CODE_OF_CONDUCT": 1,
+        "CONTRIBUTING": 1,
+        "README": 1
+      }
+    },
+    "rails": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "redis": {
+      "has_docs_folder": false,
+      "total_docs": 7,
+      "root_docs": [
+        "INSTALL",
+        "CONTRIBUTING.md",
+        "TLS.md",
+        "CODE_OF_CONDUCT.md",
+        "LICENSE.txt",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "INSTALL": 1,
+        "CONTRIBUTING": 1,
+        "other_markdown": 1,
+        "CODE_OF_CONDUCT": 1,
+        "LICENSE": 1,
+        "README": 1,
+        "SECURITY": 1
+      }
+    },
+    "requests": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "saleor": {
+      "has_docs_folder": false,
+      "total_docs": 7,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "CHANGELOG.md",
+        "README.md",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "LICENSE": 1,
+        "other_markdown": 2,
+        "CHANGELOG": 1,
+        "README": 1,
+        "SECURITY": 1
+      }
+    },
+    "scikit-learn": {
+      "has_docs_folder": false,
+      "total_docs": 5,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "AGENTS.md",
+        "CODE_OF_CONDUCT.md",
+        "README.rst",
+        "SECURITY.md"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "other_markdown": 1,
+        "CODE_OF_CONDUCT": 1,
+        "README": 1,
+        "SECURITY": 1
+      }
+    },
+    "sentry": {
+      "has_docs_folder": false,
+      "total_docs": 4,
+      "root_docs": [
+        "AGENTS.md",
+        "CLAUDE.md",
+        "LICENSE.md",
+        "README.md"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "other_markdown": 2,
+        "LICENSE": 1,
+        "README": 1
+      }
+    },
+    "sphinx": {
+      "has_docs_folder": false,
+      "total_docs": 4,
+      "root_docs": [
+        "CODE_OF_CONDUCT.rst",
+        "LICENSE.rst",
+        "CONTRIBUTING.rst",
+        "README.rst"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "CODE_OF_CONDUCT": 1,
+        "LICENSE": 1,
+        "CONTRIBUTING": 1,
+        "README": 1
+      }
+    },
+    "superset": {
+      "has_docs_folder": true,
+      "total_docs": 60,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "AGENTS.md",
+        "INSTALL.md",
+        "CLAUDE.md",
+        "UPDATING.md",
+        "CODE_OF_CONDUCT.md",
+        "CHANGELOG.md",
+        "GPT.md",
+        "GEMINI.md",
+        "LICENSE.txt",
+        "README.md"
+      ],
+      "tier_distribution": {
+        "0": 5,
+        "1": 10,
+        "2": 11,
+        "5": 20,
+        "3": 2,
+        "4": 1
+      },
+      "examples_by_tier": {
+        "0": [
+          {
+            "path": "DOCS_CLAUDE.md",
+            "name": "DOCS_CLAUDE.md",
+            "keywords": []
+          },
+          {
+            "path": ".claude/instructions.md",
+            "name": "instructions.md",
+            "keywords": []
+          },
+          {
+            "path": "static/llms.txt",
+            "name": "llms.txt",
+            "keywords": []
+          },
+          {
+            "path": "admin_docs/index.md",
+            "name": "index.md",
+            "keywords": []
+          },
+          {
+            "path": "src/pages/markdown-page.md",
+            "name": "markdown-page.md",
+            "keywords": []
+          }
+        ],
+        "1": [
+          {
+            "path": "README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "developer_docs/testing/overview.md",
+            "name": "overview.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "developer_docs/guidelines/design-guidelines.md",
+            "name": "design-guidelines.md",
+            "keywords": [
+              "architecture|design|system"
+            ]
+          },
+          {
+            "path": "developer_docs/extensions/quick-start.md",
+            "name": "quick-start.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "developer_docs/extensions/architecture.md",
+            "name": "architecture.md",
+            "keywords": [
+              "architecture|design|system"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "path": "components/index.md",
+            "name": "index.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "components/chart-components/bar-chart.md",
+            "name": "bar-chart.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "components/layout-components/grid.md",
+            "name": "grid.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "developer_docs/testing/backend-testing.md",
+            "name": "backend-testing.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          },
+          {
+            "path": "developer_docs/testing/frontend-testing.md",
+            "name": "frontend-testing.md",
+            "keywords": [
+              "backend|frontend|database|auth|search|storage"
+            ]
+          }
+        ],
+        "5": [
+          {
+            "path": "developer_docs/index.md",
+            "name": "index.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "developer_docs/testing/e2e-testing.md",
+            "name": "e2e-testing.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "developer_docs/testing/storybook.md",
+            "name": "storybook.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "developer_docs/testing/ci-cd.md",
+            "name": "ci-cd.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "developer_docs/extensions/dependencies.md",
+            "name": "dependencies.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "developer_docs/testing/testing-guidelines.md",
+            "name": "testing-guidelines.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "developer_docs/contributing/guidelines.md",
+            "name": "guidelines.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          }
+        ],
+        "4": [
+          {
+            "path": "developer_docs/extensions/deployment.md",
+            "name": "deployment.md",
+            "keywords": [
+              "deploy|deployment|production|operations|ops"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "other_markdown": 45,
+        "INSTALL": 1,
+        "CODE_OF_CONDUCT": 1,
+        "CHANGELOG": 1,
+        "LICENSE": 1,
+        "README": 2,
+        "SECURITY": 1,
+        "QUICKSTART": 1,
+        "ARCHITECTURE": 1,
+        "DEPLOYMENT": 1,
+        "DEVELOPMENT": 1,
+        "guide": 1,
+        "other": 2
+      }
+    },
+    "vue": {
+      "has_docs_folder": false,
+      "total_docs": 0,
+      "root_docs": [],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {}
+    },
+    "wagtail": {
+      "has_docs_folder": true,
+      "total_docs": 379,
+      "root_docs": [
+        "LICENSE",
+        "AGENTS.md",
+        "CHANGELOG.txt",
+        "CONTRIBUTORS.md",
+        "CODE_OF_CONDUCT.md",
+        "SPONSORS.md",
+        "README.md"
+      ],
+      "tier_distribution": {
+        "0": 64,
+        "1": 8,
+        "5": 231,
+        "3": 16,
+        "2": 49,
+        "4": 4
+      },
+      "examples_by_tier": {
+        "0": [
+          {
+            "path": "spelling_wordlist.txt",
+            "name": "spelling_wordlist.txt",
+            "keywords": []
+          },
+          {
+            "path": "support.md",
+            "name": "support.md",
+            "keywords": []
+          },
+          {
+            "path": "index.rst",
+            "name": "index.rst",
+            "keywords": []
+          },
+          {
+            "path": "advanced_topics/icons.md",
+            "name": "icons.md",
+            "keywords": []
+          },
+          {
+            "path": "advanced_topics/performance.md",
+            "name": "performance.md",
+            "keywords": []
+          }
+        ],
+        "1": [
+          {
+            "path": "README.md",
+            "name": "README.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "advanced_topics/documents/overview.md",
+            "name": "overview.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "getting_started/index.md",
+            "name": "index.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "getting_started/integrating_into_django.md",
+            "name": "integrating_into_django.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          },
+          {
+            "path": "getting_started/quick_install.md",
+            "name": "quick_install.md",
+            "keywords": [
+              "readme|getting[\\-_]started|quickstart|quick[\\-_]start|introduction|intro|overview"
+            ]
+          }
+        ],
+        "5": [
+          {
+            "path": "advanced_topics/streamfield_migrations.md",
+            "name": "streamfield_migrations.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "advanced_topics/testing.md",
+            "name": "testing.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "advanced_topics/documents/testing.md",
+            "name": "testing.md",
+            "keywords": [
+              "contribut|development|dev|testing|test"
+            ]
+          },
+          {
+            "path": "releases/5.2.5.md",
+            "name": "5.2.5.md",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          },
+          {
+            "path": "releases/2.16.1.rst",
+            "name": "2.16.1.rst",
+            "keywords": [
+              "changelog|release|migration"
+            ]
+          }
+        ],
+        "3": [
+          {
+            "path": "advanced_topics/third_party_tutorials.md",
+            "name": "third_party_tutorials.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "advanced_topics/images/feature_detection.md",
+            "name": "feature_detection.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "topics/snippets/features.md",
+            "name": "features.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "tutorial/create_portfolio_page.md",
+            "name": "create_portfolio_page.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          },
+          {
+            "path": "tutorial/index.md",
+            "name": "index.md",
+            "keywords": [
+              "feature|workflow|guide|tutorial|how[\\-_]to|walkthrough"
+            ]
+          }
+        ],
+        "2": [
+          {
+            "path": "advanced_topics/reference_index.md",
+            "name": "reference_index.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "advanced_topics/images/custom_image_model.md",
+            "name": "custom_image_model.md",
+            "keywords": [
+              "class|function|endpoint|schema|model"
+            ]
+          },
+          {
+            "path": "advanced_topics/api/index.md",
+            "name": "index.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "advanced_topics/api/django-ninja.md",
+            "name": "django-ninja.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          },
+          {
+            "path": "advanced_topics/api/v2/usage.md",
+            "name": "usage.md",
+            "keywords": [
+              "reference|api|components?|modules?"
+            ]
+          }
+        ],
+        "4": [
+          {
+            "path": "extending/custom_account_settings.md",
+            "name": "custom_account_settings.md",
+            "keywords": [
+              "config|configuration|environment|settings"
+            ]
+          },
+          {
+            "path": "deployment/index.md",
+            "name": "index.md",
+            "keywords": [
+              "deploy|deployment|production|operations|ops"
+            ]
+          },
+          {
+            "path": "deployment/flyio.md",
+            "name": "flyio.md",
+            "keywords": [
+              "deploy|deployment|production|operations|ops"
+            ]
+          },
+          {
+            "path": "deployment/under_the_hood.md",
+            "name": "under_the_hood.md",
+            "keywords": [
+              "deploy|deployment|production|operations|ops"
+            ]
+          }
+        ]
+      },
+      "doc_types": {
+        "LICENSE": 1,
+        "other_markdown": 236,
+        "CHANGELOG": 1,
+        "CODE_OF_CONDUCT": 1,
+        "README": 2,
+        "other": 130,
+        "reference": 1,
+        "TESTING": 2,
+        "feature": 2,
+        "tutorial": 1,
+        "DEPLOYMENT": 1,
+        "SECURITY": 1
+      }
+    },
+    "webpack": {
+      "has_docs_folder": false,
+      "total_docs": 10,
+      "root_docs": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "AGENTS.md",
+        "WORKING_GROUP.md",
+        "CLAUDE.md",
+        "TESTING_DOCS.md",
+        "_SETUP.md",
+        "CHANGELOG.md",
+        "GOVERNANCE.md",
+        "README.md"
+      ],
+      "tier_distribution": {},
+      "examples_by_tier": {},
+      "doc_types": {
+        "CONTRIBUTING": 1,
+        "LICENSE": 1,
+        "other_markdown": 6,
+        "CHANGELOG": 1,
+        "README": 1
+      }
+    }
+  }
+}

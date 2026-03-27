@@ -1,0 +1,525 @@
+{
+  "summary": {
+    "total_projects": 37,
+    "by_classification": {
+      "rich_documentation": [
+        "gitlabhq",
+        "grafana",
+        "wagtail",
+        "metabase",
+        "mui",
+        "electron",
+        "pytest",
+        "celery",
+        "pandas",
+        "scikit-learn",
+        "sphinx",
+        "discourse",
+        "django-rest-framework",
+        "superset",
+        "fastapi-users"
+      ],
+      "minimal_doc_folder": [
+        "airflow",
+        "mastodon",
+        "cal.com",
+        "plane",
+        "ghost",
+        "kubernetes"
+      ],
+      "basic_root_docs": [
+        "fullstack-fastapi",
+        "webpack",
+        "redis",
+        "saleor"
+      ],
+      "minimal_documentation": [
+        "home-assistant",
+        "sentry",
+        "click",
+        "django",
+        "docker",
+        "express",
+        "fastapi",
+        "flask",
+        "nextjs",
+        "rails",
+        "requests",
+        "vue"
+      ]
+    },
+    "projects_with_doc_folders": 21,
+    "projects_with_substantial_docs": 15,
+    "doc_folder_locations": {
+      "doc": 5,
+      "docs": 16
+    }
+  },
+  "projects": [
+    {
+      "project": "gitlabhq",
+      "has_doc_folder": true,
+      "doc_folder_location": "doc",
+      "doc_folder_file_count": 2617,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "INSTALLATION_TYPE",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "root_doc_count": 4,
+      "total_doc_score": 26178,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "grafana",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 715,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "root_doc_count": 3,
+      "total_doc_score": 7156,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "wagtail",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 372,
+      "root_doc_files": [
+        "CHANGELOG.txt",
+        "README.md"
+      ],
+      "root_doc_count": 2,
+      "total_doc_score": 3724,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "metabase",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 322,
+      "root_doc_files": [
+        "README.md"
+      ],
+      "root_doc_count": 1,
+      "total_doc_score": 3222,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "mui",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 320,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "CHANGELOG.old.md",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "root_doc_count": 4,
+      "total_doc_score": 3208,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "electron",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 275,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "root_doc_count": 2,
+      "total_doc_score": 2754,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "pytest",
+      "has_doc_folder": true,
+      "doc_folder_location": "doc",
+      "doc_folder_file_count": 258,
+      "root_doc_files": [
+        "CHANGELOG.rst",
+        "CONTRIBUTING.rst",
+        "README.rst"
+      ],
+      "root_doc_count": 3,
+      "total_doc_score": 2586,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "celery",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 240,
+      "root_doc_files": [
+        "Changelog.rst",
+        "CONTRIBUTING.rst",
+        "README.rst"
+      ],
+      "root_doc_count": 3,
+      "total_doc_score": 2406,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "pandas",
+      "has_doc_folder": true,
+      "doc_folder_location": "doc",
+      "doc_folder_file_count": 220,
+      "root_doc_files": [
+        "README.md"
+      ],
+      "root_doc_count": 1,
+      "total_doc_score": 2202,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "scikit-learn",
+      "has_doc_folder": true,
+      "doc_folder_location": "doc",
+      "doc_folder_file_count": 195,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "README.rst"
+      ],
+      "root_doc_count": 2,
+      "total_doc_score": 1954,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "sphinx",
+      "has_doc_folder": true,
+      "doc_folder_location": "doc",
+      "doc_folder_file_count": 154,
+      "root_doc_files": [
+        "CONTRIBUTING.rst",
+        "README.rst"
+      ],
+      "root_doc_count": 2,
+      "total_doc_score": 1544,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "discourse",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 112,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "root_doc_count": 2,
+      "total_doc_score": 1124,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "django-rest-framework",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 70,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "root_doc_count": 2,
+      "total_doc_score": 704,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "superset",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 49,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "INSTALL.md",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "root_doc_count": 4,
+      "total_doc_score": 498,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "fastapi-users",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 36,
+      "root_doc_files": [
+        "README.md"
+      ],
+      "root_doc_count": 1,
+      "total_doc_score": 362,
+      "classification": "rich_documentation"
+    },
+    {
+      "project": "airflow",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 2,
+      "root_doc_files": [
+        "INSTALL",
+        "INSTALLING.md",
+        "CONTRIBUTING.rst",
+        "README.md"
+      ],
+      "root_doc_count": 4,
+      "total_doc_score": 28,
+      "classification": "minimal_doc_folder"
+    },
+    {
+      "project": "mastodon",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 1,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "root_doc_count": 3,
+      "total_doc_score": 16,
+      "classification": "minimal_doc_folder"
+    },
+    {
+      "project": "cal.com",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 1,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "root_doc_count": 2,
+      "total_doc_score": 14,
+      "classification": "minimal_doc_folder"
+    },
+    {
+      "project": "plane",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 1,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "root_doc_count": 2,
+      "total_doc_score": 14,
+      "classification": "minimal_doc_folder"
+    },
+    {
+      "project": "ghost",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 1,
+      "root_doc_files": [
+        "README.md"
+      ],
+      "root_doc_count": 1,
+      "total_doc_score": 12,
+      "classification": "minimal_doc_folder"
+    },
+    {
+      "project": "fullstack-fastapi",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "deployment.md",
+        "development.md",
+        "README.md"
+      ],
+      "root_doc_count": 4,
+      "total_doc_score": 8,
+      "classification": "basic_root_docs"
+    },
+    {
+      "project": "webpack",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "TESTING_DOCS.md",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "root_doc_count": 4,
+      "total_doc_score": 8,
+      "classification": "basic_root_docs"
+    },
+    {
+      "project": "kubernetes",
+      "has_doc_folder": true,
+      "doc_folder_location": "docs",
+      "doc_folder_file_count": 0,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "root_doc_count": 3,
+      "total_doc_score": 6,
+      "classification": "minimal_doc_folder"
+    },
+    {
+      "project": "redis",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [
+        "INSTALL",
+        "CONTRIBUTING.md",
+        "README.md"
+      ],
+      "root_doc_count": 3,
+      "total_doc_score": 6,
+      "classification": "basic_root_docs"
+    },
+    {
+      "project": "saleor",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "CHANGELOG.md",
+        "README.md"
+      ],
+      "root_doc_count": 3,
+      "total_doc_score": 6,
+      "classification": "basic_root_docs"
+    },
+    {
+      "project": "home-assistant",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [
+        "CONTRIBUTING.md",
+        "README.rst"
+      ],
+      "root_doc_count": 2,
+      "total_doc_score": 4,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "sentry",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [
+        "README.md"
+      ],
+      "root_doc_count": 1,
+      "total_doc_score": 2,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "click",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "django",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "docker",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "express",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "fastapi",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "flask",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "nextjs",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "rails",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "requests",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    },
+    {
+      "project": "vue",
+      "has_doc_folder": false,
+      "doc_folder_location": null,
+      "doc_folder_file_count": 0,
+      "root_doc_files": [],
+      "root_doc_count": 0,
+      "total_doc_score": 0,
+      "classification": "minimal_documentation"
+    }
+  ]
+}
