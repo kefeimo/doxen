@@ -16,9 +16,46 @@
 - electron (275 docs) - Desktop framework APIs
 - django-rest-framework (70 docs) - REST API patterns ✅ Phase 1 tested
 
-**Status:** Phase 1 (Component Grouping) ✅ COMPLETE → Phase 2 (Component Analysis) next
+**Status:** Phase 2 (Component Analysis) ✅ COMPLETE → Phase 3 (REFERENCE-*.md Generation) next
 
 **Plan:** See `docs/.progress/sprint-2-3-tier-2-plan.md`
+
+### Phase 2: Component Analysis ✅ COMPLETE (2026-03-27)
+
+**Implemented:**
+- Created `ComponentAnalyzer` agent for deep API extraction
+- Created `PythonAPIExtractor` using AST (classes, functions, methods, parameters, types)
+- Structured JSON output with file references and line numbers
+- API coverage calculation (percentage of documented APIs)
+- Support for: classes, methods, functions, parameters, return types, decorators, docstrings
+
+**Tested on django-rest-framework (5 core components):**
+- ✅ serializers: 10 classes, 2 functions, 72 methods (84 total APIs, 51.2% coverage)
+- ✅ views: 1 class, 4 functions, 33 methods (38 APIs, 89.5% coverage)
+- ✅ routers: 4 classes, 2 functions, 17 methods (23 APIs, 60.9% coverage)
+- ✅ authentication: 6 classes, 1 function, 13 methods (20 APIs, 60.0% coverage)
+- ✅ permissions: 15 classes, 31 methods (46 APIs, 23.9% coverage)
+- **Total: 211 APIs extracted across 5 components**
+- **Average coverage: 57.1%** (target: 80%+)
+
+**Key Implementation Details:**
+- AST-based extraction (no regex, precise)
+- Extracts: class hierarchy, method signatures, parameter types, return types, docstrings
+- Handles: magic methods, private methods, properties, static/class methods
+- Calculates coverage: (documented APIs / total APIs) × 100%
+- Preserves source location (file:line) for all APIs
+
+**Files Created:**
+- `src/doxen/extractors/python_api_extractor.py` (370 lines, AST traversal)
+- `src/doxen/agents/component_analyzer.py` (270 lines, multi-language analyzer)
+- `experimental/scripts/test_component_analysis.py` (test script)
+
+**Results:** `experimental/results/serializers_analysis.json`
+
+**Notes:**
+- Coverage varies: views (90%) high, permissions (24%) low due to missing docstrings
+- JavaScript/TypeScript extraction placeholder (Phase 2 extension if needed)
+- LLM enhancement placeholder (optional, for semantic descriptions)
 
 ### Phase 1: Component Grouping ✅ COMPLETE (2026-03-27)
 

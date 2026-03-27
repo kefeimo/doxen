@@ -1,0 +1,2389 @@
+{
+  "name": "serializers",
+  "type": "python_module",
+  "language": "python",
+  "path": "rest_framework/serializers.py",
+  "files": [
+    {
+      "path": "rest_framework/serializers.py",
+      "name": "serializers.py",
+      "size": 70603
+    }
+  ],
+  "entry_point": "rest_framework/serializers.py",
+  "semantic_type": "unknown",
+  "api": {
+    "language": "python",
+    "classes": [
+      {
+        "name": "BaseSerializer",
+        "bases": [
+          "Field"
+        ],
+        "methods": [
+          {
+            "name": "__init__",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "instance",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "data",
+                "type": null,
+                "default": "empty"
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 114,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "magic"
+          },
+          {
+            "name": "__new__",
+            "parameters": [
+              {
+                "name": "cls",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 123,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "magic"
+          },
+          {
+            "name": "__class_getitem__",
+            "parameters": [
+              {
+                "name": "cls",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 131,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "magic"
+          },
+          {
+            "name": "many_init",
+            "parameters": [
+              {
+                "name": "cls",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "This method implements the creation of a `ListSerializer` parent\nclass when `many=True` is used. You can customize it if you need to\ncontrol which keyword arguments are passed to the parent, and\nwhich are passed to the child.\n\nNote that we're over-cautious in passing most arguments to both parent\nand child classes in order to try to cover the general case. If you're\noverriding this method you'll probably want something much simpler, eg:\n\n@classmethod\ndef many_init(cls, *args, **kwargs):\n    kwargs['child'] = cls()\n    return CustomListSerializer(*args, **kwargs)",
+            "line": 135,
+            "decorators": [
+              "classmethod"
+            ],
+            "is_async": false,
+            "method_type": "classmethod"
+          },
+          {
+            "name": "to_internal_value",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 165,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "to_representation",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "instance",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 168,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "update",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "instance",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "validated_data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 171,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "create",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "validated_data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 174,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "save",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 177,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "is_valid",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 217,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "data",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 238,
+            "decorators": [
+              "property"
+            ],
+            "is_async": false,
+            "method_type": "property"
+          },
+          {
+            "name": "errors",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 259,
+            "decorators": [
+              "property"
+            ],
+            "is_async": false,
+            "method_type": "property"
+          },
+          {
+            "name": "validated_data",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 266,
+            "decorators": [
+              "property"
+            ],
+            "is_async": false,
+            "method_type": "property"
+          }
+        ],
+        "attributes": [],
+        "docstring": "The BaseSerializer class provides a minimal class which may be used\nfor writing custom serializer implementations.\n\nNote that we strongly restrict the ordering of operations/properties\nthat may be used on the serializer in order to enforce correct usage.\n\nIn particular, if a `data=` argument is passed then:\n\n.is_valid() - Available.\n.initial_data - Available.\n.validated_data - Only available after calling `is_valid()`\n.errors - Only available after calling `is_valid()`\n.data - Only available after calling `is_valid()`\n\nIf a `data=` argument is not passed then:\n\n.is_valid() - Not available.\n.initial_data - Not available.\n.validated_data - Not available.\n.errors - Not available.\n.data - Available.",
+        "line": 89,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "SerializerMetaclass",
+        "bases": [
+          "type"
+        ],
+        "methods": [
+          {
+            "name": "_get_declared_fields",
+            "parameters": [
+              {
+                "name": "cls",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "bases",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "attrs",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 286,
+            "decorators": [
+              "classmethod"
+            ],
+            "is_async": false,
+            "method_type": "classmethod"
+          },
+          {
+            "name": "__new__",
+            "parameters": [
+              {
+                "name": "cls",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "name",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "bases",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "attrs",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 309,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "magic"
+          }
+        ],
+        "attributes": [],
+        "docstring": "This metaclass sets a dictionary named `_declared_fields` on the class.\n\nAny instances of `Field` included as attributes on either the class\nor on any of its superclasses will be include in the\n`_declared_fields` dictionary.",
+        "line": 276,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "Serializer",
+        "bases": [
+          "BaseSerializer"
+        ],
+        "methods": [
+          {
+            "name": "set_value",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "dictionary",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "keys",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "value",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Similar to Python's built in `dictionary[key] = value`,\nbut takes a list of nested keys instead of a single key.\n\nset_value({'a': 1}, [], {'b': 2}) -> {'a': 1, 'b': 2}\nset_value({'a': 1}, ['x'], 2) -> {'a': 1, 'x': 2}\nset_value({'a': 1}, ['x', 'y'], 2) -> {'a': 1, 'x': {'y': 2}}",
+            "line": 357,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "fields",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "A dictionary of {field_name: field_instance}.",
+            "line": 378,
+            "decorators": [
+              "cached_property"
+            ],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "_writable_fields",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 391,
+            "decorators": [
+              "property"
+            ],
+            "is_async": false,
+            "method_type": "property"
+          },
+          {
+            "name": "_readable_fields",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 397,
+            "decorators": [
+              "property"
+            ],
+            "is_async": false,
+            "method_type": "property"
+          },
+          {
+            "name": "get_fields",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Returns a dictionary of {field_name: field_instance}.",
+            "line": 402,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_validators",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Returns a list of validator callables.",
+            "line": 411,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_initial",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 420,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_value",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "dictionary",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 439,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "run_validation",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "data",
+                "type": null,
+                "default": "empty"
+              }
+            ],
+            "return_type": null,
+            "docstring": "We override the default `run_validation`, because the validation\nperformed by validators and the `.validate()` method should\nbe coerced into an error dictionary with a 'non_fields_error' key.",
+            "line": 446,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "_read_only_defaults",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 466,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "private"
+          },
+          {
+            "name": "run_validators",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "value",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Add read_only fields with defaults to value before running validators.",
+            "line": 482,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "to_internal_value",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Dict of native values <- Dict of primitive datatypes.",
+            "line": 493,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "to_representation",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "instance",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Object instance -> Dict of primitive datatypes.",
+            "line": 530,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "validate",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "attrs",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 556,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "__repr__",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 559,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "magic"
+          },
+          {
+            "name": "__iter__",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 566,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "magic"
+          },
+          {
+            "name": "__getitem__",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "key",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 570,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "magic"
+          },
+          {
+            "name": "data",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 584,
+            "decorators": [
+              "property"
+            ],
+            "is_async": false,
+            "method_type": "property"
+          },
+          {
+            "name": "errors",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 589,
+            "decorators": [
+              "property"
+            ],
+            "is_async": false,
+            "method_type": "property"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "default_error_messages",
+            "type": null,
+            "line": 353
+          }
+        ],
+        "docstring": null,
+        "line": 352,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "ListSerializer",
+        "bases": [
+          "BaseSerializer"
+        ],
+        "methods": [
+          {
+            "name": "__init__",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 613,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "magic"
+          },
+          {
+            "name": "get_initial",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 623,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_value",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "dictionary",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Given the input dictionary, return the field value.",
+            "line": 628,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "run_validation",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "data",
+                "type": null,
+                "default": "empty"
+              }
+            ],
+            "return_type": null,
+            "docstring": "We override the default `run_validation`, because the validation\nperformed by validators and the `.validate()` method should\nbe coerced into an error dictionary with a 'non_fields_error' key.",
+            "line": 638,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "run_child_validation",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Run validation on child serializer.\nYou may need to override this method to support multiple updates. For example:\n\nself.child.instance = self.instance.get(pk=data['id'])\nself.child.initial_data = data\nreturn super().run_child_validation(data)",
+            "line": 658,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "to_internal_value",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "List of dicts of native values <- List of dicts of primitive datatypes.",
+            "line": 669,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "to_representation",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "List of object instances -> List of dicts of primitive datatypes.",
+            "line": 719,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "validate",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "attrs",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 731,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "update",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "instance",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "validated_data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 734,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "create",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "validated_data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 743,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "save",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Save and return a list of object instances.",
+            "line": 748,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "is_valid",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 779,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "__repr__",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 801,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "magic"
+          },
+          {
+            "name": "data",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 808,
+            "decorators": [
+              "property"
+            ],
+            "is_async": false,
+            "method_type": "property"
+          },
+          {
+            "name": "errors",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 813,
+            "decorators": [
+              "property"
+            ],
+            "is_async": false,
+            "method_type": "property"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "child",
+            "type": null,
+            "line": 603
+          },
+          {
+            "name": "many",
+            "type": null,
+            "line": 604
+          },
+          {
+            "name": "default_error_messages",
+            "type": null,
+            "line": 606
+          }
+        ],
+        "docstring": null,
+        "line": 602,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "ModelSerializer",
+        "bases": [
+          "Serializer"
+        ],
+        "methods": [
+          {
+            "name": "create",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "validated_data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "We have a bit of extra checking around this in order to provide\ndescriptive messages when something goes wrong, but this method is\nessentially just:\n\n    return ExampleModel.objects.create(**validated_data)\n\nIf there are many to many fields present on the instance then they\ncannot be set until the model is instantiated, in which case the\nimplementation is like so:\n\n    example_relationship = validated_data.pop('example_relationship')\n    instance = ExampleModel.objects.create(**validated_data)\n    instance.example_relationship = example_relationship\n    return instance\n\nThe default implementation also does not handle nested relationships.\nIf you want to support writable nested relationships you'll need\nto write an explicit `.create()` method.",
+            "line": 976,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "update",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "instance",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "validated_data",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": null,
+            "line": 1040,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_fields",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Return the dict of field names -> field instances that should be\nused for `self.fields` when instantiating the serializer.",
+            "line": 1068,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_field_names",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "declared_fields",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "info",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Returns the list of all field names that should be created when\ninstantiating this serializer class. This is based on the default\nset of fields, but also takes into account the `Meta.fields` or\n`Meta.exclude` options if they have been specified.",
+            "line": 1151,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_default_field_names",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "declared_fields",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "model_info",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Return the default list of field names that will be used if the\n`Meta.fields` option is not specified.",
+            "line": 1243,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "build_field",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_name",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "info",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "model_class",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "nested_depth",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Return a two tuple of (cls, kwargs) to build a serializer field with.",
+            "line": 1257,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "build_standard_field",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_name",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "model_field",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Create regular model fields.",
+            "line": 1280,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "build_relational_field",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_name",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "relation_info",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Create fields for forward and reverse relationships.",
+            "line": 1341,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "build_nested_field",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_name",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "relation_info",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "nested_depth",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Create nested fields for forward and reverse relationships.",
+            "line": 1359,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "build_property_field",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_name",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "model_class",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Create a read only field for model methods and properties.",
+            "line": 1374,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "build_url_field",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_name",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "model_class",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Create a field representing the object's own URL.",
+            "line": 1383,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "build_unknown_field",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_name",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "model_class",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Raise an error on any unknown fields.",
+            "line": 1392,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "include_extra_kwargs",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "kwargs",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "extra_kwargs",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Include any 'extra_kwargs' that have been included for this field,\npossibly removing any incompatible existing keyword arguments.",
+            "line": 1401,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_extra_kwargs",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Return a dictionary mapping field names to a dictionary of\nadditional keyword arguments.",
+            "line": 1425,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_unique_together_constraints",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "model",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Returns iterator of (fields, queryset, condition_fields, condition),\neach entry describes an unique together constraint on `fields` in `queryset`\nwith respect of constraint's `condition`.",
+            "line": 1455,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_uniqueness_extra_kwargs",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_names",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "declared_fields",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "extra_kwargs",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Return any additional field options that need to be included as a\nresult of uniqueness constraints on the model. This is returned as\na two-tuple of:\n\n('dict of updated extra kwargs', 'mapping of hidden fields')",
+            "line": 1472,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "_get_model_fields",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_names",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "declared_fields",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "extra_kwargs",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Returns all the model fields that are being mapped to by fields\non the serializer class.\nReturned as a dict of 'model field name' -> 'model field'.\nUsed internally by `get_uniqueness_field_options`.",
+            "line": 1549,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "private"
+          },
+          {
+            "name": "get_validators",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Determine the set of validators to use when instantiating serializer.",
+            "line": 1584,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "_get_constraint_violation_error_message",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "constraint",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Returns the violation error message for the UniqueConstraint,\nor None if the message is the default.",
+            "line": 1599,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "private"
+          },
+          {
+            "name": "get_unique_together_validators",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Determine a default set of validators for any unique_together constraints.",
+            "line": 1610,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "get_unique_for_date_validators",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Determine a default set of validators for the following constraints:\n\n* unique_for_date\n* unique_for_month\n* unique_for_year",
+            "line": 1684,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "serializer_field_mapping",
+            "type": null,
+            "line": 926
+          },
+          {
+            "name": "serializer_related_field",
+            "type": null,
+            "line": 961
+          },
+          {
+            "name": "serializer_related_to_field",
+            "type": null,
+            "line": 962
+          },
+          {
+            "name": "serializer_url_field",
+            "type": null,
+            "line": 963
+          },
+          {
+            "name": "serializer_choice_field",
+            "type": null,
+            "line": 964
+          },
+          {
+            "name": "url_field_name",
+            "type": null,
+            "line": 973
+          }
+        ],
+        "docstring": "A `ModelSerializer` is just a regular `Serializer`, except that:\n\n* A set of default fields are automatically populated.\n* A set of default validators are automatically populated.\n* Default `.create()` and `.update()` implementations are provided.\n\nThe process of automatically determining a set of serializer fields\nbased on the model fields is reasonably complex, but you almost certainly\ndon't need to dig into the implementation.\n\nIf the `ModelSerializer` class *doesn't* generate the set of fields that\nyou need you should either declare the extra/differing fields explicitly on\nthe serializer class, or simply use a `Serializer` class.",
+        "line": 910,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "HyperlinkedModelSerializer",
+        "bases": [
+          "ModelSerializer"
+        ],
+        "methods": [
+          {
+            "name": "get_default_field_names",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "declared_fields",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "model_info",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Return the default list of field names that will be used if the\n`Meta.fields` option is not specified.",
+            "line": 1736,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          },
+          {
+            "name": "build_nested_field",
+            "parameters": [
+              {
+                "name": "self",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "field_name",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "relation_info",
+                "type": null,
+                "default": null
+              },
+              {
+                "name": "nested_depth",
+                "type": null,
+                "default": null
+              }
+            ],
+            "return_type": null,
+            "docstring": "Create nested fields for forward and reverse relationships.",
+            "line": 1748,
+            "decorators": [],
+            "is_async": false,
+            "method_type": "public"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "serializer_related_field",
+            "type": null,
+            "line": 1734
+          }
+        ],
+        "docstring": "A type of `ModelSerializer` that uses hyperlinked relationships instead\nof primary key relationships. Specifically:\n\n* A 'url' field is included instead of the 'id' field.\n* Relationships to other instances are hyperlinks, instead of primary keys.",
+        "line": 1726,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "NestedSerializer",
+        "bases": [
+          "ModelSerializer"
+        ],
+        "methods": [],
+        "attributes": [],
+        "docstring": null,
+        "line": 1363,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "NestedSerializer",
+        "bases": [
+          "HyperlinkedModelSerializer"
+        ],
+        "methods": [],
+        "attributes": [],
+        "docstring": null,
+        "line": 1752,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "Meta",
+        "bases": [],
+        "methods": [],
+        "attributes": [
+          {
+            "name": "model",
+            "type": null,
+            "line": 1365
+          },
+          {
+            "name": "depth",
+            "type": null,
+            "line": 1366
+          },
+          {
+            "name": "fields",
+            "type": null,
+            "line": 1367
+          }
+        ],
+        "docstring": null,
+        "line": 1364,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "Meta",
+        "bases": [],
+        "methods": [],
+        "attributes": [
+          {
+            "name": "model",
+            "type": null,
+            "line": 1754
+          },
+          {
+            "name": "depth",
+            "type": null,
+            "line": 1755
+          },
+          {
+            "name": "fields",
+            "type": null,
+            "line": 1756
+          }
+        ],
+        "docstring": null,
+        "line": 1753,
+        "decorators": [],
+        "file": "rest_framework/serializers.py"
+      }
+    ],
+    "functions": [
+      {
+        "name": "as_serializer_error",
+        "parameters": [
+          {
+            "name": "exc",
+            "type": null,
+            "default": null
+          }
+        ],
+        "return_type": null,
+        "docstring": "Coerce validation exceptions into a standardized serialized error format.\n\nThis function normalizes both Django's `ValidationError` and REST\nframework's `ValidationError` into a dictionary structure compatible\nwith serializer `.errors`, ensuring all values are represented as\nlists of error details.\n\nThe returned structure conforms to the serializer error contract:\n- Field-specific errors are returned as '{field-name: [errors]}'\n- Non-field errors are returned under the 'NON_FIELD_ERRORS_KEY'",
+        "line": 314,
+        "decorators": [],
+        "is_async": false,
+        "file": "rest_framework/serializers.py"
+      },
+      {
+        "name": "raise_errors_on_nested_writes",
+        "parameters": [
+          {
+            "name": "method_name",
+            "type": null,
+            "default": null
+          },
+          {
+            "name": "serializer",
+            "type": null,
+            "default": null
+          },
+          {
+            "name": "validated_data",
+            "type": null,
+            "default": null
+          }
+        ],
+        "return_type": null,
+        "docstring": "Enforce explicit handling of writable nested and dotted-source fields.\n\nThis helper raises clear and actionable errors when a serializer attempts\nto perform writable nested updates or creates using the default\n`ModelSerializer` behavior.\n\nWritable nested relationships and dotted-source fields are intentionally\nunsupported by default due to ambiguous persistence semantics. Developers\nmust either:\n- Override the `.create()` / `.update()` methods explicitly, or\n- Mark nested serializers as `read_only=True`\n\nThis check is invoked internally by default `ModelSerializer.create()`\nand `ModelSerializer.update()` implementations.\n\nEg. Suppose we have a `UserSerializer` with a nested profile. How should\nwe handle the case of an update, where the `profile` relationship does\nnot exist? Any of the following might be valid:\n* Raise an application error.\n* Silently ignore the nested part of the update.\n* Automatically create a profile instance.",
+        "line": 828,
+        "decorators": [],
+        "is_async": false,
+        "file": "rest_framework/serializers.py"
+      }
+    ],
+    "imports": [
+      {
+        "type": "import",
+        "module": "contextlib",
+        "alias": null,
+        "line": 14
+      },
+      {
+        "type": "import",
+        "module": "copy",
+        "alias": null,
+        "line": 15
+      },
+      {
+        "type": "import",
+        "module": "inspect",
+        "alias": null,
+        "line": 16
+      },
+      {
+        "type": "import",
+        "module": "traceback",
+        "alias": null,
+        "line": 17
+      },
+      {
+        "type": "from_import",
+        "module": "collections",
+        "name": "defaultdict",
+        "alias": null,
+        "line": 18
+      },
+      {
+        "type": "from_import",
+        "module": "collections.abc",
+        "name": "Mapping",
+        "alias": null,
+        "line": 19
+      },
+      {
+        "type": "from_import",
+        "module": "django.core.exceptions",
+        "name": "FieldDoesNotExist",
+        "alias": null,
+        "line": 21
+      },
+      {
+        "type": "from_import",
+        "module": "django.core.exceptions",
+        "name": "ImproperlyConfigured",
+        "alias": null,
+        "line": 21
+      },
+      {
+        "type": "from_import",
+        "module": "django.core.exceptions",
+        "name": "ValidationError",
+        "alias": "DjangoValidationError",
+        "line": 22
+      },
+      {
+        "type": "from_import",
+        "module": "django.db",
+        "name": "models",
+        "alias": null,
+        "line": 23
+      },
+      {
+        "type": "from_import",
+        "module": "django.db.models.fields",
+        "name": "Field",
+        "alias": "DjangoModelField",
+        "line": 24
+      },
+      {
+        "type": "from_import",
+        "module": "django.utils",
+        "name": "timezone",
+        "alias": null,
+        "line": 25
+      },
+      {
+        "type": "from_import",
+        "module": "django.utils.functional",
+        "name": "cached_property",
+        "alias": null,
+        "line": 26
+      },
+      {
+        "type": "from_import",
+        "module": "django.utils.translation",
+        "name": "gettext_lazy",
+        "alias": "_",
+        "line": 27
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.compat",
+        "name": "get_referenced_base_fields_from_q",
+        "alias": null,
+        "line": 29
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.compat",
+        "name": "postgres_fields",
+        "alias": null,
+        "line": 29
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.exceptions",
+        "name": "ErrorDetail",
+        "alias": null,
+        "line": 32
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.exceptions",
+        "name": "ValidationError",
+        "alias": null,
+        "line": 32
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "get_error_detail",
+        "alias": null,
+        "line": 33
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.settings",
+        "name": "api_settings",
+        "alias": null,
+        "line": 34
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils",
+        "name": "html",
+        "alias": null,
+        "line": 35
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils",
+        "name": "model_meta",
+        "alias": null,
+        "line": 35
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils",
+        "name": "representation",
+        "alias": null,
+        "line": 35
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.field_mapping",
+        "name": "ClassLookupDict",
+        "alias": null,
+        "line": 36
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.field_mapping",
+        "name": "get_field_kwargs",
+        "alias": null,
+        "line": 36
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.field_mapping",
+        "name": "get_nested_relation_kwargs",
+        "alias": null,
+        "line": 36
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.field_mapping",
+        "name": "get_relation_kwargs",
+        "alias": null,
+        "line": 36
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.field_mapping",
+        "name": "get_url_kwargs",
+        "alias": null,
+        "line": 36
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.serializer_helpers",
+        "name": "BindingDict",
+        "alias": null,
+        "line": 40
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.serializer_helpers",
+        "name": "BoundField",
+        "alias": null,
+        "line": 40
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.serializer_helpers",
+        "name": "JSONBoundField",
+        "alias": null,
+        "line": 40
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.serializer_helpers",
+        "name": "NestedBoundField",
+        "alias": null,
+        "line": 40
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.serializer_helpers",
+        "name": "ReturnDict",
+        "alias": null,
+        "line": 40
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.utils.serializer_helpers",
+        "name": "ReturnList",
+        "alias": null,
+        "line": 40
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.validators",
+        "name": "UniqueForDateValidator",
+        "alias": null,
+        "line": 44
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.validators",
+        "name": "UniqueForMonthValidator",
+        "alias": null,
+        "line": 44
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.validators",
+        "name": "UniqueForYearValidator",
+        "alias": null,
+        "line": 44
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.validators",
+        "name": "UniqueTogetherValidator",
+        "alias": null,
+        "line": 44
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "BigIntegerField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "BooleanField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "CharField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "ChoiceField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "DateField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "DateTimeField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "DecimalField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "DictField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "DurationField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "EmailField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "Field",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "FileField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "FilePathField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "FloatField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "HiddenField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "HStoreField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "IPAddressField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "ImageField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "IntegerField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "JSONField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "ListField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "ModelField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "MultipleChoiceField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "ReadOnlyField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "RegexField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "SerializerMethodField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "SlugField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "TimeField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "URLField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "UUIDField",
+        "alias": null,
+        "line": 55
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.relations",
+        "name": "HyperlinkedIdentityField",
+        "alias": null,
+        "line": 62
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.relations",
+        "name": "HyperlinkedRelatedField",
+        "alias": null,
+        "line": 62
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.relations",
+        "name": "ManyRelatedField",
+        "alias": null,
+        "line": 62
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.relations",
+        "name": "PrimaryKeyRelatedField",
+        "alias": null,
+        "line": 62
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.relations",
+        "name": "RelatedField",
+        "alias": null,
+        "line": 62
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.relations",
+        "name": "SlugRelatedField",
+        "alias": null,
+        "line": 62
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.relations",
+        "name": "StringRelatedField",
+        "alias": null,
+        "line": 62
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "CreateOnlyDefault",
+        "alias": null,
+        "line": 68
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "CurrentUserDefault",
+        "alias": null,
+        "line": 68
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "SkipField",
+        "alias": null,
+        "line": 68
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.fields",
+        "name": "empty",
+        "alias": null,
+        "line": 68
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.relations",
+        "name": "Hyperlink",
+        "alias": null,
+        "line": 71
+      },
+      {
+        "type": "from_import",
+        "module": "rest_framework.relations",
+        "name": "PKOnlyObject",
+        "alias": null,
+        "line": 71
+      }
+    ],
+    "constants": [
+      {
+        "name": "LIST_SERIALIZER_KWARGS",
+        "value": "('read_only', 'write_only', 'required', 'default', 'initial', 'source', 'label', 'help_text', 'style', 'error_messages', 'allow_empty', 'instance', 'data', 'partial', 'context', 'allow_null', 'max_length', 'min_length')",
+        "line": 75
+      },
+      {
+        "name": "LIST_SERIALIZER_KWARGS_REMOVE",
+        "value": "('allow_empty', 'min_length', 'max_length')",
+        "line": 81
+      },
+      {
+        "name": "ALL_FIELDS",
+        "value": "__all__",
+        "line": 83
+      }
+    ],
+    "total_classes": 10,
+    "total_functions": 2,
+    "total_methods": 72
+  },
+  "api_coverage": 51.2
+}
