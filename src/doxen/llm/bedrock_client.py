@@ -116,6 +116,55 @@ class BedrockClient:
 
         return guide_data
 
+    def generate(
+        self,
+        prompt: str,
+        max_tokens: Optional[int] = None,
+        temperature: float = 0.3,
+        system_prompt: Optional[str] = None,
+    ) -> str:
+        """Generic text generation method.
+
+        Args:
+            prompt: User prompt
+            max_tokens: Maximum tokens to generate (uses instance default if None)
+            temperature: Sampling temperature (0-1)
+            system_prompt: Optional system prompt
+
+        Returns:
+            Generated text content
+        """
+        if max_tokens is None:
+            max_tokens = self.max_tokens
+
+        # Build request
+        request_body = {
+            "anthropic_version": "bedrock-2023-05-31",
+            "max_tokens": max_tokens,
+            "temperature": temperature,
+            "messages": [
+                {
+                    "role": "user",
+                    "content": prompt,
+                }
+            ],
+        }
+
+        if system_prompt:
+            request_body["system"] = system_prompt
+
+        # Call Bedrock API
+        response = self.client.invoke_model(
+            modelId=self.model_id,
+            body=json.dumps(request_body),
+        )
+
+        # Parse response
+        response_body = json.loads(response["body"].read())
+        content = response_body["content"][0]["text"]
+
+        return content
+
     def _get_default_system_prompt(self) -> str:
         """Get default system prompt for guide generation."""
         return """You are a technical documentation specialist generating integration guides for software projects.

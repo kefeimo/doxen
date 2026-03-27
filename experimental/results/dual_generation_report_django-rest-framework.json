@@ -1,0 +1,138 @@
+{
+  "project": "django-rest-framework",
+  "generation_time": "2026-03-27T15:19:10.105471",
+  "duration_seconds": 924.496799,
+  "results": [
+    {
+      "topic_id": "quickstart",
+      "topic_name": "Getting Started",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-quickstart.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-quickstart.md",
+      "tutorial_words": 557,
+      "guide_words": 314
+    },
+    {
+      "topic_id": "serialization",
+      "topic_name": "Serialization",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-serialization.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-serialization.md",
+      "tutorial_words": 541,
+      "guide_words": 345
+    },
+    {
+      "topic_id": "requests-responses",
+      "topic_name": "Requests and Responses",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-requests-responses.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-requests-responses.md",
+      "tutorial_words": 574,
+      "guide_words": 326
+    },
+    {
+      "topic_id": "class-based-views",
+      "topic_name": "Class-Based Views",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-class-based-views.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-class-based-views.md",
+      "tutorial_words": 575,
+      "guide_words": 338
+    },
+    {
+      "topic_id": "authentication-permissions",
+      "topic_name": "Authentication and Permissions",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-authentication-permissions.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-authentication-permissions.md",
+      "tutorial_words": 604,
+      "guide_words": 321
+    },
+    {
+      "topic_id": "relationships-hyperlinked",
+      "topic_name": "Relationships and Hyperlinked APIs",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-relationships-hyperlinked.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-relationships-hyperlinked.md",
+      "tutorial_words": 549,
+      "guide_words": 332
+    },
+    {
+      "topic_id": "viewsets-routers",
+      "topic_name": "Viewsets and Routers",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-viewsets-routers.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-viewsets-routers.md",
+      "tutorial_words": 555,
+      "guide_words": 327
+    },
+    {
+      "topic_id": "ajax-csrf-cors",
+      "topic_name": "AJAX, CSRF & CORS",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-ajax-csrf-cors.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-ajax-csrf-cors.md",
+      "tutorial_words": 615,
+      "guide_words": 344
+    },
+    {
+      "topic_id": "browsable-api",
+      "topic_name": "Browsable API",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-browsable-api.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-browsable-api.md",
+      "tutorial_words": 583,
+      "guide_words": 319
+    },
+    {
+      "topic_id": "browser-enhancements",
+      "topic_name": "Browser Enhancements",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-browser-enhancements.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-browser-enhancements.md",
+      "tutorial_words": 578,
+      "guide_words": 317
+    },
+    {
+      "topic_id": "documenting-api",
+      "topic_name": "Documenting Your API",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-documenting-api.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-documenting-api.md",
+      "tutorial_words": 651,
+      "guide_words": 352
+    },
+    {
+      "topic_id": "html-forms",
+      "topic_name": "HTML & Forms",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-html-forms.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-html-forms.md",
+      "tutorial_words": 619,
+      "guide_words": 387
+    },
+    {
+      "topic_id": "internationalization",
+      "topic_name": "Internationalization",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-internationalization.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-internationalization.md",
+      "tutorial_words": 591,
+      "guide_words": 347
+    },
+    {
+      "topic_id": "rest-hypermedia-hateoas",
+      "topic_name": "REST, Hypermedia & HATEOAS",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-rest-hypermedia-hateoas.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-rest-hypermedia-hateoas.md",
+      "tutorial_words": 556,
+      "guide_words": 343
+    },
+    {
+      "topic_id": "writable-nested-serializers",
+      "topic_name": "Writable Nested Serializers",
+      "tutorial_path": "experimental/results/django-rest-framework/guides/TUTORIAL-writable-nested-serializers.md",
+      "guide_path": "experimental/results/django-rest-framework/guides/GUIDE-writable-nested-serializers.md",
+      "tutorial_words": 563,
+      "guide_words": 357
+    }
+  ],
+  "skipped": [],
+  "summary": {
+    "total_topics": 15,
+    "generated": 15,
+    "failed": 0,
+    "skipped": 0,
+    "total_tutorial_words": 8711,
+    "total_guide_words": 5069,
+    "total_words": 13780,
+    "estimated_cost_usd": 1.23
+  }
+}

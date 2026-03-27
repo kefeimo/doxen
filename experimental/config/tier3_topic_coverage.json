@@ -1,0 +1,152 @@
+{
+  "project": "django-rest-framework",
+  "topics": [
+    {
+      "id": "quickstart",
+      "name": "Getting Started",
+      "type": "tutorial",
+      "difficulty": "beginner",
+      "ground_truth": "tutorial/quickstart.md",
+      "tier2_refs": ["REFERENCE-SERIALIZERS.md", "REFERENCE-VIEWS.md", "REFERENCE-ROUTERS.md"],
+      "priority": 1
+    },
+    {
+      "id": "serialization",
+      "name": "Serialization",
+      "type": "tutorial",
+      "difficulty": "beginner",
+      "ground_truth": "tutorial/1-serialization.md",
+      "tier2_refs": ["REFERENCE-SERIALIZERS.md"],
+      "priority": 2
+    },
+    {
+      "id": "requests-responses",
+      "name": "Requests and Responses",
+      "type": "tutorial",
+      "difficulty": "beginner",
+      "ground_truth": "tutorial/2-requests-and-responses.md",
+      "tier2_refs": ["REFERENCE-VIEWS.md"],
+      "priority": 3
+    },
+    {
+      "id": "class-based-views",
+      "name": "Class-Based Views",
+      "type": "tutorial",
+      "difficulty": "intermediate",
+      "ground_truth": "tutorial/3-class-based-views.md",
+      "tier2_refs": ["REFERENCE-VIEWS.md"],
+      "priority": 4
+    },
+    {
+      "id": "authentication-permissions",
+      "name": "Authentication and Permissions",
+      "type": "tutorial",
+      "difficulty": "intermediate",
+      "ground_truth": "tutorial/4-authentication-and-permissions.md",
+      "tier2_refs": ["REFERENCE-AUTHENTICATION.md", "REFERENCE-PERMISSIONS.md"],
+      "priority": 5
+    },
+    {
+      "id": "relationships-hyperlinked",
+      "name": "Relationships and Hyperlinked APIs",
+      "type": "tutorial",
+      "difficulty": "intermediate",
+      "ground_truth": "tutorial/5-relationships-and-hyperlinked-apis.md",
+      "tier2_refs": ["REFERENCE-SERIALIZERS.md", "REFERENCE-ROUTERS.md"],
+      "priority": 6
+    },
+    {
+      "id": "viewsets-routers",
+      "name": "Viewsets and Routers",
+      "type": "tutorial",
+      "difficulty": "intermediate",
+      "ground_truth": "tutorial/6-viewsets-and-routers.md",
+      "tier2_refs": ["REFERENCE-VIEWS.md", "REFERENCE-ROUTERS.md"],
+      "priority": 7
+    },
+    {
+      "id": "ajax-csrf-cors",
+      "name": "AJAX, CSRF & CORS",
+      "type": "topic",
+      "difficulty": "advanced",
+      "ground_truth": "topics/ajax-csrf-cors.md",
+      "tier2_refs": ["REFERENCE-VIEWS.md", "REFERENCE-AUTHENTICATION.md"],
+      "priority": 8
+    },
+    {
+      "id": "browsable-api",
+      "name": "Browsable API",
+      "type": "topic",
+      "difficulty": "advanced",
+      "ground_truth": "topics/browsable-api.md",
+      "tier2_refs": ["REFERENCE-VIEWS.md"],
+      "priority": 9
+    },
+    {
+      "id": "browser-enhancements",
+      "name": "Browser Enhancements",
+      "type": "topic",
+      "difficulty": "advanced",
+      "ground_truth": "topics/browser-enhancements.md",
+      "tier2_refs": ["REFERENCE-VIEWS.md"],
+      "priority": 10
+    },
+    {
+      "id": "documenting-api",
+      "name": "Documenting Your API",
+      "type": "topic",
+      "difficulty": "advanced",
+      "ground_truth": "topics/documenting-your-api.md",
+      "tier2_refs": ["REFERENCE-VIEWS.md", "REFERENCE-ROUTERS.md"],
+      "priority": 11
+    },
+    {
+      "id": "html-forms",
+      "name": "HTML & Forms",
+      "type": "topic",
+      "difficulty": "advanced",
+      "ground_truth": "topics/html-and-forms.md",
+      "tier2_refs": ["REFERENCE-SERIALIZERS.md", "REFERENCE-VIEWS.md"],
+      "priority": 12
+    },
+    {
+      "id": "internationalization",
+      "name": "Internationalization",
+      "type": "topic",
+      "difficulty": "advanced",
+      "ground_truth": "topics/internationalization.md",
+      "tier2_refs": ["REFERENCE-VIEWS.md", "REFERENCE-SERIALIZERS.md"],
+      "priority": 13
+    },
+    {
+      "id": "rest-hypermedia-hateoas",
+      "name": "REST, Hypermedia & HATEOAS",
+      "type": "topic",
+      "difficulty": "advanced",
+      "ground_truth": "topics/rest-hypermedia-hateoas.md",
+      "tier2_refs": ["REFERENCE-SERIALIZERS.md", "REFERENCE-VIEWS.md", "REFERENCE-ROUTERS.md"],
+      "priority": 14
+    },
+    {
+      "id": "writable-nested-serializers",
+      "name": "Writable Nested Serializers",
+      "type": "topic",
+      "difficulty": "advanced",
+      "ground_truth": "topics/writable-nested-serializers.md",
+      "tier2_refs": ["REFERENCE-SERIALIZERS.md"],
+      "priority": 15
+    }
+  ],
+  "coverage": {
+    "current": {
+      "tutorials_generated": 0,
+      "guides_generated": 3,
+      "total_generated": 3
+    },
+    "target": {
+      "tutorials_to_generate": 15,
+      "guides_to_generate": 15,
+      "total_to_generate": 30
+    }
+  }
+}

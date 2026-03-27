@@ -10,6 +10,10 @@ experimental/projects/*/
 # Archive of cloned repos - never commit these
 experimental/projects-archive/
 
+# Experimental results - ignore generated documentation (keep analysis files)
+experimental/results/*/guides/
+experimental/results/*/reference_docs/
+
 # Python
 __pycache__/
 *.py[cod]
