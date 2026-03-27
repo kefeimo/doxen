@@ -1,0 +1,375 @@
+{
+  "guides": [
+    {
+      "guide_name": "Getting Started",
+      "generated_path": "experimental/results/django-rest-framework/guides/GUIDE-getting-started.md",
+      "ground_truth_path": "experimental/projects/django-rest-framework/docs/tutorial/quickstart.md",
+      "scores": {
+        "section_coverage": 0.0,
+        "code_coverage": 75.42372881355932,
+        "concept_coverage": 9.803921568627452,
+        "completeness": 76.96428571428572,
+        "overall": 37.18996581683521
+      },
+      "sections": {
+        "coverage": 0.0,
+        "common": [],
+        "only_generated": [
+          "Quick Start",
+          "Step 3: Configure URL Routing",
+          "Nested Serialization",
+          "Troubleshooting",
+          "Step-by-Step Workflow",
+          "Advanced Topics",
+          "Related Guides",
+          "views.py",
+          "API Reference",
+          "Add validation to serializer",
+          "Step 2: Create API View",
+          "Common Patterns",
+          "Core Concepts",
+          "Serialization",
+          "Getting Started with Django REST Framework - Integration Guide",
+          "ViewSet Pattern",
+          "Step 1: Create Model Serializer",
+          "serializers.py",
+          "models.py",
+          "Overview",
+          "Serializer validation errors"
+        ],
+        "only_ground_truth": [],
+        "generated_count": 21,
+        "ground_truth_count": 10
+      },
+      "code": {
+        "coverage": 0.7542372881355932,
+        "generated_count": 10,
+        "ground_truth_count": 11,
+        "generated_lines": 89,
+        "ground_truth_lines": 118,
+        "languages": {
+          "generated": [
+            "python",
+            "unknown",
+            "python",
+            "mermaid",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python"
+          ],
+          "ground_truth": [
+            "bash",
+            "bash",
+            "bash",
+            "python",
+            "python",
+            "python",
+            "python",
+            "text",
+            "bash",
+            "bash",
+            "bash"
+          ]
+        }
+      },
+      "concepts": {
+        "coverage": 0.09803921568627451,
+        "common_count": 5,
+        "only_generated_count": 33,
+        "only_ground_truth_count": 46,
+        "common_sample": [
+          "ViewSets",
+          "serializer_class",
+          "rest_framework",
+          "DefaultRouter",
+          "ModelViewSet"
+        ],
+        "missing_sample": [
+          "\n\n=== \":fontawesome-brands-windows: Windows\"\n\n    If you use Bash for Windows\n\n    ",
+          "\n\nWe can now access our API, both from the command-line, using tools like ",
+          "bash\n$ pwd\n<some path>/tutorial\n$ find .\n.\n./tutorial\n./tutorial/asgi.py\n./tutorial/__init__.py\n./tutorial/quickstart\n./tutorial/quickstart/migrations\n./tutorial/quickstart/migrations/__init__.py\n./tutorial/quickstart/models.py\n./tutorial/quickstart/__init__.py\n./tutorial/quickstart/apps.py\n./tutorial/quickstart/admin.py\n./tutorial/quickstart/tests.py\n./tutorial/quickstart/views.py\n./tutorial/settings.py\n./tutorial/urls.py\n./tutorial/wsgi.py\n./env\n./env/...\n./manage.py\n",
+          ". The settings module will be in ",
+          "HyperlinkedModelSerializer",
+          "\n\n## Settings\n\nAdd ",
+          "bash\nbash: http -a admin http://127.0.0.1:8000/users/\nhttp: password for admin@127.0.0.1:8000:: \n$HTTP/1.1 200 OK\n...\n{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"email\": \"admin@example.com\",\n            \"groups\": [],\n            \"url\": \"http://127.0.0.1:8000/users/1/\",\n            \"username\": \"admin\"\n        }\n    ]\n}\n",
+          " to ",
+          "order_by",
+          "bash\n    # Create the project directory\n    mkdir tutorial\n    cd tutorial\n    \n    # Create a virtual environment to isolate our package dependencies locally\n    python3 -m venv .venv\n    source .venv/bin/activate\n    \n    # Install Django and Django REST framework into the virtual environment\n    pip install djangorestframework\n    \n    # Set up a new project with a single application\n    django-admin startproject tutorial .  # Note the trailing '.' character\n    cd tutorial\n    django-admin startapp quickstart\n    cd ..\n    ",
+          "\n\nOr using the [httpie][httpie], command line tool...\n\n",
+          "quickstart",
+          "\n\nOkay, we're done.\n\n---\n\n## Testing our API\n\nWe're now ready to test the API we've built.  Let's fire up the server from the command line.\n\n",
+          "PageNumberPagination",
+          "GroupViewSet",
+          "\n\nBecause we're using viewsets instead of views, we can automatically generate the URL conf for our API, by simply registering the viewsets with a router class.\n\nAgain, if we need more control over the API URLs we can simply drop down to using regular class-based views, and writing the URL conf explicitly.\n\nFinally, we're including default login and logout views for use with the browsable API.  That's optional, but useful if your API requires authentication and you want to use the browsable API.\n\n## Pagination\n\nPagination allows you to control how many objects per page are returned. To enable it add the following lines to ",
+          "bash\npython manage.py migrate\n",
+          "UserViewSet",
+          "bash\npython manage.py createsuperuser --username admin --email admin@example.com\n",
+          "date_joined"
+        ]
+      },
+      "completeness": {
+        "word_ratio": 0.7696428571428572,
+        "generated_words": 431,
+        "ground_truth_words": 560,
+        "completeness": 0.7696428571428572
+      }
+    },
+    {
+      "guide_name": "Authentication",
+      "generated_path": "experimental/results/django-rest-framework/guides/GUIDE-authentication.md",
+      "ground_truth_path": "experimental/projects/django-rest-framework/docs/tutorial/4-authentication-and-permissions.md",
+      "scores": {
+        "section_coverage": 0.0,
+        "code_coverage": 74.72527472527473,
+        "concept_coverage": 3.9603960396039604,
+        "completeness": 31.042296072507554,
+        "overall": 26.077896707701385
+      },
+      "sections": {
+        "coverage": 0.0,
+        "common": [],
+        "only_generated": [
+          "Quick Start",
+          "Authentication Schemes",
+          "Troubleshooting",
+          "Step-by-Step Workflow",
+          "Advanced Topics",
+          "Custom Authentication",
+          "Related Guides",
+          "views.py",
+          "Multiple Authentication Schemes",
+          "API Reference",
+          "Python requests example",
+          "Common Patterns",
+          "Step 1: Configure Authentication Classes",
+          "settings.py",
+          "Core Concepts",
+          "Authentication Integration Guide for Django REST Framework - Integration Guide",
+          "Overview",
+          "Step 2: Implement Authentication Logic",
+          "Authentication Flow",
+          "Token Authentication Failed"
+        ],
+        "only_ground_truth": [],
+        "generated_count": 20,
+        "ground_truth_count": 10
+      },
+      "code": {
+        "coverage": 0.7472527472527473,
+        "generated_count": 9,
+        "ground_truth_count": 20,
+        "generated_lines": 68,
+        "ground_truth_lines": 91,
+        "languages": {
+          "generated": [
+            "python",
+            "unknown",
+            "mermaid",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python"
+          ],
+          "ground_truth": [
+            "python",
+            "python",
+            "python",
+            "bash",
+            "bash",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "bash",
+            "bash"
+          ]
+        }
+      },
+      "concepts": {
+        "coverage": 0.039603960396039604,
+        "common_count": 4,
+        "only_generated_count": 32,
+        "only_ground_truth_count": 97,
+        "common_sample": [
+          "BasicAuthentication",
+          "permission_classes",
+          "SessionAuthentication",
+          "rest_framework"
+        ],
+        "missing_sample": [
+          " etc...  The untyped ",
+          " add:\n\n",
+          "\n\n## Adding login to the Browsable API\n\nIf you open a browser and navigate to the browsable API at the moment, you'll find that you're no longer able to create new code snippets.  In order to do so we'd need to be able to login as a user.\n\nWe can add a login view for use with the browsable API, by editing the URLconf in our project-level ",
+          " field, along with the validated data from the request.\n\n## Updating our serializer\n\nNow that snippets are associated with the user that created them, let's update our ",
+          " method to our model class:\n\n",
+          " argument controls which attribute is used to populate a field, and can point at any attribute on the serialized instance.  It can also take the dotted notation shown above, in which case it will traverse the given attributes, in a similar way as it is used with Django's template language.\n\nThe field we've added is the untyped ",
+          "TextField",
+          "python\nowner = serializers.ReadOnlyField(source=\"owner.username\")\n",
+          " class.\n\n",
+          "get_lexer_by_name",
+          " generic class-based views.\n\n",
+          "\n\nNow, if you open a browser again, you find that the 'DELETE' and 'PUT' actions only appear on a snippet instance endpoint if you're logged in as the same user that created the code snippet.\n\n## Authenticating with the API\n\nBecause we now have a set of permissions on the API, we need to authenticate our requests to it if we want to edit any snippets.  We haven't set up any [authentication classes][authentication], so the defaults are currently applied, which are ",
+          "ForeignKey",
+          "\n\nWe can make a successful request by including the username and password of one of the users we created earlier.\n\n",
+          "python\nfrom snippets.serializers import UserSerializer\n",
+          "\n\nThen, add the following property to **both** the ",
+          "\n\nWhen that's all done we'll need to update our database tables.\nNormally we'd create a database migration in order to do that, but for the purposes of this tutorial, let's just delete the database and start again.\n\n",
+          "python\ndef perform_create(self, serializer):\n    serializer.save(owner=self.request.user)\n",
+          " view classes.\n\n",
+          "BooleanField"
+        ]
+      },
+      "completeness": {
+        "word_ratio": 0.3104229607250755,
+        "generated_words": 411,
+        "ground_truth_words": 1324,
+        "completeness": 0.3104229607250755
+      }
+    },
+    {
+      "guide_name": "Serialization",
+      "generated_path": "experimental/results/django-rest-framework/guides/GUIDE-serialization.md",
+      "ground_truth_path": "experimental/projects/django-rest-framework/docs/tutorial/1-serialization.md",
+      "scores": {
+        "section_coverage": 0.0,
+        "code_coverage": 24.0,
+        "concept_coverage": 2.4,
+        "completeness": 27.38439306358382,
+        "overall": 12.196878612716763
+      },
+      "sections": {
+        "coverage": 0.0,
+        "common": [],
+        "only_generated": [
+          "Common Patterns",
+          "Serialization Flow",
+          "Quick Start",
+          "Working with Django REST Framework Serializers - Integration Guide",
+          "Nested Serializer Write Operations Failing",
+          "Overview",
+          "Validation Pipeline",
+          "Related Guides",
+          "Custom Validation Logic",
+          "Troubleshooting",
+          "Core Concepts",
+          "Custom Field Serialization",
+          "Usage",
+          "Step 2: Handle Nested Relationships",
+          "Step 1: Define Model Serializer",
+          "API Reference",
+          "Step-by-Step Workflow",
+          "Advanced Topics"
+        ],
+        "only_ground_truth": [],
+        "generated_count": 18,
+        "ground_truth_count": 11
+      },
+      "code": {
+        "coverage": 0.24,
+        "generated_count": 9,
+        "ground_truth_count": 26,
+        "generated_lines": 54,
+        "ground_truth_lines": 225,
+        "languages": {
+          "generated": [
+            "python",
+            "unknown",
+            "mermaid",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python"
+          ],
+          "ground_truth": [
+            "bash",
+            "bash",
+            "bash",
+            "text",
+            "python",
+            "bash",
+            "python",
+            "bash",
+            "pycon",
+            "pycon",
+            "pycon",
+            "pycon",
+            "pycon",
+            "pycon",
+            "python",
+            "pycon",
+            "python",
+            "python",
+            "python",
+            "python",
+            "python",
+            "pycon",
+            "bash",
+            "bash",
+            "bash",
+            "bash"
+          ]
+        }
+      },
+      "concepts": {
+        "coverage": 0.024,
+        "common_count": 3,
+        "only_generated_count": 37,
+        "only_ground_truth_count": 122,
+        "common_sample": [
+          "ModelSerializer",
+          "validated_data",
+          "rest_framework"
+        ],
+        "missing_sample": [
+          "\n\n=== \":fontawesome-brands-windows: Windows\"\n\n    If you use Bash for Windows\n\n    ",
+          "pycon\n>>> serializer = SnippetSerializer(Snippet.objects.all(), many=True)\n>>> serializer.data\n[{'id': 1, 'title': '', 'code': 'foo = \"bar\"\\n', 'linenos': False, 'language': 'python', 'style': 'friendly'}, {'id': 2, 'title': '', 'code': 'print(\"hello, world\")\\n', 'linenos': False, 'language': 'python', 'style': 'friendly'}, {'id': 3, 'title': '', 'code': 'print(\"hello, world\")', 'linenos': False, 'language': 'python', 'style': 'friendly'}]\n",
+          "get_all_styles",
+          "\n\nAt this point we've translated the model instance into Python native datatypes.  To finalize the serialization process we render the data into ",
+          "\n\nOkay, we're ready to roll.\n\n## Creating a model to work with\n\nFor the purposes of this tutorial we're going to start by creating a simple ",
+          " classes, REST framework includes both ",
+          "\n\nOr we can get a particular snippet by referencing its id:\n\n",
+          "ModelForm",
+          "TextField",
+          "\n\n...and start up Django's development server.\n\n",
+          " classes don't do anything particularly magical, they are simply a shortcut for creating serializer classes:\n\n* An automatically determined set of fields.\n* Simple default implementations for the ",
+          "max_length",
+          "python\nfrom django.db import models\nfrom pygments.lexers import get_all_lexers\nfrom pygments.styles import get_all_styles\n\nLEXERS = [item for item in get_all_lexers() if item[1]]\nLANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])\nSTYLE_CHOICES = sorted([(item, item) for item in get_all_styles()])\n\n\nclass Snippet(models.Model):\n    created = models.DateTimeField(auto_now_add=True)\n    title = models.CharField(max_length=100, blank=True, default=\"\")\n    code = models.TextField()\n    linenos = models.BooleanField(default=False)\n    language = models.CharField(\n        choices=LANGUAGE_CHOICES, default=\"python\", max_length=100\n    )\n    style = models.CharField(choices=STYLE_CHOICES, default=\"friendly\", max_length=100)\n\n    class Meta:\n        ordering = [\"created\"]\n",
+          "ModelSerializers",
+          "BooleanField",
+          "SnippetSerializer",
+          "pycon\n>>> content = JSONRenderer().render(serializer.data)\n>>> content\nb'{\"id\":2,\"title\":\"\",\"code\":\"print(\\\\\"hello, world\\\\\")\\\\n\",\"linenos\":false,\"language\":\"python\",\"style\":\"friendly\"}'\n",
+          " class, and includes similar validation flags on the various fields, such as ",
+          "python\nfrom django.http import HttpResponse, JsonResponse\nfrom django.views.decorators.csrf import csrf_exempt\nfrom rest_framework.parsers import JSONParser\nfrom snippets.models import Snippet\nfrom snippets.serializers import SnippetSerializer\n",
+          "snippet_detail"
+        ]
+      },
+      "completeness": {
+        "word_ratio": 0.2738439306358382,
+        "generated_words": 379,
+        "ground_truth_words": 1384,
+        "completeness": 0.2738439306358382
+      }
+    }
+  ],
+  "summary": {
+    "average_overall": 25.154913712417784,
+    "grade": "F (Poor)",
+    "validated_count": 3
+  }
+}
