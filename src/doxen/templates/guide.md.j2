@@ -1,0 +1,177 @@
+# {{ guide.title }} - Integration Guide
+
+**Category:** {{ guide.category }}
+**Difficulty:** {{ guide.difficulty }}
+{% if guide.prerequisites %}**Prerequisites:** {{ guide.prerequisites | join(', ') }}{% endif %}
+
+---
+
+## Overview
+
+{{ guide.overview }}
+
+## Quick Start
+
+{{ guide.quick_start.description }}
+
+```{{ guide.language }}
+{{ guide.quick_start.code }}
+```
+
+{% if guide.quick_start.output %}
+**Expected Output:**
+```
+{{ guide.quick_start.output }}
+```
+{% endif %}
+
+---
+
+## Core Concepts
+
+{% for concept in guide.concepts %}
+### {{ concept.name }}
+
+{{ concept.description }}
+
+{% if concept.code_example %}
+```{{ guide.language }}
+{{ concept.code_example }}
+```
+{% endif %}
+
+{% if concept.diagram %}
+```mermaid
+{{ concept.diagram }}
+```
+{% endif %}
+
+{% endfor %}
+
+---
+
+## Step-by-Step Workflow
+
+{% for step in guide.workflow %}
+### Step {{ loop.index }}: {{ step.title }}
+
+**What:** {{ step.what }}
+
+{% if step.why %}**Why:** {{ step.why }}{% endif %}
+
+**How:**
+
+{{ step.description }}
+
+```{{ guide.language }}
+{{ step.code }}
+```
+
+{% if step.related_apis %}
+**Related APIs:**
+{% for api in step.related_apis %}
+- [`{{ api.name }}`]({{ api.link }}) - {{ api.description }}
+{% endfor %}
+{% endif %}
+
+{% if step.notes %}
+> **Note:** {{ step.notes }}
+{% endif %}
+
+{% endfor %}
+
+---
+
+## Common Patterns
+
+{% for pattern in guide.patterns %}
+### {{ pattern.name }}
+
+{{ pattern.description }}
+
+**Use Case:** {{ pattern.use_case }}
+
+```{{ guide.language }}
+{{ pattern.code }}
+```
+
+{% if pattern.pros_cons %}
+**Considerations:**
+- ✅ {{ pattern.pros_cons.pros | join('\n- ✅ ') }}
+- ⚠️  {{ pattern.pros_cons.cons | join('\n- ⚠️  ') }}
+{% endif %}
+
+{% endfor %}
+
+---
+
+{% if guide.advanced_topics %}
+## Advanced Topics
+
+{% for topic in guide.advanced_topics %}
+### {{ topic.name }}
+
+{{ topic.description }}
+
+{% if topic.code %}
+```{{ guide.language }}
+{{ topic.code }}
+```
+{% endif %}
+
+{% endfor %}
+
+---
+{% endif %}
+
+{% if guide.troubleshooting %}
+## Troubleshooting
+
+{% for issue in guide.troubleshooting %}
+### {{ issue.problem }}
+
+**Symptoms:** {{ issue.symptoms }}
+
+**Solution:**
+
+{{ issue.solution }}
+
+{% if issue.code %}
+```{{ guide.language }}
+{{ issue.code }}
+```
+{% endif %}
+
+{% endfor %}
+
+---
+{% endif %}
+
+## Related Guides
+
+{% if guide.related_guides %}
+{% for related in guide.related_guides %}
+- [{{ related.title }}]({{ related.path }}) - {{ related.description }}
+{% endfor %}
+{% else %}
+*See [Project Overview](../README.md) for more guides.*
+{% endif %}
+
+---
+
+## API Reference
+
+{% if guide.api_references %}
+{% for ref in guide.api_references %}
+- [{{ ref.component }}]({{ ref.path }}){% if ref.description %} - {{ ref.description }}{% endif %}
+{% endfor %}
+{% else %}
+*See [API Documentation](../reference_docs/) for detailed API references.*
+{% endif %}
+
+---
+
+**Generated:** {{ guide.generation_time }}
+**Source Project:** {{ guide.project_name }}
+**Guide Type:** {{ guide.guide_type }}
+**LLM Model:** {{ guide.llm_model | default('claude-opus-4-6') }}

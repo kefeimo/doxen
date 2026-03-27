@@ -31,6 +31,7 @@ dependencies = [
     "pyyaml>=6.0",            # YAML metadata handling
     "markdown-it-py>=3.0.0",  # Markdown parsing/generation
     "rich>=13.0.0",           # Terminal output formatting
+    "jinja2>=3.1.0",          # Template engine for documentation
 ]
 
 [project.optional-dependencies]
