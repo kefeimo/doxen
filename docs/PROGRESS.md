@@ -4,7 +4,42 @@
 
 ---
 
-## Current Phase: Tier 3 Complete ✅ → Production Ready
+## Current Phase: Tier 4 Planning → Interactive Exploration
+
+**Phase:** Tier 4 (Interactive Exploration) - PLANNING
+**Started:** 2026-03-27
+**Goal:** Enable natural language queries that generate custom guides on-demand
+**Status:** 📝 Plan complete → Ready for implementation
+
+**Vision:**
+- User asks: "How do I add pagination to my Django REST Framework API?"
+- Doxen generates custom guide on-the-fly
+- Caches common questions as static guides
+- Supports follow-up questions (conversational)
+
+**Key Differences from Tier 3:**
+- **Tier 3:** Pre-defined topics (Getting Started, Authentication)
+- **Tier 4:** Custom questions ("How do I [X]?")
+- **Tier 3:** Batch generation, all guides upfront
+- **Tier 4:** Just-in-time, single query at a time
+
+**Architecture (Mode C: Interactive):**
+```
+User Question → QueryAnalyzer → SmartContextLoader → LLM → Custom Guide
+```
+
+**Plan:** See `docs/.progress/tier-4-interactive-exploration-plan.md`
+
+**Next Steps:**
+1. Implement QueryAnalyzer (intent extraction)
+2. Implement SmartContextLoader (keyword-based filtering)
+3. Create interactive-guide.md.j2 template
+4. Build CLI: `doxen ask "How do I...?"`
+5. Test on django-rest-framework
+
+---
+
+## Tier 3 Complete ✅ (2026-03-27)
 
 **Phase:** Tier 3 (Integration Guides) - COMPLETE
 **Completed:** 2026-03-27
