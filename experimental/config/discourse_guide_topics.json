@@ -1,0 +1,92 @@
+{
+  "project": "discourse",
+  "framework": "Ruby on Rails",
+  "topics": [
+    {
+      "id": "sending-emails",
+      "name": "Sending Emails",
+      "components": ["mailers", "helpers"],
+      "difficulty": "beginner",
+      "status": "complete",
+      "description": "Email delivery patterns and mailer usage"
+    },
+    {
+      "id": "view-helpers",
+      "name": "View Helpers",
+      "components": ["helpers"],
+      "difficulty": "beginner",
+      "status": "complete",
+      "description": "Using helper functions in views"
+    },
+    {
+      "id": "email-templates",
+      "name": "Email Templates",
+      "components": ["mailers", "helpers"],
+      "difficulty": "intermediate",
+      "status": "pending",
+      "description": "Creating and customizing email templates"
+    },
+    {
+      "id": "background-jobs",
+      "name": "Background Jobs",
+      "components": ["jobs"],
+      "difficulty": "intermediate",
+      "status": "pending",
+      "description": "Scheduling and managing background tasks",
+      "note": "Requires REFERENCE-JOBS.md"
+    },
+    {
+      "id": "service-objects",
+      "name": "Service Objects",
+      "components": ["services"],
+      "difficulty": "intermediate",
+      "status": "pending",
+      "description": "Using service layer for business logic",
+      "note": "Requires REFERENCE-SERVICES.md"
+    },
+    {
+      "id": "data-queries",
+      "name": "Database Queries",
+      "components": ["queries", "models"],
+      "difficulty": "intermediate",
+      "status": "pending",
+      "description": "Efficient data access patterns"
+    },
+    {
+      "id": "batch-operations",
+      "name": "Batch Operations",
+      "components": ["services", "jobs"],
+      "difficulty": "advanced",
+      "status": "pending",
+      "description": "Processing large datasets efficiently"
+    },
+    {
+      "id": "error-handling",
+      "name": "Error Handling",
+      "components": ["mailers", "services"],
+      "difficulty": "intermediate",
+      "status": "pending",
+      "description": "Graceful error handling and recovery"
+    }
+  ],
+  "priority_order": [
+    "email-templates",
+    "service-objects",
+    "background-jobs",
+    "data-queries",
+    "batch-operations",
+    "error-handling"
+  ],
+  "notes": {
+    "tier2_needed": [
+      "REFERENCE-SERVICES.md (153 files)",
+      "REFERENCE-JOBS.md (218 files)"
+    ],
+    "estimated_cost": {
+      "tier2_services": "$0.20-0.30",
+      "tier2_jobs": "$0.20-0.30",
+      "tier3_guides": "$0.30-0.50 (6 guides)",
+      "total": "$0.70-1.10"
+    }
+  }
+}

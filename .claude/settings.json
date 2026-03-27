@@ -134,7 +134,8 @@
       "Bash(ls -lh experimental/results/django-rest-framework/guides/*.md)",
       "Bash(chmod +x experimental/scripts/generate_architecture.py)",
       "Bash(./venv/bin/python experimental/scripts/generate_architecture.py django-rest-framework)",
-      "Bash(ls -la experimental/results/*/)"
+      "Bash(ls -la experimental/results/*/)",
+      "Bash(./venv/bin/python experimental/scripts/generate_architecture.py discourse)"
     ],
     "additionalDirectories": [
       "/home/kefei/project/doxen/.doxen/docs",
