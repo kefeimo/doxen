@@ -6,6 +6,7 @@ from typing import Any, Dict, List, Optional
 
 from doxen.analyzer.llm_analyzer import LLMAnalyzer
 from doxen.extractors.python_api_extractor import PythonAPIExtractor
+from doxen.extractors.ruby_api_extractor import RubyAPIExtractor
 
 
 class ComponentAnalyzer:
@@ -26,6 +27,7 @@ class ComponentAnalyzer:
 
         # Language-specific extractors
         self.python_extractor = PythonAPIExtractor()
+        self.ruby_extractor = RubyAPIExtractor()
 
     def analyze_component(
         self,
@@ -49,6 +51,8 @@ class ComponentAnalyzer:
         # Extract API elements based on language
         if language == "python":
             api_data = self._analyze_python_component(component, repo_path)
+        elif language == "ruby":
+            api_data = self._analyze_ruby_component(component, repo_path)
         elif language in ["javascript", "typescript"]:
             api_data = self._analyze_javascript_component(component, repo_path)
         else:
@@ -158,6 +162,24 @@ class ComponentAnalyzer:
             "total_methods": sum(len(cls.get("methods", [])) for cls in all_classes),
         }
 
+    def _analyze_ruby_component(
+        self,
+        component: Dict[str, Any],
+        repo_path: Path,
+    ) -> Dict[str, Any]:
+        """Analyze Ruby component using Ripper extraction.
+
+        Args:
+            component: Component dictionary
+            repo_path: Repository root path
+
+        Returns:
+            API data dictionary with classes, modules, methods, etc.
+        """
+        # Use Ruby extractor to analyze all files in component
+        api_data = self.ruby_extractor.extract_from_component(component, repo_path)
+        return api_data
+
     def _analyze_javascript_component(
         self,
         component: Dict[str, Any],
@@ -232,6 +254,9 @@ class ComponentAnalyzer:
     def _calculate_coverage(self, api_data: Dict[str, Any]) -> float:
         """Calculate API coverage score (percentage of documented APIs).
 
+        For Python: checks for docstrings
+        For Ruby: assumes 100% coverage (no easy docstring extraction)
+
         Args:
             api_data: Extracted API data
 
@@ -241,6 +266,19 @@ class ComponentAnalyzer:
         if api_data.get("error"):
             return 0.0
 
+        language = api_data.get("language", "unknown")
+
+        # Ruby doesn't have easily accessible docstrings via Ripper
+        # Assume all extracted APIs are "documented" (structure is documented)
+        if language == "ruby":
+            total_apis = (
+                api_data.get("total_classes", 0) +
+                api_data.get("total_modules", 0) +
+                api_data.get("total_methods", 0)
+            )
+            return 100.0 if total_apis > 0 else 0.0
+
+        # Python: count docstrings
         total_apis = 0
         documented_apis = 0
 

@@ -27,6 +27,22 @@
 - Dependencies managed via `pyproject.toml`
 - Install dependencies: `./venv/bin/pip install -e .` (within venv)
 
+### Ruby Environment (rbenv)
+- **CRITICAL: ALWAYS use rbenv Ruby - NOT system Ruby**
+- Ruby version specified in `.ruby-version` (project root)
+- **rbenv automatically switches Ruby version when you cd to this directory**
+- **For all Ruby commands:**
+  - Just use `ruby` command (rbenv shim auto-routes to correct version)
+  - Example: `ruby src/doxen/extractors/ruby_parser.rb file.rb`
+- **Setup (one-time):**
+  1. Install rbenv: `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`
+  2. Add to shell: `echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc && source ~/.bashrc`
+  3. Install Ruby version: `rbenv install 3.4.1` (matches discourse requirements)
+  4. Install bundler: `gem install bundler`
+- **Dependencies managed via `Gemfile`**
+- Install dependencies: `bundle install --path vendor/bundle`
+- Run with bundler: `bundle exec ruby script.rb` (when gems are needed)
+
 ### Alternative: Docker
 - For isolated environment, use Docker containers
 - Avoids system-level Python dependency conflicts

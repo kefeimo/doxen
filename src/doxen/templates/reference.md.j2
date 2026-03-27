@@ -106,6 +106,45 @@ This component contains API elements.
 {% endfor %}
 {% endif %}
 
+{% if component.api.modules %}
+### Modules
+
+{% for mod in component.api.modules %}
+####`{{ mod.name }}`
+
+*Ruby module{% if mod.namespace %} in {{ mod.namespace }}{% endif %}*
+
+**Defined in:** [`{{ mod.file }}`]({{ mod.file }}#L{{ mod.line }})
+
+{% if mod.methods %}
+##### Methods
+
+{% for method in mod.methods %}
+<details>
+<summary><code>{{ method.name }}({% for param in method.parameters %}{% if not loop.first %}{{ param.name }}{% if param.type == 'keyword' %}:{% endif %}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %})</code></summary>
+
+**Defined in:** [`{{ mod.file }}`]({{ mod.file }}#L{{ method.line }})
+
+{% if method.parameters|length > 1 %}
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+{% for param in method.parameters %}
+| `{{ param.name }}` | {{ param.type }} | {% if param.default %}yes{% else %}—{% endif %} | — |
+{% endfor %}
+{% endif %}
+
+</details>
+
+{% endfor %}
+{% endif %}
+
+---
+
+{% endfor %}
+{% endif %}
+
 {% if component.api.functions %}
 ### Functions
 

@@ -1,0 +1,5625 @@
+{
+  "repo_path": "/home/kefei/project/doxen/experimental/projects/discourse",
+  "repo_name": "discourse",
+  "framework": "Ruby on Rails",
+  "primary_language": "Ruby",
+  "components": [
+    {
+      "name": "helpers",
+      "type": "rails_helpers",
+      "language": "ruby",
+      "path": "app/helpers",
+      "files": [
+        {
+          "path": "app/helpers/qunit_helper.rb",
+          "name": "qunit_helper.rb",
+          "size": 541
+        },
+        {
+          "path": "app/helpers/topic_post_bookmarkable_helper.rb",
+          "name": "topic_post_bookmarkable_helper.rb",
+          "size": 393
+        },
+        {
+          "path": "app/helpers/embed_helper.rb",
+          "name": "embed_helper.rb",
+          "size": 673
+        },
+        {
+          "path": "app/helpers/posts_helper.rb",
+          "name": "posts_helper.rb",
+          "size": 828
+        },
+        {
+          "path": "app/helpers/topics_helper.rb",
+          "name": "topics_helper.rb",
+          "size": 1128
+        },
+        {
+          "path": "app/helpers/list_helper.rb",
+          "name": "list_helper.rb",
+          "size": 494
+        },
+        {
+          "path": "app/helpers/user_notifications_helper.rb",
+          "name": "user_notifications_helper.rb",
+          "size": 3229
+        },
+        {
+          "path": "app/helpers/common_helper.rb",
+          "name": "common_helper.rb",
+          "size": 732
+        },
+        {
+          "path": "app/helpers/application_helper.rb",
+          "name": "application_helper.rb",
+          "size": 32377
+        },
+        {
+          "path": "app/helpers/emoji_helper.rb",
+          "name": "emoji_helper.rb",
+          "size": 123
+        },
+        {
+          "path": "app/helpers/email_helper.rb",
+          "name": "email_helper.rb",
+          "size": 2891
+        }
+      ],
+      "semantic_type": "utility"
+    },
+    {
+      "name": "services",
+      "type": "rails_services",
+      "language": "ruby",
+      "path": "app/services",
+      "files": [
+        {
+          "path": "app/services/themes_install_task.rb",
+          "name": "themes_install_task.rb",
+          "size": 2557
+        },
+        {
+          "path": "app/services/topic_timestamp_changer.rb",
+          "name": "topic_timestamp_changer.rb",
+          "size": 1541
+        },
+        {
+          "path": "app/services/random_topic_selector.rb",
+          "name": "random_topic_selector.rb",
+          "size": 2308
+        },
+        {
+          "path": "app/services/user_merger.rb",
+          "name": "user_merger.rb",
+          "size": 20280
+        },
+        {
+          "path": "app/services/username_changer.rb",
+          "name": "username_changer.rb",
+          "size": 1870
+        },
+        {
+          "path": "app/services/badge_granter.rb",
+          "name": "badge_granter.rb",
+          "size": 18078
+        },
+        {
+          "path": "app/services/post_action_notifier.rb",
+          "name": "post_action_notifier.rb",
+          "size": 4825
+        },
+        {
+          "path": "app/services/locale_normalizer.rb",
+          "name": "locale_normalizer.rb",
+          "size": 1596
+        },
+        {
+          "path": "app/services/topic_status_updater.rb",
+          "name": "topic_status_updater.rb",
+          "size": 6716
+        },
+        {
+          "path": "app/services/web_hook_emitter.rb",
+          "name": "web_hook_emitter.rb",
+          "size": 1708
+        },
+        {
+          "path": "app/services/registered_bookmarkable.rb",
+          "name": "registered_bookmarkable.rb",
+          "size": 4194
+        },
+        {
+          "path": "app/services/search_indexer.rb",
+          "name": "search_indexer.rb",
+          "size": 12987
+        },
+        {
+          "path": "app/services/push_notification_pusher.rb",
+          "name": "push_notification_pusher.rb",
+          "size": 5927
+        },
+        {
+          "path": "app/services/user_notification_schedule_processor.rb",
+          "name": "user_notification_schedule_processor.rb",
+          "size": 2730
+        },
+        {
+          "path": "app/services/topic_bookmarkable.rb",
+          "name": "topic_bookmarkable.rb",
+          "size": 3194
+        },
+        {
+          "path": "app/services/sidebar_section_links_updater.rb",
+          "name": "sidebar_section_links_updater.rb",
+          "size": 1789
+        },
+        {
+          "path": "app/services/user_action_manager.rb",
+          "name": "user_action_manager.rb",
+          "size": 3728
+        },
+        {
+          "path": "app/services/category_hashtag_data_source.rb",
+          "name": "category_hashtag_data_source.rb",
+          "size": 3640
+        },
+        {
+          "path": "app/services/sidebar_site_settings_backfiller.rb",
+          "name": "sidebar_site_settings_backfiller.rb",
+          "size": 3538
+        },
+        {
+          "path": "app/services/email_style_updater.rb",
+          "name": "email_style_updater.rb",
+          "size": 1275
+        },
+        {
+          "path": "app/services/email_settings_validator.rb",
+          "name": "email_settings_validator.rb",
+          "size": 4814
+        },
+        {
+          "path": "app/services/user_suspender.rb",
+          "name": "user_suspender.rb",
+          "size": 1180
+        },
+        {
+          "path": "app/services/tag_settings_updater.rb",
+          "name": "tag_settings_updater.rb",
+          "size": 2346
+        },
+        {
+          "path": "app/services/post_alerter.rb",
+          "name": "post_alerter.rb",
+          "size": 36919
+        },
+        {
+          "path": "app/services/wildcard_domain_checker.rb",
+          "name": "wildcard_domain_checker.rb",
+          "size": 332
+        },
+        {
+          "path": "app/services/user_password_expirer.rb",
+          "name": "user_password_expirer.rb",
+          "size": 173
+        },
+        {
+          "path": "app/services/user_destroyer.rb",
+          "name": "user_destroyer.rb",
+          "size": 6776
+        },
+        {
+          "path": "app/services/staff_action_logger.rb",
+          "name": "staff_action_logger.rb",
+          "size": 35633
+        },
+        {
+          "path": "app/services/user_silencer.rb",
+          "name": "user_silencer.rb",
+          "size": 3292
+        },
+        {
+          "path": "app/services/username_checker_service.rb",
+          "name": "username_checker_service.rb",
+          "size": 1049
+        },
+        {
+          "path": "app/services/destroy_task.rb",
+          "name": "destroy_task.rb",
+          "size": 6293
+        },
+        {
+          "path": "app/services/hashtag_autocomplete_service.rb",
+          "name": "hashtag_autocomplete_service.rb",
+          "size": 16381
+        },
+        {
+          "path": "app/services/wildcard_url_checker.rb",
+          "name": "wildcard_url_checker.rb",
+          "size": 458
+        },
+        {
+          "path": "app/services/theme_settings_migrations_runner.rb",
+          "name": "theme_settings_migrations_runner.rb",
+          "size": 7403
+        },
+        {
+          "path": "app/services/notification_emailer.rb",
+          "name": "notification_emailer.rb",
+          "size": 3857
+        },
+        {
+          "path": "app/services/word_watcher.rb",
+          "name": "word_watcher.rb",
+          "size": 8391
+        },
+        {
+          "path": "app/services/base_bookmarkable.rb",
+          "name": "base_bookmarkable.rb",
+          "size": 10123
+        },
+        {
+          "path": "app/services/site_setting_update_existing_users.rb",
+          "name": "site_setting_update_existing_users.rb",
+          "size": 9031
+        },
+        {
+          "path": "app/services/tracked_topics_updater.rb",
+          "name": "tracked_topics_updater.rb",
+          "size": 644
+        },
+        {
+          "path": "app/services/post_owner_changer.rb",
+          "name": "post_owner_changer.rb",
+          "size": 1895
+        },
+        {
+          "path": "app/services/email_settings_exception_handler.rb",
+          "name": "email_settings_exception_handler.rb",
+          "size": 2504
+        },
+        {
+          "path": "app/services/heat_settings_updater.rb",
+          "name": "heat_settings_updater.rb",
+          "size": 2771
+        },
+        {
+          "path": "app/services/tag_hashtag_data_source.rb",
+          "name": "tag_hashtag_data_source.rb",
+          "size": 2675
+        },
+        {
+          "path": "app/services/external_upload_manager.rb",
+          "name": "external_upload_manager.rb",
+          "size": 6903
+        },
+        {
+          "path": "app/services/color_scheme_revisor.rb",
+          "name": "color_scheme_revisor.rb",
+          "size": 1401
+        },
+        {
+          "path": "app/services/post_bookmarkable.rb",
+          "name": "post_bookmarkable.rb",
+          "size": 3272
+        },
+        {
+          "path": "app/services/inline_uploads.rb",
+          "name": "inline_uploads.rb",
+          "size": 10730
+        },
+        {
+          "path": "app/services/user_updater.rb",
+          "name": "user_updater.rb",
+          "size": 12138
+        },
+        {
+          "path": "app/services/group_mentions_updater.rb",
+          "name": "group_mentions_updater.rb",
+          "size": 478
+        },
+        {
+          "path": "app/services/user_notification_renderer.rb",
+          "name": "user_notification_renderer.rb",
+          "size": 439
+        },
+        {
+          "path": "app/services/trust_level_granter.rb",
+          "name": "trust_level_granter.rb",
+          "size": 370
+        },
+        {
+          "path": "app/services/user_anonymizer.rb",
+          "name": "user_anonymizer.rb",
+          "size": 3741
+        },
+        {
+          "path": "app/services/user_stat_count_updater.rb",
+          "name": "user_stat_count_updater.rb",
+          "size": 1939
+        },
+        {
+          "path": "app/services/user_authenticator.rb",
+          "name": "user_authenticator.rb",
+          "size": 1642
+        },
+        {
+          "path": "app/services/group_action_logger.rb",
+          "name": "group_action_logger.rb",
+          "size": 1943
+        },
+        {
+          "path": "app/services/anonymous_shadow_creator.rb",
+          "name": "anonymous_shadow_creator.rb",
+          "size": 2138
+        },
+        {
+          "path": "app/services/site_settings_task.rb",
+          "name": "site_settings_task.rb",
+          "size": 2471
+        },
+        {
+          "path": "app/services/handle_chunk_upload.rb",
+          "name": "handle_chunk_upload.rb",
+          "size": 1901
+        },
+        {
+          "path": "app/services/user_activator.rb",
+          "name": "user_activator.rb",
+          "size": 1553
+        },
+        {
+          "path": "app/services/group_message.rb",
+          "name": "group_message.rb",
+          "size": 3306
+        },
+        {
+          "path": "app/services/user/suspend.rb",
+          "name": "suspend.rb",
+          "size": 1618
+        },
+        {
+          "path": "app/services/user/silence.rb",
+          "name": "silence.rb",
+          "size": 1610
+        },
+        {
+          "path": "app/services/user/bulk_destroy.rb",
+          "name": "bulk_destroy.rb",
+          "size": 1146
+        },
+        {
+          "path": "app/services/user/policy/not_already_silenced.rb",
+          "name": "not_already_silenced.rb",
+          "size": 527
+        },
+        {
+          "path": "app/services/user/policy/not_already_suspended.rb",
+          "name": "not_already_suspended.rb",
+          "size": 527
+        },
+        {
+          "path": "app/services/user/action/destroy_and_publish.rb",
+          "name": "destroy_and_publish.rb",
+          "size": 1028
+        },
+        {
+          "path": "app/services/user/action/silence_all.rb",
+          "name": "silence_all.rb",
+          "size": 953
+        },
+        {
+          "path": "app/services/user/action/suspend_all.rb",
+          "name": "suspend_all.rb",
+          "size": 683
+        },
+        {
+          "path": "app/services/user/action/trigger_post_action.rb",
+          "name": "trigger_post_action.rb",
+          "size": 910
+        },
+        {
+          "path": "app/services/tags/bulk_create.rb",
+          "name": "bulk_create.rb",
+          "size": 3116
+        },
+        {
+          "path": "app/services/categories/configure.rb",
+          "name": "configure.rb",
+          "size": 2216
+        },
+        {
+          "path": "app/services/categories/type_registry.rb",
+          "name": "type_registry.rb",
+          "size": 2455
+        },
+        {
+          "path": "app/services/categories/types/base.rb",
+          "name": "base.rb",
+          "size": 13538
+        },
+        {
+          "path": "app/services/categories/types/discussion.rb",
+          "name": "discussion.rb",
+          "size": 986
+        },
+        {
+          "path": "app/services/spam_rule/auto_silence.rb",
+          "name": "auto_silence.rb",
+          "size": 1809
+        },
+        {
+          "path": "app/services/spam_rule/flag_sockpuppets.rb",
+          "name": "flag_sockpuppets.rb",
+          "size": 1386
+        },
+        {
+          "path": "app/services/notification/action/bulk_create.rb",
+          "name": "bulk_create.rb",
+          "size": 2491
+        },
+        {
+          "path": "app/services/admin_notices/dismiss.rb",
+          "name": "dismiss.rb",
+          "size": 800
+        },
+        {
+          "path": "app/services/discourse_id/revoke.rb",
+          "name": "revoke.rb",
+          "size": 1976
+        },
+        {
+          "path": "app/services/discourse_id/register.rb",
+          "name": "register.rb",
+          "size": 1784
+        },
+        {
+          "path": "app/services/discourse_id/regenerate_credentials.rb",
+          "name": "regenerate_credentials.rb",
+          "size": 1150
+        },
+        {
+          "path": "app/services/discourse_id/concerns/challenge_flow.rb",
+          "name": "challenge_flow.rb",
+          "size": 2662
+        },
+        {
+          "path": "app/services/flags/destroy_flag.rb",
+          "name": "destroy_flag.rb",
+          "size": 775
+        },
+        {
+          "path": "app/services/flags/reorder_flag.rb",
+          "name": "reorder_flag.rb",
+          "size": 1336
+        },
+        {
+          "path": "app/services/flags/create_flag.rb",
+          "name": "create_flag.rb",
+          "size": 1369
+        },
+        {
+          "path": "app/services/flags/update_flag.rb",
+          "name": "update_flag.rb",
+          "size": 1402
+        },
+        {
+          "path": "app/services/flags/toggle_flag.rb",
+          "name": "toggle_flag.rb",
+          "size": 654
+        },
+        {
+          "path": "app/services/site_setting/update.rb",
+          "name": "update.rb",
+          "size": 3398
+        },
+        {
+          "path": "app/services/site_setting/upsert_groups.rb",
+          "name": "upsert_groups.rb",
+          "size": 1944
+        },
+        {
+          "path": "app/services/site_setting/splash_screen_image_changed.rb",
+          "name": "splash_screen_image_changed.rb",
+          "size": 1940
+        },
+        {
+          "path": "app/services/site_setting/policy/settings_are_not_deprecated.rb",
+          "name": "settings_are_not_deprecated.rb",
+          "size": 869
+        },
+        {
+          "path": "app/services/site_setting/policy/settings_are_unshadowed_globally.rb",
+          "name": "settings_are_unshadowed_globally.rb",
+          "size": 555
+        },
+        {
+          "path": "app/services/site_setting/policy/settings_are_configurable.rb",
+          "name": "settings_are_configurable.rb",
+          "size": 636
+        },
+        {
+          "path": "app/services/site_setting/policy/settings_are_visible.rb",
+          "name": "settings_are_visible.rb",
+          "size": 604
+        },
+        {
+          "path": "app/services/groups/create.rb",
+          "name": "create.rb",
+          "size": 5513
+        },
+        {
+          "path": "app/services/problem_check/ram.rb",
+          "name": "ram.rb",
+          "size": 278
+        },
+        {
+          "path": "app/services/problem_check/google_analytics_version.rb",
+          "name": "google_analytics_version.rb",
+          "size": 214
+        },
+        {
+          "path": "app/services/problem_check/failing_emails.rb",
+          "name": "failing_emails.rb",
+          "size": 356
+        },
+        {
+          "path": "app/services/problem_check/inline_problem_check.rb",
+          "name": "inline_problem_check.rb",
+          "size": 273
+        },
+        {
+          "path": "app/services/problem_check/github_config.rb",
+          "name": "github_config.rb",
+          "size": 389
+        },
+        {
+          "path": "app/services/problem_check/starttls_disabled.rb",
+          "name": "starttls_disabled.rb",
+          "size": 221
+        },
+        {
+          "path": "app/services/problem_check/sidekiq_check.rb",
+          "name": "sidekiq_check.rb",
+          "size": 715
+        },
+        {
+          "path": "app/services/problem_check/s3_upload_config.rb",
+          "name": "s3_upload_config.rb",
+          "size": 498
+        },
+        {
+          "path": "app/services/problem_check/subfolder_ends_in_slash.rb",
+          "name": "subfolder_ends_in_slash.rb",
+          "size": 207
+        },
+        {
+          "path": "app/services/problem_check/s3_backup_config.rb",
+          "name": "s3_backup_config.rb",
+          "size": 527
+        },
+        {
+          "path": "app/services/problem_check/qq_mail_smtp.rb",
+          "name": "qq_mail_smtp.rb",
+          "size": 395
+        },
+        {
+          "path": "app/services/problem_check/twitter_login.rb",
+          "name": "twitter_login.rb",
+          "size": 360
+        },
+        {
+          "path": "app/services/problem_check/upcoming_change_stable_opted_out.rb",
+          "name": "upcoming_change_stable_opted_out.rb",
+          "size": 922
+        },
+        {
+          "path": "app/services/problem_check/maxmind_db_configuration.rb",
+          "name": "maxmind_db_configuration.rb",
+          "size": 276
+        },
+        {
+          "path": "app/services/problem_check/rails_env.rb",
+          "name": "rails_env.rb",
+          "size": 245
+        },
+        {
+          "path": "app/services/problem_check/poll_pop3_timeout.rb",
+          "name": "poll_pop3_timeout.rb",
+          "size": 130
+        },
+        {
+          "path": "app/services/problem_check/google_oauth2_config.rb",
+          "name": "google_oauth2_config.rb",
+          "size": 430
+        },
+        {
+          "path": "app/services/problem_check/force_https.rb",
+          "name": "force_https.rb",
+          "size": 185
+        },
+        {
+          "path": "app/services/problem_check/host_names.rb",
+          "name": "host_names.rb",
+          "size": 232
+        },
+        {
+          "path": "app/services/problem_check/poll_pop3_auth_error.rb",
+          "name": "poll_pop3_auth_error.rb",
+          "size": 132
+        },
+        {
+          "path": "app/services/problem_check/twitter_config.rb",
+          "name": "twitter_config.rb",
+          "size": 400
+        },
+        {
+          "path": "app/services/problem_check/bad_favicon_url.rb",
+          "name": "bad_favicon_url.rb",
+          "size": 128
+        },
+        {
+          "path": "app/services/problem_check/email_polling_errored_recently.rb",
+          "name": "email_polling_errored_recently.rb",
+          "size": 388
+        },
+        {
+          "path": "app/services/problem_check/watched_words.rb",
+          "name": "watched_words.rb",
+          "size": 615
+        },
+        {
+          "path": "app/services/problem_check/missing_mailgun_api_key.rb",
+          "name": "missing_mailgun_api_key.rb",
+          "size": 359
+        },
+        {
+          "path": "app/services/problem_check/unreachable_themes.rb",
+          "name": "unreachable_themes.rb",
+          "size": 599
+        },
+        {
+          "path": "app/services/problem_check/facebook_config.rb",
+          "name": "facebook_config.rb",
+          "size": 395
+        },
+        {
+          "path": "app/services/problem_check/out_of_date_themes.rb",
+          "name": "out_of_date_themes.rb",
+          "size": 619
+        },
+        {
+          "path": "app/services/problem_check/image_magick.rb",
+          "name": "image_magick.rb",
+          "size": 265
+        },
+        {
+          "path": "app/services/problem_check/s3_cdn.rb",
+          "name": "s3_cdn.rb",
+          "size": 278
+        },
+        {
+          "path": "app/services/problem_check/translation_overrides.rb",
+          "name": "translation_overrides.rb",
+          "size": 263
+        },
+        {
+          "path": "app/services/problem_check/problem.rb",
+          "name": "problem.rb",
+          "size": 742
+        },
+        {
+          "path": "app/services/problem_check/group_email_credentials.rb",
+          "name": "group_email_credentials.rb",
+          "size": 1636
+        },
+        {
+          "path": "app/services/notifications/consolidation_planner.rb",
+          "name": "consolidation_planner.rb",
+          "size": 6230
+        },
+        {
+          "path": "app/services/notifications/consolidation_plan.rb",
+          "name": "consolidation_plan.rb",
+          "size": 753
+        },
+        {
+          "path": "app/services/notifications/consolidate_notifications.rb",
+          "name": "consolidate_notifications.rb",
+          "size": 5921
+        },
+        {
+          "path": "app/services/notifications/delete_previous_notifications.rb",
+          "name": "delete_previous_notifications.rb",
+          "size": 1673
+        },
+        {
+          "path": "app/services/category/hierarchical_search.rb",
+          "name": "hierarchical_search.rb",
+          "size": 862
+        },
+        {
+          "path": "app/services/category/query/hierarchical_search.rb",
+          "name": "hierarchical_search.rb",
+          "size": 3403
+        },
+        {
+          "path": "app/services/category/action/eager_load_associations.rb",
+          "name": "eager_load_associations.rb",
+          "size": 918
+        },
+        {
+          "path": "app/services/upcoming_changes/notify_promotion.rb",
+          "name": "notify_promotion.rb",
+          "size": 4024
+        },
+        {
+          "path": "app/services/upcoming_changes/notify_promotions.rb",
+          "name": "notify_promotions.rb",
+          "size": 2721
+        },
+        {
+          "path": "app/services/upcoming_changes/list.rb",
+          "name": "list.rb",
+          "size": 2836
+        },
+        {
+          "path": "app/services/upcoming_changes/toggle.rb",
+          "name": "toggle.rb",
+          "size": 2193
+        },
+        {
+          "path": "app/services/upcoming_changes/track.rb",
+          "name": "track.rb",
+          "size": 1303
+        },
+        {
+          "path": "app/services/upcoming_changes/action/track_removed_changes.rb",
+          "name": "track_removed_changes.rb",
+          "size": 1153
+        },
+        {
+          "path": "app/services/upcoming_changes/action/notification_data_merger.rb",
+          "name": "notification_data_merger.rb",
+          "size": 1453
+        },
+        {
+          "path": "app/services/upcoming_changes/action/track_notify_added_changes.rb",
+          "name": "track_notify_added_changes.rb",
+          "size": 2581
+        },
+        {
+          "path": "app/services/upcoming_changes/action/notify_admins_of_available_change.rb",
+          "name": "notify_admins_of_available_change.rb",
+          "size": 2090
+        },
+        {
+          "path": "app/services/upcoming_changes/action/track_notify_status_changes.rb",
+          "name": "track_notify_status_changes.rb",
+          "size": 4428
+        },
+        {
+          "path": "app/services/video_conversion/base_adapter.rb",
+          "name": "base_adapter.rb",
+          "size": 2594
+        },
+        {
+          "path": "app/services/video_conversion/aws_media_convert_adapter.rb",
+          "name": "aws_media_convert_adapter.rb",
+          "size": 14450
+        },
+        {
+          "path": "app/services/video_conversion/adapter_factory.rb",
+          "name": "adapter_factory.rb",
+          "size": 435
+        },
+        {
+          "path": "app/services/themes/create.rb",
+          "name": "create.rb",
+          "size": 2903
+        },
+        {
+          "path": "app/services/themes/get_translations.rb",
+          "name": "get_translations.rb",
+          "size": 1189
+        },
+        {
+          "path": "app/services/themes/destroy.rb",
+          "name": "destroy.rb",
+          "size": 1226
+        },
+        {
+          "path": "app/services/themes/theme_site_setting_manager.rb",
+          "name": "theme_site_setting_manager.rb",
+          "size": 4753
+        },
+        {
+          "path": "app/services/themes/bulk_destroy.rb",
+          "name": "bulk_destroy.rb",
+          "size": 1516
+        }
+      ],
+      "semantic_type": "utility"
+    },
+    {
+      "name": "queries",
+      "type": "rails_queries",
+      "language": "ruby",
+      "path": "app/queries",
+      "files": [
+        {
+          "path": "app/queries/reports/list_query.rb",
+          "name": "list_query.rb",
+          "size": 3491
+        }
+      ],
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "models",
+      "type": "rails_models",
+      "language": "ruby",
+      "path": "app/models",
+      "files": [
+        {
+          "path": "app/models/email_log.rb",
+          "name": "email_log.rb",
+          "size": 4432
+        },
+        {
+          "path": "app/models/incoming_link.rb",
+          "name": "incoming_link.rb",
+          "size": 3490
+        },
+        {
+          "path": "app/models/s3_region_site_setting.rb",
+          "name": "s3_region_site_setting.rb",
+          "size": 788
+        },
+        {
+          "path": "app/models/top_lists.rb",
+          "name": "top_lists.rb",
+          "size": 199
+        },
+        {
+          "path": "app/models/category_group.rb",
+          "name": "category_group.rb",
+          "size": 686
+        },
+        {
+          "path": "app/models/user_visit.rb",
+          "name": "user_visit.rb",
+          "size": 3316
+        },
+        {
+          "path": "app/models/user_auth_token_log.rb",
+          "name": "user_auth_token_log.rb",
+          "size": 553
+        },
+        {
+          "path": "app/models/category_featured_topic.rb",
+          "name": "category_featured_topic.rb",
+          "size": 3058
+        },
+        {
+          "path": "app/models/category_page_style.rb",
+          "name": "category_page_style.rb",
+          "size": 1244
+        },
+        {
+          "path": "app/models/new_topic_duration_site_setting.rb",
+          "name": "new_topic_duration_site_setting.rb",
+          "size": 723
+        },
+        {
+          "path": "app/models/group_associated_group.rb",
+          "name": "group_associated_group.rb",
+          "size": 1779
+        },
+        {
+          "path": "app/models/user_action.rb",
+          "name": "user_action.rb",
+          "size": 15641
+        },
+        {
+          "path": "app/models/search_sort_order_site_setting.rb",
+          "name": "search_sort_order_site_setting.rb",
+          "size": 767
+        },
+        {
+          "path": "app/models/user_field_option.rb",
+          "name": "user_field_option.rb",
+          "size": 400
+        },
+        {
+          "path": "app/models/category_user.rb",
+          "name": "category_user.rb",
+          "size": 9863
+        },
+        {
+          "path": "app/models/web_hook_events_daily_aggregate.rb",
+          "name": "web_hook_events_daily_aggregate.rb",
+          "size": 1673
+        },
+        {
+          "path": "app/models/user_second_factor.rb",
+          "name": "user_second_factor.rb",
+          "size": 1688
+        },
+        {
+          "path": "app/models/topic_tracking_state.rb",
+          "name": "topic_tracking_state.rb",
+          "size": 21072
+        },
+        {
+          "path": "app/models/topic.rb",
+          "name": "topic.rb",
+          "size": 76140
+        },
+        {
+          "path": "app/models/user_avatar.rb",
+          "name": "user_avatar.rb",
+          "size": 7365
+        },
+        {
+          "path": "app/models/admin_dashboard_index_data.rb",
+          "name": "admin_dashboard_index_data.rb",
+          "size": 329
+        },
+        {
+          "path": "app/models/user_badge.rb",
+          "name": "user_badge.rb",
+          "size": 5530
+        },
+        {
+          "path": "app/models/topic_posters_summary.rb",
+          "name": "topic_posters_summary.rb",
+          "size": 2493
+        },
+        {
+          "path": "app/models/optimized_image.rb",
+          "name": "optimized_image.rb",
+          "size": 10906
+        },
+        {
+          "path": "app/models/incoming_links_report.rb",
+          "name": "incoming_links_report.rb",
+          "size": 8124
+        },
+        {
+          "path": "app/models/shelved_notification.rb",
+          "name": "shelved_notification.rb",
+          "size": 460
+        },
+        {
+          "path": "app/models/upcoming_change_event.rb",
+          "name": "upcoming_change_event.rb",
+          "size": 1257
+        },
+        {
+          "path": "app/models/group_history.rb",
+          "name": "group_history.rb",
+          "size": 2036
+        },
+        {
+          "path": "app/models/user.rb",
+          "name": "user.rb",
+          "size": 70162
+        },
+        {
+          "path": "app/models/post_hotlinked_media.rb",
+          "name": "post_hotlinked_media.rb",
+          "size": 1010
+        },
+        {
+          "path": "app/models/topic_participant_groups_summary.rb",
+          "name": "topic_participant_groups_summary.rb",
+          "size": 624
+        },
+        {
+          "path": "app/models/badge.rb",
+          "name": "badge.rb",
+          "size": 9234
+        },
+        {
+          "path": "app/models/color_scheme.rb",
+          "name": "color_scheme.rb",
+          "size": 18587
+        },
+        {
+          "path": "app/models/search_experience_site_setting.rb",
+          "name": "search_experience_site_setting.rb",
+          "size": 400
+        },
+        {
+          "path": "app/models/welcome_banner_page_visibility.rb",
+          "name": "welcome_banner_page_visibility.rb",
+          "size": 623
+        },
+        {
+          "path": "app/models/embeddable_host_tag.rb",
+          "name": "embeddable_host_tag.rb",
+          "size": 872
+        },
+        {
+          "path": "app/models/push_subscription.rb",
+          "name": "push_subscription.rb",
+          "size": 531
+        },
+        {
+          "path": "app/models/email_change_request.rb",
+          "name": "email_change_request.rb",
+          "size": 1629
+        },
+        {
+          "path": "app/models/screened_email.rb",
+          "name": "screened_email.rb",
+          "size": 2547
+        },
+        {
+          "path": "app/models/sidebar_section_link.rb",
+          "name": "sidebar_section_link.rb",
+          "size": 2018
+        },
+        {
+          "path": "app/models/form_template.rb",
+          "name": "form_template.rb",
+          "size": 2364
+        },
+        {
+          "path": "app/models/category_and_topic_lists.rb",
+          "name": "category_and_topic_lists.rb",
+          "size": 145
+        },
+        {
+          "path": "app/models/incoming_email.rb",
+          "name": "incoming_email.rb",
+          "size": 3022
+        },
+        {
+          "path": "app/models/shared_draft.rb",
+          "name": "shared_draft.rb",
+          "size": 523
+        },
+        {
+          "path": "app/models/child_theme.rb",
+          "name": "child_theme.rb",
+          "size": 997
+        },
+        {
+          "path": "app/models/topic_localization.rb",
+          "name": "topic_localization.rb",
+          "size": 1278
+        },
+        {
+          "path": "app/models/full_name_requirement.rb",
+          "name": "full_name_requirement.rb",
+          "size": 540
+        },
+        {
+          "path": "app/models/topic_hot_score.rb",
+          "name": "topic_hot_score.rb",
+          "size": 6457
+        },
+        {
+          "path": "app/models/theme_modifier_set.rb",
+          "name": "theme_modifier_set.rb",
+          "size": 4902
+        },
+        {
+          "path": "app/models/user_email.rb",
+          "name": "user_email.rb",
+          "size": 3561
+        },
+        {
+          "path": "app/models/category_custom_field.rb",
+          "name": "category_custom_field.rb",
+          "size": 530
+        },
+        {
+          "path": "app/models/theme_translation_override.rb",
+          "name": "theme_translation_override.rb",
+          "size": 834
+        },
+        {
+          "path": "app/models/embedding.rb",
+          "name": "embedding.rb",
+          "size": 906
+        },
+        {
+          "path": "app/models/anonymous_user.rb",
+          "name": "anonymous_user.rb",
+          "size": 641
+        },
+        {
+          "path": "app/models/composition_mode_site_setting.rb",
+          "name": "composition_mode_site_setting.rb",
+          "size": 390
+        },
+        {
+          "path": "app/models/user_status.rb",
+          "name": "user_status.rb",
+          "size": 955
+        },
+        {
+          "path": "app/models/post_analyzer.rb",
+          "name": "post_analyzer.rb",
+          "size": 4410
+        },
+        {
+          "path": "app/models/tag_group_membership.rb",
+          "name": "tag_group_membership.rb",
+          "size": 520
+        },
+        {
+          "path": "app/models/web_hook_event_types_hook.rb",
+          "name": "web_hook_event_types_hook.rb",
+          "size": 419
+        },
+        {
+          "path": "app/models/stylesheet_cache.rb",
+          "name": "stylesheet_cache.rb",
+          "size": 1653
+        },
+        {
+          "path": "app/models/topic_custom_field.rb",
+          "name": "topic_custom_field.rb",
+          "size": 629
+        },
+        {
+          "path": "app/models/category_search_data.rb",
+          "name": "category_search_data.rb",
+          "size": 399
+        },
+        {
+          "path": "app/models/topic_thumbnail.rb",
+          "name": "topic_thumbnail.rb",
+          "size": 2670
+        },
+        {
+          "path": "app/models/user_profile.rb",
+          "name": "user_profile.rb",
+          "size": 6970
+        },
+        {
+          "path": "app/models/user_history.rb",
+          "name": "user_history.rb",
+          "size": 14683
+        },
+        {
+          "path": "app/models/user_bookmark_list.rb",
+          "name": "user_bookmark_list.rb",
+          "size": 1146
+        },
+        {
+          "path": "app/models/topic_allowed_user.rb",
+          "name": "topic_allowed_user.rb",
+          "size": 631
+        },
+        {
+          "path": "app/models/topic_featured_users.rb",
+          "name": "topic_featured_users.rb",
+          "size": 2655
+        },
+        {
+          "path": "app/models/post_timing.rb",
+          "name": "post_timing.rb",
+          "size": 8313
+        },
+        {
+          "path": "app/models/sidebar_url.rb",
+          "name": "sidebar_url.rb",
+          "size": 2957
+        },
+        {
+          "path": "app/models/navigation_menu_site_setting.rb",
+          "name": "navigation_menu_site_setting.rb",
+          "size": 461
+        },
+        {
+          "path": "app/models/topic_poster.rb",
+          "name": "topic_poster.rb",
+          "size": 483
+        },
+        {
+          "path": "app/models/group_category_notification_default.rb",
+          "name": "group_category_notification_default.rb",
+          "size": 2043
+        },
+        {
+          "path": "app/models/theme_field.rb",
+          "name": "theme_field.rb",
+          "size": 23232
+        },
+        {
+          "path": "app/models/topic_embed.rb",
+          "name": "topic_embed.rb",
+          "size": 11133
+        },
+        {
+          "path": "app/models/backup_draft_topic.rb",
+          "name": "backup_draft_topic.rb",
+          "size": 534
+        },
+        {
+          "path": "app/models/reviewable_flagged_post.rb",
+          "name": "reviewable_flagged_post.rb",
+          "size": 12565
+        },
+        {
+          "path": "app/models/upload_reference.rb",
+          "name": "upload_reference.rb",
+          "size": 1766
+        },
+        {
+          "path": "app/models/user_field.rb",
+          "name": "user_field.rb",
+          "size": 2695
+        },
+        {
+          "path": "app/models/category_localization.rb",
+          "name": "category_localization.rb",
+          "size": 971
+        },
+        {
+          "path": "app/models/report.rb",
+          "name": "report.rb",
+          "size": 17112
+        },
+        {
+          "path": "app/models/site.rb",
+          "name": "site.rb",
+          "size": 8439
+        },
+        {
+          "path": "app/models/interface_color_selector_setting.rb",
+          "name": "interface_color_selector_setting.rb",
+          "size": 603
+        },
+        {
+          "path": "app/models/theme_site_setting.rb",
+          "name": "theme_site_setting.rb",
+          "size": 5156
+        },
+        {
+          "path": "app/models/badge_grouping.rb",
+          "name": "badge_grouping.rb",
+          "size": 678
+        },
+        {
+          "path": "app/models/site_setting_group.rb",
+          "name": "site_setting_group.rb",
+          "size": 1306
+        },
+        {
+          "path": "app/models/topic_view_item.rb",
+          "name": "topic_view_item.rb",
+          "size": 2432
+        },
+        {
+          "path": "app/models/redelivering_webhook_event.rb",
+          "name": "redelivering_webhook_event.rb",
+          "size": 551
+        },
+        {
+          "path": "app/models/backup_location_site_setting.rb",
+          "name": "backup_location_site_setting.rb",
+          "size": 403
+        },
+        {
+          "path": "app/models/post_revision.rb",
+          "name": "post_revision.rb",
+          "size": 2327
+        },
+        {
+          "path": "app/models/topic_invite.rb",
+          "name": "topic_invite.rb",
+          "size": 682
+        },
+        {
+          "path": "app/models/watched_word.rb",
+          "name": "watched_word.rb",
+          "size": 4085
+        },
+        {
+          "path": "app/models/user_ip_address_history.rb",
+          "name": "user_ip_address_history.rb",
+          "size": 606
+        },
+        {
+          "path": "app/models/invited_group.rb",
+          "name": "invited_group.rb",
+          "size": 451
+        },
+        {
+          "path": "app/models/reviewable_note.rb",
+          "name": "reviewable_note.rb",
+          "size": 1058
+        },
+        {
+          "path": "app/models/post_stat.rb",
+          "name": "post_stat.rb",
+          "size": 1176
+        },
+        {
+          "path": "app/models/api_key.rb",
+          "name": "api_key.rb",
+          "size": 4120
+        },
+        {
+          "path": "app/models/post_localization.rb",
+          "name": "post_localization.rb",
+          "size": 1279
+        },
+        {
+          "path": "app/models/backup_file.rb",
+          "name": "backup_file.rb",
+          "size": 462
+        },
+        {
+          "path": "app/models/backup_metadata.rb",
+          "name": "backup_metadata.rb",
+          "size": 686
+        },
+        {
+          "path": "app/models/user_badges.rb",
+          "name": "user_badges.rb",
+          "size": 325
+        },
+        {
+          "path": "app/models/like_notification_frequency_site_setting.rb",
+          "name": "like_notification_frequency_site_setting.rb",
+          "size": 592
+        },
+        {
+          "path": "app/models/user_api_key_scope.rb",
+          "name": "user_api_key_scope.rb",
+          "size": 2045
+        },
+        {
+          "path": "app/models/group_archived_message.rb",
+          "name": "group_archived_message.rb",
+          "size": 2175
+        },
+        {
+          "path": "app/models/post_reply_key.rb",
+          "name": "post_reply_key.rb",
+          "size": 885
+        },
+        {
+          "path": "app/models/reviewable_claimed_topic.rb",
+          "name": "reviewable_claimed_topic.rb",
+          "size": 957
+        },
+        {
+          "path": "app/models/post_mover.rb",
+          "name": "post_mover.rb",
+          "size": 29134
+        },
+        {
+          "path": "app/models/user_required_fields_version.rb",
+          "name": "user_required_fields_version.rb",
+          "size": 338
+        },
+        {
+          "path": "app/models/theme.rb",
+          "name": "theme.rb",
+          "size": 33547
+        },
+        {
+          "path": "app/models/quoted_post.rb",
+          "name": "quoted_post.rb",
+          "size": 3071
+        },
+        {
+          "path": "app/models/user_api_key.rb",
+          "name": "user_api_key.rb",
+          "size": 3130
+        },
+        {
+          "path": "app/models/web_hook.rb",
+          "name": "web_hook.rb",
+          "size": 5522
+        },
+        {
+          "path": "app/models/slug_setting.rb",
+          "name": "slug_setting.rb",
+          "size": 236
+        },
+        {
+          "path": "app/models/tag_group.rb",
+          "name": "tag_group.rb",
+          "size": 4365
+        },
+        {
+          "path": "app/models/category_tag_stat.rb",
+          "name": "category_tag_stat.rb",
+          "size": 3088
+        },
+        {
+          "path": "app/models/reviewable_priority_setting.rb",
+          "name": "reviewable_priority_setting.rb",
+          "size": 356
+        },
+        {
+          "path": "app/models/post.rb",
+          "name": "post.rb",
+          "size": 40516
+        },
+        {
+          "path": "app/models/group_tag_notification_default.rb",
+          "name": "group_tag_notification_default.rb",
+          "size": 1625
+        },
+        {
+          "path": "app/models/tag.rb",
+          "name": "tag.rb",
+          "size": 11062
+        },
+        {
+          "path": "app/models/topic_link.rb",
+          "name": "topic_link.rb",
+          "size": 13444
+        },
+        {
+          "path": "app/models/post_search_data.rb",
+          "name": "post_search_data.rb",
+          "size": 716
+        },
+        {
+          "path": "app/models/upload.rb",
+          "name": "upload.rb",
+          "size": 20863
+        },
+        {
+          "path": "app/models/image_quality_setting.rb",
+          "name": "image_quality_setting.rb",
+          "size": 393
+        },
+        {
+          "path": "app/models/external_upload_stub.rb",
+          "name": "external_upload_stub.rb",
+          "size": 2336
+        },
+        {
+          "path": "app/models/problem_check_tracker.rb",
+          "name": "problem_check_tracker.rb",
+          "size": 2422
+        },
+        {
+          "path": "app/models/application_request.rb",
+          "name": "application_request.rb",
+          "size": 2329
+        },
+        {
+          "path": "app/models/web_hook_event_type.rb",
+          "name": "web_hook_event_type.rb",
+          "size": 3808
+        },
+        {
+          "path": "app/models/user_summary.rb",
+          "name": "user_summary.rb",
+          "size": 5941
+        },
+        {
+          "path": "app/models/user_open_id.rb",
+          "name": "user_open_id.rb",
+          "size": 870
+        },
+        {
+          "path": "app/models/screened_url.rb",
+          "name": "screened_url.rb",
+          "size": 1683
+        },
+        {
+          "path": "app/models/topic_tag.rb",
+          "name": "topic_tag.rb",
+          "size": 1800
+        },
+        {
+          "path": "app/models/digest_email_site_setting.rb",
+          "name": "digest_email_site_setting.rb",
+          "size": 585
+        },
+        {
+          "path": "app/models/user_api_key_client_scope.rb",
+          "name": "user_api_key_client_scope.rb",
+          "size": 806
+        },
+        {
+          "path": "app/models/plugin_store.rb",
+          "name": "plugin_store.rb",
+          "size": 1873
+        },
+        {
+          "path": "app/models/user_stat.rb",
+          "name": "user_stat.rb",
+          "size": 12261
+        },
+        {
+          "path": "app/models/emoji.rb",
+          "name": "emoji.rb",
+          "size": 10277
+        },
+        {
+          "path": "app/models/muted_user.rb",
+          "name": "muted_user.rb",
+          "size": 604
+        },
+        {
+          "path": "app/models/remote_theme.rb",
+          "name": "remote_theme.rb",
+          "size": 17539
+        },
+        {
+          "path": "app/models/trust_level_and_staff_and_disabled_setting.rb",
+          "name": "trust_level_and_staff_and_disabled_setting.rb",
+          "size": 694
+        },
+        {
+          "path": "app/models/draft_sequence.rb",
+          "name": "draft_sequence.rb",
+          "size": 1501
+        },
+        {
+          "path": "app/models/directory_item.rb",
+          "name": "directory_item.rb",
+          "size": 9450
+        },
+        {
+          "path": "app/models/trust_level_and_staff_setting.rb",
+          "name": "trust_level_and_staff_setting.rb",
+          "size": 562
+        },
+        {
+          "path": "app/models/reviewable.rb",
+          "name": "reviewable.rb",
+          "size": 28897
+        },
+        {
+          "path": "app/models/theme_settings_migration.rb",
+          "name": "theme_settings_migration.rb",
+          "size": 1689
+        },
+        {
+          "path": "app/models/group_custom_field.rb",
+          "name": "group_custom_field.rb",
+          "size": 506
+        },
+        {
+          "path": "app/models/welcome_banner_location.rb",
+          "name": "welcome_banner_location.rb",
+          "size": 471
+        },
+        {
+          "path": "app/models/invite_redeemer.rb",
+          "name": "invite_redeemer.rb",
+          "size": 9874
+        },
+        {
+          "path": "app/models/group_request.rb",
+          "name": "group_request.rb",
+          "size": 683
+        },
+        {
+          "path": "app/models/group.rb",
+          "name": "group.rb",
+          "size": 43044
+        },
+        {
+          "path": "app/models/user_upload.rb",
+          "name": "user_upload.rb",
+          "size": 505
+        },
+        {
+          "path": "app/models/permalink.rb",
+          "name": "permalink.rb",
+          "size": 3154
+        },
+        {
+          "path": "app/models/plugin_store_row.rb",
+          "name": "plugin_store_row.rb",
+          "size": 432
+        },
+        {
+          "path": "app/models/problem_check.rb",
+          "name": "problem_check.rb",
+          "size": 6379
+        },
+        {
+          "path": "app/models/tag_localization.rb",
+          "name": "tag_localization.rb",
+          "size": 958
+        },
+        {
+          "path": "app/models/topic_link_click.rb",
+          "name": "topic_link_click.rb",
+          "size": 3912
+        },
+        {
+          "path": "app/models/color_scheme_color.rb",
+          "name": "color_scheme_color.rb",
+          "size": 847
+        },
+        {
+          "path": "app/models/username_validator.rb",
+          "name": "username_validator.rb",
+          "size": 5337
+        },
+        {
+          "path": "app/models/embeddable_host.rb",
+          "name": "embeddable_host.rb",
+          "size": 2242
+        },
+        {
+          "path": "app/models/about.rb",
+          "name": "about.rb",
+          "size": 4562
+        },
+        {
+          "path": "app/models/translation_override.rb",
+          "name": "translation_override.rb",
+          "size": 7268
+        },
+        {
+          "path": "app/models/user_warning.rb",
+          "name": "user_warning.rb",
+          "size": 608
+        },
+        {
+          "path": "app/models/user_custom_field.rb",
+          "name": "user_custom_field.rb",
+          "size": 830
+        },
+        {
+          "path": "app/models/custom_emoji.rb",
+          "name": "custom_emoji.rb",
+          "size": 1015
+        },
+        {
+          "path": "app/models/oauth2_user_info.rb",
+          "name": "oauth2_user_info.rb",
+          "size": 895
+        },
+        {
+          "path": "app/models/category.rb",
+          "name": "category.rb",
+          "size": 44666
+        },
+        {
+          "path": "app/models/discourse_connect.rb",
+          "name": "discourse_connect.rb",
+          "size": 14298
+        },
+        {
+          "path": "app/models/invite.rb",
+          "name": "invite.rb",
+          "size": 11561
+        },
+        {
+          "path": "app/models/tag_search_data.rb",
+          "name": "tag_search_data.rb",
+          "size": 384
+        },
+        {
+          "path": "app/models/tag_user.rb",
+          "name": "tag_user.rb",
+          "size": 8543
+        },
+        {
+          "path": "app/models/backup_draft_post.rb",
+          "name": "backup_draft_post.rb",
+          "size": 587
+        },
+        {
+          "path": "app/models/reviewable_sensitivity_setting.rb",
+          "name": "reviewable_sensitivity_setting.rb",
+          "size": 363
+        },
+        {
+          "path": "app/models/dismissed_topic_user.rb",
+          "name": "dismissed_topic_user.rb",
+          "size": 615
+        },
+        {
+          "path": "app/models/base_font_setting.rb",
+          "name": "base_font_setting.rb",
+          "size": 308
+        },
+        {
+          "path": "app/models/moved_post.rb",
+          "name": "moved_post.rb",
+          "size": 1701
+        },
+        {
+          "path": "app/models/reviewable_user.rb",
+          "name": "reviewable_user.rb",
+          "size": 7175
+        },
+        {
+          "path": "app/models/web_hook_event.rb",
+          "name": "web_hook_event.rb",
+          "size": 1422
+        },
+        {
+          "path": "app/models/post_action_type.rb",
+          "name": "post_action_type.rb",
+          "size": 2560
+        },
+        {
+          "path": "app/models/watched_word_group.rb",
+          "name": "watched_word_group.rb",
+          "size": 1074
+        },
+        {
+          "path": "app/models/post_reply.rb",
+          "name": "post_reply.rb",
+          "size": 802
+        },
+        {
+          "path": "app/models/sitemap.rb",
+          "name": "sitemap.rb",
+          "size": 2176
+        },
+        {
+          "path": "app/models/given_daily_like.rb",
+          "name": "given_daily_like.rb",
+          "size": 1480
+        },
+        {
+          "path": "app/models/topic_user.rb",
+          "name": "topic_user.rb",
+          "size": 20484
+        },
+        {
+          "path": "app/models/top_topic.rb",
+          "name": "top_topic.rb",
+          "size": 9956
+        },
+        {
+          "path": "app/models/mobile_category_page_style.rb",
+          "name": "mobile_category_page_style.rb",
+          "size": 863
+        },
+        {
+          "path": "app/models/category_posting_review_group.rb",
+          "name": "category_posting_review_group.rb",
+          "size": 1089
+        },
+        {
+          "path": "app/models/notification.rb",
+          "name": "notification.rb",
+          "size": 15379
+        },
+        {
+          "path": "app/models/emoji_set_site_setting.rb",
+          "name": "emoji_set_site_setting.rb",
+          "size": 926
+        },
+        {
+          "path": "app/models/color_scheme_setting.rb",
+          "name": "color_scheme_setting.rb",
+          "size": 341
+        },
+        {
+          "path": "app/models/ignored_user.rb",
+          "name": "ignored_user.rb",
+          "size": 749
+        },
+        {
+          "path": "app/models/reviewable_history.rb",
+          "name": "reviewable_history.rb",
+          "size": 998
+        },
+        {
+          "path": "app/models/topic_search_data.rb",
+          "name": "topic_search_data.rb",
+          "size": 542
+        },
+        {
+          "path": "app/models/topic_allowed_group.rb",
+          "name": "topic_allowed_group.rb",
+          "size": 553
+        },
+        {
+          "path": "app/models/email_style.rb",
+          "name": "email_style.rb",
+          "size": 651
+        },
+        {
+          "path": "app/models/associated_group.rb",
+          "name": "associated_group.rb",
+          "size": 1179
+        },
+        {
+          "path": "app/models/topic_list.rb",
+          "name": "topic_list.rb",
+          "size": 5116
+        },
+        {
+          "path": "app/models/trust_level_setting.rb",
+          "name": "trust_level_setting.rb",
+          "size": 548
+        },
+        {
+          "path": "app/models/topic_participants_summary.rb",
+          "name": "topic_participants_summary.rb",
+          "size": 967
+        },
+        {
+          "path": "app/models/topic_timer.rb",
+          "name": "topic_timer.rb",
+          "size": 4452
+        },
+        {
+          "path": "app/models/badge_type.rb",
+          "name": "badge_type.rb",
+          "size": 473
+        },
+        {
+          "path": "app/models/site_setting.rb",
+          "name": "site_setting.rb",
+          "size": 11757
+        },
+        {
+          "path": "app/models/auto_track_duration_site_setting.rb",
+          "name": "auto_track_duration_site_setting.rb",
+          "size": 977
+        },
+        {
+          "path": "app/models/user_option.rb",
+          "name": "user_option.rb",
+          "size": 12172
+        },
+        {
+          "path": "app/models/user_password.rb",
+          "name": "user_password.rb",
+          "size": 2787
+        },
+        {
+          "path": "app/models/reviewable_queued_post.rb",
+          "name": "reviewable_queued_post.rb",
+          "size": 8678
+        },
+        {
+          "path": "app/models/onceoff_log.rb",
+          "name": "onceoff_log.rb",
+          "size": 349
+        },
+        {
+          "path": "app/models/linked_topic.rb",
+          "name": "linked_topic.rb",
+          "size": 647
+        },
+        {
+          "path": "app/models/user_search.rb",
+          "name": "user_search.rb",
+          "size": 6524
+        },
+        {
+          "path": "app/models/incoming_domain.rb",
+          "name": "incoming_domain.rb",
+          "size": 1016
+        },
+        {
+          "path": "app/models/locale_site_setting.rb",
+          "name": "locale_site_setting.rb",
+          "size": 1832
+        },
+        {
+          "path": "app/models/user_profile_view.rb",
+          "name": "user_profile_view.rb",
+          "size": 2741
+        },
+        {
+          "path": "app/models/single_sign_on_record.rb",
+          "name": "single_sign_on_record.rb",
+          "size": 1002
+        },
+        {
+          "path": "app/models/user_associated_account.rb",
+          "name": "user_associated_account.rb",
+          "size": 1068
+        },
+        {
+          "path": "app/models/onebox_locale_site_setting.rb",
+          "name": "onebox_locale_site_setting.rb",
+          "size": 368
+        },
+        {
+          "path": "app/models/incoming_referer.rb",
+          "name": "incoming_referer.rb",
+          "size": 889
+        },
+        {
+          "path": "app/models/user_archived_message.rb",
+          "name": "user_archived_message.rb",
+          "size": 1573
+        },
+        {
+          "path": "app/models/theme_svg_sprite.rb",
+          "name": "theme_svg_sprite.rb",
+          "size": 610
+        },
+        {
+          "path": "app/models/search_log.rb",
+          "name": "search_log.rb",
+          "size": 5128
+        },
+        {
+          "path": "app/models/reviewable_post.rb",
+          "name": "reviewable_post.rb",
+          "size": 5632
+        },
+        {
+          "path": "app/models/user_security_key.rb",
+          "name": "user_security_key.rb",
+          "size": 1846
+        },
+        {
+          "path": "app/models/discourse_version_check.rb",
+          "name": "discourse_version_check.rb",
+          "size": 433
+        },
+        {
+          "path": "app/models/bookmark.rb",
+          "name": "bookmark.rb",
+          "size": 8066
+        },
+        {
+          "path": "app/models/directory_column.rb",
+          "name": "directory_column.rb",
+          "size": 1840
+        },
+        {
+          "path": "app/models/javascript_cache.rb",
+          "name": "javascript_cache.rb",
+          "size": 1532
+        },
+        {
+          "path": "app/models/category_required_tag_group.rb",
+          "name": "category_required_tag_group.rb",
+          "size": 747
+        },
+        {
+          "path": "app/models/category_list.rb",
+          "name": "category_list.rb",
+          "size": 9995
+        },
+        {
+          "path": "app/models/user_export.rb",
+          "name": "user_export.rb",
+          "size": 1556
+        },
+        {
+          "path": "app/models/category_moderation_group.rb",
+          "name": "category_moderation_group.rb",
+          "size": 497
+        },
+        {
+          "path": "app/models/tag_group_permission.rb",
+          "name": "tag_group_permission.rb",
+          "size": 774
+        },
+        {
+          "path": "app/models/notification_level_when_replying_site_setting.rb",
+          "name": "notification_level_when_replying_site_setting.rb",
+          "size": 654
+        },
+        {
+          "path": "app/models/api_key_scope.rb",
+          "name": "api_key_scope.rb",
+          "size": 10253
+        },
+        {
+          "path": "app/models/user_api_key_client.rb",
+          "name": "user_api_key_client.rb",
+          "size": 1068
+        },
+        {
+          "path": "app/models/flag.rb",
+          "name": "flag.rb",
+          "size": 2683
+        },
+        {
+          "path": "app/models/topic_converter.rb",
+          "name": "topic_converter.rb",
+          "size": 4337
+        },
+        {
+          "path": "app/models/email_token.rb",
+          "name": "email_token.rb",
+          "size": 3233
+        },
+        {
+          "path": "app/models/topic_notifier.rb",
+          "name": "topic_notifier.rb",
+          "size": 1055
+        },
+        {
+          "path": "app/models/post_custom_field.rb",
+          "name": "post_custom_field.rb",
+          "size": 914
+        },
+        {
+          "path": "app/models/sidebar_section.rb",
+          "name": "sidebar_section.rb",
+          "size": 2544
+        },
+        {
+          "path": "app/models/post_action.rb",
+          "name": "post_action.rb",
+          "size": 9996
+        },
+        {
+          "path": "app/models/user_auth_token.rb",
+          "name": "user_auth_token.rb",
+          "size": 9241
+        },
+        {
+          "path": "app/models/stat.rb",
+          "name": "stat.rb",
+          "size": 1784
+        },
+        {
+          "path": "app/models/user_search_data.rb",
+          "name": "user_search_data.rb",
+          "size": 387
+        },
+        {
+          "path": "app/models/developer.rb",
+          "name": "developer.rb",
+          "size": 648
+        },
+        {
+          "path": "app/models/published_page.rb",
+          "name": "published_page.rb",
+          "size": 1622
+        },
+        {
+          "path": "app/models/email_level_site_setting.rb",
+          "name": "email_level_site_setting.rb",
+          "size": 450
+        },
+        {
+          "path": "app/models/category_form_template.rb",
+          "name": "category_form_template.rb",
+          "size": 606
+        },
+        {
+          "path": "app/models/theme_setting.rb",
+          "name": "theme_setting.rb",
+          "size": 2920
+        },
+        {
+          "path": "app/models/admin_dashboard_data.rb",
+          "name": "admin_dashboard_data.rb",
+          "size": 498
+        },
+        {
+          "path": "app/models/category_tag_group.rb",
+          "name": "category_tag_group.rb",
+          "size": 536
+        },
+        {
+          "path": "app/models/base_timer.rb",
+          "name": "base_timer.rb",
+          "size": 3481
+        },
+        {
+          "path": "app/models/invited_user.rb",
+          "name": "invited_user.rb",
+          "size": 1053
+        },
+        {
+          "path": "app/models/mailing_list_mode_site_setting.rb",
+          "name": "mailing_list_mode_site_setting.rb",
+          "size": 423
+        },
+        {
+          "path": "app/models/allowed_pm_user.rb",
+          "name": "allowed_pm_user.rb",
+          "size": 673
+        },
+        {
+          "path": "app/models/draft.rb",
+          "name": "draft.rb",
+          "size": 10122
+        },
+        {
+          "path": "app/models/category_tag.rb",
+          "name": "category_tag.rb",
+          "size": 556
+        },
+        {
+          "path": "app/models/topic_group.rb",
+          "name": "topic_group.rb",
+          "size": 2770
+        },
+        {
+          "path": "app/models/group_mention.rb",
+          "name": "group_mention.rb",
+          "size": 520
+        },
+        {
+          "path": "app/models/private_message_topic_tracking_state.rb",
+          "name": "private_message_topic_tracking_state.rb",
+          "size": 7207
+        },
+        {
+          "path": "app/models/web_crawler_request.rb",
+          "name": "web_crawler_request.rb",
+          "size": 1286
+        },
+        {
+          "path": "app/models/global_setting.rb",
+          "name": "global_setting.rb",
+          "size": 11155
+        },
+        {
+          "path": "app/models/screened_ip_address.rb",
+          "name": "screened_ip_address.rb",
+          "size": 5748
+        },
+        {
+          "path": "app/models/optimized_video.rb",
+          "name": "optimized_video.rb",
+          "size": 2400
+        },
+        {
+          "path": "app/models/user_associated_group.rb",
+          "name": "user_associated_group.rb",
+          "size": 1475
+        },
+        {
+          "path": "app/models/top_menu_item.rb",
+          "name": "top_menu_item.rb",
+          "size": 1787
+        },
+        {
+          "path": "app/models/group_user.rb",
+          "name": "group_user.rb",
+          "size": 7462
+        },
+        {
+          "path": "app/models/trust_level3_requirements.rb",
+          "name": "trust_level3_requirements.rb",
+          "size": 8550
+        },
+        {
+          "path": "app/models/do_not_disturb_timing.rb",
+          "name": "do_not_disturb_timing.rb",
+          "size": 775
+        },
+        {
+          "path": "app/models/post_stripper.rb",
+          "name": "post_stripper.rb",
+          "size": 869
+        },
+        {
+          "path": "app/models/topic_view_stat.rb",
+          "name": "topic_view_stat.rb",
+          "size": 1249
+        },
+        {
+          "path": "app/models/user_notification_schedule.rb",
+          "name": "user_notification_schedule.rb",
+          "size": 2267
+        },
+        {
+          "path": "app/models/skipped_email_log.rb",
+          "name": "skipped_email_log.rb",
+          "size": 2740
+        },
+        {
+          "path": "app/models/unsubscribe_key.rb",
+          "name": "unsubscribe_key.rb",
+          "size": 1710
+        },
+        {
+          "path": "app/models/remove_muted_tags_from_latest_site_setting.rb",
+          "name": "remove_muted_tags_from_latest_site_setting.rb",
+          "size": 584
+        },
+        {
+          "path": "app/models/reviewable_score.rb",
+          "name": "reviewable_score.rb",
+          "size": 3957
+        },
+        {
+          "path": "app/models/default_text_size_setting.rb",
+          "name": "default_text_size_setting.rb",
+          "size": 320
+        },
+        {
+          "path": "app/models/admin_notice.rb",
+          "name": "admin_notice.rb",
+          "size": 814
+        },
+        {
+          "path": "app/models/category_setting.rb",
+          "name": "category_setting.rb",
+          "size": 2729
+        },
+        {
+          "path": "app/models/previous_replies_site_setting.rb",
+          "name": "previous_replies_site_setting.rb",
+          "size": 488
+        },
+        {
+          "path": "app/models/admin_dashboard_general_data.rb",
+          "name": "admin_dashboard_general_data.rb",
+          "size": 561
+        },
+        {
+          "path": "app/models/post_detail.rb",
+          "name": "post_detail.rb",
+          "size": 542
+        },
+        {
+          "path": "app/models/concerns/trashable.rb",
+          "name": "trashable.rb",
+          "size": 970
+        },
+        {
+          "path": "app/models/concerns/anon_cache_invalidator.rb",
+          "name": "anon_cache_invalidator.rb",
+          "size": 204
+        },
+        {
+          "path": "app/models/concerns/custom_field.rb",
+          "name": "custom_field.rb",
+          "size": 204
+        },
+        {
+          "path": "app/models/concerns/locale_matchable.rb",
+          "name": "locale_matchable.rb",
+          "size": 298
+        },
+        {
+          "path": "app/models/concerns/positionable.rb",
+          "name": "positionable.rb",
+          "size": 1085
+        },
+        {
+          "path": "app/models/concerns/localizable.rb",
+          "name": "localizable.rb",
+          "size": 1440
+        },
+        {
+          "path": "app/models/concerns/reviewable_action_builder.rb",
+          "name": "reviewable_action_builder.rb",
+          "size": 5785
+        },
+        {
+          "path": "app/models/concerns/roleable.rb",
+          "name": "roleable.rb",
+          "size": 2192
+        },
+        {
+          "path": "app/models/concerns/has_url.rb",
+          "name": "has_url.rb",
+          "size": 1453
+        },
+        {
+          "path": "app/models/concerns/second_factor_manager.rb",
+          "name": "second_factor_manager.rb",
+          "size": 7610
+        },
+        {
+          "path": "app/models/concerns/searchable.rb",
+          "name": "searchable.rb",
+          "size": 266
+        },
+        {
+          "path": "app/models/concerns/has_search_data.rb",
+          "name": "has_search_data.rb",
+          "size": 326
+        },
+        {
+          "path": "app/models/concerns/stats_cacheable.rb",
+          "name": "stats_cacheable.rb",
+          "size": 1015
+        },
+        {
+          "path": "app/models/concerns/category_hashtag.rb",
+          "name": "category_hashtag.rb",
+          "size": 1938
+        },
+        {
+          "path": "app/models/concerns/topic_tracking_state_publishable.rb",
+          "name": "topic_tracking_state_publishable.rb",
+          "size": 870
+        },
+        {
+          "path": "app/models/concerns/has_deprecated_columns.rb",
+          "name": "has_deprecated_columns.rb",
+          "size": 605
+        },
+        {
+          "path": "app/models/concerns/has_destroyed_web_hook.rb",
+          "name": "has_destroyed_web_hook.rb",
+          "size": 482
+        },
+        {
+          "path": "app/models/concerns/has_post_upload_references.rb",
+          "name": "has_post_upload_references.rb",
+          "size": 4219
+        },
+        {
+          "path": "app/models/concerns/has_custom_fields.rb",
+          "name": "has_custom_fields.rb",
+          "size": 10578
+        },
+        {
+          "path": "app/models/concerns/has_sanitizable_fields.rb",
+          "name": "has_sanitizable_fields.rb",
+          "size": 775
+        },
+        {
+          "path": "app/models/concerns/limited_edit.rb",
+          "name": "limited_edit.rb",
+          "size": 487
+        },
+        {
+          "path": "app/models/concerns/cached_counting.rb",
+          "name": "cached_counting.rb",
+          "size": 4987
+        },
+        {
+          "path": "app/models/concerns/reports/top_uploads.rb",
+          "name": "top_uploads.rb",
+          "size": 2540
+        },
+        {
+          "path": "app/models/concerns/reports/consolidated_page_views_browser_detection.rb",
+          "name": "consolidated_page_views_browser_detection.rb",
+          "size": 448
+        },
+        {
+          "path": "app/models/concerns/reports/topics.rb",
+          "name": "topics.rb",
+          "size": 777
+        },
+        {
+          "path": "app/models/concerns/reports/site_traffic.rb",
+          "name": "site_traffic.rb",
+          "size": 3335
+        },
+        {
+          "path": "app/models/concerns/reports/topics_with_no_response.rb",
+          "name": "topics_with_no_response.rb",
+          "size": 941
+        },
+        {
+          "path": "app/models/concerns/reports/notify_moderators_private_messages.rb",
+          "name": "notify_moderators_private_messages.rb",
+          "size": 307
+        },
+        {
+          "path": "app/models/concerns/reports/web_hook_events_daily_aggregate.rb",
+          "name": "web_hook_events_daily_aggregate.rb",
+          "size": 2152
+        },
+        {
+          "path": "app/models/concerns/reports/likes.rb",
+          "name": "likes.rb",
+          "size": 242
+        },
+        {
+          "path": "app/models/concerns/reports/suspicious_logins.rb",
+          "name": "suspicious_logins.rb",
+          "size": 2410
+        },
+        {
+          "path": "app/models/concerns/reports/user_to_user_private_messages_with_replies.rb",
+          "name": "user_to_user_private_messages_with_replies.rb",
+          "size": 746
+        },
+        {
+          "path": "app/models/concerns/reports/emails.rb",
+          "name": "emails.rb",
+          "size": 190
+        },
+        {
+          "path": "app/models/concerns/reports/associated_accounts_by_provider.rb",
+          "name": "associated_accounts_by_provider.rb",
+          "size": 3125
+        },
+        {
+          "path": "app/models/concerns/reports/time_to_first_response.rb",
+          "name": "time_to_first_response.rb",
+          "size": 1058
+        },
+        {
+          "path": "app/models/concerns/reports/top_users_by_likes_received_from_a_variety_of_people.rb",
+          "name": "top_users_by_likes_received_from_a_variety_of_people.rb",
+          "size": 1825
+        },
+        {
+          "path": "app/models/concerns/reports/system_private_messages.rb",
+          "name": "system_private_messages.rb",
+          "size": 283
+        },
+        {
+          "path": "app/models/concerns/reports/users_by_type.rb",
+          "name": "users_by_type.rb",
+          "size": 1665
+        },
+        {
+          "path": "app/models/concerns/reports/flags_status.rb",
+          "name": "flags_status.rb",
+          "size": 5411
+        },
+        {
+          "path": "app/models/concerns/reports/staff_logins.rb",
+          "name": "staff_logins.rb",
+          "size": 1915
+        },
+        {
+          "path": "app/models/concerns/reports/top_referred_topics.rb",
+          "name": "top_referred_topics.rb",
+          "size": 1036
+        },
+        {
+          "path": "app/models/concerns/reports/mobile_visits.rb",
+          "name": "mobile_visits.rb",
+          "size": 563
+        },
+        {
+          "path": "app/models/concerns/reports/daily_engaged_users.rb",
+          "name": "daily_engaged_users.rb",
+          "size": 1045
+        },
+        {
+          "path": "app/models/concerns/reports/posts.rb",
+          "name": "posts.rb",
+          "size": 999
+        },
+        {
+          "path": "app/models/concerns/reports/trending_search.rb",
+          "name": "trending_search.rb",
+          "size": 901
+        },
+        {
+          "path": "app/models/concerns/reports/web_crawlers.rb",
+          "name": "web_crawlers.rb",
+          "size": 831
+        },
+        {
+          "path": "app/models/concerns/reports/top_referrers.rb",
+          "name": "top_referrers.rb",
+          "size": 1017
+        },
+        {
+          "path": "app/models/concerns/reports/top_users_by_likes_received.rb",
+          "name": "top_users_by_likes_received.rb",
+          "size": 1596
+        },
+        {
+          "path": "app/models/concerns/reports/consolidated_page_views.rb",
+          "name": "consolidated_page_views.rb",
+          "size": 1383
+        },
+        {
+          "path": "app/models/concerns/reports/signups.rb",
+          "name": "signups.rb",
+          "size": 724
+        },
+        {
+          "path": "app/models/concerns/reports/post_edits.rb",
+          "name": "post_edits.rb",
+          "size": 3977
+        },
+        {
+          "path": "app/models/concerns/reports/new_contributors.rb",
+          "name": "new_contributors.rb",
+          "size": 970
+        },
+        {
+          "path": "app/models/concerns/reports/profile_views.rb",
+          "name": "profile_views.rb",
+          "size": 813
+        },
+        {
+          "path": "app/models/concerns/reports/moderator_warning_private_messages.rb",
+          "name": "moderator_warning_private_messages.rb",
+          "size": 307
+        },
+        {
+          "path": "app/models/concerns/reports/users_by_trust_level.rb",
+          "name": "users_by_trust_level.rb",
+          "size": 815
+        },
+        {
+          "path": "app/models/concerns/reports/flags.rb",
+          "name": "flags.rb",
+          "size": 911
+        },
+        {
+          "path": "app/models/concerns/reports/dau_by_mau.rb",
+          "name": "dau_by_mau.rb",
+          "size": 1536
+        },
+        {
+          "path": "app/models/concerns/reports/top_ignored_users.rb",
+          "name": "top_ignored_users.rb",
+          "size": 2543
+        },
+        {
+          "path": "app/models/concerns/reports/storage_stats.rb",
+          "name": "storage_stats.rb",
+          "size": 530
+        },
+        {
+          "path": "app/models/concerns/reports/user_to_user_private_messages.rb",
+          "name": "user_to_user_private_messages.rb",
+          "size": 291
+        },
+        {
+          "path": "app/models/concerns/reports/visits.rb",
+          "name": "visits.rb",
+          "size": 2262
+        },
+        {
+          "path": "app/models/concerns/reports/topic_view_stats.rb",
+          "name": "topic_view_stats.rb",
+          "size": 2318
+        },
+        {
+          "path": "app/models/concerns/reports/top_traffic_sources.rb",
+          "name": "top_traffic_sources.rb",
+          "size": 1051
+        },
+        {
+          "path": "app/models/concerns/reports/moderators_activity.rb",
+          "name": "moderators_activity.rb",
+          "size": 6055
+        },
+        {
+          "path": "app/models/concerns/reports/notify_user_private_messages.rb",
+          "name": "notify_user_private_messages.rb",
+          "size": 289
+        },
+        {
+          "path": "app/models/concerns/reports/bookmarks.rb",
+          "name": "bookmarks.rb",
+          "size": 644
+        },
+        {
+          "path": "app/models/concerns/reports/top_users_by_likes_received_from_inferior_trust_level.rb",
+          "name": "top_users_by_likes_received_from_inferior_trust_level.rb",
+          "size": 2361
+        },
+        {
+          "path": "app/models/concerns/reports/consolidated_api_requests.rb",
+          "name": "consolidated_api_requests.rb",
+          "size": 997
+        },
+        {
+          "path": "app/models/concerns/reports/user_flagging_ratio.rb",
+          "name": "user_flagging_ratio.rb",
+          "size": 2963
+        },
+        {
+          "path": "app/models/concerns/reports/trust_level_growth.rb",
+          "name": "trust_level_growth.rb",
+          "size": 2029
+        }
+      ],
+      "semantic_type": "data_model"
+    },
+    {
+      "name": "jobs",
+      "type": "rails_jobs",
+      "language": "ruby",
+      "path": "app/jobs",
+      "files": [
+        {
+          "path": "app/jobs/base.rb",
+          "name": "base.rb",
+          "size": 14473
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_drafts.rb",
+          "name": "clean_up_drafts.rb",
+          "size": 164
+        },
+        {
+          "path": "app/jobs/scheduled/enqueue_digest_emails.rb",
+          "name": "enqueue_digest_emails.rb",
+          "size": 2046
+        },
+        {
+          "path": "app/jobs/scheduled/destroy_old_hidden_posts.rb",
+          "name": "destroy_old_hidden_posts.rb",
+          "size": 251
+        },
+        {
+          "path": "app/jobs/scheduled/cleanup_redelivering_web_hook_events.rb",
+          "name": "cleanup_redelivering_web_hook_events.rb",
+          "size": 338
+        },
+        {
+          "path": "app/jobs/scheduled/pending_reviewables_reminder.rb",
+          "name": "pending_reviewables_reminder.rb",
+          "size": 1882
+        },
+        {
+          "path": "app/jobs/scheduled/check_upcoming_changes.rb",
+          "name": "check_upcoming_changes.rb",
+          "size": 3748
+        },
+        {
+          "path": "app/jobs/scheduled/clean_dismissed_topic_users.rb",
+          "name": "clean_dismissed_topic_users.rb",
+          "size": 2402
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_unsubscribe_keys.rb",
+          "name": "clean_up_unsubscribe_keys.rb",
+          "size": 221
+        },
+        {
+          "path": "app/jobs/scheduled/process_user_notification_schedules.rb",
+          "name": "process_user_notification_schedules.rb",
+          "size": 540
+        },
+        {
+          "path": "app/jobs/scheduled/presence_channel_auto_leave.rb",
+          "name": "presence_channel_auto_leave.rb",
+          "size": 225
+        },
+        {
+          "path": "app/jobs/scheduled/activation_reminder_emails.rb",
+          "name": "activation_reminder_emails.rb",
+          "size": 893
+        },
+        {
+          "path": "app/jobs/scheduled/clear_expired_impersonations.rb",
+          "name": "clear_expired_impersonations.rb",
+          "size": 316
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_bookmarks.rb",
+          "name": "clean_up_bookmarks.rb",
+          "size": 170
+        },
+        {
+          "path": "app/jobs/scheduled/purge_old_web_hook_events_daily_aggregate.rb",
+          "name": "purge_old_web_hook_events_daily_aggregate.rb",
+          "size": 205
+        },
+        {
+          "path": "app/jobs/scheduled/purge_old_web_hook_events.rb",
+          "name": "purge_old_web_hook_events.rb",
+          "size": 176
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_api_keys_max_life.rb",
+          "name": "clean_up_api_keys_max_life.rb",
+          "size": 185
+        },
+        {
+          "path": "app/jobs/scheduled/ensure_badges_consistency.rb",
+          "name": "ensure_badges_consistency.rb",
+          "size": 322
+        },
+        {
+          "path": "app/jobs/scheduled/process_shelved_notifications.rb",
+          "name": "process_shelved_notifications.rb",
+          "size": 799
+        },
+        {
+          "path": "app/jobs/scheduled/update_heat_settings.rb",
+          "name": "update_heat_settings.rb",
+          "size": 182
+        },
+        {
+          "path": "app/jobs/scheduled/directory_refresh_daily.rb",
+          "name": "directory_refresh_daily.rb",
+          "size": 195
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_email_tokens.rb",
+          "name": "clean_up_email_tokens.rb",
+          "size": 247
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_unmatched_emails.rb",
+          "name": "clean_up_unmatched_emails.rb",
+          "size": 385
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_unused_user_api_keys.rb",
+          "name": "clean_up_unused_user_api_keys.rb",
+          "size": 442
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_unmatched_ips.rb",
+          "name": "clean_up_unmatched_ips.rb",
+          "size": 606
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_search_logs.rb",
+          "name": "clean_up_search_logs.rb",
+          "size": 172
+        },
+        {
+          "path": "app/jobs/scheduled/update_topic_hot_scores.rb",
+          "name": "update_topic_hot_scores.rb",
+          "size": 393
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_email_logs.rb",
+          "name": "clean_up_email_logs.rb",
+          "size": 406
+        },
+        {
+          "path": "app/jobs/scheduled/process_badge_backlog.rb",
+          "name": "process_badge_backlog.rb",
+          "size": 184
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_user_auth_tokens.rb",
+          "name": "clean_up_user_auth_tokens.rb",
+          "size": 180
+        },
+        {
+          "path": "app/jobs/scheduled/create_recent_post_search_indexes.rb",
+          "name": "create_recent_post_search_indexes.rb",
+          "size": 1605
+        },
+        {
+          "path": "app/jobs/scheduled/topic_timer_enqueuer.rb",
+          "name": "topic_timer_enqueuer.rb",
+          "size": 879
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_post_reply_keys.rb",
+          "name": "clean_up_post_reply_keys.rb",
+          "size": 351
+        },
+        {
+          "path": "app/jobs/scheduled/check_translation_overrides.rb",
+          "name": "check_translation_overrides.rb",
+          "size": 842
+        },
+        {
+          "path": "app/jobs/scheduled/badge_grant.rb",
+          "name": "badge_grant.rb",
+          "size": 340
+        },
+        {
+          "path": "app/jobs/scheduled/poll_mailbox.rb",
+          "name": "poll_mailbox.rb",
+          "size": 3194
+        },
+        {
+          "path": "app/jobs/scheduled/purge_unactivated.rb",
+          "name": "purge_unactivated.rb",
+          "size": 174
+        },
+        {
+          "path": "app/jobs/scheduled/category_stats.rb",
+          "name": "category_stats.rb",
+          "size": 173
+        },
+        {
+          "path": "app/jobs/scheduled/about_stats.rb",
+          "name": "about_stats.rb",
+          "size": 170
+        },
+        {
+          "path": "app/jobs/scheduled/cleanup_problem_check_trackers.rb",
+          "name": "cleanup_problem_check_trackers.rb",
+          "size": 432
+        },
+        {
+          "path": "app/jobs/scheduled/invalidate_inactive_admins.rb",
+          "name": "invalidate_inactive_admins.rb",
+          "size": 1484
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_exports.rb",
+          "name": "clean_up_exports.rb",
+          "size": 179
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_uploads.rb",
+          "name": "clean_up_uploads.rb",
+          "size": 2661
+        },
+        {
+          "path": "app/jobs/scheduled/regenerate_sitemaps.rb",
+          "name": "regenerate_sitemaps.rb",
+          "size": 214
+        },
+        {
+          "path": "app/jobs/scheduled/auto_queue_handler.rb",
+          "name": "auto_queue_handler.rb",
+          "size": 872
+        },
+        {
+          "path": "app/jobs/scheduled/grant_anniversary_badges.rb",
+          "name": "grant_anniversary_badges.rb",
+          "size": 593
+        },
+        {
+          "path": "app/jobs/scheduled/old_keys_reminder.rb",
+          "name": "old_keys_reminder.rb",
+          "size": 2180
+        },
+        {
+          "path": "app/jobs/scheduled/migrate_upload_scheme.rb",
+          "name": "migrate_upload_scheme.rb",
+          "size": 1604
+        },
+        {
+          "path": "app/jobs/scheduled/fix_user_usernames_and_groups_names_clash.rb",
+          "name": "fix_user_usernames_and_groups_names_clash.rb",
+          "size": 700
+        },
+        {
+          "path": "app/jobs/scheduled/purge_expired_ignored_users.rb",
+          "name": "purge_expired_ignored_users.rb",
+          "size": 223
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_associated_groups.rb",
+          "name": "clean_up_associated_groups.rb",
+          "size": 183
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_tags.rb",
+          "name": "clean_up_tags.rb",
+          "size": 539
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_unused_api_keys.rb",
+          "name": "clean_up_unused_api_keys.rb",
+          "size": 182
+        },
+        {
+          "path": "app/jobs/scheduled/enqueue_onceoffs.rb",
+          "name": "enqueue_onceoffs.rb",
+          "size": 183
+        },
+        {
+          "path": "app/jobs/scheduled/pending_users_reminder.rb",
+          "name": "pending_users_reminder.rb",
+          "size": 2528
+        },
+        {
+          "path": "app/jobs/scheduled/reindex_search.rb",
+          "name": "reindex_search.rb",
+          "size": 5855
+        },
+        {
+          "path": "app/jobs/scheduled/backfill_dominant_colors.rb",
+          "name": "backfill_dominant_colors.rb",
+          "size": 199
+        },
+        {
+          "path": "app/jobs/scheduled/top_refresh_older.rb",
+          "name": "top_refresh_older.rb",
+          "size": 174
+        },
+        {
+          "path": "app/jobs/scheduled/purge_old_notifications.rb",
+          "name": "purge_old_notifications.rb",
+          "size": 181
+        },
+        {
+          "path": "app/jobs/scheduled/top_refresh_today.rb",
+          "name": "top_refresh_today.rb",
+          "size": 175
+        },
+        {
+          "path": "app/jobs/scheduled/tl3_promotions.rb",
+          "name": "tl3_promotions.rb",
+          "size": 2254
+        },
+        {
+          "path": "app/jobs/scheduled/heartbeat.rb",
+          "name": "heartbeat.rb",
+          "size": 353
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_stylesheet_cache.rb",
+          "name": "clean_up_stylesheet_cache.rb",
+          "size": 183
+        },
+        {
+          "path": "app/jobs/scheduled/calculate_scores.rb",
+          "name": "calculate_scores.rb",
+          "size": 181
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_inactive_users.rb",
+          "name": "clean_up_inactive_users.rb",
+          "size": 1468
+        },
+        {
+          "path": "app/jobs/scheduled/update_animated_uploads.rb",
+          "name": "update_animated_uploads.rb",
+          "size": 634
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_unused_staged_users.rb",
+          "name": "clean_up_unused_staged_users.rb",
+          "size": 973
+        },
+        {
+          "path": "app/jobs/scheduled/destroy_old_deletion_stubs.rb",
+          "name": "destroy_old_deletion_stubs.rb",
+          "size": 222
+        },
+        {
+          "path": "app/jobs/scheduled/notify_admins_of_problems.rb",
+          "name": "notify_admins_of_problems.rb",
+          "size": 930
+        },
+        {
+          "path": "app/jobs/scheduled/reviewable_priorities.rb",
+          "name": "reviewable_priorities.rb",
+          "size": 1337
+        },
+        {
+          "path": "app/jobs/scheduled/aggregate_web_hooks_events.rb",
+          "name": "aggregate_web_hooks_events.rb",
+          "size": 664
+        },
+        {
+          "path": "app/jobs/scheduled/bookmark_reminder_notifications.rb",
+          "name": "bookmark_reminder_notifications.rb",
+          "size": 921
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_unused_registered_user_api_key_clients.rb",
+          "name": "clean_up_unused_registered_user_api_key_clients.rb",
+          "size": 657
+        },
+        {
+          "path": "app/jobs/scheduled/periodical_updates.rb",
+          "name": "periodical_updates.rb",
+          "size": 2013
+        },
+        {
+          "path": "app/jobs/scheduled/pending_queued_posts_reminder.rb",
+          "name": "pending_queued_posts_reminder.rb",
+          "size": 1464
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_crawler_stats.rb",
+          "name": "clean_up_crawler_stats.rb",
+          "size": 748
+        },
+        {
+          "path": "app/jobs/scheduled/run_problem_checks.rb",
+          "name": "run_problem_checks.rb",
+          "size": 865
+        },
+        {
+          "path": "app/jobs/scheduled/drop_backup_schema.rb",
+          "name": "drop_backup_schema.rb",
+          "size": 199
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_email_change_requests.rb",
+          "name": "clean_up_email_change_requests.rb",
+          "size": 228
+        },
+        {
+          "path": "app/jobs/scheduled/directory_refresh_older.rb",
+          "name": "directory_refresh_older.rb",
+          "size": 269
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_user_api_keys_max_life.rb",
+          "name": "clean_up_user_api_keys_max_life.rb",
+          "size": 443
+        },
+        {
+          "path": "app/jobs/scheduled/grant_new_user_of_the_month_badges.rb",
+          "name": "grant_new_user_of_the_month_badges.rb",
+          "size": 3646
+        },
+        {
+          "path": "app/jobs/scheduled/ensure_db_consistency.rb",
+          "name": "ensure_db_consistency.rb",
+          "size": 1583
+        },
+        {
+          "path": "app/jobs/scheduled/ensure_s3_uploads_existence.rb",
+          "name": "ensure_s3_uploads_existence.rb",
+          "size": 1276
+        },
+        {
+          "path": "app/jobs/scheduled/ignored_users_summary.rb",
+          "name": "ignored_users_summary.rb",
+          "size": 1552
+        },
+        {
+          "path": "app/jobs/scheduled/unsilence_users.rb",
+          "name": "unsilence_users.rb",
+          "size": 311
+        },
+        {
+          "path": "app/jobs/scheduled/schedule_backup.rb",
+          "name": "schedule_backup.rb",
+          "size": 1205
+        },
+        {
+          "path": "app/jobs/scheduled/redeliver_web_hook_events.rb",
+          "name": "redeliver_web_hook_events.rb",
+          "size": 1813
+        },
+        {
+          "path": "app/jobs/scheduled/clean_up_associated_accounts.rb",
+          "name": "clean_up_associated_accounts.rb",
+          "size": 191
+        },
+        {
+          "path": "app/jobs/scheduled/purge_deleted_uploads.rb",
+          "name": "purge_deleted_uploads.rb",
+          "size": 273
+        },
+        {
+          "path": "app/jobs/scheduled/purge_old_mini_scheduler_stat.rb",
+          "name": "purge_old_mini_scheduler_stat.rb",
+          "size": 191
+        },
+        {
+          "path": "app/jobs/scheduled/check_new_features.rb",
+          "name": "check_new_features.rb",
+          "size": 3637
+        },
+        {
+          "path": "app/jobs/scheduled/check_out_of_date_themes.rb",
+          "name": "check_out_of_date_themes.rb",
+          "size": 513
+        },
+        {
+          "path": "app/jobs/scheduled/delete_rejected_emails.rb",
+          "name": "delete_rejected_emails.rb",
+          "size": 188
+        },
+        {
+          "path": "app/jobs/scheduled/call_discourse_hub.rb",
+          "name": "call_discourse_hub.rb",
+          "size": 1380
+        },
+        {
+          "path": "app/jobs/scheduled/enqueue_suspect_users.rb",
+          "name": "enqueue_suspect_users.rb",
+          "size": 2002
+        },
+        {
+          "path": "app/jobs/scheduled/create_missing_avatars.rb",
+          "name": "create_missing_avatars.rb",
+          "size": 419
+        },
+        {
+          "path": "app/jobs/concerns/skippable.rb",
+          "name": "skippable.rb",
+          "size": 641
+        },
+        {
+          "path": "app/jobs/onceoff/fix_out_of_sync_user_uploaded_avatar.rb",
+          "name": "fix_out_of_sync_user_uploaded_avatar.rb",
+          "size": 710
+        },
+        {
+          "path": "app/jobs/onceoff/clean_up_post_timings.rb",
+          "name": "clean_up_post_timings.rb",
+          "size": 759
+        },
+        {
+          "path": "app/jobs/onceoff/clean_up_user_export_topics.rb",
+          "name": "clean_up_user_export_topics.rb",
+          "size": 1088
+        },
+        {
+          "path": "app/jobs/onceoff/create_tags_search_index.rb",
+          "name": "create_tags_search_index.rb",
+          "size": 260
+        },
+        {
+          "path": "app/jobs/onceoff/fix_invalid_gravatar_uploads.rb",
+          "name": "fix_invalid_gravatar_uploads.rb",
+          "size": 755
+        },
+        {
+          "path": "app/jobs/onceoff/retro_recent_time_read.rb",
+          "name": "retro_recent_time_read.rb",
+          "size": 847
+        },
+        {
+          "path": "app/jobs/onceoff/post_uploads_recovery.rb",
+          "name": "post_uploads_recovery.rb",
+          "size": 382
+        },
+        {
+          "path": "app/jobs/onceoff/fix_encoded_topic_slugs.rb",
+          "name": "fix_encoded_topic_slugs.rb",
+          "size": 319
+        },
+        {
+          "path": "app/jobs/onceoff/migrate_censored_words.rb",
+          "name": "migrate_censored_words.rb",
+          "size": 411
+        },
+        {
+          "path": "app/jobs/onceoff/fix_post_search_data_after_default_locale_rename.rb",
+          "name": "fix_post_search_data_after_default_locale_rename.rb",
+          "size": 532
+        },
+        {
+          "path": "app/jobs/onceoff/migrate_custom_emojis.rb",
+          "name": "migrate_custom_emojis.rb",
+          "size": 1120
+        },
+        {
+          "path": "app/jobs/onceoff/grant_onebox.rb",
+          "name": "grant_onebox.rb",
+          "size": 1165
+        },
+        {
+          "path": "app/jobs/onceoff/fix_primary_emails_for_staged_users.rb",
+          "name": "fix_primary_emails_for_staged_users.rb",
+          "size": 1359
+        },
+        {
+          "path": "app/jobs/onceoff/grant_emoji.rb",
+          "name": "grant_emoji.rb",
+          "size": 889
+        },
+        {
+          "path": "app/jobs/onceoff/fix_s3_etags.rb",
+          "name": "fix_s3_etags.rb",
+          "size": 330
+        },
+        {
+          "path": "app/jobs/onceoff/migrate_tagging_plugin.rb",
+          "name": "migrate_tagging_plugin.rb",
+          "size": 677
+        },
+        {
+          "path": "app/jobs/onceoff/retro_grant_anniversary.rb",
+          "name": "retro_grant_anniversary.rb",
+          "size": 344
+        },
+        {
+          "path": "app/jobs/onceoff/migrate_upload_extensions.rb",
+          "name": "migrate_upload_extensions.rb",
+          "size": 279
+        },
+        {
+          "path": "app/jobs/onceoff/grant_first_reply_by_email.rb",
+          "name": "grant_first_reply_by_email.rb",
+          "size": 758
+        },
+        {
+          "path": "app/jobs/onceoff/clear_width_and_height.rb",
+          "name": "clear_width_and_height.rb",
+          "size": 466
+        },
+        {
+          "path": "app/jobs/onceoff/fix_retro_anniversary.rb",
+          "name": "fix_retro_anniversary.rb",
+          "size": 911
+        },
+        {
+          "path": "app/jobs/onceoff/fix_posts_read.rb",
+          "name": "fix_posts_read.rb",
+          "size": 566
+        },
+        {
+          "path": "app/jobs/onceoff/fix_featured_link_for_topics.rb",
+          "name": "fix_featured_link_for_topics.rb",
+          "size": 451
+        },
+        {
+          "path": "app/jobs/onceoff/onceoff.rb",
+          "name": "onceoff.rb",
+          "size": 1208
+        },
+        {
+          "path": "app/jobs/onceoff/correct_missing_dualstack_urls.rb",
+          "name": "correct_missing_dualstack_urls.rb",
+          "size": 804
+        },
+        {
+          "path": "app/jobs/onceoff/clean_up_sidekiq_statistic.rb",
+          "name": "clean_up_sidekiq_statistic.rb",
+          "size": 214
+        },
+        {
+          "path": "app/jobs/onceoff/migrate_featured_links.rb",
+          "name": "migrate_featured_links.rb",
+          "size": 1185
+        },
+        {
+          "path": "app/jobs/onceoff/fix_encoded_category_slugs.rb",
+          "name": "fix_encoded_category_slugs.rb",
+          "size": 438
+        },
+        {
+          "path": "app/jobs/onceoff/remove_old_auto_close_jobs.rb",
+          "name": "remove_old_auto_close_jobs.rb",
+          "size": 307
+        },
+        {
+          "path": "app/jobs/onceoff/init_category_tag_stats.rb",
+          "name": "init_category_tag_stats.rb",
+          "size": 619
+        },
+        {
+          "path": "app/jobs/regular/site_setting_update_default_tags.rb",
+          "name": "site_setting_update_default_tags.rb",
+          "size": 396
+        },
+        {
+          "path": "app/jobs/regular/pull_hotlinked_images.rb",
+          "name": "pull_hotlinked_images.rb",
+          "size": 7973
+        },
+        {
+          "path": "app/jobs/regular/invite_password_instructions_email.rb",
+          "name": "invite_password_instructions_email.rb",
+          "size": 445
+        },
+        {
+          "path": "app/jobs/regular/anonymize_user.rb",
+          "name": "anonymize_user.rb",
+          "size": 3314
+        },
+        {
+          "path": "app/jobs/regular/publish_topic_to_category.rb",
+          "name": "publish_topic_to_category.rb",
+          "size": 428
+        },
+        {
+          "path": "app/jobs/regular/invite_email.rb",
+          "name": "invite_email.rb",
+          "size": 675
+        },
+        {
+          "path": "app/jobs/regular/crawl_topic_link.rb",
+          "name": "crawl_topic_link.rb",
+          "size": 2037
+        },
+        {
+          "path": "app/jobs/regular/mass_award_badge.rb",
+          "name": "mass_award_badge.rb",
+          "size": 347
+        },
+        {
+          "path": "app/jobs/regular/topic_action_converter.rb",
+          "name": "topic_action_converter.rb",
+          "size": 872
+        },
+        {
+          "path": "app/jobs/regular/notify_category_change.rb",
+          "name": "notify_category_change.rb",
+          "size": 584
+        },
+        {
+          "path": "app/jobs/regular/automatic_group_membership.rb",
+          "name": "automatic_group_membership.rb",
+          "size": 717
+        },
+        {
+          "path": "app/jobs/regular/topic_timer_base.rb",
+          "name": "topic_timer_base.rb",
+          "size": 404
+        },
+        {
+          "path": "app/jobs/regular/backfill_badge.rb",
+          "name": "backfill_badge.rb",
+          "size": 1059
+        },
+        {
+          "path": "app/jobs/regular/emit_web_hook_event.rb",
+          "name": "emit_web_hook_event.rb",
+          "size": 4753
+        },
+        {
+          "path": "app/jobs/regular/notify_mailing_list_subscribers.rb",
+          "name": "notify_mailing_list_subscribers.rb",
+          "size": 4819
+        },
+        {
+          "path": "app/jobs/regular/update_gravatar.rb",
+          "name": "update_gravatar.rb",
+          "size": 539
+        },
+        {
+          "path": "app/jobs/regular/create_linked_topic.rb",
+          "name": "create_linked_topic.rb",
+          "size": 4273
+        },
+        {
+          "path": "app/jobs/regular/process_bulk_invite_emails.rb",
+          "name": "process_bulk_invite_emails.rb",
+          "size": 668
+        },
+        {
+          "path": "app/jobs/regular/rebake_custom_emoji_posts.rb",
+          "name": "rebake_custom_emoji_posts.rb",
+          "size": 203
+        },
+        {
+          "path": "app/jobs/regular/user_email.rb",
+          "name": "user_email.rb",
+          "size": 10525
+        },
+        {
+          "path": "app/jobs/regular/post_update_topic_tracking_state.rb",
+          "name": "post_update_topic_tracking_state.rb",
+          "size": 809
+        },
+        {
+          "path": "app/jobs/regular/send_push_notification.rb",
+          "name": "send_push_notification.rb",
+          "size": 485
+        },
+        {
+          "path": "app/jobs/regular/create_user_reviewable.rb",
+          "name": "create_user_reviewable.rb",
+          "size": 1040
+        },
+        {
+          "path": "app/jobs/regular/backfill_sidebar_site_settings.rb",
+          "name": "backfill_sidebar_site_settings.rb",
+          "size": 439
+        },
+        {
+          "path": "app/jobs/regular/toggle_topic_closed.rb",
+          "name": "toggle_topic_closed.rb",
+          "size": 1454
+        },
+        {
+          "path": "app/jobs/regular/publish_group_membership_updates.rb",
+          "name": "publish_group_membership_updates.rb",
+          "size": 719
+        },
+        {
+          "path": "app/jobs/regular/delete_user_posts.rb",
+          "name": "delete_user_posts.rb",
+          "size": 896
+        },
+        {
+          "path": "app/jobs/regular/create_backup.rb",
+          "name": "create_backup.rb",
+          "size": 365
+        },
+        {
+          "path": "app/jobs/regular/bulk_grant_trust_level.rb",
+          "name": "bulk_grant_trust_level.rb",
+          "size": 673
+        },
+        {
+          "path": "app/jobs/regular/remove_banner.rb",
+          "name": "remove_banner.rb",
+          "size": 288
+        },
+        {
+          "path": "app/jobs/regular/unpin_topic.rb",
+          "name": "unpin_topic.rb",
+          "size": 269
+        },
+        {
+          "path": "app/jobs/regular/process_email.rb",
+          "name": "process_email.rb",
+          "size": 488
+        },
+        {
+          "path": "app/jobs/regular/open_topic.rb",
+          "name": "open_topic.rb",
+          "size": 1171
+        },
+        {
+          "path": "app/jobs/regular/delete_topic.rb",
+          "name": "delete_topic.rb",
+          "size": 485
+        },
+        {
+          "path": "app/jobs/regular/group_smtp_email.rb",
+          "name": "group_smtp_email.rb",
+          "size": 3854
+        },
+        {
+          "path": "app/jobs/regular/update_hotlinked_raw.rb",
+          "name": "update_hotlinked_raw.rb",
+          "size": 1043
+        },
+        {
+          "path": "app/jobs/regular/refresh_users_reviewable_counts.rb",
+          "name": "refresh_users_reviewable_counts.rb",
+          "size": 331
+        },
+        {
+          "path": "app/jobs/regular/push_notification.rb",
+          "name": "push_notification.rb",
+          "size": 1780
+        },
+        {
+          "path": "app/jobs/regular/clear_slow_mode.rb",
+          "name": "clear_slow_mode.rb",
+          "size": 247
+        },
+        {
+          "path": "app/jobs/regular/notify_tag_change.rb",
+          "name": "notify_tag_change.rb",
+          "size": 1224
+        },
+        {
+          "path": "app/jobs/regular/process_sns_notification.rb",
+          "name": "process_sns_notification.rb",
+          "size": 1607
+        },
+        {
+          "path": "app/jobs/regular/run_problem_check.rb",
+          "name": "run_problem_check.rb",
+          "size": 976
+        },
+        {
+          "path": "app/jobs/regular/update_username.rb",
+          "name": "update_username.rb",
+          "size": 6955
+        },
+        {
+          "path": "app/jobs/regular/run_heartbeat.rb",
+          "name": "run_heartbeat.rb",
+          "size": 346
+        },
+        {
+          "path": "app/jobs/regular/delete_replies.rb",
+          "name": "delete_replies.rb",
+          "size": 980
+        },
+        {
+          "path": "app/jobs/regular/convert_video.rb",
+          "name": "convert_video.rb",
+          "size": 992
+        },
+        {
+          "path": "app/jobs/regular/notify_post_revision.rb",
+          "name": "notify_post_revision.rb",
+          "size": 856
+        },
+        {
+          "path": "app/jobs/regular/download_profile_background_from_url.rb",
+          "name": "download_profile_background_from_url.rb",
+          "size": 630
+        },
+        {
+          "path": "app/jobs/regular/merge_user.rb",
+          "name": "merge_user.rb",
+          "size": 1165
+        },
+        {
+          "path": "app/jobs/regular/update_post_uploads_secure_status.rb",
+          "name": "update_post_uploads_secure_status.rb",
+          "size": 299
+        },
+        {
+          "path": "app/jobs/regular/delete_inaccessible_notifications.rb",
+          "name": "delete_inaccessible_notifications.rb",
+          "size": 490
+        },
+        {
+          "path": "app/jobs/regular/update_top_redirection.rb",
+          "name": "update_top_redirection.rb",
+          "size": 341
+        },
+        {
+          "path": "app/jobs/regular/index_user_fields_for_search.rb",
+          "name": "index_user_fields_for_search.rb",
+          "size": 279
+        },
+        {
+          "path": "app/jobs/regular/rebake_posts_for_upload.rb",
+          "name": "rebake_posts_for_upload.rb",
+          "size": 242
+        },
+        {
+          "path": "app/jobs/regular/admin_confirmation_email.rb",
+          "name": "admin_confirmation_email.rb",
+          "size": 810
+        },
+        {
+          "path": "app/jobs/regular/make_embedded_topic_visible.rb",
+          "name": "make_embedded_topic_visible.rb",
+          "size": 453
+        },
+        {
+          "path": "app/jobs/regular/export_csv_file.rb",
+          "name": "export_csv_file.rb",
+          "size": 13798
+        },
+        {
+          "path": "app/jobs/regular/export_user_archive.rb",
+          "name": "export_user_archive.rb",
+          "size": 19168
+        },
+        {
+          "path": "app/jobs/regular/process_post.rb",
+          "name": "process_post.rb",
+          "size": 2684
+        },
+        {
+          "path": "app/jobs/regular/bump_topic.rb",
+          "name": "bump_topic.rb",
+          "size": 370
+        },
+        {
+          "path": "app/jobs/regular/close_topic.rb",
+          "name": "close_topic.rb",
+          "size": 790
+        },
+        {
+          "path": "app/jobs/regular/send_system_message.rb",
+          "name": "send_system_message.rb",
+          "size": 535
+        },
+        {
+          "path": "app/jobs/regular/site_setting_update_default_categories.rb",
+          "name": "site_setting_update_default_categories.rb",
+          "size": 408
+        },
+        {
+          "path": "app/jobs/regular/bulk_invite.rb",
+          "name": "bulk_invite.rb",
+          "size": 6586
+        },
+        {
+          "path": "app/jobs/regular/download_avatar_from_url.rb",
+          "name": "download_avatar_from_url.rb",
+          "size": 616
+        },
+        {
+          "path": "app/jobs/regular/sync_topic_user_bookmarked.rb",
+          "name": "sync_topic_user_bookmarked.rb",
+          "size": 1505
+        },
+        {
+          "path": "app/jobs/regular/notify_reviewable.rb",
+          "name": "notify_reviewable.rb",
+          "size": 2314
+        },
+        {
+          "path": "app/jobs/regular/group_pm_update_summary.rb",
+          "name": "group_pm_update_summary.rb",
+          "size": 624
+        },
+        {
+          "path": "app/jobs/regular/group_pm_alert.rb",
+          "name": "group_pm_alert.rb",
+          "size": 1285
+        },
+        {
+          "path": "app/jobs/regular/check_video_conversion_status.rb",
+          "name": "check_video_conversion_status.rb",
+          "size": 1324
+        },
+        {
+          "path": "app/jobs/regular/sync_access_control_for_uploads.rb",
+          "name": "sync_access_control_for_uploads.rb",
+          "size": 1097
+        },
+        {
+          "path": "app/jobs/regular/confirm_sns_subscription.rb",
+          "name": "confirm_sns_subscription.rb",
+          "size": 561
+        },
+        {
+          "path": "app/jobs/regular/download_backup_email.rb",
+          "name": "download_backup_email.rb",
+          "size": 720
+        },
+        {
+          "path": "app/jobs/regular/update_topic_upload_security.rb",
+          "name": "update_topic_upload_security.rb",
+          "size": 401
+        },
+        {
+          "path": "app/jobs/regular/retrieve_topic.rb",
+          "name": "retrieve_topic.rb",
+          "size": 502
+        },
+        {
+          "path": "app/jobs/regular/pull_user_profile_hotlinked_images.rb",
+          "name": "pull_user_profile_hotlinked_images.rb",
+          "size": 1990
+        },
+        {
+          "path": "app/jobs/regular/index_category_for_search.rb",
+          "name": "index_category_for_search.rb",
+          "size": 260
+        },
+        {
+          "path": "app/jobs/regular/generate_topic_thumbnails.rb",
+          "name": "generate_topic_thumbnails.rb",
+          "size": 421
+        },
+        {
+          "path": "app/jobs/regular/truncate_user_flag_stats.rb",
+          "name": "truncate_user_flag_stats.rb",
+          "size": 1679
+        },
+        {
+          "path": "app/jobs/regular/bulk_user_title_update.rb",
+          "name": "bulk_user_title_update.rb",
+          "size": 628
+        },
+        {
+          "path": "app/jobs/regular/create_avatar_thumbnails.rb",
+          "name": "create_avatar_thumbnails.rb",
+          "size": 460
+        },
+        {
+          "path": "app/jobs/regular/backup_chunks_merger.rb",
+          "name": "backup_chunks_merger.rb",
+          "size": 1337
+        },
+        {
+          "path": "app/jobs/regular/process_localized_cooked.rb",
+          "name": "process_localized_cooked.rb",
+          "size": 1032
+        },
+        {
+          "path": "app/jobs/regular/notify_moved_posts.rb",
+          "name": "notify_moved_posts.rb",
+          "size": 1089
+        },
+        {
+          "path": "app/jobs/regular/suspicious_login.rb",
+          "name": "suspicious_login.rb",
+          "size": 605
+        },
+        {
+          "path": "app/jobs/regular/feature_topic_users.rb",
+          "name": "feature_topic_users.rb",
+          "size": 554
+        },
+        {
+          "path": "app/jobs/regular/post_alert.rb",
+          "name": "post_alert.rb",
+          "size": 361
+        },
+        {
+          "path": "app/jobs/regular/change_display_name.rb",
+          "name": "change_display_name.rb",
+          "size": 2728
+        },
+        {
+          "path": "app/jobs/regular/update_group_mentions.rb",
+          "name": "update_group_mentions.rb",
+          "size": 319
+        },
+        {
+          "path": "app/jobs/regular/critical_user_email.rb",
+          "name": "critical_user_email.rb",
+          "size": 176
+        }
+      ],
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "mailers",
+      "type": "rails_mailers",
+      "language": "ruby",
+      "path": "app/mailers",
+      "files": [
+        {
+          "path": "app/mailers/user_notifications.rb",
+          "name": "user_notifications.rb",
+          "size": 27855
+        },
+        {
+          "path": "app/mailers/subscription_mailer.rb",
+          "name": "subscription_mailer.rb",
+          "size": 559
+        },
+        {
+          "path": "app/mailers/group_smtp_mailer.rb",
+          "name": "group_smtp_mailer.rb",
+          "size": 2683
+        },
+        {
+          "path": "app/mailers/rejection_mailer.rb",
+          "name": "rejection_mailer.rb",
+          "size": 1152
+        },
+        {
+          "path": "app/mailers/admin_confirmation_mailer.rb",
+          "name": "admin_confirmation_mailer.rb",
+          "size": 438
+        },
+        {
+          "path": "app/mailers/invite_mailer.rb",
+          "name": "invite_mailer.rb",
+          "size": 2613
+        },
+        {
+          "path": "app/mailers/version_mailer.rb",
+          "name": "version_mailer.rb",
+          "size": 851
+        },
+        {
+          "path": "app/mailers/download_backup_mailer.rb",
+          "name": "download_backup_mailer.rb",
+          "size": 271
+        },
+        {
+          "path": "app/mailers/test_mailer.rb",
+          "name": "test_mailer.rb",
+          "size": 214
+        }
+      ],
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "controllers",
+      "type": "rails_controllers",
+      "language": "ruby",
+      "path": "app/controllers",
+      "files": [
+        {
+          "path": "app/controllers/sidebar_sections_controller.rb",
+          "name": "sidebar_sections_controller.rb",
+          "size": 4368
+        },
+        {
+          "path": "app/controllers/composer_controller.rb",
+          "name": "composer_controller.rb",
+          "size": 6245
+        },
+        {
+          "path": "app/controllers/reviewables_controller.rb",
+          "name": "reviewables_controller.rb",
+          "size": 11048
+        },
+        {
+          "path": "app/controllers/theme_javascripts_controller.rb",
+          "name": "theme_javascripts_controller.rb",
+          "size": 3392
+        },
+        {
+          "path": "app/controllers/offline_controller.rb",
+          "name": "offline_controller.rb",
+          "size": 340
+        },
+        {
+          "path": "app/controllers/user_actions_controller.rb",
+          "name": "user_actions_controller.rb",
+          "size": 2165
+        },
+        {
+          "path": "app/controllers/about_controller.rb",
+          "name": "about_controller.rb",
+          "size": 1066
+        },
+        {
+          "path": "app/controllers/bookmarks_controller.rb",
+          "name": "bookmarks_controller.rb",
+          "size": 3027
+        },
+        {
+          "path": "app/controllers/robots_txt_controller.rb",
+          "name": "robots_txt_controller.rb",
+          "size": 3016
+        },
+        {
+          "path": "app/controllers/topics_controller.rb",
+          "name": "topics_controller.rb",
+          "size": 47992
+        },
+        {
+          "path": "app/controllers/composer_messages_controller.rb",
+          "name": "composer_messages_controller.rb",
+          "size": 1270
+        },
+        {
+          "path": "app/controllers/user_badges_controller.rb",
+          "name": "user_badges_controller.rb",
+          "size": 5690
+        },
+        {
+          "path": "app/controllers/associated_groups_controller.rb",
+          "name": "associated_groups_controller.rb",
+          "size": 267
+        },
+        {
+          "path": "app/controllers/topic_localizations_controller.rb",
+          "name": "topic_localizations_controller.rb",
+          "size": 1517
+        },
+        {
+          "path": "app/controllers/user_api_key_clients_controller.rb",
+          "name": "user_api_key_clients_controller.rb",
+          "size": 1914
+        },
+        {
+          "path": "app/controllers/exceptions_controller.rb",
+          "name": "exceptions_controller.rb",
+          "size": 387
+        },
+        {
+          "path": "app/controllers/test_requests_controller.rb",
+          "name": "test_requests_controller.rb",
+          "size": 690
+        },
+        {
+          "path": "app/controllers/presence_controller.rb",
+          "name": "presence_controller.rb",
+          "size": 3048
+        },
+        {
+          "path": "app/controllers/similar_topics_controller.rb",
+          "name": "similar_topics_controller.rb",
+          "size": 704
+        },
+        {
+          "path": "app/controllers/clicks_controller.rb",
+          "name": "clicks_controller.rb",
+          "size": 446
+        },
+        {
+          "path": "app/controllers/pageview_controller.rb",
+          "name": "pageview_controller.rb",
+          "size": 400
+        },
+        {
+          "path": "app/controllers/post_readers_controller.rb",
+          "name": "post_readers_controller.rb",
+          "size": 1320
+        },
+        {
+          "path": "app/controllers/user_avatars_controller.rb",
+          "name": "user_avatars_controller.rb",
+          "size": 6818
+        },
+        {
+          "path": "app/controllers/embed_controller.rb",
+          "name": "embed_controller.rb",
+          "size": 5752
+        },
+        {
+          "path": "app/controllers/application_controller.rb",
+          "name": "application_controller.rb",
+          "size": 36217
+        },
+        {
+          "path": "app/controllers/search_controller.rb",
+          "name": "search_controller.rb",
+          "size": 8586
+        },
+        {
+          "path": "app/controllers/directory_columns_controller.rb",
+          "name": "directory_columns_controller.rb",
+          "size": 325
+        },
+        {
+          "path": "app/controllers/topic_view_stats_controller.rb",
+          "name": "topic_view_stats_controller.rb",
+          "size": 898
+        },
+        {
+          "path": "app/controllers/directory_items_controller.rb",
+          "name": "directory_items_controller.rb",
+          "size": 5945
+        },
+        {
+          "path": "app/controllers/uploads_controller.rb",
+          "name": "uploads_controller.rb",
+          "size": 13296
+        },
+        {
+          "path": "app/controllers/calendar_subscriptions_controller.rb",
+          "name": "calendar_subscriptions_controller.rb",
+          "size": 2145
+        },
+        {
+          "path": "app/controllers/user_api_keys_controller.rb",
+          "name": "user_api_keys_controller.rb",
+          "size": 8479
+        },
+        {
+          "path": "app/controllers/webhooks_controller.rb",
+          "name": "webhooks_controller.rb",
+          "size": 10664
+        },
+        {
+          "path": "app/controllers/badges_controller.rb",
+          "name": "badges_controller.rb",
+          "size": 2260
+        },
+        {
+          "path": "app/controllers/email_controller.rb",
+          "name": "email_controller.rb",
+          "size": 2308
+        },
+        {
+          "path": "app/controllers/session_controller.rb",
+          "name": "session_controller.rb",
+          "size": 30834
+        },
+        {
+          "path": "app/controllers/invites_controller.rb",
+          "name": "invites_controller.rb",
+          "size": 22033
+        },
+        {
+          "path": "app/controllers/inline_onebox_controller.rb",
+          "name": "inline_onebox_controller.rb",
+          "size": 1064
+        },
+        {
+          "path": "app/controllers/published_pages_controller.rb",
+          "name": "published_pages_controller.rb",
+          "size": 2817
+        },
+        {
+          "path": "app/controllers/wizard_controller.rb",
+          "name": "wizard_controller.rb",
+          "size": 403
+        },
+        {
+          "path": "app/controllers/reviewable_notes_controller.rb",
+          "name": "reviewable_notes_controller.rb",
+          "size": 1123
+        },
+        {
+          "path": "app/controllers/groups_controller.rb",
+          "name": "groups_controller.rb",
+          "size": 33599
+        },
+        {
+          "path": "app/controllers/static_controller.rb",
+          "name": "static_controller.rb",
+          "size": 10044
+        },
+        {
+          "path": "app/controllers/slugs_controller.rb",
+          "name": "slugs_controller.rb",
+          "size": 507
+        },
+        {
+          "path": "app/controllers/stylesheets_controller.rb",
+          "name": "stylesheets_controller.rb",
+          "size": 2964
+        },
+        {
+          "path": "app/controllers/emojis_controller.rb",
+          "name": "emojis_controller.rb",
+          "size": 267
+        },
+        {
+          "path": "app/controllers/extra_locales_controller.rb",
+          "name": "extra_locales_controller.rb",
+          "size": 3560
+        },
+        {
+          "path": "app/controllers/site_controller.rb",
+          "name": "site_controller.rb",
+          "size": 1843
+        },
+        {
+          "path": "app/controllers/posts_controller.rb",
+          "name": "posts_controller.rb",
+          "size": 32172
+        },
+        {
+          "path": "app/controllers/sitemap_controller.rb",
+          "name": "sitemap_controller.rb",
+          "size": 2191
+        },
+        {
+          "path": "app/controllers/steps_controller.rb",
+          "name": "steps_controller.rb",
+          "size": 633
+        },
+        {
+          "path": "app/controllers/finish_installation_controller.rb",
+          "name": "finish_installation_controller.rb",
+          "size": 3805
+        },
+        {
+          "path": "app/controllers/drafts_controller.rb",
+          "name": "drafts_controller.rb",
+          "size": 7323
+        },
+        {
+          "path": "app/controllers/tags_controller.rb",
+          "name": "tags_controller.rb",
+          "size": 25273
+        },
+        {
+          "path": "app/controllers/export_csv_controller.rb",
+          "name": "export_csv_controller.rb",
+          "size": 2254
+        },
+        {
+          "path": "app/controllers/new_topic_controller.rb",
+          "name": "new_topic_controller.rb",
+          "size": 102
+        },
+        {
+          "path": "app/controllers/list_controller.rb",
+          "name": "list_controller.rb",
+          "size": 17891
+        },
+        {
+          "path": "app/controllers/users_controller.rb",
+          "name": "users_controller.rb",
+          "size": 76214
+        },
+        {
+          "path": "app/controllers/qunit_controller.rb",
+          "name": "qunit_controller.rb",
+          "size": 2025
+        },
+        {
+          "path": "app/controllers/dev_mode_controller.rb",
+          "name": "dev_mode_controller.rb",
+          "size": 774
+        },
+        {
+          "path": "app/controllers/form_templates_controller.rb",
+          "name": "form_templates_controller.rb",
+          "size": 750
+        },
+        {
+          "path": "app/controllers/onebox_controller.rb",
+          "name": "onebox_controller.rb",
+          "size": 1305
+        },
+        {
+          "path": "app/controllers/bootstrap_controller.rb",
+          "name": "bootstrap_controller.rb",
+          "size": 2982
+        },
+        {
+          "path": "app/controllers/hashtags_controller.rb",
+          "name": "hashtags_controller.rb",
+          "size": 837
+        },
+        {
+          "path": "app/controllers/categories_controller.rb",
+          "name": "categories_controller.rb",
+          "size": 24942
+        },
+        {
+          "path": "app/controllers/tag_localizations_controller.rb",
+          "name": "tag_localizations_controller.rb",
+          "size": 1552
+        },
+        {
+          "path": "app/controllers/push_notification_controller.rb",
+          "name": "push_notification_controller.rb",
+          "size": 553
+        },
+        {
+          "path": "app/controllers/permalinks_controller.rb",
+          "name": "permalinks_controller.rb",
+          "size": 916
+        },
+        {
+          "path": "app/controllers/forums_controller.rb",
+          "name": "forums_controller.rb",
+          "size": 576
+        },
+        {
+          "path": "app/controllers/post_action_users_controller.rb",
+          "name": "post_action_users_controller.rb",
+          "size": 1888
+        },
+        {
+          "path": "app/controllers/reviewable_claimed_topics_controller.rb",
+          "name": "reviewable_claimed_topics_controller.rb",
+          "size": 1891
+        },
+        {
+          "path": "app/controllers/tag_groups_controller.rb",
+          "name": "tag_groups_controller.rb",
+          "size": 5527
+        },
+        {
+          "path": "app/controllers/highlight_js_controller.rb",
+          "name": "highlight_js_controller.rb",
+          "size": 1269
+        },
+        {
+          "path": "app/controllers/safe_mode_controller.rb",
+          "name": "safe_mode_controller.rb",
+          "size": 1125
+        },
+        {
+          "path": "app/controllers/do_not_disturb_controller.rb",
+          "name": "do_not_disturb_controller.rb",
+          "size": 1343
+        },
+        {
+          "path": "app/controllers/home_page_controller.rb",
+          "name": "home_page_controller.rb",
+          "size": 305
+        },
+        {
+          "path": "app/controllers/post_actions_controller.rb",
+          "name": "post_actions_controller.rb",
+          "size": 2321
+        },
+        {
+          "path": "app/controllers/new_invite_controller.rb",
+          "name": "new_invite_controller.rb",
+          "size": 103
+        },
+        {
+          "path": "app/controllers/post_localizations_controller.rb",
+          "name": "post_localizations_controller.rb",
+          "size": 2036
+        },
+        {
+          "path": "app/controllers/metadata_controller.rb",
+          "name": "metadata_controller.rb",
+          "size": 4402
+        },
+        {
+          "path": "app/controllers/user_status_controller.rb",
+          "name": "user_status_controller.rb",
+          "size": 752
+        },
+        {
+          "path": "app/controllers/edit_directory_columns_controller.rb",
+          "name": "edit_directory_columns_controller.rb",
+          "size": 2606
+        },
+        {
+          "path": "app/controllers/notifications_controller.rb",
+          "name": "notifications_controller.rb",
+          "size": 5483
+        },
+        {
+          "path": "app/controllers/svg_sprite_controller.rb",
+          "name": "svg_sprite_controller.rb",
+          "size": 2616
+        },
+        {
+          "path": "app/controllers/users_email_controller.rb",
+          "name": "users_email_controller.rb",
+          "size": 4046
+        },
+        {
+          "path": "app/controllers/users/omniauth_callbacks_controller.rb",
+          "name": "omniauth_callbacks_controller.rb",
+          "size": 8298
+        },
+        {
+          "path": "app/controllers/users/discourse_id_controller.rb",
+          "name": "discourse_id_controller.rb",
+          "size": 955
+        },
+        {
+          "path": "app/controllers/users/associate_accounts_controller.rb",
+          "name": "associate_accounts_controller.rb",
+          "size": 1889
+        },
+        {
+          "path": "app/controllers/admin/api_controller.rb",
+          "name": "api_controller.rb",
+          "size": 4402
+        },
+        {
+          "path": "app/controllers/admin/robots_txt_controller.rb",
+          "name": "robots_txt_controller.rb",
+          "size": 1403
+        },
+        {
+          "path": "app/controllers/admin/email_templates_controller.rb",
+          "name": "email_templates_controller.rb",
+          "size": 8880
+        },
+        {
+          "path": "app/controllers/admin/versions_controller.rb",
+          "name": "versions_controller.rb",
+          "size": 157
+        },
+        {
+          "path": "app/controllers/admin/web_hooks_controller.rb",
+          "name": "web_hooks_controller.rb",
+          "size": 5934
+        },
+        {
+          "path": "app/controllers/admin/admin_notices_controller.rb",
+          "name": "admin_notices_controller.rb",
+          "size": 300
+        },
+        {
+          "path": "app/controllers/admin/search_logs_controller.rb",
+          "name": "search_logs_controller.rb",
+          "size": 790
+        },
+        {
+          "path": "app/controllers/admin/search_controller.rb",
+          "name": "search_controller.rb",
+          "size": 1214
+        },
+        {
+          "path": "app/controllers/admin/watched_words_controller.rb",
+          "name": "watched_words_controller.rb",
+          "size": 4963
+        },
+        {
+          "path": "app/controllers/admin/badges_controller.rb",
+          "name": "badges_controller.rb",
+          "size": 6351
+        },
+        {
+          "path": "app/controllers/admin/staff_controller.rb",
+          "name": "staff_controller.rb",
+          "size": 135
+        },
+        {
+          "path": "app/controllers/admin/email_controller.rb",
+          "name": "email_controller.rb",
+          "size": 3778
+        },
+        {
+          "path": "app/controllers/admin/staff_action_logs_controller.rb",
+          "name": "staff_action_logs_controller.rb",
+          "size": 4196
+        },
+        {
+          "path": "app/controllers/admin/plugins_controller.rb",
+          "name": "plugins_controller.rb",
+          "size": 642
+        },
+        {
+          "path": "app/controllers/admin/section_controller.rb",
+          "name": "section_controller.rb",
+          "size": 108
+        },
+        {
+          "path": "app/controllers/admin/impersonate_controller.rb",
+          "name": "impersonate_controller.rb",
+          "size": 1108
+        },
+        {
+          "path": "app/controllers/admin/screened_emails_controller.rb",
+          "name": "screened_emails_controller.rb",
+          "size": 492
+        },
+        {
+          "path": "app/controllers/admin/color_schemes_controller.rb",
+          "name": "color_schemes_controller.rb",
+          "size": 2298
+        },
+        {
+          "path": "app/controllers/admin/groups_controller.rb",
+          "name": "groups_controller.rb",
+          "size": 4116
+        },
+        {
+          "path": "app/controllers/admin/site_texts_controller.rb",
+          "name": "site_texts_controller.rb",
+          "size": 9075
+        },
+        {
+          "path": "app/controllers/admin/embeddable_hosts_controller.rb",
+          "name": "embeddable_hosts_controller.rb",
+          "size": 1717
+        },
+        {
+          "path": "app/controllers/admin/site_settings_controller.rb",
+          "name": "site_settings_controller.rb",
+          "size": 5275
+        },
+        {
+          "path": "app/controllers/admin/dashboard_controller.rb",
+          "name": "dashboard_controller.rb",
+          "size": 2253
+        },
+        {
+          "path": "app/controllers/admin/user_fields_controller.rb",
+          "name": "user_fields_controller.rb",
+          "size": 1968
+        },
+        {
+          "path": "app/controllers/admin/reports_controller.rb",
+          "name": "reports_controller.rb",
+          "size": 2788
+        },
+        {
+          "path": "app/controllers/admin/users_controller.rb",
+          "name": "users_controller.rb",
+          "size": 17645
+        },
+        {
+          "path": "app/controllers/admin/form_templates_controller.rb",
+          "name": "form_templates_controller.rb",
+          "size": 2077
+        },
+        {
+          "path": "app/controllers/admin/screened_urls_controller.rb",
+          "name": "screened_urls_controller.rb",
+          "size": 442
+        },
+        {
+          "path": "app/controllers/admin/screened_ip_addresses_controller.rb",
+          "name": "screened_ip_addresses_controller.rb",
+          "size": 2351
+        },
+        {
+          "path": "app/controllers/admin/email_styles_controller.rb",
+          "name": "email_styles_controller.rb",
+          "size": 446
+        },
+        {
+          "path": "app/controllers/admin/permalinks_controller.rb",
+          "name": "permalinks_controller.rb",
+          "size": 1800
+        },
+        {
+          "path": "app/controllers/admin/email_logs_controller.rb",
+          "name": "email_logs_controller.rb",
+          "size": 5320
+        },
+        {
+          "path": "app/controllers/admin/themes_controller.rb",
+          "name": "themes_controller.rb",
+          "size": 15205
+        },
+        {
+          "path": "app/controllers/admin/admin_controller.rb",
+          "name": "admin_controller.rb",
+          "size": 175
+        },
+        {
+          "path": "app/controllers/admin/backups_controller.rb",
+          "name": "backups_controller.rb",
+          "size": 9260
+        },
+        {
+          "path": "app/controllers/admin/embedding_controller.rb",
+          "name": "embedding_controller.rb",
+          "size": 807
+        },
+        {
+          "path": "app/controllers/admin/unknown_reviewables_controller.rb",
+          "name": "unknown_reviewables_controller.rb",
+          "size": 190
+        },
+        {
+          "path": "app/controllers/admin/emoji_controller.rb",
+          "name": "emoji_controller.rb",
+          "size": 2074
+        },
+        {
+          "path": "app/controllers/admin/config/about_controller.rb",
+          "name": "about_controller.rb",
+          "size": 3633
+        },
+        {
+          "path": "app/controllers/admin/config/fonts_controller.rb",
+          "name": "fonts_controller.rb",
+          "size": 1087
+        },
+        {
+          "path": "app/controllers/admin/config/logo_controller.rb",
+          "name": "logo_controller.rb",
+          "size": 1263
+        },
+        {
+          "path": "app/controllers/admin/config/upcoming_changes_controller.rb",
+          "name": "upcoming_changes_controller.rb",
+          "size": 1436
+        },
+        {
+          "path": "app/controllers/admin/config/site_settings_controller.rb",
+          "name": "site_settings_controller.rb",
+          "size": 1208
+        },
+        {
+          "path": "app/controllers/admin/config/welcome_banner_controller.rb",
+          "name": "welcome_banner_controller.rb",
+          "size": 657
+        },
+        {
+          "path": "app/controllers/admin/config/flags_controller.rb",
+          "name": "flags_controller.rb",
+          "size": 3421
+        },
+        {
+          "path": "app/controllers/admin/config/customize_controller.rb",
+          "name": "customize_controller.rb",
+          "size": 2252
+        },
+        {
+          "path": "app/controllers/admin/config/color_palettes_controller.rb",
+          "name": "color_palettes_controller.rb",
+          "size": 2406
+        },
+        {
+          "path": "app/controllers/admin/config/discourse_id_controller.rb",
+          "name": "discourse_id_controller.rb",
+          "size": 2053
+        }
+      ],
+      "semantic_type": "api_endpoint"
+    },
+    {
+      "name": "serializers",
+      "type": "rails_serializers",
+      "language": "ruby",
+      "path": "app/serializers",
+      "files": [
+        {
+          "path": "app/serializers/upload_thumbnail_serializer.rb",
+          "name": "upload_thumbnail_serializer.rb",
+          "size": 166
+        },
+        {
+          "path": "app/serializers/basic_group_user_serializer.rb",
+          "name": "basic_group_user_serializer.rb",
+          "size": 218
+        },
+        {
+          "path": "app/serializers/edit_directory_column_serializer.rb",
+          "name": "edit_directory_column_serializer.rb",
+          "size": 215
+        },
+        {
+          "path": "app/serializers/screened_ip_address_serializer.rb",
+          "name": "screened_ip_address_serializer.rb",
+          "size": 320
+        },
+        {
+          "path": "app/serializers/directory_item_serializer.rb",
+          "name": "directory_item_serializer.rb",
+          "size": 1480
+        },
+        {
+          "path": "app/serializers/primary_group_serializer.rb",
+          "name": "primary_group_serializer.rb",
+          "size": 112
+        },
+        {
+          "path": "app/serializers/tag_group_serializer.rb",
+          "name": "tag_group_serializer.rb",
+          "size": 715
+        },
+        {
+          "path": "app/serializers/web_hook_post_serializer.rb",
+          "name": "web_hook_post_serializer.rb",
+          "size": 1211
+        },
+        {
+          "path": "app/serializers/topic_pending_post_serializer.rb",
+          "name": "topic_pending_post_serializer.rb",
+          "size": 250
+        },
+        {
+          "path": "app/serializers/category_and_topic_lists_serializer.rb",
+          "name": "category_and_topic_lists_serializer.rb",
+          "size": 787
+        },
+        {
+          "path": "app/serializers/group_user_with_custom_fields_serializer.rb",
+          "name": "group_user_with_custom_fields_serializer.rb",
+          "size": 369
+        },
+        {
+          "path": "app/serializers/suggested_topics_mixin.rb",
+          "name": "suggested_topics_mixin.rb",
+          "size": 1199
+        },
+        {
+          "path": "app/serializers/invite_link_serializer.rb",
+          "name": "invite_link_serializer.rb",
+          "size": 346
+        },
+        {
+          "path": "app/serializers/hidden_profile_serializer.rb",
+          "name": "hidden_profile_serializer.rb",
+          "size": 526
+        },
+        {
+          "path": "app/serializers/user_bookmark_base_serializer.rb",
+          "name": "user_bookmark_base_serializer.rb",
+          "size": 1306
+        },
+        {
+          "path": "app/serializers/reviewable_user_serializer.rb",
+          "name": "reviewable_user_serializer.rb",
+          "size": 866
+        },
+        {
+          "path": "app/serializers/flagged_topic_summary_serializer.rb",
+          "name": "flagged_topic_summary_serializer.rb",
+          "size": 478
+        },
+        {
+          "path": "app/serializers/post_item_excerpt.rb",
+          "name": "post_item_excerpt.rb",
+          "size": 425
+        },
+        {
+          "path": "app/serializers/reviewable_perform_result_serializer.rb",
+          "name": "reviewable_perform_result_serializer.rb",
+          "size": 796
+        },
+        {
+          "path": "app/serializers/admin_user_list_serializer.rb",
+          "name": "admin_user_list_serializer.rb",
+          "size": 2734
+        },
+        {
+          "path": "app/serializers/reviewable_topic_serializer.rb",
+          "name": "reviewable_topic_serializer.rb",
+          "size": 519
+        },
+        {
+          "path": "app/serializers/reviewable_explanation_serializer.rb",
+          "name": "reviewable_explanation_serializer.rb",
+          "size": 626
+        },
+        {
+          "path": "app/serializers/user_serializer.rb",
+          "name": "user_serializer.rb",
+          "size": 9174
+        },
+        {
+          "path": "app/serializers/site_serializer.rb",
+          "name": "site_serializer.rb",
+          "size": 10629
+        },
+        {
+          "path": "app/serializers/admin_web_hook_serializer.rb",
+          "name": "admin_web_hook_serializer.rb",
+          "size": 801
+        },
+        {
+          "path": "app/serializers/admin_user_serializer.rb",
+          "name": "admin_user_serializer.rb",
+          "size": 1255
+        },
+        {
+          "path": "app/serializers/reviewable_score_type_serializer.rb",
+          "name": "reviewable_score_type_serializer.rb",
+          "size": 525
+        },
+        {
+          "path": "app/serializers/post_serializer.rb",
+          "name": "post_serializer.rb",
+          "size": 16734
+        },
+        {
+          "path": "app/serializers/post_localization_serializer.rb",
+          "name": "post_localization_serializer.rb",
+          "size": 409
+        },
+        {
+          "path": "app/serializers/theme_index_serializer.rb",
+          "name": "theme_index_serializer.rb",
+          "size": 480
+        },
+        {
+          "path": "app/serializers/user_tag_notifications_serializer.rb",
+          "name": "user_tag_notifications_serializer.rb",
+          "size": 259
+        },
+        {
+          "path": "app/serializers/reviewable_serializer.rb",
+          "name": "reviewable_serializer.rb",
+          "size": 4947
+        },
+        {
+          "path": "app/serializers/invite_serializer.rb",
+          "name": "invite_serializer.rb",
+          "size": 1114
+        },
+        {
+          "path": "app/serializers/form_template_serializer.rb",
+          "name": "form_template_serializer.rb",
+          "size": 123
+        },
+        {
+          "path": "app/serializers/api_key_scope_serializer.rb",
+          "name": "api_key_scope_serializer.rb",
+          "size": 499
+        },
+        {
+          "path": "app/serializers/search_post_serializer.rb",
+          "name": "search_post_serializer.rb",
+          "size": 722
+        },
+        {
+          "path": "app/serializers/poster_serializer.rb",
+          "name": "poster_serializer.rb",
+          "size": 112
+        },
+        {
+          "path": "app/serializers/category_badge_serializer.rb",
+          "name": "category_badge_serializer.rb",
+          "size": 883
+        },
+        {
+          "path": "app/serializers/auth_provider_serializer.rb",
+          "name": "auth_provider_serializer.rb",
+          "size": 853
+        },
+        {
+          "path": "app/serializers/wizard_field_choice_serializer.rb",
+          "name": "wizard_field_choice_serializer.rb",
+          "size": 859
+        },
+        {
+          "path": "app/serializers/web_hook_like_serializer.rb",
+          "name": "web_hook_like_serializer.rb",
+          "size": 220
+        },
+        {
+          "path": "app/serializers/reviewable_action_serializer.rb",
+          "name": "reviewable_action_serializer.rb",
+          "size": 965
+        },
+        {
+          "path": "app/serializers/basic_user_badge_serializer.rb",
+          "name": "basic_user_badge_serializer.rb",
+          "size": 298
+        },
+        {
+          "path": "app/serializers/post_revision_serializer.rb",
+          "name": "post_revision_serializer.rb",
+          "size": 7870
+        },
+        {
+          "path": "app/serializers/flair_group_serializer.rb",
+          "name": "flair_group_serializer.rb",
+          "size": 153
+        },
+        {
+          "path": "app/serializers/basic_user_serializer.rb",
+          "name": "basic_user_serializer.rb",
+          "size": 922
+        },
+        {
+          "path": "app/serializers/notification_serializer.rb",
+          "name": "notification_serializer.rb",
+          "size": 1241
+        },
+        {
+          "path": "app/serializers/remote_theme_serializer.rb",
+          "name": "remote_theme_serializer.rb",
+          "size": 957
+        },
+        {
+          "path": "app/serializers/user_notification_schedule_serializer.rb",
+          "name": "user_notification_schedule_serializer.rb",
+          "size": 597
+        },
+        {
+          "path": "app/serializers/user_wordpress_serializer.rb",
+          "name": "user_wordpress_serializer.rb",
+          "size": 293
+        },
+        {
+          "path": "app/serializers/group_user_serializer.rb",
+          "name": "group_user_serializer.rb",
+          "size": 431
+        },
+        {
+          "path": "app/serializers/admin_web_hook_event_serializer.rb",
+          "name": "admin_web_hook_event_serializer.rb",
+          "size": 501
+        },
+        {
+          "path": "app/serializers/reviewable_settings_serializer.rb",
+          "name": "reviewable_settings_serializer.rb",
+          "size": 454
+        },
+        {
+          "path": "app/serializers/post_wordpress_serializer.rb",
+          "name": "post_wordpress_serializer.rb",
+          "size": 318
+        },
+        {
+          "path": "app/serializers/badge_type_serializer.rb",
+          "name": "badge_type_serializer.rb",
+          "size": 245
+        },
+        {
+          "path": "app/serializers/user_export_serializer.rb",
+          "name": "user_export_serializer.rb",
+          "size": 555
+        },
+        {
+          "path": "app/serializers/user_topic_bookmark_serializer.rb",
+          "name": "user_topic_bookmark_serializer.rb",
+          "size": 1231
+        },
+        {
+          "path": "app/serializers/reviewable_bundled_action_serializer.rb",
+          "name": "reviewable_bundled_action_serializer.rb",
+          "size": 358
+        },
+        {
+          "path": "app/serializers/reviewable_score_explanation_serializer.rb",
+          "name": "reviewable_score_explanation_serializer.rb",
+          "size": 298
+        },
+        {
+          "path": "app/serializers/user_bookmark_list_serializer.rb",
+          "name": "user_bookmark_list_serializer.rb",
+          "size": 596
+        },
+        {
+          "path": "app/serializers/grouped_screened_url_serializer.rb",
+          "name": "grouped_screened_url_serializer.rb",
+          "size": 204
+        },
+        {
+          "path": "app/serializers/email_style_serializer.rb",
+          "name": "email_style_serializer.rb",
+          "size": 145
+        },
+        {
+          "path": "app/serializers/wizard_field_serializer.rb",
+          "name": "wizard_field_serializer.rb",
+          "size": 1333
+        },
+        {
+          "path": "app/serializers/color_scheme_color_serializer.rb",
+          "name": "color_scheme_color_serializer.rb",
+          "size": 532
+        },
+        {
+          "path": "app/serializers/topic_list_item_serializer.rb",
+          "name": "topic_list_item_serializer.rb",
+          "size": 4028
+        },
+        {
+          "path": "app/serializers/flagged_topic_serializer.rb",
+          "name": "flagged_topic_serializer.rb",
+          "size": 297
+        },
+        {
+          "path": "app/serializers/topic_view_details_serializer.rb",
+          "name": "topic_view_details_serializer.rb",
+          "size": 5167
+        },
+        {
+          "path": "app/serializers/topic_flag_type_serializer.rb",
+          "name": "topic_flag_type_serializer.rb",
+          "size": 150
+        },
+        {
+          "path": "app/serializers/basic_group_serializer.rb",
+          "name": "basic_group_serializer.rb",
+          "size": 2524
+        },
+        {
+          "path": "app/serializers/optimized_video_serializer.rb",
+          "name": "optimized_video_serializer.rb",
+          "size": 459
+        },
+        {
+          "path": "app/serializers/similar_topic_serializer.rb",
+          "name": "similar_topic_serializer.rb",
+          "size": 361
+        },
+        {
+          "path": "app/serializers/user_status_serializer.rb",
+          "name": "user_status_serializer.rb",
+          "size": 273
+        },
+        {
+          "path": "app/serializers/similar_admin_user_serializer.rb",
+          "name": "similar_admin_user_serializer.rb",
+          "size": 269
+        },
+        {
+          "path": "app/serializers/embedding_serializer.rb",
+          "name": "embedding_serializer.rb",
+          "size": 407
+        },
+        {
+          "path": "app/serializers/invited_user_serializer.rb",
+          "name": "invited_user_serializer.rb",
+          "size": 420
+        },
+        {
+          "path": "app/serializers/user_action_serializer.rb",
+          "name": "user_action_serializer.rb",
+          "size": 1989
+        },
+        {
+          "path": "app/serializers/grouped_search_result_serializer.rb",
+          "name": "grouped_search_result_serializer.rb",
+          "size": 1083
+        },
+        {
+          "path": "app/serializers/web_hook_event_type_serializer.rb",
+          "name": "web_hook_event_type_serializer.rb",
+          "size": 124
+        },
+        {
+          "path": "app/serializers/group_requester_serializer.rb",
+          "name": "group_requester_serializer.rb",
+          "size": 124
+        },
+        {
+          "path": "app/serializers/topic_tracking_state_item_serializer.rb",
+          "name": "topic_tracking_state_item_serializer.rb",
+          "size": 798
+        },
+        {
+          "path": "app/serializers/admin_detailed_user_serializer.rb",
+          "name": "admin_detailed_user_serializer.rb",
+          "size": 4614
+        },
+        {
+          "path": "app/serializers/category_detailed_serializer.rb",
+          "name": "category_detailed_serializer.rb",
+          "size": 1415
+        },
+        {
+          "path": "app/serializers/web_hook_flag_serializer.rb",
+          "name": "web_hook_flag_serializer.rb",
+          "size": 836
+        },
+        {
+          "path": "app/serializers/category_group_serializer.rb",
+          "name": "category_group_serializer.rb",
+          "size": 257
+        },
+        {
+          "path": "app/serializers/web_hook_category_serializer.rb",
+          "name": "web_hook_category_serializer.rb",
+          "size": 208
+        },
+        {
+          "path": "app/serializers/category_list_serializer.rb",
+          "name": "category_list_serializer.rb",
+          "size": 346
+        },
+        {
+          "path": "app/serializers/trust_level3_requirements_serializer.rb",
+          "name": "trust_level3_requirements_serializer.rb",
+          "size": 1287
+        },
+        {
+          "path": "app/serializers/user_field_serializer.rb",
+          "name": "user_field_serializer.rb",
+          "size": 576
+        },
+        {
+          "path": "app/serializers/basic_topic_serializer.rb",
+          "name": "basic_topic_serializer.rb",
+          "size": 264
+        },
+        {
+          "path": "app/serializers/listable_topic_serializer.rb",
+          "name": "listable_topic_serializer.rb",
+          "size": 4259
+        },
+        {
+          "path": "app/serializers/user_summary_serializer.rb",
+          "name": "user_summary_serializer.rb",
+          "size": 3782
+        },
+        {
+          "path": "app/serializers/flagged_user_serializer.rb",
+          "name": "flagged_user_serializer.rb",
+          "size": 1473
+        },
+        {
+          "path": "app/serializers/embeddable_host_serializer.rb",
+          "name": "embeddable_host_serializer.rb",
+          "size": 406
+        },
+        {
+          "path": "app/serializers/published_page_serializer.rb",
+          "name": "published_page_serializer.rb",
+          "size": 158
+        },
+        {
+          "path": "app/serializers/user_card_serializer.rb",
+          "name": "user_card_serializer.rb",
+          "size": 5564
+        },
+        {
+          "path": "app/serializers/web_hook_user_serializer.rb",
+          "name": "web_hook_user_serializer.rb",
+          "size": 1297
+        },
+        {
+          "path": "app/serializers/basic_category_serializer.rb",
+          "name": "basic_category_serializer.rb",
+          "size": 2314
+        },
+        {
+          "path": "app/serializers/admin_email_template_serializer.rb",
+          "name": "admin_email_template_serializer.rb",
+          "size": 1590
+        },
+        {
+          "path": "app/serializers/topic_tracking_state_serializer.rb",
+          "name": "topic_tracking_state_serializer.rb",
+          "size": 922
+        },
+        {
+          "path": "app/serializers/basic_reviewable_queued_post_serializer.rb",
+          "name": "basic_reviewable_queued_post_serializer.rb",
+          "size": 465
+        },
+        {
+          "path": "app/serializers/reviewable_queued_post_serializer.rb",
+          "name": "reviewable_queued_post_serializer.rb",
+          "size": 831
+        },
+        {
+          "path": "app/serializers/sidebar_url_serializer.rb",
+          "name": "sidebar_url_serializer.rb",
+          "size": 189
+        },
+        {
+          "path": "app/serializers/reviewable_score_serializer.rb",
+          "name": "reviewable_score_serializer.rb",
+          "size": 4235
+        },
+        {
+          "path": "app/serializers/incoming_email_serializer.rb",
+          "name": "incoming_email_serializer.rb",
+          "size": 797
+        },
+        {
+          "path": "app/serializers/email_log_serializer.rb",
+          "name": "email_log_serializer.rb",
+          "size": 739
+        },
+        {
+          "path": "app/serializers/web_hook_group_user_serializer.rb",
+          "name": "web_hook_group_user_serializer.rb",
+          "size": 125
+        },
+        {
+          "path": "app/serializers/reviewable_editable_field_serializer.rb",
+          "name": "reviewable_editable_field_serializer.rb",
+          "size": 123
+        },
+        {
+          "path": "app/serializers/tag_localization_serializer.rb",
+          "name": "tag_localization_serializer.rb",
+          "size": 147
+        },
+        {
+          "path": "app/serializers/queued_post_serializer.rb",
+          "name": "queued_post_serializer.rb",
+          "size": 1162
+        },
+        {
+          "path": "app/serializers/user_name_serializer.rb",
+          "name": "user_name_serializer.rb",
+          "size": 109
+        },
+        {
+          "path": "app/serializers/site_category_serializer.rb",
+          "name": "site_category_serializer.rb",
+          "size": 1914
+        },
+        {
+          "path": "app/serializers/group_post_serializer.rb",
+          "name": "group_post_serializer.rb",
+          "size": 1454
+        },
+        {
+          "path": "app/serializers/admin_plugin_serializer.rb",
+          "name": "admin_plugin_serializer.rb",
+          "size": 1888
+        },
+        {
+          "path": "app/serializers/theme_translation_serializer.rb",
+          "name": "theme_translation_serializer.rb",
+          "size": 128
+        },
+        {
+          "path": "app/serializers/basic_api_key_serializer.rb",
+          "name": "basic_api_key_serializer.rb",
+          "size": 327
+        },
+        {
+          "path": "app/serializers/topic_poster_serializer.rb",
+          "name": "topic_poster_serializer.rb",
+          "size": 287
+        },
+        {
+          "path": "app/serializers/screened_url_serializer.rb",
+          "name": "screened_url_serializer.rb",
+          "size": 309
+        },
+        {
+          "path": "app/serializers/user_notification_total_serializer.rb",
+          "name": "user_notification_total_serializer.rb",
+          "size": 1537
+        },
+        {
+          "path": "app/serializers/user_history_serializer.rb",
+          "name": "user_history_serializer.rb",
+          "size": 1631
+        },
+        {
+          "path": "app/serializers/invited_serializer.rb",
+          "name": "invited_serializer.rb",
+          "size": 642
+        },
+        {
+          "path": "app/serializers/user_auth_token_serializer.rb",
+          "name": "user_auth_token_serializer.rb",
+          "size": 385
+        },
+        {
+          "path": "app/serializers/skipped_email_log_serializer.rb",
+          "name": "skipped_email_log_serializer.rb",
+          "size": 192
+        },
+        {
+          "path": "app/serializers/admin_notice_serializer.rb",
+          "name": "admin_notice_serializer.rb",
+          "size": 138
+        },
+        {
+          "path": "app/serializers/basic_post_serializer.rb",
+          "name": "basic_post_serializer.rb",
+          "size": 1312
+        },
+        {
+          "path": "app/serializers/topic_view_bookmark_serializer.rb",
+          "name": "topic_view_bookmark_serializer.rb",
+          "size": 194
+        },
+        {
+          "path": "app/serializers/watched_word_list_serializer.rb",
+          "name": "watched_word_list_serializer.rb",
+          "size": 596
+        },
+        {
+          "path": "app/serializers/topic_timer_serializer.rb",
+          "name": "topic_timer_serializer.rb",
+          "size": 250
+        },
+        {
+          "path": "app/serializers/search_topic_list_item_serializer.rb",
+          "name": "search_topic_list_item_serializer.rb",
+          "size": 234
+        },
+        {
+          "path": "app/serializers/application_serializer.rb",
+          "name": "application_serializer.rb",
+          "size": 846
+        },
+        {
+          "path": "app/serializers/group_post_user_serializer.rb",
+          "name": "group_post_user_serializer.rb",
+          "size": 221
+        },
+        {
+          "path": "app/serializers/api_key_serializer.rb",
+          "name": "api_key_serializer.rb",
+          "size": 689
+        },
+        {
+          "path": "app/serializers/search_result_user_serializer.rb",
+          "name": "search_result_user_serializer.rb",
+          "size": 135
+        },
+        {
+          "path": "app/serializers/gap_serializer.rb",
+          "name": "gap_serializer.rb",
+          "size": 184
+        },
+        {
+          "path": "app/serializers/incoming_email_details_serializer.rb",
+          "name": "incoming_email_details_serializer.rb",
+          "size": 1464
+        },
+        {
+          "path": "app/serializers/admin_badge_serializer.rb",
+          "name": "admin_badge_serializer.rb",
+          "size": 359
+        },
+        {
+          "path": "app/serializers/color_scheme_selectable_serializer.rb",
+          "name": "color_scheme_selectable_serializer.rb",
+          "size": 268
+        },
+        {
+          "path": "app/serializers/watched_word_serializer.rb",
+          "name": "watched_word_serializer.rb",
+          "size": 566
+        },
+        {
+          "path": "app/serializers/topic_list_serializer.rb",
+          "name": "topic_list_serializer.rb",
+          "size": 1277
+        },
+        {
+          "path": "app/serializers/web_hook_group_serializer.rb",
+          "name": "web_hook_group_serializer.rb",
+          "size": 182
+        },
+        {
+          "path": "app/serializers/topic_view_wordpress_serializer.rb",
+          "name": "topic_view_wordpress_serializer.rb",
+          "size": 679
+        },
+        {
+          "path": "app/serializers/reviewable_flagged_post_serializer.rb",
+          "name": "reviewable_flagged_post_serializer.rb",
+          "size": 482
+        },
+        {
+          "path": "app/serializers/component_index_serializer.rb",
+          "name": "component_index_serializer.rb",
+          "size": 634
+        },
+        {
+          "path": "app/serializers/category_serializer.rb",
+          "name": "category_serializer.rb",
+          "size": 3876
+        },
+        {
+          "path": "app/serializers/admin_badges_serializer.rb",
+          "name": "admin_badges_serializer.rb",
+          "size": 355
+        },
+        {
+          "path": "app/serializers/reviewable_note_serializer.rb",
+          "name": "reviewable_note_serializer.rb",
+          "size": 210
+        },
+        {
+          "path": "app/serializers/user_with_custom_fields_serializer.rb",
+          "name": "user_with_custom_fields_serializer.rb",
+          "size": 638
+        },
+        {
+          "path": "app/serializers/sidebar_section_serializer.rb",
+          "name": "sidebar_section_serializer.rb",
+          "size": 318
+        },
+        {
+          "path": "app/serializers/associated_group_serializer.rb",
+          "name": "associated_group_serializer.rb",
+          "size": 139
+        },
+        {
+          "path": "app/serializers/topic_post_count_serializer.rb",
+          "name": "topic_post_count_serializer.rb",
+          "size": 1175
+        },
+        {
+          "path": "app/serializers/user_post_topic_bookmark_base_serializer.rb",
+          "name": "user_post_topic_bookmark_base_serializer.rb",
+          "size": 949
+        },
+        {
+          "path": "app/serializers/backup_file_serializer.rb",
+          "name": "backup_file_serializer.rb",
+          "size": 132
+        },
+        {
+          "path": "app/serializers/basic_theme_serializer.rb",
+          "name": "basic_theme_serializer.rb",
+          "size": 462
+        },
+        {
+          "path": "app/serializers/emoji_serializer.rb",
+          "name": "emoji_serializer.rb",
+          "size": 266
+        },
+        {
+          "path": "app/serializers/topic_view_posts_serializer.rb",
+          "name": "topic_view_posts_serializer.rb",
+          "size": 335
+        },
+        {
+          "path": "app/serializers/penalty_counts_serializer.rb",
+          "name": "penalty_counts_serializer.rb",
+          "size": 276
+        },
+        {
+          "path": "app/serializers/category_upload_serializer.rb",
+          "name": "category_upload_serializer.rb",
+          "size": 130
+        },
+        {
+          "path": "app/serializers/post_stream_serializer_mixin.rb",
+          "name": "post_stream_serializer_mixin.rb",
+          "size": 1966
+        },
+        {
+          "path": "app/serializers/new_post_result_serializer.rb",
+          "name": "new_post_result_serializer.rb",
+          "size": 1332
+        },
+        {
+          "path": "app/serializers/draft_serializer.rb",
+          "name": "draft_serializer.rb",
+          "size": 1457
+        },
+        {
+          "path": "app/serializers/theme_settings_serializer.rb",
+          "name": "theme_settings_serializer.rb",
+          "size": 2329
+        },
+        {
+          "path": "app/serializers/tag_settings_serializer.rb",
+          "name": "tag_settings_serializer.rb",
+          "size": 1345
+        },
+        {
+          "path": "app/serializers/permalink_serializer.rb",
+          "name": "permalink_serializer.rb",
+          "size": 1160
+        },
+        {
+          "path": "app/serializers/topic_localization_serializer.rb",
+          "name": "topic_localization_serializer.rb",
+          "size": 152
+        },
+        {
+          "path": "app/serializers/theme_serializer.rb",
+          "name": "theme_serializer.rb",
+          "size": 3075
+        },
+        {
+          "path": "app/serializers/reviewable_conversation_serializer.rb",
+          "name": "reviewable_conversation_serializer.rb",
+          "size": 219
+        },
+        {
+          "path": "app/serializers/reviewable_post_serializer.rb",
+          "name": "reviewable_post_serializer.rb",
+          "size": 421
+        },
+        {
+          "path": "app/serializers/site_text_serializer.rb",
+          "name": "site_text_serializer.rb",
+          "size": 972
+        },
+        {
+          "path": "app/serializers/private_message_topic_tracking_state_serializer.rb",
+          "name": "private_message_topic_tracking_state_serializer.rb",
+          "size": 262
+        },
+        {
+          "path": "app/serializers/topic_embed_serializer.rb",
+          "name": "topic_embed_serializer.rb",
+          "size": 254
+        },
+        {
+          "path": "app/serializers/post_action_type_serializer.rb",
+          "name": "post_action_type_serializer.rb",
+          "size": 1416
+        },
+        {
+          "path": "app/serializers/reviewable_conversation_post_serializer.rb",
+          "name": "reviewable_conversation_post_serializer.rb",
+          "size": 193
+        },
+        {
+          "path": "app/serializers/user_post_bookmark_serializer.rb",
+          "name": "user_post_bookmark_serializer.rb",
+          "size": 744
+        },
+        {
+          "path": "app/serializers/upload_serializer.rb",
+          "name": "upload_serializer.rb",
+          "size": 1578
+        },
+        {
+          "path": "app/serializers/discourse_version_check_serializer.rb",
+          "name": "discourse_version_check_serializer.rb",
+          "size": 305
+        },
+        {
+          "path": "app/serializers/tag_serializer.rb",
+          "name": "tag_serializer.rb",
+          "size": 902
+        },
+        {
+          "path": "app/serializers/category_required_tag_group_serializer.rb",
+          "name": "category_required_tag_group_serializer.rb",
+          "size": 176
+        },
+        {
+          "path": "app/serializers/wizard_serializer.rb",
+          "name": "wizard_serializer.rb",
+          "size": 489
+        },
+        {
+          "path": "app/serializers/inactive_user_serializer.rb",
+          "name": "inactive_user_serializer.rb",
+          "size": 274
+        },
+        {
+          "path": "app/serializers/found_user_serializer.rb",
+          "name": "found_user_serializer.rb",
+          "size": 222
+        },
+        {
+          "path": "app/serializers/sidebar_tag_serializer.rb",
+          "name": "sidebar_tag_serializer.rb",
+          "size": 697
+        },
+        {
+          "path": "app/serializers/detailed_user_badge_serializer.rb",
+          "name": "detailed_user_badge_serializer.rb",
+          "size": 820
+        },
+        {
+          "path": "app/serializers/invited_user_record_serializer.rb",
+          "name": "invited_user_record_serializer.rb",
+          "size": 1077
+        },
+        {
+          "path": "app/serializers/about_serializer.rb",
+          "name": "about_serializer.rb",
+          "size": 1588
+        },
+        {
+          "path": "app/serializers/badge_grouping_serializer.rb",
+          "name": "badge_grouping_serializer.rb",
+          "size": 186
+        },
+        {
+          "path": "app/serializers/wizard_step_serializer.rb",
+          "name": "wizard_step_serializer.rb",
+          "size": 635
+        },
+        {
+          "path": "app/serializers/badge_serializer.rb",
+          "name": "badge_serializer.rb",
+          "size": 790
+        },
+        {
+          "path": "app/serializers/pending_post_serializer.rb",
+          "name": "pending_post_serializer.rb",
+          "size": 798
+        },
+        {
+          "path": "app/serializers/color_scheme_serializer.rb",
+          "name": "color_scheme_serializer.rb",
+          "size": 763
+        },
+        {
+          "path": "app/serializers/theme_objects_setting_metadata_serializer.rb",
+          "name": "theme_objects_setting_metadata_serializer.rb",
+          "size": 833
+        },
+        {
+          "path": "app/serializers/topic_view_serializer.rb",
+          "name": "topic_view_serializer.rb",
+          "size": 7404
+        },
+        {
+          "path": "app/serializers/basic_reviewable_user_serializer.rb",
+          "name": "basic_reviewable_user_serializer.rb",
+          "size": 175
+        },
+        {
+          "path": "app/serializers/reviewable_history_serializer.rb",
+          "name": "reviewable_history_serializer.rb",
+          "size": 323
+        },
+        {
+          "path": "app/serializers/screened_email_serializer.rb",
+          "name": "screened_email_serializer.rb",
+          "size": 311
+        },
+        {
+          "path": "app/serializers/presence_channel_state_serializer.rb",
+          "name": "presence_channel_state_serializer.rb",
+          "size": 306
+        },
+        {
+          "path": "app/serializers/directory_column_serializer.rb",
+          "name": "directory_column_serializer.rb",
+          "size": 216
+        },
+        {
+          "path": "app/serializers/flag_serializer.rb",
+          "name": "flag_serializer.rb",
+          "size": 1258
+        },
+        {
+          "path": "app/serializers/group_show_serializer.rb",
+          "name": "group_show_serializer.rb",
+          "size": 4042
+        },
+        {
+          "path": "app/serializers/archetype_serializer.rb",
+          "name": "archetype_serializer.rb",
+          "size": 471
+        },
+        {
+          "path": "app/serializers/search_logs_serializer.rb",
+          "name": "search_logs_serializer.rb",
+          "size": 122
+        },
+        {
+          "path": "app/serializers/user_badge_serializer.rb",
+          "name": "user_badge_serializer.rb",
+          "size": 858
+        },
+        {
+          "path": "app/serializers/detailed_tag_serializer.rb",
+          "name": "detailed_tag_serializer.rb",
+          "size": 576
+        },
+        {
+          "path": "app/serializers/reviewable_claimed_topic_serializer.rb",
+          "name": "reviewable_claimed_topic_serializer.rb",
+          "size": 204
+        },
+        {
+          "path": "app/serializers/theme_field_serializer.rb",
+          "name": "theme_field_serializer.rb",
+          "size": 857
+        },
+        {
+          "path": "app/serializers/basic_group_history_serializer.rb",
+          "name": "basic_group_history_serializer.rb",
+          "size": 369
+        },
+        {
+          "path": "app/serializers/basic_reviewable_flagged_post_serializer.rb",
+          "name": "basic_reviewable_flagged_post_serializer.rb",
+          "size": 390
+        },
+        {
+          "path": "app/serializers/single_sign_on_record_serializer.rb",
+          "name": "single_sign_on_record_serializer.rb",
+          "size": 383
+        },
+        {
+          "path": "app/serializers/current_user_serializer.rb",
+          "name": "current_user_serializer.rb",
+          "size": 9755
+        },
+        {
+          "path": "app/serializers/basic_reviewable_serializer.rb",
+          "name": "basic_reviewable_serializer.rb",
+          "size": 260
+        },
+        {
+          "path": "app/serializers/admin_user_action_serializer.rb",
+          "name": "admin_user_action_serializer.rb",
+          "size": 1753
+        },
+        {
+          "path": "app/serializers/topic_link_serializer.rb",
+          "name": "topic_link_serializer.rb",
+          "size": 693
+        },
+        {
+          "path": "app/serializers/user_badges_serializer.rb",
+          "name": "user_badges_serializer.rb",
+          "size": 164
+        },
+        {
+          "path": "app/serializers/admin_form_template_serializer.rb",
+          "name": "admin_form_template_serializer.rb",
+          "size": 128
+        },
+        {
+          "path": "app/serializers/suggested_topic_serializer.rb",
+          "name": "suggested_topic_serializer.rb",
+          "size": 1016
+        },
+        {
+          "path": "app/serializers/badge_index_serializer.rb",
+          "name": "badge_index_serializer.rb",
+          "size": 259
+        },
+        {
+          "path": "app/serializers/user_option_serializer.rb",
+          "name": "user_option_serializer.rb",
+          "size": 2262
+        },
+        {
+          "path": "app/serializers/post_action_user_serializer.rb",
+          "name": "post_action_user_serializer.rb",
+          "size": 564
+        },
+        {
+          "path": "app/serializers/web_hook_topic_view_serializer.rb",
+          "name": "web_hook_topic_view_serializer.rb",
+          "size": 788
+        },
+        {
+          "path": "app/serializers/current_user_option_serializer.rb",
+          "name": "current_user_option_serializer.rb",
+          "size": 1262
+        },
+        {
+          "path": "app/serializers/concerns/basic_category_attributes.rb",
+          "name": "basic_category_attributes.rb",
+          "size": 428
+        },
+        {
+          "path": "app/serializers/concerns/user_badge_post_and_topic_attributes_mixin.rb",
+          "name": "user_badge_post_and_topic_attributes_mixin.rb",
+          "size": 909
+        },
+        {
+          "path": "app/serializers/concerns/user_tag_notifications_mixin.rb",
+          "name": "user_tag_notifications_mixin.rb",
+          "size": 768
+        },
+        {
+          "path": "app/serializers/concerns/user_primary_group_mixin.rb",
+          "name": "user_primary_group_mixin.rb",
+          "size": 1391
+        },
+        {
+          "path": "app/serializers/concerns/user_status_mixin.rb",
+          "name": "user_status_mixin.rb",
+          "size": 430
+        },
+        {
+          "path": "app/serializers/concerns/localized_fancy_topic_title_mixin.rb",
+          "name": "localized_fancy_topic_title_mixin.rb",
+          "size": 1078
+        },
+        {
+          "path": "app/serializers/concerns/user_auth_tokens_mixin.rb",
+          "name": "user_auth_tokens_mixin.rb",
+          "size": 1031
+        },
+        {
+          "path": "app/serializers/concerns/user_sidebar_mixin.rb",
+          "name": "user_sidebar_mixin.rb",
+          "size": 481
+        },
+        {
+          "path": "app/serializers/concerns/email_logs_mixin.rb",
+          "name": "email_logs_mixin.rb",
+          "size": 678
+        },
+        {
+          "path": "app/serializers/concerns/navigation_menu_tags_mixin.rb",
+          "name": "navigation_menu_tags_mixin.rb",
+          "size": 504
+        },
+        {
+          "path": "app/serializers/concerns/topic_tags_mixin.rb",
+          "name": "topic_tags_mixin.rb",
+          "size": 1493
+        }
+      ],
+      "semantic_type": "unknown"
+    }
+  ],
+  "grouping_strategy": "directory_based_llm_enhanced",
+  "coverage": {
+    "total_components": 8,
+    "total_files_grouped": 1106,
+    "component_types": {
+      "rails_helpers": 1,
+      "rails_services": 1,
+      "rails_queries": 1,
+      "rails_models": 1,
+      "rails_jobs": 1,
+      "rails_mailers": 1,
+      "rails_controllers": 1,
+      "rails_serializers": 1
+    }
+  }
+}
