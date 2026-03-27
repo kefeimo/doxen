@@ -210,15 +210,16 @@ Input: Repository path
 **Purpose:** Provide high-level understanding and quick start
 
 #### README.md
-**Target Audience:** New users, developers
+**Target Audience:** New users, developers exploring the source project
 **Content:**
 - Project purpose and value proposition
 - Quick start guide (install, run, test)
 - Project structure overview
 - Key features list
-- Links to detailed documentation
+- Link to INDEX.md for documentation navigation
 
 **Generation Approach:**
+- Generated via `DocGenerator.generate_readme()` from discovery data
 - LLM analyzes entry points (main.py, package.json, setup.py)
 - Extracts dependencies and installation requirements
 - Identifies primary use cases
@@ -230,6 +231,31 @@ Input: Repository path
 - `electron/docs/README.md` - Entry point to docs hierarchy
 
 **Data:** 100% of projects have README (universal pattern)
+
+---
+
+#### INDEX.md
+**Target Audience:** Users navigating generated documentation
+**Content:**
+- Documentation structure overview (3-tier hierarchy)
+- Links to all generated docs (ARCHITECTURE.md, REFERENCE-*.md, GUIDE-*.md, TUTORIAL-*.md)
+- Documentation statistics (file counts, word counts)
+- Getting started paths (for new users vs integrators)
+- Link to README.md for project overview
+
+**Generation Approach:**
+- Auto-generated from the list of generated documentation files
+- Categorizes docs by tier (Tier 1: Architecture, Tier 2: References, Tier 3: Guides/Tutorials)
+- Calculates statistics from generated files
+- Provides multiple entry points for different user types
+
+**Real-World Examples:**
+- `experimental/results/django-rest-framework/INDEX.md` - 38 files, 3-tier navigation
+- `experimental/results/discourse/INDEX.md` - 12 files organized by tier
+
+**Note:** Currently requires manual generation, automation pending
+
+**Data:** New addition (2026-03-27) - separates project description (README) from doc navigation (INDEX)
 
 ---
 
@@ -698,16 +724,22 @@ EXCLUDE_PATTERNS = [
 
 **Inputs:**
 - All analysis outputs
-- Doc type (README, ARCHITECTURE, REFERENCE-*, etc.)
+- Doc type (README, INDEX, ARCHITECTURE, REFERENCE-*, etc.)
 
 **Outputs:**
 - Formatted markdown files
+- Tier 1: README.md (project description), INDEX.md (doc navigation), ARCHITECTURE.md
+- Tier 2: REFERENCE-*.md
+- Tier 3: FEATURE-*.md, GUIDE-*.md, TUTORIAL-*.md
+- Tier 4: DEPLOYMENT.md, TROUBLESHOOTING.md, FAQ.md
+- Tier 5: TESTING.md, CONTRIBUTING.md, MIGRATION-GUIDE.md
 
 **Approach:**
 - Use templates for each doc type
 - Populate with analysis data
 - LLM generates narrative sections
 - Format with metadata frontmatter
+- Cross-link between README.md and INDEX.md
 
 ---
 
@@ -937,7 +969,8 @@ docs/
 **Phase 2 Output (Tier 1) ✅ COMPLETE:**
 ```
 docs/
-├── README.md                      # Tier 1: Entry point
+├── README.md                      # Tier 1: Project description
+├── INDEX.md                       # Tier 1: Documentation navigation
 └── ARCHITECTURE.md                # Tier 1: System design
 ```
 
@@ -945,6 +978,7 @@ docs/
 ```
 docs/
 ├── README.md                      # Tier 1 ✅
+├── INDEX.md                       # Tier 1 ✅
 ├── ARCHITECTURE.md                # Tier 1 ✅
 ├── REFERENCE-API.md               # Tier 2 ⭐ (HIGHEST PRIORITY)
 ├── REFERENCE-DATABASE.md          # Tier 2 ⭐
@@ -956,6 +990,7 @@ docs/
 ```
 docs/
 ├── README.md                      # Tier 1 ✅
+├── INDEX.md                       # Tier 1 ✅
 ├── ARCHITECTURE.md                # Tier 1 ✅
 ├── REFERENCE-API.md               # Tier 2 ✅
 ├── REFERENCE-DATABASE.md          # Tier 2 ✅
