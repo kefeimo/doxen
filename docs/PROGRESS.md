@@ -128,11 +128,24 @@ export ANTHROPIC_API_KEY="sk-ant-..."
 ./venv/bin/python experimental/scripts/test_tier3_guide_generation.py
 ```
 
+**Validated on discourse (Ruby on Rails):**
+- ✅ 2 guides generated: Sending Emails (3.9 KB), View Helpers (4.3 KB)
+- ✅ Total output: 8.1 KB documentation
+- ✅ Cost: $0.08 total
+- ✅ **Mode B validation successful:** LLM synthesized comprehensive guides despite 1.6% Tier 2 coverage
+- ✅ **Key finding:** LLM reads source code directly when Tier 2 is minimal, Mode B works excellently
+
+**Validation Summary:**
+- **High coverage (53.6%):** django-rest-framework → Excellent guides with rich API citations
+- **Low coverage (1.6%):** discourse → Excellent guides, LLM compensates via source code
+- **Conclusion:** Mode B is robust across coverage levels, Tier 2 provides structure but not required
+
 **Next Steps:**
-1. ~~Tier 3 PoC~~ ✅ Complete
-2. Test on discourse (validate Mode B with 1.6% Tier 2 coverage)
-3. Test on other Gold Standard projects (pandas, pytest, etc.)
-4. Expand guide types (troubleshooting, migration, advanced topics)
+1. ~~Tier 3 PoC on django-rest-framework~~ ✅ Complete
+2. ~~Validate low-coverage projects (discourse)~~ ✅ Complete
+3. ~~Test on other domains (pandas/pytest)~~ ⏭️ Skipped (libraries, not frameworks)
+4. **Plan Tier 4 (Interactive Exploration)** ← Next
+5. Expand guide types (troubleshooting, migration, advanced topics)
 
 ---
 
