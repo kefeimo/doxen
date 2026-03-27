@@ -194,6 +194,17 @@ Based on manual analysis of top projects:
 ❌ External documentation (hosted elsewhere) - django, rails, vue, nextjs, sentry, saleor, home-assistant
 ❌ Small libraries (root docs only) - click, flask, requests, redis, docker, express, fastapi, webpack
 
+### Selection Process
+**See:** `experimental/results/gold_standard_selection_process.md`
+
+The selection process involved 4 iterations over ~8 hours:
+1. Started with 33 projects → found 13 with /docs/ (39%)
+2. Discovered we missed /doc/ (singular) → found 17 folders, but only 11 rich
+3. Attempted to use Sentry, Home Assistant, Saleor → all had minimal/external docs
+4. Strategically added 4 well-documented projects → reached 15 (40.5%)
+
+**Key learning:** Initial focus on `/docs/` (plural only) was too narrow; `/doc/` (singular) is equally common.
+
 ---
 
 ## Archived Projects (22)
