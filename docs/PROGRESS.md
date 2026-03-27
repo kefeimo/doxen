@@ -16,9 +16,36 @@
 - electron (275 docs) - Desktop framework APIs
 - django-rest-framework (70 docs) - REST API patterns ✅ Phase 1 tested
 
-**Status:** Sprint 2-3 COMPLETE → Production Ready for Tier 2 (Python)
+**Status:** Sprint 2-3 COMPLETE → Production Ready for Tier 2 (Python + Ruby)
 
 **Plan:** See `docs/.progress/sprint-2-3-tier-2-plan.md`
+
+### Ruby Support ✅ COMPLETE (2026-03-27)
+
+**Implemented:**
+- rbenv environment setup (Ruby 3.4.1, .ruby-version, Gemfile)
+- Ruby API extraction via Ripper (built-in AST parser)
+- `ruby_parser.rb` (450 lines) - Classes, modules, methods, parameters
+- `ruby_api_extractor.py` (150 lines) - Python wrapper
+- Template enhanced for Ruby (modules section)
+- ComponentAnalyzer enhanced for Ruby
+
+**Tested on discourse (Ruby on Rails):**
+- ✅ 8 Rails components detected (models, controllers, serializers, jobs, services, helpers, mailers, queries)
+- ✅ 3 components documented: helpers (12 modules, 144 methods), mailers (9 classes, 51 methods), queries (2 classes, 39 methods)
+- ✅ 257 APIs documented, 47.5 KB generated
+- ✅ 100% coverage (Ruby structure coverage, no docstring dependency)
+
+**Setup:**
+- rbenv installed and configured
+- Ruby 3.4.1 installed (supports modern Rails 7+ syntax)
+- Gemfile created (no external gems, using built-in Ripper)
+- CLAUDE.md updated with rbenv instructions
+
+**Files Generated:**
+- `REFERENCE-HELPERS.md` (27.8 KB) - 12 modules
+- `REFERENCE-MAILERS.md` (12.7 KB) - 9 classes
+- `REFERENCE-QUERIES.md` (8.1 KB) - 2 classes
 
 ### Phase 4: Validation & Refinement ✅ COMPLETE (2026-03-27)
 

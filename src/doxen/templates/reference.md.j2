@@ -9,10 +9,17 @@
 
 ## Overview
 
-{% if component.api.classes %}
-This component contains **{{ component.api.total_classes }} class{{ 'es' if component.api.total_classes != 1 else '' }}**, **{{ component.api.total_functions }} function{{ 's' if component.api.total_functions != 1 else '' }}**, and **{{ component.api.total_methods }} method{{ 's' if component.api.total_methods != 1 else '' }}**.
-{% elif component.api.functions %}
-This component contains **{{ component.api.total_functions }} function{{ 's' if component.api.total_functions != 1 else '' }}**.
+{% set total_classes = component.api.total_classes | default(0) %}
+{% set total_modules = component.api.total_modules | default(0) %}
+{% set total_functions = component.api.total_functions | default(0) %}
+{% set total_methods = component.api.total_methods | default(0) %}
+
+{% if component.language == 'ruby' %}
+This component contains **{{ total_classes }} class{{ 'es' if total_classes != 1 else '' }}**, **{{ total_modules }} module{{ 's' if total_modules != 1 else '' }}**, and **{{ total_methods }} method{{ 's' if total_methods != 1 else '' }}**.
+{% elif total_classes > 0 or total_functions > 0 %}
+This component contains **{{ total_classes }} class{{ 'es' if total_classes != 1 else '' }}**, **{{ total_functions }} function{{ 's' if total_functions != 1 else '' }}**, and **{{ total_methods }} method{{ 's' if total_methods != 1 else '' }}**.
+{% elif total_functions > 0 %}
+This component contains **{{ total_functions }} function{{ 's' if total_functions != 1 else '' }}**.
 {% else %}
 This component contains API elements.
 {% endif %}
@@ -233,4 +240,4 @@ obj = {{ component.api.classes[0].name }}()
 **Generated:** {{ generation_time }}
 **Component:** {{ component.name }}
 **API Coverage:** {{ component.api_coverage }}%
-**Total APIs:** {{ component.api.total_classes + component.api.total_functions + component.api.total_methods }}
+**Total APIs:** {{ (component.api.total_classes | default(0)) + (component.api.total_modules | default(0)) + (component.api.total_functions | default(0)) + (component.api.total_methods | default(0)) }}
