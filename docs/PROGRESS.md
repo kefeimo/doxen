@@ -16,9 +16,51 @@
 - electron (275 docs) - Desktop framework APIs
 - django-rest-framework (70 docs) - REST API patterns ✅ Phase 1 tested
 
-**Status:** Phase 2 (Component Analysis) ✅ COMPLETE → Phase 3 (REFERENCE-*.md Generation) next
+**Status:** Phase 3 (REFERENCE-*.md Generation) ✅ COMPLETE → Phase 4 (Validation) next
 
 **Plan:** See `docs/.progress/sprint-2-3-tier-2-plan.md`
+
+### Phase 3: REFERENCE-*.md Generation ✅ COMPLETE (2026-03-27)
+
+**Implemented:**
+- Created Jinja2 template for REFERENCE-*.md files
+- Enhanced `DocGenerator.generate_reference_docs()` method
+- Template includes: Overview, API Reference, Usage Examples, Related Components
+- Expandable method documentation (using `<details>` tags)
+- Source file references with line numbers
+- API coverage metrics in header
+
+**Tested on django-rest-framework (5 core components):**
+- ✅ REFERENCE-SERIALIZERS.md (33KB, 10 classes, 72 methods)
+- ✅ REFERENCE-VIEWS.md (14KB, 1 class, 33 methods)
+- ✅ REFERENCE-PERMISSIONS.md (16KB, 15 classes, 31 methods)
+- ✅ REFERENCE-ROUTERS.md (8.6KB, 4 classes, 17 methods)
+- ✅ REFERENCE-AUTHENTICATION.md (8.1KB, 6 classes, 13 methods)
+- **Total: 80.5KB of structured API documentation**
+
+**Key Features:**
+- Collapsible method details (reduces visual clutter)
+- Parameter tables with types and defaults
+- Return type annotations
+- Inheritance hierarchy
+- Decorator information
+- Source file links (file:line format)
+- Automatic usage examples (language-specific)
+- Generation timestamp and metrics footer
+
+**Template Sections:**
+1. **Header:** Component name, type, path, coverage
+2. **Overview:** Summary stats, source files
+3. **API Reference:** Classes, methods, functions, constants
+4. **Usage Examples:** Code snippets (Python/JavaScript)
+5. **Related Components:** Cross-references, links to Tier 1 docs
+
+**Files Created:**
+- `src/doxen/templates/reference.md.j2` (Jinja2 template, 270 lines)
+- `src/doxen/agents/doc_generator.py` (enhanced with generate_reference_docs())
+- `experimental/scripts/test_reference_generation.py` (test script)
+
+**Results:** `experimental/results/django-rest-framework/reference_docs/`
 
 ### Phase 2: Component Analysis ✅ COMPLETE (2026-03-27)
 

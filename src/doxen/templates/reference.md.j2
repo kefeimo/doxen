@@ -1,0 +1,197 @@
+# {{ component.name }} - API Reference
+
+**Component Type:** {{ component.type }}
+**Language:** {{ component.language }}
+**Path:** `{{ component.path }}`
+{% if component.api_coverage %}**API Coverage:** {{ component.api_coverage }}%{% endif %}
+
+---
+
+## Overview
+
+{% if component.api.classes %}
+This component contains **{{ component.api.total_classes }} class{{ 'es' if component.api.total_classes != 1 else '' }}**, **{{ component.api.total_functions }} function{{ 's' if component.api.total_functions != 1 else '' }}**, and **{{ component.api.total_methods }} method{{ 's' if component.api.total_methods != 1 else '' }}**.
+{% elif component.api.functions %}
+This component contains **{{ component.api.total_functions }} function{{ 's' if component.api.total_functions != 1 else '' }}**.
+{% else %}
+This component contains API elements.
+{% endif %}
+
+{% if component.files %}
+### Source Files
+
+{% for file in component.files[:5] %}
+- [`{{ file.name }}`]({{ file.path }}){% if loop.index0 == 0 and component.entry_point %} (entry point){% endif %}
+
+{% endfor %}
+{% if component.files|length > 5 %}
+... and {{ component.files|length - 5 }} more file{{ 's' if component.files|length - 5 != 1 else '' }}
+{% endif %}
+{% endif %}
+
+---
+
+## API Reference
+
+{% if component.api.classes %}
+### Classes
+
+{% for cls in component.api.classes %}
+#### `{{ cls.name }}`
+
+{% if cls.docstring %}
+{{ cls.docstring }}
+{% else %}
+*No description available.*
+{% endif %}
+
+{% if cls.bases %}
+**Inherits from:** {{ cls.bases|join(', ') }}
+{% endif %}
+
+**Defined in:** [`{{ cls.file }}`]({{ cls.file }}#L{{ cls.line }})
+
+{% if cls.decorators %}
+**Decorators:** `{{ cls.decorators|join('`, `') }}`
+{% endif %}
+
+{% if cls.attributes %}
+##### Class Attributes
+
+| Attribute | Type | Line |
+|-----------|------|------|
+{% for attr in cls.attributes %}
+| `{{ attr.name }}` | {% if attr.type %}`{{ attr.type }}`{% else %}*any*{% endif %} | {{ attr.line }} |
+{% endfor %}
+{% endif %}
+
+{% if cls.methods %}
+##### Methods
+
+{% for method in cls.methods %}
+<details>
+<summary><code>{{ method.name }}({% for param in method.parameters %}{% if not loop.first %}{{ param.name }}{% if param.type %}: {{ param.type }}{% endif %}{% if param.default is not none %} = {{ param.default }}{% endif %}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}){% if method.return_type %} → {{ method.return_type }}{% endif %}</code>{% if method.decorators %} [{{ method.decorators|join(', ') }}]{% endif %}</summary>
+
+{% if method.docstring %}
+{{ method.docstring }}
+{% else %}
+*No description available.*
+{% endif %}
+
+**Defined in:** [`{{ cls.file }}`]({{ cls.file }}#L{{ method.line }})
+
+{% if method.parameters|length > 1 %}
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+{% for param in method.parameters %}
+{% if param.name != 'self' and param.name != 'cls' %}
+| `{{ param.name }}` | {% if param.type %}`{{ param.type }}`{% else %}*any*{% endif %} | {% if param.default is not none %}`{{ param.default }}`{% else %}—{% endif %} | — |
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if method.return_type %}
+**Returns:** `{{ method.return_type }}`
+{% endif %}
+
+</details>
+
+{% endfor %}
+{% endif %}
+
+---
+
+{% endfor %}
+{% endif %}
+
+{% if component.api.functions %}
+### Functions
+
+{% for func in component.api.functions %}
+#### `{{ func.name }}({% for param in func.parameters %}{{ param.name }}{% if param.type %}: {{ param.type }}{% endif %}{% if param.default is not none %} = {{ param.default }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}){% if func.return_type %} → {{ func.return_type }}{% endif %}`
+
+{% if func.docstring %}
+{{ func.docstring }}
+{% else %}
+*No description available.*
+{% endif %}
+
+**Defined in:** [`{{ func.file }}`]({{ func.file }}#L{{ func.line }})
+
+{% if func.decorators %}
+**Decorators:** `{{ func.decorators|join('`, `') }}`
+{% endif %}
+
+{% if func.parameters %}
+**Parameters:**
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+{% for param in func.parameters %}
+| `{{ param.name }}` | {% if param.type %}`{{ param.type }}`{% else %}*any*{% endif %} | {% if param.default is not none %}`{{ param.default }}`{% else %}—{% endif %} | — |
+{% endfor %}
+{% endif %}
+
+{% if func.return_type %}
+**Returns:** `{{ func.return_type }}`
+{% endif %}
+
+---
+
+{% endfor %}
+{% endif %}
+
+{% if component.api.constants %}
+## Constants
+
+| Name | Value | Line |
+|------|-------|------|
+{% for const in component.api.constants %}
+| `{{ const.name }}` | `{{ const.value }}` | {{ const.line }} |
+{% endfor %}
+
+---
+{% endif %}
+
+## Usage Examples
+
+{% if component.api.classes and component.api.classes[0].name %}
+```{{ component.language }}
+# Example usage of {{ component.name }}
+
+{% if component.language == 'python' %}
+from {{ component.path.replace('/', '.').replace('.py', '') }} import {{ component.api.classes[0].name }}
+
+# Create instance
+obj = {{ component.api.classes[0].name }}()
+
+# Use methods
+{% if component.api.classes[0].methods %}
+# obj.{{ component.api.classes[0].methods[0].name }}(...)
+{% endif %}
+{% endif %}
+```
+{% else %}
+*Example usage coming soon.*
+{% endif %}
+
+---
+
+## Related Components
+
+{% if component.semantic_type %}
+**Category:** {{ component.semantic_type.replace('_', ' ').title() }}
+{% endif %}
+
+*See also:*
+- [Project Overview](../README.md)
+- [Architecture](../ARCHITECTURE.md)
+
+---
+
+**Generated:** {{ generation_time }}
+**Component:** {{ component.name }}
+**API Coverage:** {{ component.api_coverage }}%
+**Total APIs:** {{ component.api.total_classes + component.api.total_functions + component.api.total_methods }}

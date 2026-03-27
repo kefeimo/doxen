@@ -431,3 +431,53 @@ Generate ARCHITECTURE.md with these sections:
 Generate the ARCHITECTURE.md content now:"""
 
         return prompt
+
+    def generate_reference_docs(
+        self,
+        components_with_api: list[Dict[str, Any]],
+        output_dir: Path,
+    ) -> list[Path]:
+        """Generate REFERENCE-{component}.md files for Tier 2 documentation.
+
+        Args:
+            components_with_api: List of components with analyzed API data
+            output_dir: Directory to save REFERENCE-*.md files
+
+        Returns:
+            List of paths to generated reference docs
+        """
+        from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+        # Setup Jinja2 environment
+        template_dir = Path(__file__).parent.parent / "templates"
+        env = Environment(
+            loader=FileSystemLoader(template_dir),
+            autoescape=select_autoescape(['html', 'xml']),
+            trim_blocks=True,
+            lstrip_blocks=True,
+        )
+
+        template = env.get_template("reference.md.j2")
+
+        generated_files = []
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        for component in components_with_api:
+            # Generate filename: REFERENCE-{COMPONENT}.md
+            component_name = component["name"].upper()
+            filename = f"REFERENCE-{component_name}.md"
+            output_path = output_dir / filename
+
+            # Render template
+            content = template.render(
+                component=component,
+                generation_time=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            )
+
+            # Save to file
+            with open(output_path, "w", encoding="utf-8") as f:
+                f.write(content)
+
+            generated_files.append(output_path)
+
+        return generated_files
