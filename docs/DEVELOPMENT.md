@@ -74,6 +74,42 @@ Each entry follows this structure:
 
 ---
 
+## 2026-03-27 - Generated Documentation Structure: README.md vs INDEX.md
+
+**Context:** When regenerating READMEs for discourse and django-rest-framework using proper pipeline (`DocGenerator.generate_readme()`), discovered confusion: old README was documentation navigation, new README was project description. Both purposes are valid but were conflated into a single file.
+
+**Decision:**
+- Generated documentation directories contain **two entry point files**:
+  - **README.md**: Project description (what the source project is)
+    - Generated via `DocGenerator.generate_readme()` from discovery data
+    - Content: Overview, features, tech stack, quick start
+    - Audience: Developers new to the source project
+  - **INDEX.md**: Documentation navigation (what docs are available)
+    - Lists ARCHITECTURE.md, REFERENCE-*.md, GUIDE-*.md, TUTORIAL-*.md
+    - 3-tier hierarchy explanation, statistics, getting started
+    - Audience: Users browsing our generated documentation
+    - Note: Not yet auto-generated (needs generator)
+
+**Alternatives Considered:**
+- Single README.md with both purposes (too cluttered, conflicting audiences)
+- DOCS-INDEX.md or TOC.md (less familiar naming)
+- README.md as navigation only (loses GitHub's default display benefit)
+
+**Consequences:**
+- Clear separation of concerns: project understanding vs doc navigation
+- README.md leverages GitHub's default display (users see project description first)
+- INDEX.md familiar to documentation users (like docs/index.html)
+- Need to build INDEX.md generator and add to Tier 1 pipeline
+- Cross-links between files help users find what they need
+
+**Status:** Active (README.md generation working, INDEX.md generator pending)
+
+**References:**
+- Detailed rationale: `docs/.progress/readme-vs-index-design-decision.md`
+- Implementation: `experimental/scripts/regenerate_readme.py`
+
+---
+
 ## Future Entries
 
 Add new entries above this line in reverse chronological order (newest first).

@@ -30,14 +30,10 @@ Doxen uses a **hierarchical, agent-based approach** to generate intelligent docu
 
 ### Gold Standard 15 Projects
 
-**Baseline for Strategy Validation:**
-1. gitlabhq (2,617 files), grafana (715), wagtail (372), metabase (322)
-2. mui (320), electron (275), pytest (258), celery (240)
-3. pandas (220), scikit-learn (195), sphinx (154), discourse (112)
-4. django-rest-framework (70), superset (49), fastapi-users (36)
+**Validation Baseline:** gitlabhq (2,617 files), grafana (715), wagtail (372), metabase (322), mui (320), electron (275), pytest (258), celery (240), pandas (220), scikit-learn (195), sphinx (154), discourse (112), django-rest-framework (70), superset (49), fastapi-users (36)
 
 **Coverage:** Python (8), JavaScript (2), Ruby (2), Go (1), Clojure (1)
-**Domains:** DevOps, CMS, Data/Analytics, ML, Web Frameworks, UI, Desktop, Documentation
+**Domains:** DevOps, CMS, Data/Analytics, ML, Web Frameworks, UI, Desktop
 
 ### Key Findings
 
@@ -84,26 +80,17 @@ Doxen uses a **hierarchical, agent-based approach** to generate intelligent docu
 - Only for complex projects (celery, gitlabhq, grafana)
 - Lowest priority
 
-### Best-in-Class Examples (from Gold Standard 15)
+### Documentation Complexity Patterns
 
-**Tier S - Massive Docs (1000+ files):**
-- **gitlabhq** (2,617 files) - Complete DevOps platform docs
-- **grafana** (715 files) - Comprehensive monitoring docs
+- **Massive (1000+ files):** gitlabhq, grafana - full Tier 1-5 hierarchy
+- **Rich (200-400 files):** wagtail, metabase, mui, electron, pytest, celery, pandas, scikit-learn
+- **Moderate (50-200 files):** sphinx, discourse, django-rest-framework, superset, fastapi-users
 
-**Tier A - Rich Docs (200-400 files):**
-- **wagtail, metabase, mui, electron, pytest, celery, pandas, scikit-learn**
-- All have well-structured /docs/ or /doc/ hierarchies
-- Clear Tier 2 (references) + Tier 3 (tutorials) + Tier 5 (development)
-
-**Tier B - Moderate Docs (50-200 files):**
-- **sphinx, discourse, django-rest-framework, superset, fastapi-users**
-- Focused documentation for specific use cases
-
-**Documentation Complexity Threshold:**
-- **<50 files:** Root-level docs only (15 out of 37 projects)
-- **50-200 files:** Tier 1 + Tier 2 sufficient (5 projects)
-- **200+ files:** Full Tier 1-5 hierarchy beneficial (10 projects)
-- **500+ files:** /docs/ folder essential (2 projects)
+**Threshold Guide:**
+- <50 files → Root-level docs only
+- 50-200 files → Tier 1 + Tier 2
+- 200+ files → Full Tier 1-5 hierarchy
+- 500+ files → /docs/ folder essential
 
 ---
 

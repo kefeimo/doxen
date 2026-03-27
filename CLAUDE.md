@@ -76,10 +76,16 @@
 **Project Documentation (about Doxen itself):**
 - **README.md** - Public-facing project introduction and quick start
 - **product_story.md** - Product vision and positioning
-- **docs/STRATEGY.md** - High-level product strategy and vision ONLY
-  - Focus: "What we're building and why" (product decisions)
-  - NOT: Implementation details, current work, granular progress
-  - Keep concise: Strategic decisions, tier priorities, design philosophy
+- **docs/STRATEGY.md** - Documentation generation strategy
+  - **Focus:** "What generated documentation should look like and how to generate it"
+  - **Content:**
+    - Document hierarchy (3-tier structure, what each tier contains)
+    - Generation approach (agent workflow, high-level process)
+    - Tier specifications (structure, examples, content templates)
+    - Output structure (what files get generated)
+    - Data-driven validation (tier priorities, gold standard findings)
+  - **NOT:** Session-specific implementation details, current bugs, temporary analysis
+  - Think: "Blueprint for documentation generation" not "current work status"
 - **docs/PROGRESS.md** - Current sprint status, active work, next steps
   - Focus: "What we're working on now"
   - Updated frequently as work progresses
