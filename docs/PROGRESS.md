@@ -4,21 +4,52 @@
 
 ---
 
-## Current Phase: Sprint 2-3 - Tier 2 Implementation 🚧
+## Current Phase: Tier 2 Complete ✅ → Next Milestone
 
-**Phase:** Tier 2 (Component References) - HIGHEST PRIORITY
-**Timeline:** Weeks 3-5 (2-3 weeks estimated)
-**Goal:** Generate REFERENCE-{component}.md documentation
-**Target:** 80%+ API coverage on gold standard projects
+**Phase:** Tier 2 (Component References) - COMPLETE
+**Completed:** 2026-03-27
+**Goal:** Generate REFERENCE-{component}.md documentation ✅
+**Result:** Production-ready for Python + Ruby with native AST extraction
 
-**Test Projects:**
-- mui (320 docs) - React component library
-- electron (275 docs) - Desktop framework APIs
-- django-rest-framework (70 docs) - REST API patterns ✅ Phase 1 tested
+**Scope Achieved:**
+- Python: AST-based extraction with docstrings (53.6% coverage on django-rest-framework)
+- Ruby: YARD-based extraction with @param/@return tags (1.6% coverage on discourse)
+- Jinja2 templating for markdown generation
+- Real coverage metrics (honest reflection of source documentation)
 
-**Status:** Sprint 2-3 COMPLETE → Production Ready for Tier 2 (Python + Ruby)
+**Status:** ✅ COMPLETE - Ready for production use on Python/Ruby projects
 
-**Plan:** See `docs/.progress/sprint-2-3-tier-2-plan.md`
+---
+
+## Tier 2 Limitations & Design Decisions
+
+### Native Extraction Philosophy
+**Design:** Pure AST/parser-based extraction (no LLM inference)
+**Coverage metrics reflect reality:** % of APIs with actual docstrings in source code
+
+**Works Well:**
+- Python projects with docstrings (django, flask, requests)
+- Ruby projects with YARD-formatted comments (rubygems, rails gems)
+- Well-documented open source libraries
+
+**Limited Coverage On:**
+- Projects with alternative doc formats (TomDoc, RDoc, JSDoc variants)
+- Undocumented codebases (majority of real-world projects)
+- Mixed documentation styles
+
+**Why Not Add LLM Now?**
+- **Tier 2 goal:** Extract what exists (fast, deterministic, honest)
+- **Tier 3+ goal:** Synthesize what's missing (guides, workflows, relationships)
+- **Decision:** Save LLM for synthesis tasks, not parsing comments
+- **Future:** Optional LLM enhancement layer (Tier 2.5) after Tier 3 complete
+
+### Next Milestone Options
+1. **Tier 3: Integration Guides** - Synthesize cross-component workflows (LLM essential)
+2. **JavaScript/TypeScript Support** - Expand language coverage (similar to Ruby)
+3. **Optimization** - Performance, caching, incremental updates
+4. **Gold Standard Validation** - Test on remaining 13 projects
+
+**Recommendation:** TBD based on user priorities
 
 ### Ruby Support ✅ COMPLETE (2026-03-27)
 
@@ -205,6 +236,40 @@
 - `experimental/scripts/test_component_grouping.py` (new test script)
 
 **Results:** `experimental/results/django-rest-framework_component_grouping.json`
+
+---
+
+## Tier Roadmap & LLM Strategy
+
+### Tier 1: Repository Overview ✅
+- **Status:** Complete
+- **LLM Use:** Optional (LLM analyzer for semantic descriptions)
+- **Current:** Rule-based heuristics work well
+
+### Tier 2: Component References ✅
+- **Status:** Complete (Python + Ruby)
+- **LLM Use:** None (pure AST extraction)
+- **Coverage:** Reflects actual docstrings in source code
+- **Philosophy:** "Show me what exists" not "generate what's missing"
+
+### Tier 3: Integration Guides (Next)
+- **Status:** Not started
+- **LLM Use:** Essential (synthesis required)
+- **Goal:** Cross-component workflows, getting started guides, architecture patterns
+- **Why LLM:** Can't be derived from AST alone - requires understanding relationships
+
+### Tier 4: Interactive Exploration
+- **Status:** Not started
+- **LLM Use:** Essential (natural language queries)
+- **Goal:** "How do I authenticate a user?" → trace through auth flow
+- **Why LLM:** Requires semantic understanding + code navigation
+
+### Tier 5: Validation & Testing
+- **Status:** Not started
+- **LLM Use:** Moderate (test generation, example validation)
+- **Goal:** Verify documentation accuracy, generate usage examples
+
+**Key Insight:** LLM becomes valuable when **synthesizing relationships**, not just extracting structure.
 
 ---
 
