@@ -4,38 +4,47 @@
 
 ---
 
-## Current Phase: Tier 4 Planning → Interactive Exploration
+## Current Phase: Pipeline Consolidation
 
-**Phase:** Tier 4 (Interactive Exploration) - PLANNING
+**Phase:** Infrastructure Cleanup
 **Started:** 2026-03-27
-**Goal:** Enable natural language queries that generate custom guides on-demand
-**Status:** 📝 Plan complete → Ready for implementation
+**Goal:** Consolidate fragmented generation and validation pipelines
+**Status:** 🚧 Planning → Implementation needed
 
-**Vision:**
-- User asks: "How do I add pagination to my Django REST Framework API?"
-- Doxen generates custom guide on-the-fly
-- Caches common questions as static guides
-- Supports follow-up questions (conversational)
+**Problem Identified:**
+- Generation and validation scripts exist but are disconnected
+- Different directory structures (`doxen_output/` vs `results/`)
+- Scripts scattered with no clear entry point
+- Validation infrastructure exists but was "forgotten" (easy to lose track)
 
-**Key Differences from Tier 3:**
-- **Tier 3:** Pre-defined topics (Getting Started, Authentication)
-- **Tier 4:** Custom questions ("How do I [X]?")
-- **Tier 3:** Batch generation, all guides upfront
-- **Tier 4:** Just-in-time, single query at a time
+**Immediate Priority:**
+1. Document all existing scripts in `docs/PIPELINE.md`
+2. Standardize output directory structure
+3. Create single entry point for generation
+4. Connect validation to generation workflow
+5. Create end-to-end example (pytest or pandas)
 
-**Architecture (Mode C: Interactive):**
-```
-User Question → QueryAnalyzer → SmartContextLoader → LLM → Custom Guide
-```
+**Why Now:** Before generating more projects, consolidate the foundation. Better to have clear, reproducible process than scattered examples.
 
-**Plan:** See `docs/.progress/tier-4-interactive-exploration-plan.md`
+**Next:** See TODO list and `docs/.progress/day-5-discourse-completion.md`
 
-**Next Steps:**
-1. Implement QueryAnalyzer (intent extraction)
-2. Implement SmartContextLoader (keyword-based filtering)
-3. Create interactive-guide.md.j2 template
-4. Build CLI: `doxen ask "How do I...?"`
-5. Test on django-rest-framework
+---
+
+## Recent Completion: discourse Documentation ✅ (2026-03-27)
+
+**Achievement:** Completed all remaining Tier 3 guides for discourse (80% → 100%)
+
+**Final Projects Status:**
+- **django-rest-framework** (Python): 39 files, ~22,500 words, $2.28 ✅
+- **discourse** (Ruby): 13 files, ~8,500 words, $0.41 ✅
+- **Combined:** 52 files, ~31,000 words, $2.69
+
+**Validation Status:**
+- ✅ Tier 3 validated on django-rest-framework (58% code coverage vs ground truth)
+- ✅ Tier 1 validated on 4 pilot projects (75% success rate, 86% completeness)
+- ❌ Validation not run on our 2 main projects (structure mismatch)
+
+**See:** `docs/.progress/day-5-discourse-completion.md` for full details
 
 ---
 
