@@ -78,6 +78,9 @@ Gemfile.lock
 *~
 .DS_Store
 
+# Claude Code
+.claude/settings.json
+
 # Environment variables
 .env
 .env.local
