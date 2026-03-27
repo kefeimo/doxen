@@ -1,0 +1,3344 @@
+{
+  "repo_path": "experimental/projects/django-rest-framework",
+  "repo_name": "django-rest-framework",
+  "framework": {
+    "framework": "Django REST Framework",
+    "version": "unknown",
+    "primary_language": "Python",
+    "entry_points": [
+      "manage.py",
+      "wsgi.py",
+      "asgi.py"
+    ],
+    "route_file": "urls.py",
+    "conventions": {
+      "config_dir": "settings/",
+      "app_dir": "rest_framework/"
+    },
+    "detection_method": "llm"
+  },
+  "structure": {
+    "name": "django-rest-framework",
+    "path": ".",
+    "type": "directory",
+    "children": [
+      {
+        "name": ".gitattributes",
+        "path": ".gitattributes",
+        "type": "file",
+        "size": 65
+      },
+      {
+        "name": ".github",
+        "path": ".github",
+        "type": "directory",
+        "children": [
+          {
+            "name": "FUNDING.yml",
+            "path": ".github/FUNDING.yml",
+            "type": "file",
+            "size": 62
+          },
+          {
+            "name": "ISSUE_TEMPLATE",
+            "path": ".github/ISSUE_TEMPLATE",
+            "type": "directory",
+            "children": [
+              {
+                "name": "config.yml",
+                "path": ".github/ISSUE_TEMPLATE/config.yml",
+                "type": "file",
+                "size": 312
+              }
+            ]
+          },
+          {
+            "name": "dependabot.yml",
+            "path": ".github/dependabot.yml",
+            "type": "file",
+            "size": 1191
+          },
+          {
+            "name": "release.yml",
+            "path": ".github/release.yml",
+            "type": "file",
+            "size": 525
+          },
+          {
+            "name": "stale.yml",
+            "path": ".github/stale.yml",
+            "type": "file",
+            "size": 712
+          },
+          {
+            "name": "workflows",
+            "path": ".github/workflows",
+            "type": "directory",
+            "children": [
+              {
+                "name": "main.yml",
+                "path": ".github/workflows/main.yml",
+                "type": "file",
+                "size": 2101
+              },
+              {
+                "name": "mkdocs-deploy.yml",
+                "path": ".github/workflows/mkdocs-deploy.yml",
+                "type": "file",
+                "size": 634
+              },
+              {
+                "name": "release.yml",
+                "path": ".github/workflows/release.yml",
+                "type": "file",
+                "size": 3900
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": ".gitignore",
+        "path": ".gitignore",
+        "type": "file",
+        "size": 172
+      },
+      {
+        "name": ".pre-commit-config.yaml",
+        "path": ".pre-commit-config.yaml",
+        "type": "file",
+        "size": 1122
+      },
+      {
+        "name": ".readthedocs.yaml",
+        "path": ".readthedocs.yaml",
+        "type": "file",
+        "size": 415
+      },
+      {
+        "name": ".tx",
+        "path": ".tx",
+        "type": "directory",
+        "children": [
+          {
+            "name": "config",
+            "path": ".tx/config",
+            "type": "file",
+            "size": 295
+          }
+        ]
+      },
+      {
+        "name": "CONTRIBUTING.md",
+        "path": "CONTRIBUTING.md",
+        "type": "file",
+        "size": 728
+      },
+      {
+        "name": "LICENSE.md",
+        "path": "LICENSE.md",
+        "type": "file",
+        "size": 1537
+      },
+      {
+        "name": "MANIFEST.in",
+        "path": "MANIFEST.in",
+        "type": "file",
+        "size": 78
+      },
+      {
+        "name": "PULL_REQUEST_TEMPLATE.md",
+        "path": "PULL_REQUEST_TEMPLATE.md",
+        "type": "file",
+        "size": 384
+      },
+      {
+        "name": "README.md",
+        "path": "README.md",
+        "type": "file",
+        "size": 6422
+      },
+      {
+        "name": "SECURITY.md",
+        "path": "SECURITY.md",
+        "type": "file",
+        "size": 234
+      },
+      {
+        "name": "codecov.yml",
+        "path": "codecov.yml",
+        "type": "file",
+        "size": 131
+      },
+      {
+        "name": "codespell-ignore-words.txt",
+        "path": "codespell-ignore-words.txt",
+        "type": "file",
+        "size": 55
+      },
+      {
+        "name": "docs",
+        "path": "docs",
+        "type": "directory",
+        "children": [
+          {
+            "name": "CNAME",
+            "path": "docs/CNAME",
+            "type": "file",
+            "size": 30
+          },
+          {
+            "name": "api-guide",
+            "path": "docs/api-guide",
+            "type": "directory",
+            "children": [
+              {
+                "name": "authentication.md",
+                "path": "docs/api-guide/authentication.md",
+                "type": "file",
+                "size": 28252
+              },
+              {
+                "name": "caching.md",
+                "path": "docs/api-guide/caching.md",
+                "type": "file",
+                "size": 2992
+              },
+              {
+                "name": "content-negotiation.md",
+                "path": "docs/api-guide/content-negotiation.md",
+                "type": "file",
+                "size": 4714
+              },
+              {
+                "name": "exceptions.md",
+                "path": "docs/api-guide/exceptions.md",
+                "type": "file",
+                "size": 11974
+              },
+              {
+                "name": "fields.md",
+                "path": "docs/api-guide/fields.md",
+                "type": "file",
+                "size": 44043
+              },
+              {
+                "name": "filtering.md",
+                "path": "docs/api-guide/filtering.md",
+                "type": "file",
+                "size": 17294
+              },
+              {
+                "name": "format-suffixes.md",
+                "path": "docs/api-guide/format-suffixes.md",
+                "type": "file",
+                "size": 3988
+              },
+              {
+                "name": "generic-views.md",
+                "path": "docs/api-guide/generic-views.md",
+                "type": "file",
+                "size": 19625
+              },
+              {
+                "name": "metadata.md",
+                "path": "docs/api-guide/metadata.md",
+                "type": "file",
+                "size": 4756
+              },
+              {
+                "name": "pagination.md",
+                "path": "docs/api-guide/pagination.md",
+                "type": "file",
+                "size": 18533
+              },
+              {
+                "name": "parsers.md",
+                "path": "docs/api-guide/parsers.md",
+                "type": "file",
+                "size": 9154
+              },
+              {
+                "name": "permissions.md",
+                "path": "docs/api-guide/permissions.md",
+                "type": "file",
+                "size": 22550
+              },
+              {
+                "name": "relations.md",
+                "path": "docs/api-guide/relations.md",
+                "type": "file",
+                "size": 27989
+              },
+              {
+                "name": "renderers.md",
+                "path": "docs/api-guide/renderers.md",
+                "type": "file",
+                "size": 25139
+              },
+              {
+                "name": "requests.md",
+                "path": "docs/api-guide/requests.md",
+                "type": "file",
+                "size": 6737
+              },
+              {
+                "name": "responses.md",
+                "path": "docs/api-guide/responses.md",
+                "type": "file",
+                "size": 4680
+              },
+              {
+                "name": "reverse.md",
+                "path": "docs/api-guide/reverse.md",
+                "type": "file",
+                "size": 2520
+              },
+              {
+                "name": "routers.md",
+                "path": "docs/api-guide/routers.md",
+                "type": "file",
+                "size": 17679
+              },
+              {
+                "name": "schemas.md",
+                "path": "docs/api-guide/schemas.md",
+                "type": "file",
+                "size": 16591
+              },
+              {
+                "name": "serializers.md",
+                "path": "docs/api-guide/serializers.md",
+                "type": "file",
+                "size": 59776
+              },
+              {
+                "name": "settings.md",
+                "path": "docs/api-guide/settings.md",
+                "type": "file",
+                "size": 16608
+              },
+              {
+                "name": "status-codes.md",
+                "path": "docs/api-guide/status-codes.md",
+                "type": "file",
+                "size": 4715
+              },
+              {
+                "name": "testing.md",
+                "path": "docs/api-guide/testing.md",
+                "type": "file",
+                "size": 17814
+              },
+              {
+                "name": "throttling.md",
+                "path": "docs/api-guide/throttling.md",
+                "type": "file",
+                "size": 11348
+              },
+              {
+                "name": "validators.md",
+                "path": "docs/api-guide/validators.md",
+                "type": "file",
+                "size": 14268
+              },
+              {
+                "name": "versioning.md",
+                "path": "docs/api-guide/versioning.md",
+                "type": "file",
+                "size": 10581
+              },
+              {
+                "name": "views.md",
+                "path": "docs/api-guide/views.md",
+                "type": "file",
+                "size": 9108
+              },
+              {
+                "name": "viewsets.md",
+                "path": "docs/api-guide/viewsets.md",
+                "type": "file",
+                "size": 15507
+              }
+            ]
+          },
+          {
+            "name": "community",
+            "path": "docs/community",
+            "type": "directory",
+            "children": [
+              {
+                "name": "3.0-announcement.md",
+                "path": "docs/community/3.0-announcement.md",
+                "type": "file",
+                "size": 49481
+              },
+              {
+                "name": "3.1-announcement.md",
+                "path": "docs/community/3.1-announcement.md",
+                "type": "file",
+                "size": 10666
+              },
+              {
+                "name": "3.10-announcement.md",
+                "path": "docs/community/3.10-announcement.md",
+                "type": "file",
+                "size": 6147
+              },
+              {
+                "name": "3.11-announcement.md",
+                "path": "docs/community/3.11-announcement.md",
+                "type": "file",
+                "size": 5413
+              },
+              {
+                "name": "3.12-announcement.md",
+                "path": "docs/community/3.12-announcement.md",
+                "type": "file",
+                "size": 7315
+              },
+              {
+                "name": "3.13-announcement.md",
+                "path": "docs/community/3.13-announcement.md",
+                "type": "file",
+                "size": 1499
+              },
+              {
+                "name": "3.14-announcement.md",
+                "path": "docs/community/3.14-announcement.md",
+                "type": "file",
+                "size": 2300
+              },
+              {
+                "name": "3.15-announcement.md",
+                "path": "docs/community/3.15-announcement.md",
+                "type": "file",
+                "size": 2131
+              },
+              {
+                "name": "3.16-announcement.md",
+                "path": "docs/community/3.16-announcement.md",
+                "type": "file",
+                "size": 1640
+              },
+              {
+                "name": "3.2-announcement.md",
+                "path": "docs/community/3.2-announcement.md",
+                "type": "file",
+                "size": 6237
+              },
+              {
+                "name": "3.3-announcement.md",
+                "path": "docs/community/3.3-announcement.md",
+                "type": "file",
+                "size": 4167
+              },
+              {
+                "name": "3.4-announcement.md",
+                "path": "docs/community/3.4-announcement.md",
+                "type": "file",
+                "size": 8439
+              },
+              {
+                "name": "3.5-announcement.md",
+                "path": "docs/community/3.5-announcement.md",
+                "type": "file",
+                "size": 10059
+              },
+              {
+                "name": "3.6-announcement.md",
+                "path": "docs/community/3.6-announcement.md",
+                "type": "file",
+                "size": 8164
+              },
+              {
+                "name": "3.7-announcement.md",
+                "path": "docs/community/3.7-announcement.md",
+                "type": "file",
+                "size": 5999
+              },
+              {
+                "name": "3.8-announcement.md",
+                "path": "docs/community/3.8-announcement.md",
+                "type": "file",
+                "size": 3683
+              },
+              {
+                "name": "3.9-announcement.md",
+                "path": "docs/community/3.9-announcement.md",
+                "type": "file",
+                "size": 8813
+              },
+              {
+                "name": "contributing.md",
+                "path": "docs/community/contributing.md",
+                "type": "file",
+                "size": 11583
+              },
+              {
+                "name": "jobs.md",
+                "path": "docs/community/jobs.md",
+                "type": "file",
+                "size": 2307
+              },
+              {
+                "name": "kickstarter-announcement.md",
+                "path": "docs/community/kickstarter-announcement.md",
+                "type": "file",
+                "size": 14413
+              },
+              {
+                "name": "mozilla-grant.md",
+                "path": "docs/community/mozilla-grant.md",
+                "type": "file",
+                "size": 4912
+              },
+              {
+                "name": "project-management.md",
+                "path": "docs/community/project-management.md",
+                "type": "file",
+                "size": 4542
+              },
+              {
+                "name": "release-notes.md",
+                "path": "docs/community/release-notes.md",
+                "type": "file",
+                "size": 177253
+              },
+              {
+                "name": "third-party-packages.md",
+                "path": "docs/community/third-party-packages.md",
+                "type": "file",
+                "size": 23726
+              },
+              {
+                "name": "tutorials-and-resources.md",
+                "path": "docs/community/tutorials-and-resources.md",
+                "type": "file",
+                "size": 10389
+              }
+            ]
+          },
+          {
+            "name": "img",
+            "path": "docs/img",
+            "type": "directory",
+            "children": [
+              {
+                "name": "admin.png",
+                "path": "docs/img/admin.png",
+                "type": "file",
+                "size": 55904
+              },
+              {
+                "name": "api-docs.gif",
+                "path": "docs/img/api-docs.gif",
+                "type": "file",
+                "size": 5616028
+              },
+              {
+                "name": "api-docs.png",
+                "path": "docs/img/api-docs.png",
+                "type": "file",
+                "size": 161971
+              },
+              {
+                "name": "bayer.png",
+                "path": "docs/img/bayer.png",
+                "type": "file",
+                "size": 42939
+              },
+              {
+                "name": "books",
+                "path": "docs/img/books",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "bda-cover.png",
+                    "path": "docs/img/books/bda-cover.png",
+                    "type": "file",
+                    "size": 47237
+                  },
+                  {
+                    "name": "dfa-40-cover.jpg",
+                    "path": "docs/img/books/dfa-40-cover.jpg",
+                    "type": "file",
+                    "size": 772861
+                  },
+                  {
+                    "name": "dfa-cover.jpg",
+                    "path": "docs/img/books/dfa-cover.jpg",
+                    "type": "file",
+                    "size": 50099
+                  },
+                  {
+                    "name": "hwa-cover.png",
+                    "path": "docs/img/books/hwa-cover.png",
+                    "type": "file",
+                    "size": 30506
+                  },
+                  {
+                    "name": "tsd-cover.png",
+                    "path": "docs/img/books/tsd-cover.png",
+                    "type": "file",
+                    "size": 118271
+                  }
+                ]
+              },
+              {
+                "name": "build-status.png",
+                "path": "docs/img/build-status.png",
+                "type": "file",
+                "size": 145784
+              },
+              {
+                "name": "cerulean.png",
+                "path": "docs/img/cerulean.png",
+                "type": "file",
+                "size": 62558
+              },
+              {
+                "name": "corejson-format.png",
+                "path": "docs/img/corejson-format.png",
+                "type": "file",
+                "size": 20499
+              },
+              {
+                "name": "cursor-pagination.png",
+                "path": "docs/img/cursor-pagination.png",
+                "type": "file",
+                "size": 12221
+              },
+              {
+                "name": "drf-m-api-root.png",
+                "path": "docs/img/drf-m-api-root.png",
+                "type": "file",
+                "size": 83057
+              },
+              {
+                "name": "drf-m-detail-view.png",
+                "path": "docs/img/drf-m-detail-view.png",
+                "type": "file",
+                "size": 123502
+              },
+              {
+                "name": "drf-m-list-view.png",
+                "path": "docs/img/drf-m-list-view.png",
+                "type": "file",
+                "size": 125547
+              },
+              {
+                "name": "drf-r-api-root.png",
+                "path": "docs/img/drf-r-api-root.png",
+                "type": "file",
+                "size": 83518
+              },
+              {
+                "name": "drf-r-detail-view.png",
+                "path": "docs/img/drf-r-detail-view.png",
+                "type": "file",
+                "size": 121052
+              },
+              {
+                "name": "drf-r-list-view.png",
+                "path": "docs/img/drf-r-list-view.png",
+                "type": "file",
+                "size": 130100
+              },
+              {
+                "name": "drf-rw-api-root.png",
+                "path": "docs/img/drf-rw-api-root.png",
+                "type": "file",
+                "size": 83986
+              },
+              {
+                "name": "drf-rw-detail-view.png",
+                "path": "docs/img/drf-rw-detail-view.png",
+                "type": "file",
+                "size": 134147
+              },
+              {
+                "name": "drf-rw-list-view.png",
+                "path": "docs/img/drf-rw-list-view.png",
+                "type": "file",
+                "size": 214320
+              },
+              {
+                "name": "drf-yasg.png",
+                "path": "docs/img/drf-yasg.png",
+                "type": "file",
+                "size": 59949
+              },
+              {
+                "name": "filter-controls.png",
+                "path": "docs/img/filter-controls.png",
+                "type": "file",
+                "size": 47904
+              },
+              {
+                "name": "horizontal.png",
+                "path": "docs/img/horizontal.png",
+                "type": "file",
+                "size": 11628
+              },
+              {
+                "name": "inline.png",
+                "path": "docs/img/inline.png",
+                "type": "file",
+                "size": 8295
+              },
+              {
+                "name": "labels-and-milestones.png",
+                "path": "docs/img/labels-and-milestones.png",
+                "type": "file",
+                "size": 84026
+              },
+              {
+                "name": "link-header-pagination.png",
+                "path": "docs/img/link-header-pagination.png",
+                "type": "file",
+                "size": 35799
+              },
+              {
+                "name": "logo-dark.png",
+                "path": "docs/img/logo-dark.png",
+                "type": "file",
+                "size": 38689
+              },
+              {
+                "name": "logo-light.png",
+                "path": "docs/img/logo-light.png",
+                "type": "file",
+                "size": 36655
+              },
+              {
+                "name": "ordering-filter.png",
+                "path": "docs/img/ordering-filter.png",
+                "type": "file",
+                "size": 18226
+              },
+              {
+                "name": "pages-pagination.png",
+                "path": "docs/img/pages-pagination.png",
+                "type": "file",
+                "size": 10229
+              },
+              {
+                "name": "premium",
+                "path": "docs/img/premium",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "bitio-readme.png",
+                    "path": "docs/img/premium/bitio-readme.png",
+                    "type": "file",
+                    "size": 18479
+                  },
+                  {
+                    "name": "cadre-readme.png",
+                    "path": "docs/img/premium/cadre-readme.png",
+                    "type": "file",
+                    "size": 6933
+                  },
+                  {
+                    "name": "cryptapi-readme.png",
+                    "path": "docs/img/premium/cryptapi-readme.png",
+                    "type": "file",
+                    "size": 17824
+                  },
+                  {
+                    "name": "esg-readme.png",
+                    "path": "docs/img/premium/esg-readme.png",
+                    "type": "file",
+                    "size": 13473
+                  },
+                  {
+                    "name": "fezto-readme.png",
+                    "path": "docs/img/premium/fezto-readme.png",
+                    "type": "file",
+                    "size": 22592
+                  },
+                  {
+                    "name": "kloudless-readme.png",
+                    "path": "docs/img/premium/kloudless-readme.png",
+                    "type": "file",
+                    "size": 14501
+                  },
+                  {
+                    "name": "lightson-readme.png",
+                    "path": "docs/img/premium/lightson-readme.png",
+                    "type": "file",
+                    "size": 16358
+                  },
+                  {
+                    "name": "posthog-readme.png",
+                    "path": "docs/img/premium/posthog-readme.png",
+                    "type": "file",
+                    "size": 4881
+                  },
+                  {
+                    "name": "release-history.png",
+                    "path": "docs/img/premium/release-history.png",
+                    "type": "file",
+                    "size": 17889
+                  },
+                  {
+                    "name": "retool-readme.png",
+                    "path": "docs/img/premium/retool-readme.png",
+                    "type": "file",
+                    "size": 8921
+                  },
+                  {
+                    "name": "rollbar-readme.png",
+                    "path": "docs/img/premium/rollbar-readme.png",
+                    "type": "file",
+                    "size": 17227
+                  },
+                  {
+                    "name": "sentry-readme.png",
+                    "path": "docs/img/premium/sentry-readme.png",
+                    "type": "file",
+                    "size": 24506
+                  },
+                  {
+                    "name": "spacinov-readme.png",
+                    "path": "docs/img/premium/spacinov-readme.png",
+                    "type": "file",
+                    "size": 56997
+                  },
+                  {
+                    "name": "stream-readme.png",
+                    "path": "docs/img/premium/stream-readme.png",
+                    "type": "file",
+                    "size": 19170
+                  },
+                  {
+                    "name": "svix-premium.png",
+                    "path": "docs/img/premium/svix-premium.png",
+                    "type": "file",
+                    "size": 32055
+                  },
+                  {
+                    "name": "zuplo-readme.png",
+                    "path": "docs/img/premium/zuplo-readme.png",
+                    "type": "file",
+                    "size": 12409
+                  }
+                ]
+              },
+              {
+                "name": "quickstart.png",
+                "path": "docs/img/quickstart.png",
+                "type": "file",
+                "size": 27279
+              },
+              {
+                "name": "raml.png",
+                "path": "docs/img/raml.png",
+                "type": "file",
+                "size": 37216
+              },
+              {
+                "name": "rover.png",
+                "path": "docs/img/rover.png",
+                "type": "file",
+                "size": 61259
+              },
+              {
+                "name": "search-filter.png",
+                "path": "docs/img/search-filter.png",
+                "type": "file",
+                "size": 9137
+              },
+              {
+                "name": "self-describing.png",
+                "path": "docs/img/self-describing.png",
+                "type": "file",
+                "size": 53953
+              },
+              {
+                "name": "slate.png",
+                "path": "docs/img/slate.png",
+                "type": "file",
+                "size": 65706
+              },
+              {
+                "name": "sponsors",
+                "path": "docs/img/sponsors",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "0-eventbrite.png",
+                    "path": "docs/img/sponsors/0-eventbrite.png",
+                    "type": "file",
+                    "size": 22429
+                  },
+                  {
+                    "name": "1-cyan.png",
+                    "path": "docs/img/sponsors/1-cyan.png",
+                    "type": "file",
+                    "size": 6121
+                  },
+                  {
+                    "name": "1-divio.png",
+                    "path": "docs/img/sponsors/1-divio.png",
+                    "type": "file",
+                    "size": 4864
+                  },
+                  {
+                    "name": "1-kuwaitnet.png",
+                    "path": "docs/img/sponsors/1-kuwaitnet.png",
+                    "type": "file",
+                    "size": 3674
+                  },
+                  {
+                    "name": "1-lulu.png",
+                    "path": "docs/img/sponsors/1-lulu.png",
+                    "type": "file",
+                    "size": 18013
+                  },
+                  {
+                    "name": "1-potato.png",
+                    "path": "docs/img/sponsors/1-potato.png",
+                    "type": "file",
+                    "size": 12190
+                  },
+                  {
+                    "name": "1-purplebit.png",
+                    "path": "docs/img/sponsors/1-purplebit.png",
+                    "type": "file",
+                    "size": 9161
+                  },
+                  {
+                    "name": "1-runscope.png",
+                    "path": "docs/img/sponsors/1-runscope.png",
+                    "type": "file",
+                    "size": 10913
+                  },
+                  {
+                    "name": "1-simple-energy.png",
+                    "path": "docs/img/sponsors/1-simple-energy.png",
+                    "type": "file",
+                    "size": 54455
+                  },
+                  {
+                    "name": "1-vokal_interactive.png",
+                    "path": "docs/img/sponsors/1-vokal_interactive.png",
+                    "type": "file",
+                    "size": 22814
+                  },
+                  {
+                    "name": "1-wiredrive.png",
+                    "path": "docs/img/sponsors/1-wiredrive.png",
+                    "type": "file",
+                    "size": 8082
+                  },
+                  {
+                    "name": "2-byte.png",
+                    "path": "docs/img/sponsors/2-byte.png",
+                    "type": "file",
+                    "size": 13690
+                  },
+                  {
+                    "name": "2-compile.png",
+                    "path": "docs/img/sponsors/2-compile.png",
+                    "type": "file",
+                    "size": 3108
+                  },
+                  {
+                    "name": "2-crate.png",
+                    "path": "docs/img/sponsors/2-crate.png",
+                    "type": "file",
+                    "size": 8257
+                  },
+                  {
+                    "name": "2-cryptico.png",
+                    "path": "docs/img/sponsors/2-cryptico.png",
+                    "type": "file",
+                    "size": 9970
+                  },
+                  {
+                    "name": "2-django.png",
+                    "path": "docs/img/sponsors/2-django.png",
+                    "type": "file",
+                    "size": 5055
+                  },
+                  {
+                    "name": "2-heroku.png",
+                    "path": "docs/img/sponsors/2-heroku.png",
+                    "type": "file",
+                    "size": 7337
+                  },
+                  {
+                    "name": "2-hipflask.png",
+                    "path": "docs/img/sponsors/2-hipflask.png",
+                    "type": "file",
+                    "size": 6016
+                  },
+                  {
+                    "name": "2-hipo.png",
+                    "path": "docs/img/sponsors/2-hipo.png",
+                    "type": "file",
+                    "size": 8111
+                  },
+                  {
+                    "name": "2-koordinates.png",
+                    "path": "docs/img/sponsors/2-koordinates.png",
+                    "type": "file",
+                    "size": 1934
+                  },
+                  {
+                    "name": "2-laterpay.png",
+                    "path": "docs/img/sponsors/2-laterpay.png",
+                    "type": "file",
+                    "size": 2003
+                  },
+                  {
+                    "name": "2-lightning_kite.png",
+                    "path": "docs/img/sponsors/2-lightning_kite.png",
+                    "type": "file",
+                    "size": 6715
+                  },
+                  {
+                    "name": "2-mirus_research.png",
+                    "path": "docs/img/sponsors/2-mirus_research.png",
+                    "type": "file",
+                    "size": 12414
+                  },
+                  {
+                    "name": "2-nexthub.png",
+                    "path": "docs/img/sponsors/2-nexthub.png",
+                    "type": "file",
+                    "size": 2562
+                  },
+                  {
+                    "name": "2-opbeat.png",
+                    "path": "docs/img/sponsors/2-opbeat.png",
+                    "type": "file",
+                    "size": 11603
+                  },
+                  {
+                    "name": "2-prorenata.png",
+                    "path": "docs/img/sponsors/2-prorenata.png",
+                    "type": "file",
+                    "size": 4051
+                  },
+                  {
+                    "name": "2-pulsecode.png",
+                    "path": "docs/img/sponsors/2-pulsecode.png",
+                    "type": "file",
+                    "size": 2368
+                  },
+                  {
+                    "name": "2-rapasso.png",
+                    "path": "docs/img/sponsors/2-rapasso.png",
+                    "type": "file",
+                    "size": 13667
+                  },
+                  {
+                    "name": "2-rheinwerk_verlag.png",
+                    "path": "docs/img/sponsors/2-rheinwerk_verlag.png",
+                    "type": "file",
+                    "size": 1562
+                  },
+                  {
+                    "name": "2-schuberg_philis.png",
+                    "path": "docs/img/sponsors/2-schuberg_philis.png",
+                    "type": "file",
+                    "size": 21870
+                  },
+                  {
+                    "name": "2-security_compass.png",
+                    "path": "docs/img/sponsors/2-security_compass.png",
+                    "type": "file",
+                    "size": 4107
+                  },
+                  {
+                    "name": "2-sga.png",
+                    "path": "docs/img/sponsors/2-sga.png",
+                    "type": "file",
+                    "size": 11112
+                  },
+                  {
+                    "name": "2-singing-horse.png",
+                    "path": "docs/img/sponsors/2-singing-horse.png",
+                    "type": "file",
+                    "size": 20831
+                  },
+                  {
+                    "name": "2-sirono.png",
+                    "path": "docs/img/sponsors/2-sirono.png",
+                    "type": "file",
+                    "size": 4941
+                  },
+                  {
+                    "name": "2-vinta.png",
+                    "path": "docs/img/sponsors/2-vinta.png",
+                    "type": "file",
+                    "size": 6844
+                  },
+                  {
+                    "name": "2-wusawork.png",
+                    "path": "docs/img/sponsors/2-wusawork.png",
+                    "type": "file",
+                    "size": 12067
+                  },
+                  {
+                    "name": "3-aba.png",
+                    "path": "docs/img/sponsors/3-aba.png",
+                    "type": "file",
+                    "size": 18974
+                  },
+                  {
+                    "name": "3-aditium.png",
+                    "path": "docs/img/sponsors/3-aditium.png",
+                    "type": "file",
+                    "size": 3028
+                  },
+                  {
+                    "name": "3-alwaysdata.png",
+                    "path": "docs/img/sponsors/3-alwaysdata.png",
+                    "type": "file",
+                    "size": 9349
+                  },
+                  {
+                    "name": "3-ax_semantics.png",
+                    "path": "docs/img/sponsors/3-ax_semantics.png",
+                    "type": "file",
+                    "size": 11509
+                  },
+                  {
+                    "name": "3-beefarm.png",
+                    "path": "docs/img/sponsors/3-beefarm.png",
+                    "type": "file",
+                    "size": 13066
+                  },
+                  {
+                    "name": "3-blimp.png",
+                    "path": "docs/img/sponsors/3-blimp.png",
+                    "type": "file",
+                    "size": 6241
+                  },
+                  {
+                    "name": "3-brightloop.png",
+                    "path": "docs/img/sponsors/3-brightloop.png",
+                    "type": "file",
+                    "size": 6864
+                  },
+                  {
+                    "name": "3-cantemo.gif",
+                    "path": "docs/img/sponsors/3-cantemo.gif",
+                    "type": "file",
+                    "size": 4526
+                  },
+                  {
+                    "name": "3-crosswordtracker.png",
+                    "path": "docs/img/sponsors/3-crosswordtracker.png",
+                    "type": "file",
+                    "size": 6715
+                  },
+                  {
+                    "name": "3-fluxility.png",
+                    "path": "docs/img/sponsors/3-fluxility.png",
+                    "type": "file",
+                    "size": 10064
+                  },
+                  {
+                    "name": "3-garfo.png",
+                    "path": "docs/img/sponsors/3-garfo.png",
+                    "type": "file",
+                    "size": 3322
+                  },
+                  {
+                    "name": "3-gizmag.png",
+                    "path": "docs/img/sponsors/3-gizmag.png",
+                    "type": "file",
+                    "size": 5370
+                  },
+                  {
+                    "name": "3-holvi.png",
+                    "path": "docs/img/sponsors/3-holvi.png",
+                    "type": "file",
+                    "size": 7533
+                  },
+                  {
+                    "name": "3-imt_computer_services.png",
+                    "path": "docs/img/sponsors/3-imt_computer_services.png",
+                    "type": "file",
+                    "size": 70397
+                  },
+                  {
+                    "name": "3-infinite_code.png",
+                    "path": "docs/img/sponsors/3-infinite_code.png",
+                    "type": "file",
+                    "size": 21786
+                  },
+                  {
+                    "name": "3-ipushpull.png",
+                    "path": "docs/img/sponsors/3-ipushpull.png",
+                    "type": "file",
+                    "size": 10089
+                  },
+                  {
+                    "name": "3-isl.png",
+                    "path": "docs/img/sponsors/3-isl.png",
+                    "type": "file",
+                    "size": 19203
+                  },
+                  {
+                    "name": "3-life_the_game.png",
+                    "path": "docs/img/sponsors/3-life_the_game.png",
+                    "type": "file",
+                    "size": 5485
+                  },
+                  {
+                    "name": "3-makespace.png",
+                    "path": "docs/img/sponsors/3-makespace.png",
+                    "type": "file",
+                    "size": 8420
+                  },
+                  {
+                    "name": "3-nephila.png",
+                    "path": "docs/img/sponsors/3-nephila.png",
+                    "type": "file",
+                    "size": 8415
+                  },
+                  {
+                    "name": "3-openeye.png",
+                    "path": "docs/img/sponsors/3-openeye.png",
+                    "type": "file",
+                    "size": 14155
+                  },
+                  {
+                    "name": "3-pathwright.png",
+                    "path": "docs/img/sponsors/3-pathwright.png",
+                    "type": "file",
+                    "size": 13036
+                  },
+                  {
+                    "name": "3-phurba.png",
+                    "path": "docs/img/sponsors/3-phurba.png",
+                    "type": "file",
+                    "size": 3064
+                  },
+                  {
+                    "name": "3-pkgfarm.png",
+                    "path": "docs/img/sponsors/3-pkgfarm.png",
+                    "type": "file",
+                    "size": 2275
+                  },
+                  {
+                    "name": "3-providenz.png",
+                    "path": "docs/img/sponsors/3-providenz.png",
+                    "type": "file",
+                    "size": 12580
+                  },
+                  {
+                    "name": "3-safari.png",
+                    "path": "docs/img/sponsors/3-safari.png",
+                    "type": "file",
+                    "size": 4419
+                  },
+                  {
+                    "name": "3-shippo.png",
+                    "path": "docs/img/sponsors/3-shippo.png",
+                    "type": "file",
+                    "size": 7345
+                  },
+                  {
+                    "name": "3-teonite.png",
+                    "path": "docs/img/sponsors/3-teonite.png",
+                    "type": "file",
+                    "size": 7882
+                  },
+                  {
+                    "name": "3-thermondo-gmbh.png",
+                    "path": "docs/img/sponsors/3-thermondo-gmbh.png",
+                    "type": "file",
+                    "size": 20046
+                  },
+                  {
+                    "name": "3-tivix.png",
+                    "path": "docs/img/sponsors/3-tivix.png",
+                    "type": "file",
+                    "size": 3552
+                  },
+                  {
+                    "name": "3-trackmaven.png",
+                    "path": "docs/img/sponsors/3-trackmaven.png",
+                    "type": "file",
+                    "size": 5331
+                  },
+                  {
+                    "name": "3-transcode.png",
+                    "path": "docs/img/sponsors/3-transcode.png",
+                    "type": "file",
+                    "size": 8615
+                  },
+                  {
+                    "name": "3-triggered_messaging.png",
+                    "path": "docs/img/sponsors/3-triggered_messaging.png",
+                    "type": "file",
+                    "size": 10509
+                  },
+                  {
+                    "name": "3-vzzual.png",
+                    "path": "docs/img/sponsors/3-vzzual.png",
+                    "type": "file",
+                    "size": 12008
+                  },
+                  {
+                    "name": "3-wildfish.png",
+                    "path": "docs/img/sponsors/3-wildfish.png",
+                    "type": "file",
+                    "size": 4137
+                  }
+                ]
+              },
+              {
+                "name": "vertical.png",
+                "path": "docs/img/vertical.png",
+                "type": "file",
+                "size": 11946
+              }
+            ]
+          },
+          {
+            "name": "index.md",
+            "path": "docs/index.md",
+            "type": "file",
+            "size": 9378
+          },
+          {
+            "name": "theme",
+            "path": "docs/theme",
+            "type": "directory",
+            "children": [
+              {
+                "name": "img",
+                "path": "docs/theme/img",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "favicon.ico",
+                    "path": "docs/theme/img/favicon.ico",
+                    "type": "file",
+                    "size": 2238
+                  },
+                  {
+                    "name": "grid.png",
+                    "path": "docs/theme/img/grid.png",
+                    "type": "file",
+                    "size": 1458
+                  },
+                  {
+                    "name": "logo.png",
+                    "path": "docs/theme/img/logo.png",
+                    "type": "file",
+                    "size": 20944
+                  }
+                ]
+              },
+              {
+                "name": "js",
+                "path": "docs/theme/js",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "prettify-1.0.js",
+                    "path": "docs/theme/js/prettify-1.0.js",
+                    "type": "file",
+                    "size": 13632
+                  }
+                ]
+              },
+              {
+                "name": "main.html",
+                "path": "docs/theme/main.html",
+                "type": "file",
+                "size": 343
+              },
+              {
+                "name": "src",
+                "path": "docs/theme/src",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "README.md",
+                    "path": "docs/theme/src/README.md",
+                    "type": "file",
+                    "size": 82
+                  },
+                  {
+                    "name": "drf-logos.fig",
+                    "path": "docs/theme/src/drf-logos.fig",
+                    "type": "file",
+                    "size": 1303581
+                  }
+                ]
+              },
+              {
+                "name": "stylesheets",
+                "path": "docs/theme/stylesheets",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "extra.css",
+                    "path": "docs/theme/stylesheets/extra.css",
+                    "type": "file",
+                    "size": 1646
+                  },
+                  {
+                    "name": "prettify.css",
+                    "path": "docs/theme/stylesheets/prettify.css",
+                    "type": "file",
+                    "size": 968
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "topics",
+            "path": "docs/topics",
+            "type": "directory",
+            "children": [
+              {
+                "name": "ajax-csrf-cors.md",
+                "path": "docs/topics/ajax-csrf-cors.md",
+                "type": "file",
+                "size": 3140
+              },
+              {
+                "name": "browsable-api.md",
+                "path": "docs/topics/browsable-api.md",
+                "type": "file",
+                "size": 10803
+              },
+              {
+                "name": "browser-enhancements.md",
+                "path": "docs/topics/browser-enhancements.md",
+                "type": "file",
+                "size": 3945
+              },
+              {
+                "name": "documenting-your-api.md",
+                "path": "docs/topics/documenting-your-api.md",
+                "type": "file",
+                "size": 9789
+              },
+              {
+                "name": "html-and-forms.md",
+                "path": "docs/topics/html-and-forms.md",
+                "type": "file",
+                "size": 8710
+              },
+              {
+                "name": "internationalization.md",
+                "path": "docs/topics/internationalization.md",
+                "type": "file",
+                "size": 6038
+              },
+              {
+                "name": "rest-hypermedia-hateoas.md",
+                "path": "docs/topics/rest-hypermedia-hateoas.md",
+                "type": "file",
+                "size": 3505
+              },
+              {
+                "name": "writable-nested-serializers.md",
+                "path": "docs/topics/writable-nested-serializers.md",
+                "type": "file",
+                "size": 1742
+              }
+            ]
+          },
+          {
+            "name": "tutorial",
+            "path": "docs/tutorial",
+            "type": "directory",
+            "children": [
+              {
+                "name": "1-serialization.md",
+                "path": "docs/tutorial/1-serialization.md",
+                "type": "file",
+                "size": 16543
+              },
+              {
+                "name": "2-requests-and-responses.md",
+                "path": "docs/tutorial/2-requests-and-responses.md",
+                "type": "file",
+                "size": 8540
+              },
+              {
+                "name": "3-class-based-views.md",
+                "path": "docs/tutorial/3-class-based-views.md",
+                "type": "file",
+                "size": 6246
+              },
+              {
+                "name": "4-authentication-and-permissions.md",
+                "path": "docs/tutorial/4-authentication-and-permissions.md",
+                "type": "file",
+                "size": 10982
+              },
+              {
+                "name": "5-relationships-and-hyperlinked-apis.md",
+                "path": "docs/tutorial/5-relationships-and-hyperlinked-apis.md",
+                "type": "file",
+                "size": 8520
+              },
+              {
+                "name": "6-viewsets-and-routers.md",
+                "path": "docs/tutorial/6-viewsets-and-routers.md",
+                "type": "file",
+                "size": 6705
+              },
+              {
+                "name": "quickstart.md",
+                "path": "docs/tutorial/quickstart.md",
+                "type": "file",
+                "size": 7713
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "licenses",
+        "path": "licenses",
+        "type": "directory",
+        "children": [
+          {
+            "name": "bootstrap.md",
+            "path": "licenses/bootstrap.md",
+            "type": "file",
+            "size": 1107
+          },
+          {
+            "name": "jquery.json-view.md",
+            "path": "licenses/jquery.json-view.md",
+            "type": "file",
+            "size": 1141
+          }
+        ]
+      },
+      {
+        "name": "mkdocs.yml",
+        "path": "mkdocs.yml",
+        "type": "file",
+        "size": 5604
+      },
+      {
+        "name": "pyproject.toml",
+        "path": "pyproject.toml",
+        "type": "file",
+        "size": 3786
+      },
+      {
+        "name": "rest_framework",
+        "path": "rest_framework",
+        "type": "directory",
+        "children": [
+          {
+            "name": "__init__.py",
+            "path": "rest_framework/__init__.py",
+            "type": "file",
+            "size": 821
+          },
+          {
+            "name": "apps.py",
+            "path": "rest_framework/apps.py",
+            "type": "file",
+            "size": 255
+          },
+          {
+            "name": "authentication.py",
+            "path": "rest_framework/authentication.py",
+            "type": "file",
+            "size": 7701
+          },
+          {
+            "name": "authtoken",
+            "path": "rest_framework/authtoken",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "rest_framework/authtoken/__init__.py",
+                "type": "file",
+                "size": 0
+              },
+              {
+                "name": "admin.py",
+                "path": "rest_framework/authtoken/admin.py",
+                "type": "file",
+                "size": 1961
+              },
+              {
+                "name": "apps.py",
+                "path": "rest_framework/authtoken/apps.py",
+                "type": "file",
+                "size": 198
+              },
+              {
+                "name": "management",
+                "path": "rest_framework/authtoken/management",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "__init__.py",
+                    "path": "rest_framework/authtoken/management/__init__.py",
+                    "type": "file",
+                    "size": 0
+                  },
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "migrations",
+                "path": "rest_framework/authtoken/migrations",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "0001_initial.py",
+                    "path": "rest_framework/authtoken/migrations/0001_initial.py",
+                    "type": "file",
+                    "size": 706
+                  },
+                  {
+                    "name": "0002_auto_20160226_1747.py",
+                    "path": "rest_framework/authtoken/migrations/0002_auto_20160226_1747.py",
+                    "type": "file",
+                    "size": 994
+                  },
+                  {
+                    "name": "0003_tokenproxy.py",
+                    "path": "rest_framework/authtoken/migrations/0003_tokenproxy.py",
+                    "type": "file",
+                    "size": 552
+                  },
+                  {
+                    "name": "0004_alter_tokenproxy_options.py",
+                    "path": "rest_framework/authtoken/migrations/0004_alter_tokenproxy_options.py",
+                    "type": "file",
+                    "size": 379
+                  },
+                  {
+                    "name": "__init__.py",
+                    "path": "rest_framework/authtoken/migrations/__init__.py",
+                    "type": "file",
+                    "size": 0
+                  }
+                ]
+              },
+              {
+                "name": "models.py",
+                "path": "rest_framework/authtoken/models.py",
+                "type": "file",
+                "size": 1944
+              },
+              {
+                "name": "serializers.py",
+                "path": "rest_framework/authtoken/serializers.py",
+                "type": "file",
+                "size": 1384
+              },
+              {
+                "name": "views.py",
+                "path": "rest_framework/authtoken/views.py",
+                "type": "file",
+                "size": 1212
+              }
+            ]
+          },
+          {
+            "name": "checks.py",
+            "path": "rest_framework/checks.py",
+            "type": "file",
+            "size": 970
+          },
+          {
+            "name": "compat.py",
+            "path": "rest_framework/compat.py",
+            "type": "file",
+            "size": 6073
+          },
+          {
+            "name": "decorators.py",
+            "path": "rest_framework/decorators.py",
+            "type": "file",
+            "size": 9974
+          },
+          {
+            "name": "exceptions.py",
+            "path": "rest_framework/exceptions.py",
+            "type": "file",
+            "size": 8159
+          },
+          {
+            "name": "fields.py",
+            "path": "rest_framework/fields.py",
+            "type": "file",
+            "size": 71109
+          },
+          {
+            "name": "filters.py",
+            "path": "rest_framework/filters.py",
+            "type": "file",
+            "size": 12899
+          },
+          {
+            "name": "generics.py",
+            "path": "rest_framework/generics.py",
+            "type": "file",
+            "size": 10163
+          },
+          {
+            "name": "locale",
+            "path": "rest_framework/locale",
+            "type": "directory",
+            "children": [
+              {
+                "name": "ach",
+                "path": "rest_framework/locale/ach",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "ar",
+                "path": "rest_framework/locale/ar",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "az",
+                "path": "rest_framework/locale/az",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "be",
+                "path": "rest_framework/locale/be",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "bg",
+                "path": "rest_framework/locale/bg",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "ca",
+                "path": "rest_framework/locale/ca",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "ca_ES",
+                "path": "rest_framework/locale/ca_ES",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "cs",
+                "path": "rest_framework/locale/cs",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "da",
+                "path": "rest_framework/locale/da",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "de",
+                "path": "rest_framework/locale/de",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "el",
+                "path": "rest_framework/locale/el",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "el_GR",
+                "path": "rest_framework/locale/el_GR",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "en",
+                "path": "rest_framework/locale/en",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "en_AU",
+                "path": "rest_framework/locale/en_AU",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "en_CA",
+                "path": "rest_framework/locale/en_CA",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "en_US",
+                "path": "rest_framework/locale/en_US",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "es",
+                "path": "rest_framework/locale/es",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "et",
+                "path": "rest_framework/locale/et",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "fa",
+                "path": "rest_framework/locale/fa",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "fa_IR",
+                "path": "rest_framework/locale/fa_IR",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "fi",
+                "path": "rest_framework/locale/fi",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "fr",
+                "path": "rest_framework/locale/fr",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "fr_CA",
+                "path": "rest_framework/locale/fr_CA",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "gl",
+                "path": "rest_framework/locale/gl",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "gl_ES",
+                "path": "rest_framework/locale/gl_ES",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "he_IL",
+                "path": "rest_framework/locale/he_IL",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "hu",
+                "path": "rest_framework/locale/hu",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "hy",
+                "path": "rest_framework/locale/hy",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "id",
+                "path": "rest_framework/locale/id",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "it",
+                "path": "rest_framework/locale/it",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "ja",
+                "path": "rest_framework/locale/ja",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "kk",
+                "path": "rest_framework/locale/kk",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "ko_KR",
+                "path": "rest_framework/locale/ko_KR",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "lt",
+                "path": "rest_framework/locale/lt",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "lv",
+                "path": "rest_framework/locale/lv",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "mk",
+                "path": "rest_framework/locale/mk",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "nb",
+                "path": "rest_framework/locale/nb",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "ne_NP",
+                "path": "rest_framework/locale/ne_NP",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "nl",
+                "path": "rest_framework/locale/nl",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "nn",
+                "path": "rest_framework/locale/nn",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "no",
+                "path": "rest_framework/locale/no",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "pl",
+                "path": "rest_framework/locale/pl",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "pt",
+                "path": "rest_framework/locale/pt",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "pt_BR",
+                "path": "rest_framework/locale/pt_BR",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "pt_PT",
+                "path": "rest_framework/locale/pt_PT",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "ro",
+                "path": "rest_framework/locale/ro",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "ru",
+                "path": "rest_framework/locale/ru",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "ru_RU",
+                "path": "rest_framework/locale/ru_RU",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "sk",
+                "path": "rest_framework/locale/sk",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "sl",
+                "path": "rest_framework/locale/sl",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "sv",
+                "path": "rest_framework/locale/sv",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "th",
+                "path": "rest_framework/locale/th",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "tr",
+                "path": "rest_framework/locale/tr",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "tr_TR",
+                "path": "rest_framework/locale/tr_TR",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "uk",
+                "path": "rest_framework/locale/uk",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "vi",
+                "path": "rest_framework/locale/vi",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "zh_CN",
+                "path": "rest_framework/locale/zh_CN",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "zh_Hans",
+                "path": "rest_framework/locale/zh_Hans",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "zh_Hant",
+                "path": "rest_framework/locale/zh_Hant",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              },
+              {
+                "name": "zh_TW",
+                "path": "rest_framework/locale/zh_TW",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "management",
+            "path": "rest_framework/management",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "rest_framework/management/__init__.py",
+                "type": "file",
+                "size": 0
+              },
+              {
+                "name": "commands",
+                "path": "rest_framework/management/commands",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "__init__.py",
+                    "path": "rest_framework/management/commands/__init__.py",
+                    "type": "file",
+                    "size": 0
+                  },
+                  {
+                    "name": "generateschema.py",
+                    "path": "rest_framework/management/commands/generateschema.py",
+                    "type": "file",
+                    "size": 2061
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "metadata.py",
+            "path": "rest_framework/metadata.py",
+            "type": "file",
+            "size": 5862
+          },
+          {
+            "name": "mixins.py",
+            "path": "rest_framework/mixins.py",
+            "type": "file",
+            "size": 2936
+          },
+          {
+            "name": "negotiation.py",
+            "path": "rest_framework/negotiation.py",
+            "type": "file",
+            "size": 4034
+          },
+          {
+            "name": "pagination.py",
+            "path": "rest_framework/pagination.py",
+            "type": "file",
+            "size": 32694
+          },
+          {
+            "name": "parsers.py",
+            "path": "rest_framework/parsers.py",
+            "type": "file",
+            "size": 7717
+          },
+          {
+            "name": "permissions.py",
+            "path": "rest_framework/permissions.py",
+            "type": "file",
+            "size": 9588
+          },
+          {
+            "name": "relations.py",
+            "path": "rest_framework/relations.py",
+            "type": "file",
+            "size": 21238
+          },
+          {
+            "name": "renderers.py",
+            "path": "rest_framework/renderers.py",
+            "type": "file",
+            "size": 35735
+          },
+          {
+            "name": "request.py",
+            "path": "rest_framework/request.py",
+            "type": "file",
+            "size": 15121
+          },
+          {
+            "name": "response.py",
+            "path": "rest_framework/response.py",
+            "type": "file",
+            "size": 3543
+          },
+          {
+            "name": "reverse.py",
+            "path": "rest_framework/reverse.py",
+            "type": "file",
+            "size": 2144
+          },
+          {
+            "name": "routers.py",
+            "path": "rest_framework/routers.py",
+            "type": "file",
+            "size": 13923
+          },
+          {
+            "name": "schemas",
+            "path": "rest_framework/schemas",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "rest_framework/schemas/__init__.py",
+                "type": "file",
+                "size": 1631
+              },
+              {
+                "name": "generators.py",
+                "path": "rest_framework/schemas/generators.py",
+                "type": "file",
+                "size": 7995
+              },
+              {
+                "name": "inspectors.py",
+                "path": "rest_framework/schemas/inspectors.py",
+                "type": "file",
+                "size": 4227
+              },
+              {
+                "name": "openapi.py",
+                "path": "rest_framework/schemas/openapi.py",
+                "type": "file",
+                "size": 26873
+              },
+              {
+                "name": "utils.py",
+                "path": "rest_framework/schemas/utils.py",
+                "type": "file",
+                "size": 1195
+              },
+              {
+                "name": "views.py",
+                "path": "rest_framework/schemas/views.py",
+                "type": "file",
+                "size": 1561
+              }
+            ]
+          },
+          {
+            "name": "serializers.py",
+            "path": "rest_framework/serializers.py",
+            "type": "file",
+            "size": 70603
+          },
+          {
+            "name": "settings.py",
+            "path": "rest_framework/settings.py",
+            "type": "file",
+            "size": 8060
+          },
+          {
+            "name": "static",
+            "path": "rest_framework/static",
+            "type": "directory",
+            "children": [
+              {
+                "name": "rest_framework",
+                "path": "rest_framework/static/rest_framework",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  },
+                  {
+                    "truncated": true
+                  },
+                  {
+                    "truncated": true
+                  },
+                  {
+                    "truncated": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "status.py",
+            "path": "rest_framework/status.py",
+            "type": "file",
+            "size": 2547
+          },
+          {
+            "name": "templates",
+            "path": "rest_framework/templates",
+            "type": "directory",
+            "children": [
+              {
+                "name": "rest_framework",
+                "path": "rest_framework/templates/rest_framework",
+                "type": "directory",
+                "children": [
+                  {
+                    "truncated": true
+                  },
+                  {
+                    "name": "admin.html",
+                    "path": "rest_framework/templates/rest_framework/admin.html",
+                    "type": "file",
+                    "size": 10902
+                  },
+                  {
+                    "name": "api.html",
+                    "path": "rest_framework/templates/rest_framework/api.html",
+                    "type": "file",
+                    "size": 116
+                  },
+                  {
+                    "name": "base.html",
+                    "path": "rest_framework/templates/rest_framework/base.html",
+                    "type": "file",
+                    "size": 13909
+                  },
+                  {
+                    "truncated": true
+                  },
+                  {
+                    "truncated": true
+                  },
+                  {
+                    "truncated": true
+                  },
+                  {
+                    "name": "login.html",
+                    "path": "rest_framework/templates/rest_framework/login.html",
+                    "type": "file",
+                    "size": 122
+                  },
+                  {
+                    "name": "login_base.html",
+                    "path": "rest_framework/templates/rest_framework/login_base.html",
+                    "type": "file",
+                    "size": 2857
+                  },
+                  {
+                    "truncated": true
+                  },
+                  {
+                    "name": "raw_data_form.html",
+                    "path": "rest_framework/templates/rest_framework/raw_data_form.html",
+                    "type": "file",
+                    "size": 335
+                  },
+                  {
+                    "truncated": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "templatetags",
+            "path": "rest_framework/templatetags",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "rest_framework/templatetags/__init__.py",
+                "type": "file",
+                "size": 0
+              },
+              {
+                "name": "rest_framework.py",
+                "path": "rest_framework/templatetags/rest_framework.py",
+                "type": "file",
+                "size": 8248
+              }
+            ]
+          },
+          {
+            "name": "test.py",
+            "path": "rest_framework/test.py",
+            "type": "file",
+            "size": 14298
+          },
+          {
+            "name": "throttling.py",
+            "path": "rest_framework/throttling.py",
+            "type": "file",
+            "size": 8067
+          },
+          {
+            "name": "urlpatterns.py",
+            "path": "rest_framework/urlpatterns.py",
+            "type": "file",
+            "size": 4401
+          },
+          {
+            "name": "urls.py",
+            "path": "rest_framework/urls.py",
+            "type": "file",
+            "size": 615
+          },
+          {
+            "name": "utils",
+            "path": "rest_framework/utils",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "rest_framework/utils/__init__.py",
+                "type": "file",
+                "size": 0
+              },
+              {
+                "name": "breadcrumbs.py",
+                "path": "rest_framework/utils/breadcrumbs.py",
+                "type": "file",
+                "size": 2039
+              },
+              {
+                "name": "encoders.py",
+                "path": "rest_framework/utils/encoders.py",
+                "type": "file",
+                "size": 2799
+              },
+              {
+                "name": "field_mapping.py",
+                "path": "rest_framework/utils/field_mapping.py",
+                "type": "file",
+                "size": 12126
+              },
+              {
+                "name": "formatting.py",
+                "path": "rest_framework/utils/formatting.py",
+                "type": "file",
+                "size": 3015
+              },
+              {
+                "name": "html.py",
+                "path": "rest_framework/utils/html.py",
+                "type": "file",
+                "size": 2294
+              },
+              {
+                "name": "humanize_datetime.py",
+                "path": "rest_framework/utils/humanize_datetime.py",
+                "type": "file",
+                "size": 1281
+              },
+              {
+                "name": "json.py",
+                "path": "rest_framework/utils/json.py",
+                "type": "file",
+                "size": 1027
+              },
+              {
+                "name": "mediatypes.py",
+                "path": "rest_framework/utils/mediatypes.py",
+                "type": "file",
+                "size": 2490
+              },
+              {
+                "name": "model_meta.py",
+                "path": "rest_framework/utils/model_meta.py",
+                "type": "file",
+                "size": 5068
+              },
+              {
+                "name": "representation.py",
+                "path": "rest_framework/utils/representation.py",
+                "type": "file",
+                "size": 2970
+              },
+              {
+                "name": "serializer_helpers.py",
+                "path": "rest_framework/utils/serializer_helpers.py",
+                "type": "file",
+                "size": 5769
+              },
+              {
+                "name": "timezone.py",
+                "path": "rest_framework/utils/timezone.py",
+                "type": "file",
+                "size": 1086
+              },
+              {
+                "name": "urls.py",
+                "path": "rest_framework/utils/urls.py",
+                "type": "file",
+                "size": 1052
+              }
+            ]
+          },
+          {
+            "name": "validators.py",
+            "path": "rest_framework/validators.py",
+            "type": "file",
+            "size": 13538
+          },
+          {
+            "name": "versioning.py",
+            "path": "rest_framework/versioning.py",
+            "type": "file",
+            "size": 6801
+          },
+          {
+            "name": "views.py",
+            "path": "rest_framework/views.py",
+            "type": "file",
+            "size": 19102
+          },
+          {
+            "name": "viewsets.py",
+            "path": "rest_framework/viewsets.py",
+            "type": "file",
+            "size": 9292
+          }
+        ]
+      },
+      {
+        "name": "runtests.py",
+        "path": "runtests.py",
+        "type": "file",
+        "size": 1973
+      },
+      {
+        "name": "setup.cfg",
+        "path": "setup.cfg",
+        "type": "file",
+        "size": 130
+      },
+      {
+        "name": "tests",
+        "path": "tests",
+        "type": "directory",
+        "children": [
+          {
+            "name": "__init__.py",
+            "path": "tests/__init__.py",
+            "type": "file",
+            "size": 0
+          },
+          {
+            "name": "authentication",
+            "path": "tests/authentication",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "tests/authentication/__init__.py",
+                "type": "file",
+                "size": 0
+              },
+              {
+                "name": "migrations",
+                "path": "tests/authentication/migrations",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "0001_initial.py",
+                    "path": "tests/authentication/migrations/0001_initial.py",
+                    "type": "file",
+                    "size": 563
+                  },
+                  {
+                    "name": "__init__.py",
+                    "path": "tests/authentication/migrations/__init__.py",
+                    "type": "file",
+                    "size": 0
+                  }
+                ]
+              },
+              {
+                "name": "models.py",
+                "path": "tests/authentication/models.py",
+                "type": "file",
+                "size": 241
+              },
+              {
+                "name": "test_authentication.py",
+                "path": "tests/authentication/test_authentication.py",
+                "type": "file",
+                "size": 23599
+              }
+            ]
+          },
+          {
+            "name": "browsable_api",
+            "path": "tests/browsable_api",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "tests/browsable_api/__init__.py",
+                "type": "file",
+                "size": 0
+              },
+              {
+                "name": "auth_urls.py",
+                "path": "tests/browsable_api/auth_urls.py",
+                "type": "file",
+                "size": 199
+              },
+              {
+                "name": "no_auth_urls.py",
+                "path": "tests/browsable_api/no_auth_urls.py",
+                "type": "file",
+                "size": 218
+              },
+              {
+                "name": "serializers.py",
+                "path": "tests/browsable_api/serializers.py",
+                "type": "file",
+                "size": 221
+              },
+              {
+                "name": "test_browsable_api.py",
+                "path": "tests/browsable_api/test_browsable_api.py",
+                "type": "file",
+                "size": 3971
+              },
+              {
+                "name": "test_browsable_nested_api.py",
+                "path": "tests/browsable_api/test_browsable_nested_api.py",
+                "type": "file",
+                "size": 1294
+              },
+              {
+                "name": "test_form_rendering.py",
+                "path": "tests/browsable_api/test_form_rendering.py",
+                "type": "file",
+                "size": 2795
+              },
+              {
+                "name": "views.py",
+                "path": "tests/browsable_api/views.py",
+                "type": "file",
+                "size": 1231
+              }
+            ]
+          },
+          {
+            "name": "conftest.py",
+            "path": "tests/conftest.py",
+            "type": "file",
+            "size": 3096
+          },
+          {
+            "name": "generic_relations",
+            "path": "tests/generic_relations",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "tests/generic_relations/__init__.py",
+                "type": "file",
+                "size": 0
+              },
+              {
+                "name": "migrations",
+                "path": "tests/generic_relations/migrations",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "0001_initial.py",
+                    "path": "tests/generic_relations/migrations/0001_initial.py",
+                    "type": "file",
+                    "size": 1182
+                  },
+                  {
+                    "name": "__init__.py",
+                    "path": "tests/generic_relations/migrations/__init__.py",
+                    "type": "file",
+                    "size": 0
+                  }
+                ]
+              },
+              {
+                "name": "models.py",
+                "path": "tests/generic_relations/models.py",
+                "type": "file",
+                "size": 1015
+              },
+              {
+                "name": "test_generic_relations.py",
+                "path": "tests/generic_relations/test_generic_relations.py",
+                "type": "file",
+                "size": 2064
+              }
+            ]
+          },
+          {
+            "name": "importable",
+            "path": "tests/importable",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "tests/importable/__init__.py",
+                "type": "file",
+                "size": 750
+              },
+              {
+                "name": "test_installed.py",
+                "path": "tests/importable/test_installed.py",
+                "type": "file",
+                "size": 695
+              }
+            ]
+          },
+          {
+            "name": "models.py",
+            "path": "tests/models.py",
+            "type": "file",
+            "size": 5132
+          },
+          {
+            "name": "schemas",
+            "path": "tests/schemas",
+            "type": "directory",
+            "children": [
+              {
+                "name": "__init__.py",
+                "path": "tests/schemas/__init__.py",
+                "type": "file",
+                "size": 0
+              },
+              {
+                "name": "test_get_schema_view.py",
+                "path": "tests/schemas/test_get_schema_view.py",
+                "type": "file",
+                "size": 475
+              },
+              {
+                "name": "test_managementcommand.py",
+                "path": "tests/schemas/test_managementcommand.py",
+                "type": "file",
+                "size": 2630
+              },
+              {
+                "name": "test_openapi.py",
+                "path": "tests/schemas/test_openapi.py",
+                "type": "file",
+                "size": 47671
+              },
+              {
+                "name": "views.py",
+                "path": "tests/schemas/views.py",
+                "type": "file",
+                "size": 7533
+              }
+            ]
+          },
+          {
+            "name": "test_atomic_requests.py",
+            "path": "tests/test_atomic_requests.py",
+            "type": "file",
+            "size": 6233
+          },
+          {
+            "name": "test_authtoken.py",
+            "path": "tests/test_authtoken.py",
+            "type": "file",
+            "size": 6709
+          },
+          {
+            "name": "test_bound_fields.py",
+            "path": "tests/test_bound_fields.py",
+            "type": "file",
+            "size": 9796
+          },
+          {
+            "name": "test_decorators.py",
+            "path": "tests/test_decorators.py",
+            "type": "file",
+            "size": 15561
+          },
+          {
+            "name": "test_description.py",
+            "path": "tests/test_description.py",
+            "type": "file",
+            "size": 4726
+          },
+          {
+            "name": "test_encoders.py",
+            "path": "tests/test_encoders.py",
+            "type": "file",
+            "size": 4085
+          },
+          {
+            "name": "test_exceptions.py",
+            "path": "tests/test_exceptions.py",
+            "type": "file",
+            "size": 3537
+          },
+          {
+            "name": "test_fields.py",
+            "path": "tests/test_fields.py",
+            "type": "file",
+            "size": 94503
+          },
+          {
+            "name": "test_filters.py",
+            "path": "tests/test_filters.py",
+            "type": "file",
+            "size": 34671
+          },
+          {
+            "name": "test_generics.py",
+            "path": "tests/test_generics.py",
+            "type": "file",
+            "size": 25621
+          },
+          {
+            "name": "test_htmlrenderer.py",
+            "path": "tests/test_htmlrenderer.py",
+            "type": "file",
+            "size": 6665
+          },
+          {
+            "name": "test_lazy_hyperlinks.py",
+            "path": "tests/test_lazy_hyperlinks.py",
+            "type": "file",
+            "size": 1345
+          },
+          {
+            "name": "test_metadata.py",
+            "path": "tests/test_metadata.py",
+            "type": "file",
+            "size": 14951
+          },
+          {
+            "name": "test_middleware.py",
+            "path": "tests/test_middleware.py",
+            "type": "file",
+            "size": 4779
+          },
+          {
+            "name": "test_model_serializer.py",
+            "path": "tests/test_model_serializer.py",
+            "type": "file",
+            "size": 53071
+          },
+          {
+            "name": "test_multitable_inheritance.py",
+            "path": "tests/test_multitable_inheritance.py",
+            "type": "file",
+            "size": 2054
+          },
+          {
+            "name": "test_negotiation.py",
+            "path": "tests/test_negotiation.py",
+            "type": "file",
+            "size": 3680
+          },
+          {
+            "name": "test_one_to_one_with_inheritance.py",
+            "path": "tests/test_one_to_one_with_inheritance.py",
+            "type": "file",
+            "size": 1255
+          },
+          {
+            "name": "test_pagination.py",
+            "path": "tests/test_pagination.py",
+            "type": "file",
+            "size": 43448
+          },
+          {
+            "name": "test_parsers.py",
+            "path": "tests/test_parsers.py",
+            "type": "file",
+            "size": 6745
+          },
+          {
+            "name": "test_permissions.py",
+            "path": "tests/test_permissions.py",
+            "type": "file",
+            "size": 32454
+          },
+          {
+            "name": "test_prefetch_related.py",
+            "path": "tests/test_prefetch_related.py",
+            "type": "file",
+            "size": 2607
+          },
+          {
+            "name": "test_relations.py",
+            "path": "tests/test_relations.py",
+            "type": "file",
+            "size": 20712
+          },
+          {
+            "name": "test_relations_hyperlink.py",
+            "path": "tests/test_relations_hyperlink.py",
+            "type": "file",
+            "size": 26443
+          },
+          {
+            "name": "test_relations_pk.py",
+            "path": "tests/test_relations_pk.py",
+            "type": "file",
+            "size": 25139
+          },
+          {
+            "name": "test_relations_slug.py",
+            "path": "tests/test_relations_slug.py",
+            "type": "file",
+            "size": 11817
+          },
+          {
+            "name": "test_renderers.py",
+            "path": "tests/test_renderers.py",
+            "type": "file",
+            "size": 35006
+          },
+          {
+            "name": "test_request.py",
+            "path": "tests/test_request.py",
+            "type": "file",
+            "size": 13455
+          },
+          {
+            "name": "test_requests_client.py",
+            "path": "tests/test_requests_client.py",
+            "type": "file",
+            "size": 8753
+          },
+          {
+            "name": "test_response.py",
+            "path": "tests/test_response.py",
+            "type": "file",
+            "size": 10883
+          },
+          {
+            "name": "test_reverse.py",
+            "path": "tests/test_reverse.py",
+            "type": "file",
+            "size": 1538
+          },
+          {
+            "name": "test_routers.py",
+            "path": "tests/test_routers.py",
+            "type": "file",
+            "size": 26834
+          },
+          {
+            "name": "test_serializer.py",
+            "path": "tests/test_serializer.py",
+            "type": "file",
+            "size": 30172
+          },
+          {
+            "name": "test_serializer_bulk_update.py",
+            "path": "tests/test_serializer_bulk_update.py",
+            "type": "file",
+            "size": 3802
+          },
+          {
+            "name": "test_serializer_lists.py",
+            "path": "tests/test_serializer_lists.py",
+            "type": "file",
+            "size": 27412
+          },
+          {
+            "name": "test_serializer_nested.py",
+            "path": "tests/test_serializer_nested.py",
+            "type": "file",
+            "size": 12826
+          },
+          {
+            "name": "test_settings.py",
+            "path": "tests/test_settings.py",
+            "type": "file",
+            "size": 3074
+          },
+          {
+            "name": "test_status.py",
+            "path": "tests/test_status.py",
+            "type": "file",
+            "size": 951
+          },
+          {
+            "name": "test_templates.py",
+            "path": "tests/test_templates.py",
+            "type": "file",
+            "size": 601
+          },
+          {
+            "name": "test_templatetags.py",
+            "path": "tests/test_templatetags.py",
+            "type": "file",
+            "size": 10424
+          },
+          {
+            "name": "test_testing.py",
+            "path": "tests/test_testing.py",
+            "type": "file",
+            "size": 14458
+          },
+          {
+            "name": "test_throttling.py",
+            "path": "tests/test_throttling.py",
+            "type": "file",
+            "size": 16890
+          },
+          {
+            "name": "test_urlpatterns.py",
+            "path": "tests/test_urlpatterns.py",
+            "type": "file",
+            "size": 8051
+          },
+          {
+            "name": "test_utils.py",
+            "path": "tests/test_utils.py",
+            "type": "file",
+            "size": 8707
+          },
+          {
+            "name": "test_validation.py",
+            "path": "tests/test_validation.py",
+            "type": "file",
+            "size": 8215
+          },
+          {
+            "name": "test_validation_error.py",
+            "path": "tests/test_validation_error.py",
+            "type": "file",
+            "size": 3698
+          },
+          {
+            "name": "test_validators.py",
+            "path": "tests/test_validators.py",
+            "type": "file",
+            "size": 40512
+          },
+          {
+            "name": "test_versioning.py",
+            "path": "tests/test_versioning.py",
+            "type": "file",
+            "size": 15015
+          },
+          {
+            "name": "test_views.py",
+            "path": "tests/test_views.py",
+            "type": "file",
+            "size": 4623
+          },
+          {
+            "name": "test_viewsets.py",
+            "path": "tests/test_viewsets.py",
+            "type": "file",
+            "size": 11900
+          },
+          {
+            "name": "test_write_only_fields.py",
+            "path": "tests/test_write_only_fields.py",
+            "type": "file",
+            "size": 909
+          },
+          {
+            "name": "urls.py",
+            "path": "tests/urls.py",
+            "type": "file",
+            "size": 17
+          },
+          {
+            "name": "utils.py",
+            "path": "tests/utils.py",
+            "type": "file",
+            "size": 1662
+          }
+        ]
+      },
+      {
+        "name": "tox.ini",
+        "path": "tox.ini",
+        "type": "file",
+        "size": 1242
+      }
+    ]
+  },
+  "entry_points": [],
+  "languages": {
+    "python": 154,
+    "javascript": 8
+  },
+  "dependencies": {
+    "python": [
+      "django"
+    ]
+  },
+  "config_files": [
+    {
+      "file": "config.yml",
+      "path": ".github/ISSUE_TEMPLATE/config.yml"
+    },
+    {
+      "file": ".gitignore",
+      "path": ".gitignore"
+    }
+  ],
+  "file_roles": {
+    "docker_config": [],
+    "env_template": [],
+    "startup_script": [],
+    "package_config": [
+      {
+        "path": "pyproject.toml",
+        "name": "pyproject.toml"
+      }
+    ],
+    "build_config": []
+  },
+  "components": [
+    {
+      "name": "tests",
+      "path": "tests",
+      "type": "tests",
+      "language": "python"
+    },
+    {
+      "name": "docs",
+      "path": "docs",
+      "type": "docs",
+      "language": "javascript"
+    }
+  ],
+  "configuration": {
+    "ports": [],
+    "scripts": {},
+    "environment_variables": [],
+    "startup_commands": []
+  },
+  "semantic_analysis": {
+    "project_type": "unknown",
+    "primary_purpose": "not analyzed",
+    "tech_stack": ""
+  }
+}

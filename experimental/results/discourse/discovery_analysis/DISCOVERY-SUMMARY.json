@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "generated": "2026-03-27T17:01:54.555529",
+    "doxen_version": "0.1.0",
+    "repository": "discourse",
+    "path": "experimental/projects/discourse"
+  },
+  "summary": {
+    "languages": {
+      "ruby": 9262,
+      "javascript": 2765,
+      "typescript": 2
+    },
+    "components": 6,
+    "entry_points": 2,
+    "api_endpoints": 993,
+    "user_flows": 152,
+    "integrations": 6
+  },
+  "files": {
+    "repository_details": "REPOSITORY-ANALYSIS.json",
+    "repository_overview": "REPOSITORY-ANALYSIS.md",
+    "workflow_details": "WORKFLOW-ANALYSIS.json",
+    "workflow_overview": "WORKFLOW-ANALYSIS.md"
+  },
+  "notes": {
+    "repository": "Detailed repository structure, dependencies, and configuration in REPOSITORY-ANALYSIS.json",
+    "workflows": "Full endpoint catalog (all 993 endpoints with metadata) in WORKFLOW-ANALYSIS.json"
+  }
+}

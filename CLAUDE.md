@@ -71,12 +71,46 @@
 - Types: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`
 - Example: `feat: add code traversal engine`
 
-### Documentation
-- **README.md** - Public-facing project introduction
+### Documentation Structure
+
+**Project Documentation (about Doxen itself):**
+- **README.md** - Public-facing project introduction and quick start
 - **product_story.md** - Product vision and positioning
+- **docs/STRATEGY.md** - High-level product strategy and vision ONLY
+  - Focus: "What we're building and why" (product decisions)
+  - NOT: Implementation details, current work, granular progress
+  - Keep concise: Strategic decisions, tier priorities, design philosophy
+- **docs/PROGRESS.md** - Current sprint status, active work, next steps
+  - Focus: "What we're working on now"
+  - Updated frequently as work progresses
 - **docs/DEVELOPMENT.md** - Architecture decisions and major milestones
-- **docs/PROGRESS.md** - Current sprint status and active work
+  - Focus: "How we built it and why" (technical decisions)
 - **docs/.progress/** - Intermediate progress tracking (append-only, rarely modified)
+  - Detailed session notes, investigation results, analysis
+  - Worth committing but not polished
+  - Examples: day-N-summary.md, design-decision.md
+
+**Generated Documentation (output of Doxen):**
+- **README.md** - Project description (what the source project is)
+  - Generated via `DocGenerator.generate_readme()` from discovery data
+  - Content: Overview, features, tech stack, quick start
+  - Audience: Developers new to the source project
+- **INDEX.md** - Documentation navigation (what docs are available)
+  - Lists ARCHITECTURE.md, REFERENCE-*.md, GUIDE-*.md, TUTORIAL-*.md
+  - 3-tier hierarchy explanation
+  - Audience: Users browsing the generated documentation
+  - Note: Not yet auto-generated (needs generator)
+- **ARCHITECTURE.md** - System architecture overview
+- **reference_docs/** - API reference documentation (Tier 2)
+- **guides/** - Integration guides and tutorials (Tier 3)
+
+**Critical Distinction:**
+- STRATEGY.md = Product vision ("build 3-tier hierarchy for RAG")
+- PROGRESS.md = Current work ("completing discourse Tier 3")
+- DEVELOPMENT.md = Technical history ("why we chose AST over regex")
+- .progress/ = Session details ("day 4 findings: pattern detection issue")
+
+**DON'T MIX:** Keep STRATEGY.md clean and strategic. Implementation details belong in DEVELOPMENT.md or .progress/
 
 ## Memory & Context Strategy
 

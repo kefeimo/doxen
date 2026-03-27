@@ -1,114 +1,54 @@
-# Django REST Framework - Generated Documentation
+# Django REST Framework
 
-**Generated:** 2026-03-27
-**Source:** django-rest-framework (70 source files)
-**Generator:** Doxen v0.3.0
+A powerful and flexible toolkit for building Web APIs in Django applications.
 
----
+## Overview
 
-## 📚 Documentation Structure
+Django REST Framework (DRF) is a comprehensive library that extends Django to provide robust tools for creating RESTful web APIs. It simplifies the process of building web APIs by offering serialization, authentication, permissions, and browsable API functionality out of the box.
 
-This documentation follows Doxen's 3-tier hierarchical approach:
+The framework is designed for developers who need to quickly build scalable, maintainable APIs while leveraging Django's existing ecosystem. It provides both the flexibility to customize every aspect of your API and sensible defaults that work well for most use cases.
 
-### Tier 1: System Architecture
-- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System overview, component relationships, data flow
+Django REST Framework is widely adopted in the Python community and serves as the foundation for countless web applications, mobile app backends, and microservices that require reliable API functionality.
 
-### Tier 2: Component References (5 files)
-Detailed API documentation for each major component:
-- [REFERENCE-AUTHENTICATION.md](reference_docs/REFERENCE-AUTHENTICATION.md) - Authentication classes and schemes
-- [REFERENCE-PERMISSIONS.md](reference_docs/REFERENCE-PERMISSIONS.md) - Permission classes and policies
-- [REFERENCE-ROUTERS.md](reference_docs/REFERENCE-ROUTERS.md) - URL routing for ViewSets
-- [REFERENCE-SERIALIZERS.md](reference_docs/REFERENCE-SERIALIZERS.md) - Data serialization and validation
-- [REFERENCE-VIEWS.md](reference_docs/REFERENCE-VIEWS.md) - Views, ViewSets, and generic views
+## Features
 
-### Tier 3: Integration Guides & Tutorials (32 files)
+- Serialization system for converting Django models to JSON/XML and vice versa
+- Authentication and permission classes for securing API endpoints
+- Browsable web API interface for development and testing
+- ViewSets and routers for organizing API logic
+- Filtering, searching, and pagination capabilities
+- Content negotiation and multiple renderer support
+- Comprehensive test utilities for API testing
+- Extensive documentation and community support
 
-**Beginner Tutorials (15 files)** - Step-by-step from empty directory:
-- [TUTORIAL-quickstart.md](guides/TUTORIAL-quickstart.md) - Build your first API
-- [TUTORIAL-serialization.md](guides/TUTORIAL-serialization.md) - Learn serialization
-- [TUTORIAL-requests-responses.md](guides/TUTORIAL-requests-responses.md) - Handle requests
-- [TUTORIAL-class-based-views.md](guides/TUTORIAL-class-based-views.md) - Use class-based views
-- [TUTORIAL-authentication-permissions.md](guides/TUTORIAL-authentication-permissions.md) - Secure your API
-- [TUTORIAL-relationships-hyperlinked.md](guides/TUTORIAL-relationships-hyperlinked.md) - Model relationships
-- [TUTORIAL-viewsets-routers.md](guides/TUTORIAL-viewsets-routers.md) - ViewSets and routers
-- [TUTORIAL-ajax-csrf-cors.md](guides/TUTORIAL-ajax-csrf-cors.md) - AJAX, CSRF & CORS
-- [TUTORIAL-browsable-api.md](guides/TUTORIAL-browsable-api.md) - Browsable API interface
-- [TUTORIAL-browser-enhancements.md](guides/TUTORIAL-browser-enhancements.md) - Browser features
-- [TUTORIAL-documenting-api.md](guides/TUTORIAL-documenting-api.md) - API documentation
-- [TUTORIAL-html-forms.md](guides/TUTORIAL-html-forms.md) - HTML forms support
-- [TUTORIAL-internationalization.md](guides/TUTORIAL-internationalization.md) - i18n support
-- [TUTORIAL-rest-hypermedia-hateoas.md](guides/TUTORIAL-rest-hypermedia-hateoas.md) - REST principles
-- [TUTORIAL-writable-nested-serializers.md](guides/TUTORIAL-writable-nested-serializers.md) - Nested serializers
+## Tech Stack
 
-**Integration Guides (17 files)** - Patterns for existing projects:
-- [GUIDE-quickstart.md](guides/GUIDE-quickstart.md) - Quick integration
-- [GUIDE-serialization.md](guides/GUIDE-serialization.md) - Serialization patterns
-- [GUIDE-authentication.md](guides/GUIDE-authentication.md) - Authentication patterns
-- [GUIDE-requests-responses.md](guides/GUIDE-requests-responses.md) - Request handling patterns
-- [GUIDE-class-based-views.md](guides/GUIDE-class-based-views.md) - View patterns
-- [GUIDE-authentication-permissions.md](guides/GUIDE-authentication-permissions.md) - Security patterns
-- [GUIDE-relationships-hyperlinked.md](guides/GUIDE-relationships-hyperlinked.md) - Relationship patterns
-- [GUIDE-viewsets-routers.md](guides/GUIDE-viewsets-routers.md) - ViewSet patterns
-- [GUIDE-ajax-csrf-cors.md](guides/GUIDE-ajax-csrf-cors.md) - Frontend integration
-- [GUIDE-browsable-api.md](guides/GUIDE-browsable-api.md) - Browsable API customization
-- [GUIDE-browser-enhancements.md](guides/GUIDE-browser-enhancements.md) - Browser features
-- [GUIDE-documenting-api.md](guides/GUIDE-documenting-api.md) - Documentation patterns
-- [GUIDE-html-forms.md](guides/GUIDE-html-forms.md) - Form handling
-- [GUIDE-internationalization.md](guides/GUIDE-internationalization.md) - i18n patterns
-- [GUIDE-rest-hypermedia-hateoas.md](guides/GUIDE-rest-hypermedia-hateoas.md) - REST patterns
-- [GUIDE-writable-nested-serializers.md](guides/GUIDE-writable-nested-serializers.md) - Nested serializer patterns
-- [GUIDE-getting-started.md](guides/GUIDE-getting-started.md) - Getting started guide
+- **Backend**: Python with Django framework
+- **Documentation**: JavaScript-based documentation system
+- **Testing**: Python-based test suite with comprehensive coverage
+
+The project follows Django's architecture patterns and integrates seamlessly with existing Django applications.
+
+## Quick Start
+
+Refer to the component documentation for detailed setup instructions:
+- Installation steps available in component directories
+- See configuration files for specific parameters
+- Component-specific setup guides in respective README files
+
+## Project Structure
+
+```
+django-rest-framework/
+├── tests/          # Python test suite (154 files)
+├── docs/           # JavaScript-powered documentation (8 files)
+└── [core modules]  # Main framework components
+```
+
+The project is organized with separate directories for comprehensive testing and documentation, ensuring both code quality and developer experience.
 
 ---
 
-## 🚀 Getting Started
+*This documentation was automatically generated by [Doxen](https://github.com/kefeimo/doxen) on 2026-03-27.*
 
-**New to Django REST Framework?**
-1. Start with [ARCHITECTURE.md](ARCHITECTURE.md) for the big picture
-2. Follow [TUTORIAL-quickstart.md](guides/TUTORIAL-quickstart.md) to build your first API
-3. Read component references as needed
-
-**Integrating into existing project?**
-1. Review [ARCHITECTURE.md](ARCHITECTURE.md) to understand components
-2. Browse [Integration Guides](guides/) for patterns
-3. Reference [Component APIs](reference_docs/) for details
-
----
-
-## 📊 Documentation Statistics
-
-| Category | Count | Total Words |
-|----------|-------|-------------|
-| Tier 1: Architecture | 1 file | 418 words |
-| Tier 2: Component References | 5 files | ~8,000 words |
-| Tier 3: Tutorials | 15 files | 8,711 words |
-| Tier 3: Integration Guides | 17 files | ~5,400 words |
-| **Total** | **38 files** | **~22,500 words** |
-
----
-
-## 🎯 Documentation Philosophy
-
-This documentation follows Doxen's hierarchical approach:
-
-**Tier 1 (Architecture):** System overview showing how components work together
-**Tier 2 (References):** Detailed API documentation per component
-**Tier 3 (Guides):** Integration patterns and step-by-step tutorials
-
-**Benefits:**
-- ✅ Start with big picture, drill down as needed
-- ✅ Component references are comprehensive but focused
-- ✅ Multiple learning paths (tutorial vs integration guide)
-- ✅ Clear component boundaries and relationships
-
----
-
-## 🔗 External Resources
-
-- [Official Django REST Framework Documentation](https://www.django-rest-framework.org/)
-- [Django Documentation](https://docs.djangoproject.com/)
-- [GitHub Repository](https://github.com/encode/django-rest-framework)
-
----
-
-**Generated by [Doxen](https://github.com/anthropics/doxen)** - AI-powered documentation generation
+*Source: `django-rest-framework` | Analysis Version: 0.1.0*
