@@ -21,13 +21,19 @@ Detailed API documentation for each major component:
 
 **Note:** Discourse has sparse inline documentation (0-1.6% docstring coverage), so these references are primarily extracted from source code structure and method signatures.
 
-### Tier 3: Integration Guides (2 files)
+### Tier 3: Integration Guides (8 files)
 
 **Integration Guides** - Patterns for existing projects:
 - [GUIDE-sending-emails.md](guides/GUIDE-sending-emails.md) - Email delivery patterns
 - [GUIDE-view-helpers.md](guides/GUIDE-view-helpers.md) - View helper usage
+- [GUIDE-email-templates.md](guides/GUIDE-email-templates.md) - Email template customization
+- [GUIDE-database-queries.md](guides/GUIDE-database-queries.md) - Database query patterns
+- [GUIDE-background-jobs.md](guides/GUIDE-background-jobs.md) - Background job scheduling
+- [GUIDE-service-objects.md](guides/GUIDE-service-objects.md) - Service layer patterns
+- [GUIDE-batch-operations.md](guides/GUIDE-batch-operations.md) - Bulk processing patterns
+- [GUIDE-error-handling.md](guides/GUIDE-error-handling.md) - Error recovery strategies
 
-**Status:** ⚠️ More guides in progress. Currently covers basic email and helper patterns.
+**Status:** ✅ Complete. Covers email, helpers, jobs, services, and error handling.
 
 ---
 
@@ -49,10 +55,10 @@ Detailed API documentation for each major component:
 
 | Category | Count | Notes |
 |----------|-------|-------|
-| Tier 1: Architecture | 1 file | System overview with component diagram |
+| Tier 1: Architecture | 2 files | System overview + navigation index |
 | Tier 2: Component References | 3 files | Extracted from source code (0-1.6% docstrings) |
-| Tier 3: Integration Guides | 2 files | Email and helper patterns |
-| **Total** | **6 files** | **~20,000 words** |
+| Tier 3: Integration Guides | 8 files | Complete coverage of core workflows |
+| **Total** | **13 files** | **~10,000 words** |
 
 ---
 
