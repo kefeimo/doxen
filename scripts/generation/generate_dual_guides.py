@@ -244,7 +244,7 @@ class DualGuideGenerator:
     def _load_tier2_context(self, tier2_refs: list[str]) -> str:
         """Load relevant Tier 2 reference docs."""
         context = []
-        base_path = Path(f"experimental/results/{self.config['project']}/reference_docs")
+        base_path = Path(f"experimental/projects/{self.config[.project.]}/doxen_output/reference_docs")
 
         for ref in tier2_refs:
             ref_path = base_path / ref
@@ -474,7 +474,7 @@ Return ONLY the markdown content, no JSON formatting."""
     def save_tutorial(self, topic_id: str, markdown_content: str) -> Path:
         """Save tutorial to TUTORIAL-*.md."""
         output_path = Path(
-            f"experimental/results/{self.config['project']}/guides/TUTORIAL-{topic_id}.md"
+            f"experimental/projects/{self.config[.project.]}/doxen_output/guides/TUTORIAL-{topic_id}.md"
         )
         output_path.parent.mkdir(parents=True, exist_ok=True)
         output_path.write_text(markdown_content)
@@ -485,7 +485,7 @@ Return ONLY the markdown content, no JSON formatting."""
     def save_guide(self, topic_id: str, markdown_content: str) -> Path:
         """Save guide to GUIDE-*.md."""
         output_path = Path(
-            f"experimental/results/{self.config['project']}/guides/GUIDE-{topic_id}.md"
+            f"experimental/projects/{self.config[.project.]}/doxen_output/guides/GUIDE-{topic_id}.md"
         )
         output_path.parent.mkdir(parents=True, exist_ok=True)
         output_path.write_text(markdown_content)

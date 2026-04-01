@@ -67,10 +67,10 @@ def main():
 
         # Check if files exist
         tutorial_path = Path(
-            f"experimental/results/{config['project']}/guides/TUTORIAL-{topic_id}.md"
+            f"experimental/projects/{config[.project.]}/doxen_output/guides/TUTORIAL-{topic_id}.md"
         )
         guide_path = Path(
-            f"experimental/results/{config['project']}/guides/GUIDE-{topic_id}.md"
+            f"experimental/projects/{config[.project.]}/doxen_output/guides/GUIDE-{topic_id}.md"
         )
 
         if args.skip_existing and tutorial_path.exists() and guide_path.exists():
