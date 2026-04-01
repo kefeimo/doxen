@@ -1,0 +1,1864 @@
+{
+  "project_name": "django-rest-framework",
+  "repo_path": "experimental/projects/django-rest-framework",
+  "analysis_date": "2026-04-01T12:00:59.670476",
+  "summary": {
+    "total_documents": 81,
+    "total_size_bytes": 1158918,
+    "by_source_type": {
+      "internal_repo": {
+        "count": 72,
+        "total_weight": 0.833778891340469,
+        "avg_quality": 0.8338023216369181
+      },
+      "external_official": {
+        "count": 9,
+        "total_weight": 0.16622110865953102,
+        "avg_quality": 0.7370635224726447
+      }
+    },
+    "by_document_type": {
+      "readme": {
+        "count": 2,
+        "total_weight": 0.015402010841437481
+      },
+      "general": {
+        "count": 31,
+        "total_weight": 0.26427759867936157
+      },
+      "api_reference": {
+        "count": 36,
+        "total_weight": 0.5226200742468566
+      },
+      "tutorial": {
+        "count": 11,
+        "total_weight": 0.1848251690881436
+      },
+      "contributing": {
+        "count": 1,
+        "total_weight": 0.012875147144200788
+      }
+    },
+    "top_weighted_documents": [
+      {
+        "path": "/api-guide/serializers/",
+        "type": "api_reference",
+        "source": "external_official",
+        "weight": 0.023736107058206137,
+        "size_kb": 58.3740234375
+      },
+      {
+        "path": "docs/community/release-notes.md",
+        "type": "general",
+        "source": "internal_repo",
+        "weight": 0.023688749911737066,
+        "size_kb": 173.0986328125
+      },
+      {
+        "path": "docs/api-guide/serializers.md",
+        "type": "api_reference",
+        "source": "internal_repo",
+        "weight": 0.02253781922014553,
+        "size_kb": 58.375
+      },
+      {
+        "path": "/tutorial/1-serialization/",
+        "type": "tutorial",
+        "source": "external_official",
+        "weight": 0.02010619530823642,
+        "size_kb": 18.28515625
+      },
+      {
+        "path": "docs/api-guide/fields.md",
+        "type": "api_reference",
+        "source": "internal_repo",
+        "weight": 0.01993088226958416,
+        "size_kb": 43.0107421875
+      }
+    ]
+  },
+  "documents": [
+    {
+      "metadata": {
+        "path": "README.md",
+        "source_type": "internal_repo",
+        "doc_type": "readme",
+        "size_bytes": 6422,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.7785736530675802,
+        "user_focus": 0.8333333333333333
+      },
+      "weight": 0.015075934861735958,
+      "reasoning": "",
+      "content_preview": "# [Django REST framework][docs]\n\n[![build-status-image]][build-status]\n[![coverage-status-image]][codecov]\n[![pypi-version]][pypi]\n\n**Awesome web-browsable Web APIs.**\n\nFull documentation for the proj..."
+    },
+    {
+      "metadata": {
+        "path": "docs/index.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 9378,
+        "last_modified": "2026-03-27 11:06:34.418681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.875
+      },
+      "weight": 0.010408665976248776,
+      "reasoning": "",
+      "content_preview": "---\nhide:\n  - navigation\n---\n\n<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-positio..."
+    },
+    {
+      "metadata": {
+        "path": "docs/topics/rest-hypermedia-hateoas.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 3505,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 1.0
+      },
+      "weight": 0.006879146620895221,
+      "reasoning": "",
+      "content_preview": "# REST, Hypermedia & HATEOAS\n\n> You keep using that word \"REST\". I do not think it means what you think it means.\n>\n> &mdash; Mike Amundsen, [REST fest 2012 keynote][cite].\n\nFirst off, the disclaimer...."
+    },
+    {
+      "metadata": {
+        "path": "docs/topics/browser-enhancements.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 3945,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.8
+      },
+      "weight": 0.006994194705965568,
+      "reasoning": "",
+      "content_preview": "# Browser enhancements\n\n> \"There are two noncontroversial uses for overloaded POST.  The first is to *simulate* HTTP's uniform interface for clients like web browsers that don't support PUT or DELETE\"..."
+    },
+    {
+      "metadata": {
+        "path": "docs/topics/ajax-csrf-cors.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 3140,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.5
+      },
+      "weight": 0.005802249175373233,
+      "reasoning": "",
+      "content_preview": "# Working with AJAX, CSRF & CORS\n\n> \"Take a close look at possible CSRF / XSRF vulnerabilities on your own websites.  They're the worst kind of vulnerability &mdash; very easy to exploit by attackers,..."
+    },
+    {
+      "metadata": {
+        "path": "docs/topics/internationalization.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 6038,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.75
+      },
+      "weight": 0.008443750614967462,
+      "reasoning": "",
+      "content_preview": "# Internationalization\n\n> Supporting internationalization is not optional. It must be a core feature.\n>\n> &mdash; [Jannis Leidel, speaking at Django Under the Hood, 2015][cite].\n\nREST framework ships ..."
+    },
+    {
+      "metadata": {
+        "path": "docs/topics/html-and-forms.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 8710,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.8333333333333333
+      },
+      "weight": 0.010020581876243632,
+      "reasoning": "",
+      "content_preview": "# HTML & Forms\n\nREST framework is suitable for returning both API style responses, and regular HTML pages. Additionally, serializers can be used as HTML forms and rendered in templates.\n\n## Rendering ..."
+    },
+    {
+      "metadata": {
+        "path": "docs/topics/documenting-your-api.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 9789,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.30646644192460926,
+        "user_focus": 0.8
+      },
+      "weight": 0.013237853331211698,
+      "reasoning": "",
+      "content_preview": "# Documenting your API\n\n> A REST API should spend almost all of its descriptive effort in defining the media type(s) used for representing resources and driving application state.\n>\n> &mdash; Roy Fiel..."
+    },
+    {
+      "metadata": {
+        "path": "docs/topics/writable-nested-serializers.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 1742,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.8,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.75
+      },
+      "weight": 0.004168613168939556,
+      "reasoning": "",
+      "content_preview": "> To save HTTP requests, it may be convenient to send related documents along with the request.\n>\n> &mdash; [JSON API specification for Ember Data][cite].\n\n# Writable nested serializers\n\nAlthough flat..."
+    },
+    {
+      "metadata": {
+        "path": "docs/topics/browsable-api.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 10803,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.27770063871146905,
+        "user_focus": 0.8333333333333333
+      },
+      "weight": 0.013753451190398605,
+      "reasoning": "",
+      "content_preview": "# The Browsable API\n\n> It is a profoundly erroneous truism... that we should cultivate the habit of thinking of what we are doing.  The precise opposite is the case.  Civilization advances by extendin..."
+    },
+    {
+      "metadata": {
+        "path": "docs/tutorial/6-viewsets-and-routers.md",
+        "source_type": "internal_repo",
+        "doc_type": "tutorial",
+        "size_bytes": 6705,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 1.0,
+        "user_focus": 0.625
+      },
+      "weight": 0.014118455726560097,
+      "reasoning": "",
+      "content_preview": "# Tutorial 6: ViewSets & Routers\n\nREST framework includes an abstraction for dealing with `ViewSets`, that allows the developer to concentrate on modeling the state and interactions of the API, and le..."
+    },
+    {
+      "metadata": {
+        "path": "docs/tutorial/4-authentication-and-permissions.md",
+        "source_type": "internal_repo",
+        "doc_type": "tutorial",
+        "size_bytes": 10982,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.72846476051721,
+        "user_focus": 0.8333333333333333
+      },
+      "weight": 0.016931607555764363,
+      "reasoning": "",
+      "content_preview": "# Tutorial 4: Authentication & Permissions\n\nCurrently our API doesn't have any restrictions on who can edit or delete code snippets.  We'd like to have some more advanced behavior in order to make sur..."
+    },
+    {
+      "metadata": {
+        "path": "docs/tutorial/2-requests-and-responses.md",
+        "source_type": "internal_repo",
+        "doc_type": "tutorial",
+        "size_bytes": 8540,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.936768149882904,
+        "user_focus": 0.875
+      },
+      "weight": 0.01623925593993287,
+      "reasoning": "",
+      "content_preview": "# Tutorial 2: Requests and Responses\n\nFrom this point we're going to really start covering the core of REST framework.\nLet's introduce a couple of essential building blocks.\n\n## Request objects\n\nREST ..."
+    },
+    {
+      "metadata": {
+        "path": "docs/tutorial/quickstart.md",
+        "source_type": "internal_repo",
+        "doc_type": "tutorial",
+        "size_bytes": 7713,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 1.0,
+        "user_focus": 0.8333333333333333
+      },
+      "weight": 0.015657728162338794,
+      "reasoning": "",
+      "content_preview": "# Quickstart\n\nWe're going to create a simple API to allow admin users to view and edit the users and groups in the system.\n\n## Project setup\n\nCreate a new Django project named `tutorial`, then start a..."
+    },
+    {
+      "metadata": {
+        "path": "docs/tutorial/3-class-based-views.md",
+        "source_type": "internal_repo",
+        "doc_type": "tutorial",
+        "size_bytes": 6246,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 1.0,
+        "user_focus": 0.75
+      },
+      "weight": 0.014072050443310929,
+      "reasoning": "",
+      "content_preview": "# Tutorial 3: Class-based Views\n\nWe can also write our API views using class-based views, rather than function based views.  As we'll see this is a powerful pattern that allows us to reuse common func..."
+    },
+    {
+      "metadata": {
+        "path": "docs/tutorial/1-serialization.md",
+        "source_type": "internal_repo",
+        "doc_type": "tutorial",
+        "size_bytes": 16543,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.48358822462673035,
+        "user_focus": 0.625
+      },
+      "weight": 0.01754706202363108,
+      "reasoning": "",
+      "content_preview": "# Tutorial 1: Serialization\n\n## Introduction\n\nThis tutorial will cover creating a simple pastebin code highlighting Web API.  Along the way it will introduce the various components that make up REST f..."
+    },
+    {
+      "metadata": {
+        "path": "docs/tutorial/5-relationships-and-hyperlinked-apis.md",
+        "source_type": "internal_repo",
+        "doc_type": "tutorial",
+        "size_bytes": 8520,
+        "last_modified": "2026-03-27 11:06:34.494680",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.9389671361502347,
+        "user_focus": 1.0
+      },
+      "weight": 0.016662133400024495,
+      "reasoning": "",
+      "content_preview": "# Tutorial 5: Relationships & Hyperlinked APIs\n\nAt the moment relationships within our API are represented by using primary keys.  In this part of the tutorial we'll improve the cohesion and discovera..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/kickstarter-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 14413,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.5
+      },
+      "weight": 0.011170848607379765,
+      "reasoning": "",
+      "content_preview": "# Kickstarting Django REST framework 3\n\n---\n\n<iframe style=\"display: block; margin: 0 auto 0 auto\" width=\"480\" height=\"360\" src=\"https://www.kickstarter.com/projects/tomchristie/django-rest-framework-..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.15-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 2131,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 1.0
+      },
+      "weight": 0.005216312756457414,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.14-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 2300,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.5
+      },
+      "weight": 0.004876086574944836,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/jobs.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 2307,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.5
+      },
+      "weight": 0.004884740620440161,
+      "reasoning": "",
+      "content_preview": "# Jobs\n\nLooking for a new Django REST Framework related role? On this site we provide a list of job resources that may be helpful. It's also worth checking out if any of [our sponsors are hiring][spon..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.9-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 8813,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.625
+      },
+      "weight": 0.009604454077959818,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.7-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 5999,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.6666666666666666
+      },
+      "weight": 0.008262033081632342,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/tutorials-and-resources.md",
+        "source_type": "internal_repo",
+        "doc_type": "tutorial",
+        "size_bytes": 10389,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.7706386667951064,
+        "user_focus": 0.8333333333333333
+      },
+      "weight": 0.016742318020844055,
+      "reasoning": "",
+      "content_preview": "# Tutorials and Resources\n\nThere are a wide range of resources available for learning and using Django REST framework. We try to keep a comprehensive list available here.\n\n## Books\n\n<div class=\"book-c..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/release-notes.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 177253,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 1.0
+      },
+      "weight": 0.023688749911737066,
+      "reasoning": "",
+      "content_preview": "# Release Notes\n\n## Versioning\n\n- **Minor** version numbers (0.0.x) are used for changes that are API compatible.  You should be able to upgrade between minor point releases without any other code cha..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.1-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 10666,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 1.0
+      },
+      "weight": 0.01122773614183608,
+      "reasoning": "",
+      "content_preview": "# Django REST framework 3.1\n\nThe 3.1 release is an intermediate step in the Kickstarter project releases, and includes a range of new functionality.\n\nSome highlights include:\n\n* A super-smart cursor p..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/contributing.md",
+        "source_type": "internal_repo",
+        "doc_type": "contributing",
+        "size_bytes": 11583,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.875
+      },
+      "weight": 0.012875147144200788,
+      "reasoning": "",
+      "content_preview": "# Contributing to REST framework\n\n> The world can only really be changed one piece at a time.  The art is picking that piece.\n>\n> &mdash; [Tim Berners-Lee][cite]\n\nThere are many ways you can contribut..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.8-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 3683,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.5
+      },
+      "weight": 0.0063055852359675865,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.4-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 8439,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.875
+      },
+      "weight": 0.009986755691551703,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/third-party-packages.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 23726,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.8
+      },
+      "weight": 0.014036966997133377,
+      "reasoning": "",
+      "content_preview": "# Third Party Packages\n\n> Software ecosystems [\u2026] establish a community that further accelerates the sharing of knowledge, content, issues, expertise and skills.\n>\n> &mdash; [Jan Bosch][cite].\n\n## Abo..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.3-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 4167,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.8
+      },
+      "weight": 0.007186359667790259,
+      "reasoning": "",
+      "content_preview": "# Django REST framework 3.3\n\nThe 3.3 release marks the final work in the Kickstarter funded series. We'd like to offer a final resounding **thank you** to all our wonderful sponsors and supporters.\n\nT..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.5-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 10059,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.875
+      },
+      "weight": 0.01069141189646763,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.2-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 6237,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.8333333333333333
+      },
+      "weight": 0.00872478654536451,
+      "reasoning": "",
+      "content_preview": "# Django REST framework 3.2\n\nThe 3.2 release is the first version to include an admin interface for the browsable API.\n\n![The AdminRenderer](../img/admin.png)\n\nThis interface is intended to act as a m..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.10-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 6147,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.625
+      },
+      "weight": 0.008271201616734511,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.16-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 1640,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.8,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.75
+      },
+      "weight": 0.004011947657391148,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.6-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 8164,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.75
+      },
+      "weight": 0.009585950274253031,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/mozilla-grant.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 4912,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.75
+      },
+      "weight": 0.007689348869965479,
+      "reasoning": "",
+      "content_preview": "# Mozilla Grant\n\nWe have recently been [awarded a Mozilla grant](https://blog.mozilla.org/blog/2016/04/13/mozilla-open-source-support-moss-update-q1-2016/), in order to fund the next major releases of..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.13-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 1499,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.8,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.5
+      },
+      "weight": 0.0035624568273691344,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.12-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 7315,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.75
+      },
+      "weight": 0.009165253676945066,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.11-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 5413,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.625
+      },
+      "weight": 0.007815455291486733,
+      "reasoning": "",
+      "content_preview": "<style>\n.promo li a {\n    float: left;\n    width: 130px;\n    height: 20px;\n    text-align: center;\n    margin: 10px 30px;\n    padding: 150px 0 0 0;\n    background-position: 0 50%;\n    background-size:..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/3.0-announcement.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 49481,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.9
+      },
+      "weight": 0.01754150245939585,
+      "reasoning": "",
+      "content_preview": "# Django REST framework 3.0\n\nThe 3.0 release of Django REST framework is the result of almost four years of iteration and refinement. It comprehensively addresses some of the previous remaining design..."
+    },
+    {
+      "metadata": {
+        "path": "docs/community/project-management.md",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 4542,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.5
+      },
+      "weight": 0.006993413412017017,
+      "reasoning": "",
+      "content_preview": "# Project management\n\n> \"No one can whistle a symphony; it takes a whole orchestra to play it\"\n>\n> &mdash; Halford E. Luccock\n\nThis document outlines our project management processes for REST framewor..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/responses.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 4680,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.6410256410256411,
+        "user_focus": 0.625
+      },
+      "weight": 0.009247823502202416,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - response.py\n---\n\n# Responses\n\n> Unlike basic HttpResponse objects, TemplateResponse objects retain the details of the context that was provided by the view to compute the response.  ..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/views.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 9108,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.32938076416337286,
+        "user_focus": 0.75
+      },
+      "weight": 0.011716754453623628,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - decorators.py\n    - views.py\n---\n\n## Class-based Views\n\n> Django's class-based views are a welcome departure from the old-style views.\n>\n> &mdash; [Reinout van Rees][cite]\n\nREST fram..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/versioning.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 10581,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.28352707683583783,
+        "user_focus": 0.9
+      },
+      "weight": 0.013894311964755702,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - versioning.py\n---\n\n# Versioning\n\n> Versioning an interface is just a \"polite\" way to kill deployed clients.\n>\n> &mdash; [Roy Fielding][cite].\n\nAPI versioning allows you to alter beha..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/parsers.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 9154,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.32772558444395894,
+        "user_focus": 0.7
+      },
+      "weight": 0.012646715141682896,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - parsers.py\n---\n\n# Parsers\n\n> Machine interacting web services tend to use more\nstructured formats for sending data than form-encoded, since they're\nsending more complex data than sim..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/throttling.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 11348,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.26436376454000704,
+        "user_focus": 0.625
+      },
+      "weight": 0.012067113049614747,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - throttling.py\n---\n\n# Throttling\n\n> HTTP/1.1 420 Enhance Your Calm\n>\n> [Twitter API rate limiting response][cite]\n\nThrottling is similar to [permissions], in that it determines if a r..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/generic-views.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 19625,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.15288182235132242,
+        "user_focus": 0.875
+      },
+      "weight": 0.016513822319307335,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - mixins.py\n    - generics.py\n---\n\n# Generic views\n\n> Django\u2019s generic views... were developed as a shortcut for common usage patterns... They take certain common idioms and patterns f..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/content-negotiation.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 4714,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.6364022061943148,
+        "user_focus": 0.6666666666666666
+      },
+      "weight": 0.009369286477605286,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - negotiation.py\n---\n\n> HTTP has provisions for several mechanisms for \"content negotiation\" - the process of selecting the best representation for a given response when there are mult..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/exceptions.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 11974,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.25060563027316013,
+        "user_focus": 0.625
+      },
+      "weight": 0.0122555515036777,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - exceptions.py\n---\n\n# Exceptions\n\n> Exceptions\u2026 allow error handling to be organized cleanly in a central or high-level place within the program structure.\n>\n> &mdash; Doug Hellmann, ..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/serializers.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 59776,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.050195763477562494,
+        "user_focus": 1.0
+      },
+      "weight": 0.02253781922014553,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - serializers.py\n---\n\n> Expanding the usefulness of the serializers is something that we would\nlike to address.  However, it's not a trivial problem, and it\nwill take some serious desi..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/filtering.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 17294,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.17347056782699202,
+        "user_focus": 0.7
+      },
+      "weight": 0.015235972307376755,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - filters.py\n---\n\n# Filtering\n\n> The root QuerySet provided by the Manager describes all objects in the database table.  Usually, though, you'll need to select only a subset of the com..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/routers.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 17679,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.1696928559307653,
+        "user_focus": 0.8
+      },
+      "weight": 0.01573644040243681,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - routers.py\n---\n\n# Routers\n\n> Resource routing allows you to quickly declare all of the common routes for a given resourceful controller.  Instead of declaring separate routes for you..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/relations.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 27989,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.10720794768252154,
+        "user_focus": 1.0
+      },
+      "weight": 0.017183222814627818,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - relations.py\n---\n\n# Serializer relations\n\n> Data structures, not algorithms, are central to programming.\n>\n> &mdash; [Rob Pike][cite]\n\nRelational fields are used to represent model r..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/metadata.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 4756,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.6307821698906644,
+        "user_focus": 0.6666666666666666
+      },
+      "weight": 0.009394990576089873,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - metadata.py\n---\n\n# Metadata\n\n> [The `OPTIONS`] method allows a client to determine the options and/or requirements associated with a resource, or the capabilities of a server, withou..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/settings.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 16608,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.18067935437244037,
+        "user_focus": 0.7
+      },
+      "weight": 0.015064351745688093,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - settings.py\n---\n\n# Settings\n\n> Namespaces are one honking great idea - let's do more of those!\n>\n> &mdash; [The Zen of Python][cite]\n\nConfiguration for REST framework is all namespac..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/caching.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 2992,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 1.0,
+        "user_focus": 0.5
+      },
+      "weight": 0.007820136787872968,
+      "reasoning": "",
+      "content_preview": "# Caching\n\n> A certain woman had a very sharp consciousness but almost no\n> memory ... She remembered enough to work, and she worked hard.\n> - Lydia Davis\n\nCaching in REST Framework works well with th..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/schemas.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 16591,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.1808427271083248,
+        "user_focus": 0.7
+      },
+      "weight": 0.015059929477050722,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - schemas\n---\n\n# Schema\n\n> A machine-readable [schema] describes what resources are available via the API, what their URLs are, how they are represented and what operations they suppor..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/fields.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 44043,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.06812453164384495,
+        "user_focus": 0.8
+      },
+      "weight": 0.01993088226958416,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - fields.py\n---\n\n# Serializer fields\n\n> Each field in a Form class is responsible not only for validating data, but also for \"cleaning\" it &mdash; normalizing it to a consistent format..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/status-codes.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 4715,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.6364022061943148,
+        "user_focus": 0.75
+      },
+      "weight": 0.009572011577498003,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - status.py\n---\n\n# Status Codes\n\n> 418 I'm a teapot - Any attempt to brew coffee with a teapot should result in the error code \"418 I'm a teapot\".  The resulting entity body MAY be sho..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/authentication.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 28252,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.10618717258955118,
+        "user_focus": 0.9
+      },
+      "weight": 0.018318788288419954,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - authentication.py\n---\n\n> Auth needs to be pluggable.\n>\n> &mdash; Jacob Kaplan-Moss, [\"REST worst practices\"][cite]\n\nAuthentication is the mechanism of associating an incoming request..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/renderers.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 25139,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.11935548040580864,
+        "user_focus": 0.7
+      },
+      "weight": 0.01686124877739466,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - renderers.py\n---\n\n# Renderers\n\n> Before a TemplateResponse instance can be returned to the client, it must be rendered. The rendering process takes the intermediate representation of..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/format-suffixes.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 3988,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.7526342197691922,
+        "user_focus": 0.625
+      },
+      "weight": 0.00954941880732229,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - urlpatterns.py\n---\n\n# Format suffixes\n\n> Section 6.2.1 does not say that content negotiation should be\nused all the time.\n>\n> &mdash; Roy Fielding, [REST discuss mailing list][cite]\n..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/viewsets.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 15507,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.1934610176049526,
+        "user_focus": 0.75
+      },
+      "weight": 0.014969767957455221,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - viewsets.py\n---\n\n# ViewSets\n\n> After routing has determined which controller to use for a request, your controller is responsible for making sense of the request and producing the ap..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/testing.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 17814,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.16844469399213924,
+        "user_focus": 0.75
+      },
+      "weight": 0.01556623413961998,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - test.py\n---\n\n# Testing\n\n> Code without tests is broken as designed.\n>\n> &mdash; [Jacob Kaplan-Moss][cite]\n\nREST framework includes a few helper classes that extend Django's existing ..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/requests.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 6737,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.44530206323289295,
+        "user_focus": 0.625
+      },
+      "weight": 0.011284442450966032,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - request.py\n---\n\n> If you're doing REST-based web service stuff ... you should ignore request.POST.\n>\n> &mdash; Malcom Tredinnick, [Django developers group][cite]\n\nREST framework's `R..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/validators.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 14268,
+        "last_modified": "2026-03-27 11:06:34.374681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.21029020047665778,
+        "user_focus": 0.7
+      },
+      "weight": 0.014427579705137585,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - validators.py\n---\n\n# Validators\n\n> Validators can be useful for reusing validation logic between different types of fields.\n>\n> &mdash; [Django documentation][cite]\n\nMost of the time..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/permissions.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 22550,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.13303769401330376,
+        "user_focus": 0.7
+      },
+      "weight": 0.016382389623975358,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - permissions.py\n---\n\n# Permissions\n\n> Authentication or identification by itself is not usually sufficient to gain access to information or code.  For that, the entity requesting acce..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/pagination.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 18533,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.16197829490848226,
+        "user_focus": 0.875
+      },
+      "weight": 0.016254558248577862,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - pagination.py\n---\n\n# Pagination\n\n> Django provides a few classes that help you manage paginated data \u2013 that is, data that\u2019s split across several pages, with \u201cPrevious/Next\u201d links.\n>\n..."
+    },
+    {
+      "metadata": {
+        "path": "docs/api-guide/reverse.md",
+        "source_type": "internal_repo",
+        "doc_type": "api_reference",
+        "size_bytes": 2520,
+        "last_modified": "2026-03-27 11:06:34.370682",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 1.0,
+        "user_focus": 0.6666666666666666
+      },
+      "weight": 0.007400655291742928,
+      "reasoning": "",
+      "content_preview": "---\nsource:\n    - reverse.py\n---\n\n# Returning URLs\n\n> The central feature that distinguishes the REST architectural style from other network-based styles is its emphasis on a uniform interface between..."
+    },
+    {
+      "metadata": {
+        "path": "docs/theme/main.html",
+        "source_type": "internal_repo",
+        "doc_type": "general",
+        "size_bytes": 343,
+        "last_modified": "2026-03-27 11:06:34.418681",
+        "language": "en",
+        "format": "html",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.5,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.8,
+        "user_focus": 0.5
+      },
+      "weight": 0.0010610386485076083,
+      "reasoning": "",
+      "content_preview": "{% extends \"base.html\" %}\n\n{% block scripts %}\n    {{ super() }}\n    <script>\n        document$.subscribe(function() {\n            document.querySelectorAll('pre code').forEach(code => {\n             ..."
+    },
+    {
+      "metadata": {
+        "path": "docs/theme/src/README.md",
+        "source_type": "internal_repo",
+        "doc_type": "readme",
+        "size_bytes": 82,
+        "last_modified": "2026-03-27 11:06:34.418681",
+        "language": "en",
+        "format": "markdown",
+        "url": null
+      },
+      "quality": {
+        "completeness": 0.0,
+        "currency": 1.0,
+        "authority": 0.9,
+        "detail_level": 0.082,
+        "user_focus": 0.5
+      },
+      "weight": 0.0003260759797015228,
+      "reasoning": "",
+      "content_preview": "# DRF logos\n\nThis folder contains the source file for the DRF logos as Figma file."
+    },
+    {
+      "metadata": {
+        "path": "/tutorial/quickstart/",
+        "source_type": "external_official",
+        "doc_type": "tutorial",
+        "size_bytes": 8828,
+        "last_modified": null,
+        "language": "en",
+        "format": "html",
+        "url": "https://www.django-rest-framework.org/tutorial/quickstart/"
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 0.5,
+        "authority": 1.0,
+        "detail_level": 0.9062075215224287,
+        "user_focus": 0.8333333333333333
+      },
+      "weight": 0.017765263830962958,
+      "reasoning": "",
+      "content_preview": "Quickstart - Django REST framework Skip to content Django REST framework Quickstart Initializing search GitHub Home Tutorial API Guide Topics Community Django REST framework GitHub Home Tutorial Tutor..."
+    },
+    {
+      "metadata": {
+        "path": "/tutorial/1-serialization/",
+        "source_type": "external_official",
+        "doc_type": "tutorial",
+        "size_bytes": 18724,
+        "last_modified": null,
+        "language": "en",
+        "format": "html",
+        "url": "https://www.django-rest-framework.org/tutorial/1-serialization/"
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 0.5,
+        "authority": 1.0,
+        "detail_level": 0.4272591326639607,
+        "user_focus": 0.75
+      },
+      "weight": 0.02010619530823642,
+      "reasoning": "",
+      "content_preview": "1 - Serialization - Django REST framework Skip to content Django REST framework 1 - Serialization Initializing search GitHub Home Tutorial API Guide Topics Community Django REST framework GitHub Home ..."
+    },
+    {
+      "metadata": {
+        "path": "/tutorial/2-requests-and-responses/",
+        "source_type": "external_official",
+        "doc_type": "tutorial",
+        "size_bytes": 10210,
+        "last_modified": null,
+        "language": "en",
+        "format": "html",
+        "url": "https://www.django-rest-framework.org/tutorial/2-requests-and-responses/"
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 0.5,
+        "authority": 1.0,
+        "detail_level": 0.7835455435847208,
+        "user_focus": 1.0
+      },
+      "weight": 0.01898309867653752,
+      "reasoning": "",
+      "content_preview": "2 - Requests and responses - Django REST framework Skip to content Django REST framework 2 - Requests and responses Initializing search GitHub Home Tutorial API Guide Topics Community Django REST fram..."
+    },
+    {
+      "metadata": {
+        "path": "/api-guide/serializers/",
+        "source_type": "external_official",
+        "doc_type": "api_reference",
+        "size_bytes": 59775,
+        "last_modified": null,
+        "language": "en",
+        "format": "html",
+        "url": "https://www.django-rest-framework.org/api-guide/serializers/"
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 0.5,
+        "authority": 1.0,
+        "detail_level": 0.05019660336317242,
+        "user_focus": 0.9166666666666667
+      },
+      "weight": 0.023736107058206137,
+      "reasoning": "",
+      "content_preview": "Serializers - Django REST framework Skip to content Django REST framework Serializers Initializing search GitHub Home Tutorial API Guide Topics Community Django REST framework GitHub Home Tutorial Tut..."
+    },
+    {
+      "metadata": {
+        "path": "/api-guide/views/",
+        "source_type": "external_official",
+        "doc_type": "api_reference",
+        "size_bytes": 11388,
+        "last_modified": null,
+        "language": "en",
+        "format": "html",
+        "url": "https://www.django-rest-framework.org/api-guide/views/"
+      },
+      "quality": {
+        "completeness": 0.6666666666666666,
+        "currency": 0.5,
+        "authority": 1.0,
+        "detail_level": 0.26343519494204426,
+        "user_focus": 0.875
+      },
+      "weight": 0.013865973733806543,
+      "reasoning": "",
+      "content_preview": "Views - Django REST framework Skip to content Django REST framework Views Initializing search GitHub Home Tutorial API Guide Topics Community Django REST framework GitHub Home Tutorial Tutorial Quicks..."
+    },
+    {
+      "metadata": {
+        "path": "/api-guide/viewsets/",
+        "source_type": "external_official",
+        "doc_type": "api_reference",
+        "size_bytes": 16193,
+        "last_modified": null,
+        "language": "en",
+        "format": "html",
+        "url": "https://www.django-rest-framework.org/api-guide/viewsets/"
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 0.5,
+        "authority": 1.0,
+        "detail_level": 0.18526523806583092,
+        "user_focus": 0.875
+      },
+      "weight": 0.016881764794019375,
+      "reasoning": "",
+      "content_preview": "Viewsets - Django REST framework Skip to content Django REST framework Viewsets Initializing search GitHub Home Tutorial API Guide Topics Community Django REST framework GitHub Home Tutorial Tutorial ..."
+    },
+    {
+      "metadata": {
+        "path": "/api-guide/routers/",
+        "source_type": "external_official",
+        "doc_type": "api_reference",
+        "size_bytes": 16295,
+        "last_modified": null,
+        "language": "en",
+        "format": "html",
+        "url": "https://www.django-rest-framework.org/api-guide/routers/"
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 0.5,
+        "authority": 1.0,
+        "detail_level": 0.18410555385087451,
+        "user_focus": 0.9
+      },
+      "weight": 0.01703014934734206,
+      "reasoning": "",
+      "content_preview": "Routers - Django REST framework Skip to content Django REST framework Routers Initializing search GitHub Home Tutorial API Guide Topics Community Django REST framework GitHub Home Tutorial Tutorial Qu..."
+    },
+    {
+      "metadata": {
+        "path": "/api-guide/authentication/",
+        "source_type": "external_official",
+        "doc_type": "api_reference",
+        "size_bytes": 26186,
+        "last_modified": null,
+        "language": "en",
+        "format": "html",
+        "url": "https://www.django-rest-framework.org/api-guide/authentication/"
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 0.5,
+        "authority": 1.0,
+        "detail_level": 0.11456503475139387,
+        "user_focus": 1.0
+      },
+      "weight": 0.019900072040553295,
+      "reasoning": "",
+      "content_preview": "Authentication - Django REST framework Skip to content Django REST framework Authentication Initializing search GitHub Home Tutorial API Guide Topics Community Django REST framework GitHub Home Tutori..."
+    },
+    {
+      "metadata": {
+        "path": "/api-guide/permissions/",
+        "source_type": "external_official",
+        "doc_type": "api_reference",
+        "size_bytes": 21960,
+        "last_modified": null,
+        "language": "en",
+        "format": "html",
+        "url": "https://www.django-rest-framework.org/api-guide/permissions/"
+      },
+      "quality": {
+        "completeness": 1.0,
+        "currency": 0.5,
+        "authority": 1.0,
+        "detail_level": 0.1366120218579235,
+        "user_focus": 0.8
+      },
+      "weight": 0.017952483869866694,
+      "reasoning": "",
+      "content_preview": "Permissions - Django REST framework Skip to content Django REST framework Permissions Initializing search GitHub Home Tutorial API Guide Topics Community Django REST framework GitHub Home Tutorial Tut..."
+    }
+  ]
+}

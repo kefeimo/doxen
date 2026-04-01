@@ -1,0 +1,46 @@
+{
+  "project_name": "django-rest-framework",
+  "base_content_length": 33089,
+  "external_docs_found": 1,
+  "integration_results": {
+    "cross_reference": {
+      "enhanced_length": 33349,
+      "confidence": 0.8,
+      "approach": "cross_reference",
+      "sources_count": 1,
+      "reasoning": "Added cross-references to 1 relevant external documents"
+    },
+    "hybrid_content": {
+      "enhanced_length": 33455,
+      "confidence": 0.7,
+      "approach": "hybrid_content",
+      "sources_count": 1,
+      "reasoning": "Integrated patterns and examples from 1 external sources"
+    }
+  },
+  "evaluation": {
+    "cross_reference": {
+      "length_increase_bytes": 260,
+      "length_increase_percent": 0.7857596179999395,
+      "confidence_score": 0.8,
+      "has_code_examples": true,
+      "has_external_references": true,
+      "section_count": 57,
+      "external_sources_count": 1,
+      "quality_score": 0.5215715192359999
+    },
+    "hybrid_content": {
+      "length_increase_bytes": 366,
+      "length_increase_percent": 1.1061077699537611,
+      "confidence_score": 0.7,
+      "has_code_examples": true,
+      "has_external_references": true,
+      "section_count": 58,
+      "external_sources_count": 1,
+      "quality_score": 0.48221221553990745
+    }
+  },
+  "recommendations": [
+    "Recommended approach: cross_reference (quality score: 0.52)"
+  ]
+}

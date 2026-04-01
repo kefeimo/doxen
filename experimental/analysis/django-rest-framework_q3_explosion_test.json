@@ -1,0 +1,44 @@
+{
+  "project_name": "django-rest-framework",
+  "project_type": "framework",
+  "current_analysis": {
+    "total_docs": 81,
+    "original_tier3_count": 16,
+    "original_tier3_percentage": 19.753086419753085
+  },
+  "expansion_simulation": {
+    "external_additions": 5,
+    "expanded_total_docs": 86,
+    "projected_tier3_explosion": 16
+  },
+  "management_results": {
+    "managed_tier3_count": 14,
+    "managed_tier3_weight": 0.22616744092580482,
+    "excluded_count": 2,
+    "overflow_references": 1,
+    "detail_level_distribution": {
+      "workflow_walkthrough": 10,
+      "detailed_implementation": 4
+    },
+    "approach": "hierarchical_capping"
+  },
+  "validation": {
+    "tier3_count_percentage": 16.27906976744186,
+    "tier3_weight_percentage": 21.156916831225896,
+    "target_range": [
+      20,
+      30
+    ],
+    "within_target": false,
+    "project_type": "framework",
+    "recommendations": [
+      "Tier 3 percentage (16.3%) below target range. Consider including more workflow guides."
+    ]
+  },
+  "recommendations": [
+    "\u26a0\ufe0f Tier 3 percentage needs adjustment: Tier 3 percentage (16.3%) below target range. Consider including more workflow guides.",
+    "\u26a0\ufe0f No conceptual overviews found - consider adding high-level feature explanations",
+    "\ud83d\udccb 2 docs converted to external references - maintains access while managing size",
+    "\ud83d\udd17 Generated 1 overflow references for excluded content"
+  ]
+}
