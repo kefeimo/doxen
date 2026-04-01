@@ -1,6 +1,7 @@
-# Doxen configuration (keep config, ignore cache)
+# Doxen configuration (keep config, ignore cache and generated docs)
 .doxen/cache/
 .doxen/settings.json
+.doxen/*-docs/
 !.doxen/config.yaml
 !.doxen/templates/
 

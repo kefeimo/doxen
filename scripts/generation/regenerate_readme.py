@@ -23,7 +23,7 @@ def regenerate_readme(project_name: str):
     print(f"{'='*80}\n")
 
     # Paths
-    results_dir = Path(f"experimental/results/{project_name}")
+    results_dir = Path(f"experimental/projects/{project_name}/doxen_output")
     discovery_dir = results_dir / "discovery_analysis"
 
     # Check discovery data exists

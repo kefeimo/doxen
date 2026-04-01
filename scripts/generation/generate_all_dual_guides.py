@@ -138,7 +138,7 @@ def main():
         print(f"  Total generations: {total_generations}")
 
         # Save report
-        report_path = Path(f"experimental/results/dual_generation_report_{config['project']}.json")
+        report_path = Path(f"experimental/analysis/dual_generation_report_{config['project']}.json")
         with open(report_path, 'w') as f:
             json.dump({
                 "project": config["project"],

@@ -236,7 +236,7 @@ def main():
     parser.add_argument(
         "--output-dir",
         default=None,
-        help="Output directory (default: experimental/results/{project_name})"
+        help="Output directory (default: experimental/projects/{project_name}/doxen_output)"
     )
 
     args = parser.parse_args()
@@ -245,7 +245,7 @@ def main():
     if args.output_dir:
         output_dir = Path(args.output_dir)
     else:
-        output_dir = Path(f"experimental/results/{args.project_name}")
+        output_dir = Path(f"experimental/projects/{args.project_name}/doxen_output")
 
     if not output_dir.exists():
         print(f"❌ Error: Output directory not found: {output_dir}")

@@ -15,7 +15,7 @@ def main():
 
     # Project paths
     project_root = Path("experimental/projects/django-rest-framework")
-    output_dir = Path("experimental/results/django-rest-framework/guides")
+    output_dir = Path("experimental/projects/django-rest-framework/doxen_output/guides")
 
     # Ensure project exists
     if not project_root.exists():
@@ -28,9 +28,9 @@ def main():
         {
             "topic": "Getting Started",
             "tier2_refs": [
-                Path("experimental/results/django-rest-framework/reference_docs/REFERENCE-SERIALIZERS.md"),
-                Path("experimental/results/django-rest-framework/reference_docs/REFERENCE-VIEWS.md"),
-                Path("experimental/results/django-rest-framework/reference_docs/REFERENCE-ROUTERS.md"),
+                Path("experimental/projects/django-rest-framework/doxen_output/reference_docs/REFERENCE-SERIALIZERS.md"),
+                Path("experimental/projects/django-rest-framework/doxen_output/reference_docs/REFERENCE-VIEWS.md"),
+                Path("experimental/projects/django-rest-framework/doxen_output/reference_docs/REFERENCE-ROUTERS.md"),
             ],
             "source_files": [
                 Path("rest_framework/serializers.py"),
@@ -42,9 +42,9 @@ def main():
         {
             "topic": "Authentication",
             "tier2_refs": [
-                Path("experimental/results/django-rest-framework/reference_docs/REFERENCE-AUTHENTICATION.md"),
-                Path("experimental/results/django-rest-framework/reference_docs/REFERENCE-VIEWS.md"),
-                Path("experimental/results/django-rest-framework/reference_docs/REFERENCE-PERMISSIONS.md"),
+                Path("experimental/projects/django-rest-framework/doxen_output/reference_docs/REFERENCE-AUTHENTICATION.md"),
+                Path("experimental/projects/django-rest-framework/doxen_output/reference_docs/REFERENCE-VIEWS.md"),
+                Path("experimental/projects/django-rest-framework/doxen_output/reference_docs/REFERENCE-PERMISSIONS.md"),
             ],
             "source_files": [
                 Path("rest_framework/authentication.py"),
@@ -56,7 +56,7 @@ def main():
         {
             "topic": "Serialization",
             "tier2_refs": [
-                Path("experimental/results/django-rest-framework/reference_docs/REFERENCE-SERIALIZERS.md"),
+                Path("experimental/projects/django-rest-framework/doxen_output/reference_docs/REFERENCE-SERIALIZERS.md"),
             ],
             "source_files": [
                 Path("rest_framework/serializers.py"),
