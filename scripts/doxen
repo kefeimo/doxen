@@ -33,9 +33,12 @@ def run_script(script_category: str, script_name: str, args: list):
     # Make script executable if it isn't
     script_path.chmod(0o755)
 
-    # Run the script with provided arguments
+    # Change to project root directory before running script
+    project_root = Path(__file__).parent.parent
+
+    # Run the script with provided arguments from project root
     cmd = [str(script_path)] + args
-    return subprocess.run(cmd).returncode
+    return subprocess.run(cmd, cwd=project_root).returncode
 
 
 def cmd_generate(args):
