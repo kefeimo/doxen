@@ -53,20 +53,52 @@ class ExistingDocAnalyzer:
     """Analyzes existing documentation for documentation-aware enhancement."""
 
     def __init__(self):
-        # Known external documentation mappings
+        # Known external documentation mappings - EXPANDED for Q2 revisit
         self.external_doc_mappings = {
             "django-rest-framework": {
                 "base_url": "https://www.django-rest-framework.org",
                 "sections": [
+                    # Tutorial progression (comprehensive)
                     "/tutorial/quickstart/",
                     "/tutorial/1-serialization/",
                     "/tutorial/2-requests-and-responses/",
+                    "/tutorial/3-class-based-views/",
+                    "/tutorial/4-authentication-and-permissions/",
+                    "/tutorial/5-relationships-and-hyperlinked-apis/",
+                    "/tutorial/6-viewsets-and-routers/",
+
+                    # API Reference (comprehensive)
                     "/api-guide/serializers/",
                     "/api-guide/views/",
                     "/api-guide/viewsets/",
                     "/api-guide/routers/",
                     "/api-guide/authentication/",
-                    "/api-guide/permissions/"
+                    "/api-guide/permissions/",
+                    "/api-guide/fields/",
+                    "/api-guide/relations/",
+                    "/api-guide/validators/",
+                    "/api-guide/pagination/",
+                    "/api-guide/filtering/",
+                    "/api-guide/parsers/",
+                    "/api-guide/renderers/",
+                    "/api-guide/throttling/",
+                    "/api-guide/content-negotiation/",
+                    "/api-guide/metadata/",
+                    "/api-guide/exceptions/",
+
+                    # Topic Guides (user-oriented)
+                    "/topics/ajax-csrf-cors/",
+                    "/topics/browsable-api/",
+                    "/topics/documenting-your-api/",
+                    "/topics/html-and-forms/",
+                    "/topics/internationalization/",
+                    "/topics/rest-hypermedia-hateoas/",
+                    "/topics/browser-enhancements/",
+                    "/topics/third-party-packages/",
+
+                    # Community and Advanced
+                    "/community/tutorials/",
+                    "/community/third-party-packages/"
                 ]
             },
             "pandas": {

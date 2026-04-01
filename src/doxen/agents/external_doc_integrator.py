@@ -41,19 +41,74 @@ class ExternalDocIntegrator:
     def __init__(self):
         self.existing_analyzer = ExistingDocAnalyzer()
 
-        # Code component patterns for mapping
+        # Code component patterns for mapping (expanded for Q2 revisit)
         self.component_patterns = {
             "django-rest-framework": {
-                "serializers": ["serializer", "serialize", "deserialization"],
-                "views": ["view", "viewset", "api view", "class.*view"],
-                "authentication": ["auth", "login", "token", "session"],
-                "permissions": ["permission", "access", "authorize"],
-                "routers": ["router", "url", "endpoint", "route"],
-                "fields": ["field", "charfield", "integerfield"],
-                "pagination": ["page", "pagination", "limit", "offset"],
-                "filtering": ["filter", "search", "query"],
-                "renderers": ["render", "json", "xml", "template"],
-                "parsers": ["parse", "json", "form", "multipart"]
+                "serializers": ["serializer", "serialize", "deserialization", "validation", "field"],
+                "views": ["view", "viewset", "api view", "class.*view", "generic view"],
+                "authentication": ["auth", "login", "token", "session", "credential", "user"],
+                "permissions": ["permission", "access", "authorize", "security", "role"],
+                "routers": ["router", "url", "endpoint", "route", "path", "urlconf"],
+                "fields": ["field", "charfield", "integerfield", "validation", "clean"],
+                "pagination": ["page", "pagination", "limit", "offset", "cursor"],
+                "filtering": ["filter", "search", "query", "lookup", "where"],
+                "renderers": ["render", "json", "xml", "template", "format", "response"],
+                "parsers": ["parse", "json", "form", "multipart", "request", "data"],
+                "relations": ["relation", "foreign", "many", "nested", "hyperlink"],
+                "validators": ["valid", "clean", "error", "constraint"],
+                "throttling": ["throttle", "rate", "limit", "quota"],
+                "metadata": ["metadata", "options", "schema"],
+                "exceptions": ["error", "exception", "status", "http"],
+                "browsable": ["browser", "html", "form", "interface"],
+                "ajax": ["ajax", "csrf", "cors", "javascript", "xhr"]
+            }
+        }
+
+        # Expanded external doc mappings (matching ExistingDocAnalyzer)
+        self.external_doc_mappings = {
+            "django-rest-framework": {
+                "base_url": "https://www.django-rest-framework.org",
+                "sections": [
+                    # Tutorial progression (comprehensive)
+                    "/tutorial/quickstart/",
+                    "/tutorial/1-serialization/",
+                    "/tutorial/2-requests-and-responses/",
+                    "/tutorial/3-class-based-views/",
+                    "/tutorial/4-authentication-and-permissions/",
+                    "/tutorial/5-relationships-and-hyperlinked-apis/",
+                    "/tutorial/6-viewsets-and-routers/",
+
+                    # API Reference (comprehensive)
+                    "/api-guide/serializers/",
+                    "/api-guide/views/",
+                    "/api-guide/viewsets/",
+                    "/api-guide/routers/",
+                    "/api-guide/authentication/",
+                    "/api-guide/permissions/",
+                    "/api-guide/fields/",
+                    "/api-guide/relations/",
+                    "/api-guide/validators/",
+                    "/api-guide/pagination/",
+                    "/api-guide/filtering/",
+                    "/api-guide/parsers/",
+                    "/api-guide/renderers/",
+                    "/api-guide/throttling/",
+                    "/api-guide/content-negotiation/",
+                    "/api-guide/metadata/",
+                    "/api-guide/exceptions/",
+
+                    # Topic Guides (user-oriented)
+                    "/topics/ajax-csrf-cors/",
+                    "/topics/browsable-api/",
+                    "/topics/documenting-your-api/",
+                    "/topics/html-and-forms/",
+                    "/topics/internationalization/",
+                    "/topics/rest-hypermedia-hateoas/",
+                    "/topics/browser-enhancements/",
+
+                    # Community and Advanced
+                    "/community/third-party-packages/"
+                ]
             }
         }
 

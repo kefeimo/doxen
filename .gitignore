@@ -104,6 +104,19 @@ test-output/
 coverage/
 *.log
 
+# Pipeline test results (generated during development)
+*pipeline_results.json
+*pipeline_test_results.json
+test_corrected_summary.py
+detect_duplicate_content_sources.py
+
+# External documentation configuration (may contain sensitive URLs)
+.doxen/external_docs/
+*.external_docs.json
+
+# Cloned repositories for testing (temporary)
+/tmp/django-rest-framework/
+
 # Temporary files
 tmp/
 temp/
