@@ -1,5 +1,8 @@
-# Doxen Output (regular runs)
-.doxen/
+# Doxen configuration (keep config, ignore cache)
+.doxen/cache/
+.doxen/settings.json
+!.doxen/config.yaml
+!.doxen/templates/
 
 # Experimental Framework - ignore ALL cloned repos (they're external dependencies)
 experimental/projects/*/
@@ -7,8 +10,14 @@ experimental/projects/*/
 !experimental/projects/*/ground_truth/
 !experimental/projects/*/doxen_output/
 
-# Archive of cloned repos - never commit these
+# Archive of cloned repos - never commit these (too large, embedded git repos)
 experimental/projects-archive/
+experimental/archive/*/
+experimental/gold_standard_15/*/
+
+# Keep directory structure but not content
+!experimental/archive/.gitkeep
+!experimental/gold_standard_15/.gitkeep
 
 # Experimental results - ignore generated documentation (keep analysis files)
 experimental/results/*/guides/
