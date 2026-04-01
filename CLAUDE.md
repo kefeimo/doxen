@@ -3,74 +3,38 @@
 **Doxen** transforms codebases into structured, testable, AI-ready knowledge.  
 **Philosophy:** Documentation should be derived, validated, and executable—not written.
 
-## Architecture
-- **Core:** Code analysis → knowledge extraction → structured output
-- **Output:** Structured specs/schemas/flows/graphs (not prose)
-- **Visualization:** Mermaid diagrams
-- **Design:** RAG-native from day one
+## Quick Reference
 
-## Development Environment
-
-### Python (CRITICAL: Always use venv)
-- **NEVER use system Python**
-- Use: `./venv/bin/python script.py` or `source venv/bin/activate && python script.py`
-- Dependencies: `pyproject.toml`, install with `./venv/bin/pip install -e .`
-
-### Ruby (CRITICAL: Always use rbenv)
-- **NEVER use system Ruby**
-- Version: `.ruby-version`, auto-switches on `cd`
-- Use: `ruby command` (rbenv auto-routes)
-- YARD extraction: classes, modules, methods, @param/@return/@examples
-- Dependencies: `Gemfile`, install with `bundle install --path vendor/bundle`
-
-### Alternative: Docker (isolated environment)
-
-## Development Conventions
-
-### Code Style
-- Explicit naming, composition over inheritance
-- Self-documenting code, minimal comments
-- Comments only for non-obvious logic
-
-### Testing
-- Executable/verifiable tests, no mocks in docs
-- Integration > unit tests, test extraction accuracy
-
-### Commits
-- Imperative mood: `<type>: <brief description>`
-- Types: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`
+### Environment Setup
+- **Python:** Always use `./venv/bin/python` (NEVER system Python)
+- **Ruby:** Always use rbenv (auto-switches via `.ruby-version`)
+- **Details:** See [environment-setup.md](.claude/claude_md_reference/environment-setup.md)
 
 ### Documentation Structure
+- **Project docs:** `STRATEGY.md` (vision), `PROGRESS.md` (current work), `DEVELOPMENT.md` (decisions)
+- **Generated docs:** `README.md` (project description), `INDEX.md` (navigation), `REFERENCE-*.md` (APIs)
+- **Details:** See [documentation-structure.md](.claude/claude_md_reference/documentation-structure.md)
 
-**Project Docs (about Doxen):**
-- `README.md` - Public intro/quick start
-- `docs/STRATEGY.md` - "What generated docs should look like and how to generate them"
-- `docs/PROGRESS.md` - Current work status
-- `docs/DEVELOPMENT.md` - Technical decisions/history
-- `docs/.progress/` - Session notes (append-only)
+### Development Workflow
+1. Check `docs/PROGRESS.md` → 2. Update as you work → 3. Distill to `docs/DEVELOPMENT.md` → 4. Test & commit
+- **Details:** See [development-workflow.md](.claude/claude_md_reference/development-workflow.md)
 
-**Generated Docs (Doxen output):**
-- `README.md` - Project description (via `DocGenerator.generate_readme()`)
-- `INDEX.md` - Doc navigation (3-tier hierarchy, links to all docs)
-- `ARCHITECTURE.md` - System overview
-- `REFERENCE-*.md` - API references (Tier 2)
-- `GUIDE-*.md`, `TUTORIAL-*.md` - Workflows (Tier 3)
+### Testing & Validation
+- **Philosophy:** Executable tests, no mocks, integration over unit, test extraction accuracy
+- **Structure:** Unit → Integration → End-to-end → Quality validation
+- **Details:** See [testing-validation.md](.claude/claude_md_reference/testing-validation.md)
 
-**Keep separate:** STRATEGY.md = vision, PROGRESS.md = current work, DEVELOPMENT.md = decisions
+## Core Conventions
 
-## Workflow & Guidelines
+### Code Style
+- Explicit naming, composition over inheritance, self-documenting code
 
-### Development Flow
-1. **Start:** Check `docs/PROGRESS.md`, read relevant `docs/DEVELOPMENT.md`
-2. **During:** Update `docs/PROGRESS.md`, add to `docs/.progress/` (append-only)
-3. **Milestones:** Distill decisions → `docs/DEVELOPMENT.md`, update next steps
-4. **Commit:** Ensure tests pass, update docs, follow conventions
+### Commits
+- Format: `<type>: <brief description>` (feat, fix, refactor, test, docs, chore)
 
 ### What NOT to Do
-- No unstructured markdown docs, mock examples, premature optimization
-- No over-engineering early - start simple
+- No system Python/Ruby, no unstructured docs, no mocks in examples, no premature optimization
 
 ### AI Guidelines
-- Understand code before modifying, ask for clarification
-- Keep responses concise, use `docs/.progress/` for tracking
-- Claude Code auto memory handles conversation context
+- Understand code before modifying, ask for clarification, keep responses concise
+- Use `docs/.progress/` for session tracking, Claude Code handles conversation context
