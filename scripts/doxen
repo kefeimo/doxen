@@ -1,0 +1,260 @@
+#!/usr/bin/env python3
+"""
+Doxen - Unified CLI for Documentation Generation and Validation
+
+A unified interface for the Doxen documentation generation system.
+Provides access to generation, validation, analysis, and utility functions.
+"""
+
+import argparse
+import sys
+import subprocess
+from pathlib import Path
+import yaml
+
+
+def load_config():
+    """Load configuration from .doxen/config.yaml"""
+    config_path = Path(__file__).parent.parent / ".doxen" / "config.yaml"
+    if config_path.exists():
+        with open(config_path) as f:
+            return yaml.safe_load(f)
+    return {}
+
+
+def run_script(script_category: str, script_name: str, args: list):
+    """Run a script from the organized structure"""
+    script_path = Path(__file__).parent / script_category / script_name
+
+    if not script_path.exists():
+        print(f"❌ Error: Script not found: {script_path}")
+        return 1
+
+    # Make script executable if it isn't
+    script_path.chmod(0o755)
+
+    # Run the script with provided arguments
+    cmd = [str(script_path)] + args
+    return subprocess.run(cmd).returncode
+
+
+def cmd_generate(args):
+    """Generate documentation"""
+    if args.tier == 1 or 1 in args.tiers:
+        print("🏗️ Generating Tier 1 (Architecture)...")
+        if args.project:
+            ret = run_script("generation", "generate_architecture.py", [args.project])
+            if ret != 0:
+                return ret
+        else:
+            print("❌ Error: --project required for Tier 1 generation")
+            return 1
+
+    if args.tier == 2 or 2 in args.tiers:
+        print("📚 Generating Tier 2 (References)...")
+        script = "test_ruby_reference_generation.py" if args.language == "ruby" else "test_reference_generation.py"
+        ret = run_script("generation", script, [args.project] if args.project else [])
+        if ret != 0:
+            return ret
+
+    if args.tier == 3 or 3 in args.tiers:
+        print("📖 Generating Tier 3 (Guides)...")
+        script = "generate_all_dual_guides.py" if args.all_projects else "generate_dual_guides.py"
+        ret = run_script("generation", script, [args.project] if args.project else [])
+        if ret != 0:
+            return ret
+
+    if args.readme_only:
+        print("📄 Regenerating README only...")
+        return run_script("generation", "regenerate_readme.py", [args.project])
+
+    return 0
+
+
+def cmd_validate(args):
+    """Validate generated documentation"""
+    if args.full:
+        print("🔍 Running full validation...")
+        return run_script("validation", "evaluate_baseline.py", [args.project] if args.project else [])
+
+    if args.tier == 3:
+        print("🔍 Validating Tier 3 guides...")
+        return run_script("validation", "validate_tier3_guides.py", [args.project] if args.project else [])
+
+    if args.coverage:
+        print("🔍 Running coverage analysis...")
+        return run_script("validation", "test_coverage_analysis.py", [args.project] if args.project else [])
+
+    # Default: run full validation
+    return run_script("validation", "evaluate_baseline.py", [args.project] if args.project else [])
+
+
+def cmd_analyze(args):
+    """Analyze projects and patterns"""
+    if args.patterns:
+        print("🔍 Analyzing documentation patterns...")
+        return run_script("analysis", "analyze_doc_patterns.py", [])
+
+    if args.components:
+        print("🔍 Analyzing components...")
+        if args.project:
+            if args.language == "ruby":
+                return run_script("analysis", "test_ruby_component_grouping.py", [args.project])
+            else:
+                return run_script("analysis", "test_component_grouping.py", [args.project])
+        else:
+            print("❌ Error: --project required for component analysis")
+            return 1
+
+    if args.benchmark:
+        print("⚡ Running performance benchmark...")
+        return run_script("analysis", "run_baseline.py", [args.project] if args.project else [])
+
+    # Default: show help
+    print("❓ Please specify analysis type: --patterns, --components, or --benchmark")
+    return 1
+
+
+def cmd_setup(args):
+    """Setup new project"""
+    print(f"🚀 Setting up project: {args.project}")
+
+    if args.git_url:
+        # Clone project
+        print(f"📥 Cloning from {args.git_url}...")
+        return run_script("utilities", "clone_projects.sh", [args.project, args.git_url])
+    else:
+        print("❌ Error: --git-url required for project setup")
+        return 1
+
+
+def cmd_cost(args):
+    """Estimate or calculate costs"""
+    print(f"💰 Cost analysis for {args.project}")
+    # This would be implemented with a cost calculation utility
+    print("⚠️ Cost calculation not yet implemented")
+    return 0
+
+
+def cmd_clean(args):
+    """Clean outputs and cache"""
+    print(f"🧹 Cleaning {args.project}")
+
+    if args.cache_only:
+        print("🗑️ Clearing cache only...")
+        cache_dir = Path(".doxen/cache")
+        if cache_dir.exists():
+            import shutil
+            shutil.rmtree(cache_dir)
+            cache_dir.mkdir(parents=True)
+            print("✅ Cache cleared")
+    else:
+        print("🗑️ Clearing all outputs...")
+        project_dir = Path(f"experimental/projects/{args.project}/doxen_output")
+        if project_dir.exists():
+            import shutil
+            shutil.rmtree(project_dir)
+            project_dir.mkdir(parents=True)
+            print("✅ Outputs cleared")
+
+    return 0
+
+
+def main():
+    """Main CLI interface"""
+    config = load_config()
+
+    parser = argparse.ArgumentParser(
+        description="Doxen - Documentation Generation and Validation System",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Generate all tiers for a project
+  ./scripts/doxen generate --project discourse --tiers 1,2,3
+
+  # Validate a project
+  ./scripts/doxen validate --project discourse --full
+
+  # Analyze patterns across projects
+  ./scripts/doxen analyze --patterns
+
+  # Setup new project
+  ./scripts/doxen setup --project pytest --git-url https://github.com/pytest-dev/pytest
+
+  # Clean project outputs
+  ./scripts/doxen clean --project discourse
+        """
+    )
+
+    subparsers = parser.add_subparsers(dest='command', help='Available commands')
+
+    # Generate command
+    gen_parser = subparsers.add_parser('generate', help='Generate documentation')
+    gen_parser.add_argument('--project', help='Project name')
+    gen_parser.add_argument('--tier', type=int, choices=[1, 2, 3], help='Generate specific tier')
+    gen_parser.add_argument('--tiers', help='Generate multiple tiers (e.g., 1,2,3)')
+    gen_parser.add_argument('--language', choices=['python', 'ruby', 'javascript'], default='python')
+    gen_parser.add_argument('--all-projects', action='store_true', help='Generate for all projects')
+    gen_parser.add_argument('--readme-only', action='store_true', help='Only regenerate README')
+    gen_parser.add_argument('--budget', type=float, help='Maximum cost budget (USD)')
+    gen_parser.add_argument('--dry-run', action='store_true', help='Show what would be generated')
+
+    # Validate command
+    val_parser = subparsers.add_parser('validate', help='Validate documentation')
+    val_parser.add_argument('--project', help='Project name')
+    val_parser.add_argument('--full', action='store_true', help='Run full validation')
+    val_parser.add_argument('--tier', type=int, choices=[3], help='Validate specific tier')
+    val_parser.add_argument('--coverage', action='store_true', help='Run coverage analysis')
+    val_parser.add_argument('--threshold', type=float, default=0.7, help='Quality threshold')
+
+    # Analyze command
+    ana_parser = subparsers.add_parser('analyze', help='Analyze projects and patterns')
+    ana_parser.add_argument('--project', help='Project name')
+    ana_parser.add_argument('--patterns', action='store_true', help='Analyze documentation patterns')
+    ana_parser.add_argument('--components', action='store_true', help='Analyze project components')
+    ana_parser.add_argument('--benchmark', action='store_true', help='Run performance benchmark')
+    ana_parser.add_argument('--language', choices=['python', 'ruby', 'javascript'], default='python')
+
+    # Setup command
+    setup_parser = subparsers.add_parser('setup', help='Setup new project')
+    setup_parser.add_argument('--project', required=True, help='Project name')
+    setup_parser.add_argument('--git-url', required=True, help='Git repository URL')
+
+    # Cost command
+    cost_parser = subparsers.add_parser('cost', help='Estimate or calculate costs')
+    cost_parser.add_argument('--project', help='Project name')
+    cost_parser.add_argument('--estimate', action='store_true', help='Estimate costs')
+
+    # Clean command
+    clean_parser = subparsers.add_parser('clean', help='Clean outputs and cache')
+    clean_parser.add_argument('--project', required=True, help='Project name')
+    clean_parser.add_argument('--cache-only', action='store_true', help='Clean cache only')
+
+    args = parser.parse_args()
+
+    # Parse tiers if provided
+    if hasattr(args, 'tiers') and args.tiers:
+        args.tiers = [int(t.strip()) for t in args.tiers.split(',')]
+    elif hasattr(args, 'tiers'):
+        args.tiers = []
+
+    # Route to command handlers
+    if args.command == 'generate':
+        return cmd_generate(args)
+    elif args.command == 'validate':
+        return cmd_validate(args)
+    elif args.command == 'analyze':
+        return cmd_analyze(args)
+    elif args.command == 'setup':
+        return cmd_setup(args)
+    elif args.command == 'cost':
+        return cmd_cost(args)
+    elif args.command == 'clean':
+        return cmd_clean(args)
+    else:
+        parser.print_help()
+        return 1
+
+
+if __name__ == '__main__':
+    sys.exit(main())

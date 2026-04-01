@@ -1,0 +1,96 @@
+# Doxen Configuration
+# Global settings for the Doxen documentation generation system
+
+# Directory structure
+directories:
+  # Base directories
+  base_dir: "."
+  src_dir: "src"
+  experimental_dir: "experimental"
+  scripts_dir: "scripts"
+
+  # Project structure
+  projects_dir: "experimental/projects"
+  gold_standard_dir: "experimental/gold_standard_15"
+  archive_dir: "experimental/archive"
+  analysis_dir: "experimental/analysis"
+
+  # Per-project structure (within projects_dir/{project_name}/)
+  project_subdirs:
+    source: "source"          # Original source code (git clone)
+    ground_truth: "ground_truth"  # Extracted documentation
+    doxen_output: "doxen_output"  # Generated documentation
+
+  # Analysis subdirectories
+  analysis_subdirs:
+    evaluation_reports: "evaluation_reports"
+    pattern_analysis: "pattern_analysis"
+    benchmarks: "benchmarks"
+
+# Default settings
+defaults:
+  # LLM settings
+  llm_model: "claude-3-5-sonnet-20241022"
+  bedrock_region: "us-east-1"
+
+  # Generation settings
+  tiers: [1, 2, 3]  # Available tiers
+  default_tier: 1
+  parallel_generation: true
+
+  # Quality thresholds
+  validation_threshold: 0.7
+  minimum_completeness: 0.6
+
+  # Cost controls
+  max_cost_per_project: 5.00  # USD
+  budget_warning_threshold: 0.8
+
+# Script organization
+scripts:
+  generation:
+    - "generate_architecture.py"
+    - "regenerate_readme.py"
+    - "generate_dual_guides.py"
+    - "generate_all_dual_guides.py"
+    - "test_reference_generation.py"
+    - "test_ruby_reference_generation.py"
+    - "test_tier3_guide_generation.py"
+
+  validation:
+    - "evaluate_baseline.py"
+    - "validate_tier3_guides.py"
+    - "test_coverage_analysis.py"
+
+  analysis:
+    - "analyze_doc_patterns.py"
+    - "analyze_all_doc_locations.py"
+    - "analyze_pandas_components.py"
+    - "test_component_analysis.py"
+    - "test_component_grouping.py"
+    - "test_ruby_component_grouping.py"
+    - "compare_pattern_detection.py"
+    - "run_baseline.py"
+    - "test_framework_patterns.py"
+
+  utilities:
+    - "calculate_characteristics.py"
+    - "extract_ground_truth.py"
+    - "extract_doc_inventory.py"
+    - "clone_projects.sh"
+    - "clone_expansion.sh"
+    - "archive_non_gold_projects.sh"
+
+# Project templates
+templates:
+  project_structure: |
+    {project_name}/
+    ├── source/           # git clone of project
+    ├── ground_truth/     # extracted original docs
+    └── doxen_output/     # generated documentation
+        ├── README.md
+        ├── INDEX.md
+        ├── ARCHITECTURE.md
+        ├── discovery_analysis/
+        ├── reference_docs/
+        └── guides/
