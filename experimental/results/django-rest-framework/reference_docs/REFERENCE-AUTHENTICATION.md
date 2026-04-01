@@ -8,6 +8,7 @@
 
 ## Overview
 
+
 This component contains **6 classes**, **1 function**, and **13 methods**.
 
 ### Source Files
@@ -347,6 +348,7 @@ AUTHENTICATION_BACKENDS setting
 ---
 
 
+
 ### Functions
 
 #### `get_authorization_header(request)`
@@ -395,7 +397,7 @@ obj = CSRFCheck()
 
 ---
 
-**Generated:** 2026-03-27 11:57:52
+**Generated:** 2026-04-01 09:03:24
 **Component:** authentication
 **API Coverage:** 60.0%
 **Total APIs:** 20

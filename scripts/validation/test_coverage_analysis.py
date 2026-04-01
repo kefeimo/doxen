@@ -22,11 +22,23 @@ def analyze_coverage(repo_name: str = "django-rest-framework"):
 
     # Paths
     repo_path = project_root / "experimental" / "projects" / repo_name
-    ground_truth_docs = repo_path / "docs"
-    generated_docs = project_root / "experimental" / "results" / repo_name / "reference_docs"
+    generated_docs = repo_path / "doxen_output" / "reference_docs"
 
-    if not ground_truth_docs.exists():
-        print(f"❌ Ground truth docs not found: {ground_truth_docs}")
+    # Try different possible doc locations
+    possible_doc_paths = [
+        repo_path / "docs",                    # Django REST Framework style
+        repo_path / "source" / repo_name / "doc",  # Pandas style
+        repo_path / "ground_truth",            # Extracted docs
+    ]
+
+    ground_truth_docs = None
+    for doc_path in possible_doc_paths:
+        if doc_path.exists():
+            ground_truth_docs = doc_path
+            break
+
+    if ground_truth_docs is None:
+        print(f"❌ Ground truth docs not found in any of: {[str(p) for p in possible_doc_paths]}")
         return
 
     if not generated_docs.exists():
@@ -99,15 +111,20 @@ def analyze_coverage(repo_name: str = "django-rest-framework"):
     print()
     print(f"   Total APIs documented: {total_apis}")
     print(f"   APIs with docstrings: {documented_apis}")
-    print(f"   Overall coverage: {documented_apis / total_apis * 100:.1f}%")
-    print()
 
-    if documented_apis / total_apis * 100 >= 80:
-        print("   ✓ PASS: Coverage ≥80% target")
-    elif documented_apis / total_apis * 100 >= 60:
-        print("   ⚠️  WARNING: Coverage below 80% target")
+    if total_apis > 0:
+        coverage_pct = documented_apis / total_apis * 100
+        print(f"   Overall coverage: {coverage_pct:.1f}%")
+        print()
+
+        if coverage_pct >= 80:
+            print("   ✓ PASS: Coverage ≥80% target")
+        elif coverage_pct >= 60:
+            print("   ⚠️  WARNING: Coverage below 80% target")
+        else:
+            print("   ❌ FAIL: Coverage below 60% minimum")
     else:
-        print("   ❌ FAIL: Coverage below 60% minimum")
+        print("   ⚠️  No APIs found to analyze")
 
     # Identify ground truth topics to compare
     print()
@@ -142,7 +159,7 @@ def analyze_coverage(repo_name: str = "django-rest-framework"):
     print("5. Recommendations:")
     print()
 
-    if documented_apis / total_apis * 100 < 80:
+    if total_apis > 0 and documented_apis / total_apis * 100 < 80:
         print("   To improve coverage to 80%:")
         print("   1. Add missing docstrings to source code (upstream)")
         print("   2. Use LLM to generate descriptions for undocumented APIs")
@@ -198,4 +215,11 @@ def compare_to_ground_truth_file(
 
 
 if __name__ == "__main__":
-    analyze_coverage("django-rest-framework")
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Analyze API coverage of generated documentation")
+    parser.add_argument("project_name", nargs='?', default="django-rest-framework",
+                      help="Project name (default: django-rest-framework)")
+
+    args = parser.parse_args()
+    analyze_coverage(args.project_name)

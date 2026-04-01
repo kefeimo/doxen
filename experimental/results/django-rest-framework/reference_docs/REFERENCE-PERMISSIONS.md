@@ -8,6 +8,7 @@
 
 ## Overview
 
+
 This component contains **15 classes**, **0 functions**, and **31 methods**.
 
 ### Source Files
@@ -775,6 +776,7 @@ provide a `.queryset` attribute.
 
 
 
+
 ## Constants
 
 | Name | Value | Line |
@@ -809,7 +811,7 @@ obj = OperationHolderMixin()
 
 ---
 
-**Generated:** 2026-03-27 11:57:52
+**Generated:** 2026-04-01 09:03:24
 **Component:** permissions
 **API Coverage:** 23.9%
 **Total APIs:** 46

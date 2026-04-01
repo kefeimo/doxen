@@ -1,0 +1,886 @@
+{
+  "repo_path": "/home/kefei/project/doxen/experimental/projects/django-rest-framework",
+  "repo_name": "django-rest-framework",
+  "framework": "Django REST Framework",
+  "primary_language": "Python",
+  "components": [
+    {
+      "name": "test_validators",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_validators.py",
+      "files": [
+        {
+          "path": "tests/test_validators.py",
+          "name": "test_validators.py",
+          "size": 40512
+        }
+      ],
+      "entry_point": "tests/test_validators.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_generics",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_generics.py",
+      "files": [
+        {
+          "path": "tests/test_generics.py",
+          "name": "test_generics.py",
+          "size": 25621
+        }
+      ],
+      "entry_point": "tests/test_generics.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_templatetags",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_templatetags.py",
+      "files": [
+        {
+          "path": "tests/test_templatetags.py",
+          "name": "test_templatetags.py",
+          "size": 10424
+        }
+      ],
+      "entry_point": "tests/test_templatetags.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_routers",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_routers.py",
+      "files": [
+        {
+          "path": "tests/test_routers.py",
+          "name": "test_routers.py",
+          "size": 26834
+        }
+      ],
+      "entry_point": "tests/test_routers.py",
+      "semantic_type": "api_endpoint"
+    },
+    {
+      "name": "test_serializer",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_serializer.py",
+      "files": [
+        {
+          "path": "tests/test_serializer.py",
+          "name": "test_serializer.py",
+          "size": 30172
+        }
+      ],
+      "entry_point": "tests/test_serializer.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_requests_client",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_requests_client.py",
+      "files": [
+        {
+          "path": "tests/test_requests_client.py",
+          "name": "test_requests_client.py",
+          "size": 8753
+        }
+      ],
+      "entry_point": "tests/test_requests_client.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_utils",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_utils.py",
+      "files": [
+        {
+          "path": "tests/test_utils.py",
+          "name": "test_utils.py",
+          "size": 8707
+        }
+      ],
+      "entry_point": "tests/test_utils.py",
+      "semantic_type": "utility"
+    },
+    {
+      "name": "test_pagination",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_pagination.py",
+      "files": [
+        {
+          "path": "tests/test_pagination.py",
+          "name": "test_pagination.py",
+          "size": 43448
+        }
+      ],
+      "entry_point": "tests/test_pagination.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_relations",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_relations.py",
+      "files": [
+        {
+          "path": "tests/test_relations.py",
+          "name": "test_relations.py",
+          "size": 20712
+        }
+      ],
+      "entry_point": "tests/test_relations.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_viewsets",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_viewsets.py",
+      "files": [
+        {
+          "path": "tests/test_viewsets.py",
+          "name": "test_viewsets.py",
+          "size": 11900
+        }
+      ],
+      "entry_point": "tests/test_viewsets.py",
+      "semantic_type": "api_endpoint"
+    },
+    {
+      "name": "test_throttling",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_throttling.py",
+      "files": [
+        {
+          "path": "tests/test_throttling.py",
+          "name": "test_throttling.py",
+          "size": 16890
+        }
+      ],
+      "entry_point": "tests/test_throttling.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_response",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_response.py",
+      "files": [
+        {
+          "path": "tests/test_response.py",
+          "name": "test_response.py",
+          "size": 10883
+        }
+      ],
+      "entry_point": "tests/test_response.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_testing",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_testing.py",
+      "files": [
+        {
+          "path": "tests/test_testing.py",
+          "name": "test_testing.py",
+          "size": 14458
+        }
+      ],
+      "entry_point": "tests/test_testing.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_relations_hyperlink",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_relations_hyperlink.py",
+      "files": [
+        {
+          "path": "tests/test_relations_hyperlink.py",
+          "name": "test_relations_hyperlink.py",
+          "size": 26443
+        }
+      ],
+      "entry_point": "tests/test_relations_hyperlink.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_atomic_requests",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_atomic_requests.py",
+      "files": [
+        {
+          "path": "tests/test_atomic_requests.py",
+          "name": "test_atomic_requests.py",
+          "size": 6233
+        }
+      ],
+      "entry_point": "tests/test_atomic_requests.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_permissions",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_permissions.py",
+      "files": [
+        {
+          "path": "tests/test_permissions.py",
+          "name": "test_permissions.py",
+          "size": 32454
+        }
+      ],
+      "entry_point": "tests/test_permissions.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_model_serializer",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_model_serializer.py",
+      "files": [
+        {
+          "path": "tests/test_model_serializer.py",
+          "name": "test_model_serializer.py",
+          "size": 53071
+        }
+      ],
+      "entry_point": "tests/test_model_serializer.py",
+      "semantic_type": "data_model"
+    },
+    {
+      "name": "test_metadata",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_metadata.py",
+      "files": [
+        {
+          "path": "tests/test_metadata.py",
+          "name": "test_metadata.py",
+          "size": 14951
+        }
+      ],
+      "entry_point": "tests/test_metadata.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_parsers",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_parsers.py",
+      "files": [
+        {
+          "path": "tests/test_parsers.py",
+          "name": "test_parsers.py",
+          "size": 6745
+        }
+      ],
+      "entry_point": "tests/test_parsers.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_request",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_request.py",
+      "files": [
+        {
+          "path": "tests/test_request.py",
+          "name": "test_request.py",
+          "size": 13455
+        }
+      ],
+      "entry_point": "tests/test_request.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_serializer_nested",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_serializer_nested.py",
+      "files": [
+        {
+          "path": "tests/test_serializer_nested.py",
+          "name": "test_serializer_nested.py",
+          "size": 12826
+        }
+      ],
+      "entry_point": "tests/test_serializer_nested.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_decorators",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_decorators.py",
+      "files": [
+        {
+          "path": "tests/test_decorators.py",
+          "name": "test_decorators.py",
+          "size": 15561
+        }
+      ],
+      "entry_point": "tests/test_decorators.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_validation",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_validation.py",
+      "files": [
+        {
+          "path": "tests/test_validation.py",
+          "name": "test_validation.py",
+          "size": 8215
+        }
+      ],
+      "entry_point": "tests/test_validation.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_filters",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_filters.py",
+      "files": [
+        {
+          "path": "tests/test_filters.py",
+          "name": "test_filters.py",
+          "size": 34671
+        }
+      ],
+      "entry_point": "tests/test_filters.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_versioning",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_versioning.py",
+      "files": [
+        {
+          "path": "tests/test_versioning.py",
+          "name": "test_versioning.py",
+          "size": 15015
+        }
+      ],
+      "entry_point": "tests/test_versioning.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_htmlrenderer",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_htmlrenderer.py",
+      "files": [
+        {
+          "path": "tests/test_htmlrenderer.py",
+          "name": "test_htmlrenderer.py",
+          "size": 6665
+        }
+      ],
+      "entry_point": "tests/test_htmlrenderer.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_renderers",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_renderers.py",
+      "files": [
+        {
+          "path": "tests/test_renderers.py",
+          "name": "test_renderers.py",
+          "size": 35006
+        }
+      ],
+      "entry_point": "tests/test_renderers.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_authtoken",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_authtoken.py",
+      "files": [
+        {
+          "path": "tests/test_authtoken.py",
+          "name": "test_authtoken.py",
+          "size": 6709
+        }
+      ],
+      "entry_point": "tests/test_authtoken.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_fields",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_fields.py",
+      "files": [
+        {
+          "path": "tests/test_fields.py",
+          "name": "test_fields.py",
+          "size": 94503
+        }
+      ],
+      "entry_point": "tests/test_fields.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "models",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/models.py",
+      "files": [
+        {
+          "path": "tests/models.py",
+          "name": "models.py",
+          "size": 5132
+        }
+      ],
+      "entry_point": "tests/models.py",
+      "semantic_type": "data_model"
+    },
+    {
+      "name": "test_urlpatterns",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_urlpatterns.py",
+      "files": [
+        {
+          "path": "tests/test_urlpatterns.py",
+          "name": "test_urlpatterns.py",
+          "size": 8051
+        }
+      ],
+      "entry_point": "tests/test_urlpatterns.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_relations_pk",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_relations_pk.py",
+      "files": [
+        {
+          "path": "tests/test_relations_pk.py",
+          "name": "test_relations_pk.py",
+          "size": 25139
+        }
+      ],
+      "entry_point": "tests/test_relations_pk.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_bound_fields",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_bound_fields.py",
+      "files": [
+        {
+          "path": "tests/test_bound_fields.py",
+          "name": "test_bound_fields.py",
+          "size": 9796
+        }
+      ],
+      "entry_point": "tests/test_bound_fields.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_relations_slug",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_relations_slug.py",
+      "files": [
+        {
+          "path": "tests/test_relations_slug.py",
+          "name": "test_relations_slug.py",
+          "size": 11817
+        }
+      ],
+      "entry_point": "tests/test_relations_slug.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "test_serializer_lists",
+      "type": "python_module",
+      "language": "python",
+      "path": "tests/test_serializer_lists.py",
+      "files": [
+        {
+          "path": "tests/test_serializer_lists.py",
+          "name": "test_serializer_lists.py",
+          "size": 27412
+        }
+      ],
+      "entry_point": "tests/test_serializer_lists.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "exceptions",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/exceptions.py",
+      "files": [
+        {
+          "path": "rest_framework/exceptions.py",
+          "name": "exceptions.py",
+          "size": 8159
+        }
+      ],
+      "entry_point": "rest_framework/exceptions.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "metadata",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/metadata.py",
+      "files": [
+        {
+          "path": "rest_framework/metadata.py",
+          "name": "metadata.py",
+          "size": 5862
+        }
+      ],
+      "entry_point": "rest_framework/metadata.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "pagination",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/pagination.py",
+      "files": [
+        {
+          "path": "rest_framework/pagination.py",
+          "name": "pagination.py",
+          "size": 32694
+        }
+      ],
+      "entry_point": "rest_framework/pagination.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "renderers",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/renderers.py",
+      "files": [
+        {
+          "path": "rest_framework/renderers.py",
+          "name": "renderers.py",
+          "size": 35735
+        }
+      ],
+      "entry_point": "rest_framework/renderers.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "throttling",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/throttling.py",
+      "files": [
+        {
+          "path": "rest_framework/throttling.py",
+          "name": "throttling.py",
+          "size": 8067
+        }
+      ],
+      "entry_point": "rest_framework/throttling.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "views",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/views.py",
+      "files": [
+        {
+          "path": "rest_framework/views.py",
+          "name": "views.py",
+          "size": 19102
+        }
+      ],
+      "entry_point": "rest_framework/views.py",
+      "semantic_type": "api_endpoint"
+    },
+    {
+      "name": "compat",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/compat.py",
+      "files": [
+        {
+          "path": "rest_framework/compat.py",
+          "name": "compat.py",
+          "size": 6073
+        }
+      ],
+      "entry_point": "rest_framework/compat.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "validators",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/validators.py",
+      "files": [
+        {
+          "path": "rest_framework/validators.py",
+          "name": "validators.py",
+          "size": 13538
+        }
+      ],
+      "entry_point": "rest_framework/validators.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "request",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/request.py",
+      "files": [
+        {
+          "path": "rest_framework/request.py",
+          "name": "request.py",
+          "size": 15121
+        }
+      ],
+      "entry_point": "rest_framework/request.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "routers",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/routers.py",
+      "files": [
+        {
+          "path": "rest_framework/routers.py",
+          "name": "routers.py",
+          "size": 13923
+        }
+      ],
+      "entry_point": "rest_framework/routers.py",
+      "semantic_type": "api_endpoint"
+    },
+    {
+      "name": "viewsets",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/viewsets.py",
+      "files": [
+        {
+          "path": "rest_framework/viewsets.py",
+          "name": "viewsets.py",
+          "size": 9292
+        }
+      ],
+      "entry_point": "rest_framework/viewsets.py",
+      "semantic_type": "api_endpoint"
+    },
+    {
+      "name": "authentication",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/authentication.py",
+      "files": [
+        {
+          "path": "rest_framework/authentication.py",
+          "name": "authentication.py",
+          "size": 7701
+        }
+      ],
+      "entry_point": "rest_framework/authentication.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "permissions",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/permissions.py",
+      "files": [
+        {
+          "path": "rest_framework/permissions.py",
+          "name": "permissions.py",
+          "size": 9588
+        }
+      ],
+      "entry_point": "rest_framework/permissions.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "fields",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/fields.py",
+      "files": [
+        {
+          "path": "rest_framework/fields.py",
+          "name": "fields.py",
+          "size": 71109
+        }
+      ],
+      "entry_point": "rest_framework/fields.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "parsers",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/parsers.py",
+      "files": [
+        {
+          "path": "rest_framework/parsers.py",
+          "name": "parsers.py",
+          "size": 7717
+        }
+      ],
+      "entry_point": "rest_framework/parsers.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "versioning",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/versioning.py",
+      "files": [
+        {
+          "path": "rest_framework/versioning.py",
+          "name": "versioning.py",
+          "size": 6801
+        }
+      ],
+      "entry_point": "rest_framework/versioning.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "serializers",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/serializers.py",
+      "files": [
+        {
+          "path": "rest_framework/serializers.py",
+          "name": "serializers.py",
+          "size": 70603
+        }
+      ],
+      "entry_point": "rest_framework/serializers.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "relations",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/relations.py",
+      "files": [
+        {
+          "path": "rest_framework/relations.py",
+          "name": "relations.py",
+          "size": 21238
+        }
+      ],
+      "entry_point": "rest_framework/relations.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "filters",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/filters.py",
+      "files": [
+        {
+          "path": "rest_framework/filters.py",
+          "name": "filters.py",
+          "size": 12899
+        }
+      ],
+      "entry_point": "rest_framework/filters.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "decorators",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/decorators.py",
+      "files": [
+        {
+          "path": "rest_framework/decorators.py",
+          "name": "decorators.py",
+          "size": 9974
+        }
+      ],
+      "entry_point": "rest_framework/decorators.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "settings",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/settings.py",
+      "files": [
+        {
+          "path": "rest_framework/settings.py",
+          "name": "settings.py",
+          "size": 8060
+        }
+      ],
+      "entry_point": "rest_framework/settings.py",
+      "semantic_type": "unknown"
+    },
+    {
+      "name": "test",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/test.py",
+      "files": [
+        {
+          "path": "rest_framework/test.py",
+          "name": "test.py",
+          "size": 14298
+        }
+      ],
+      "entry_point": "rest_framework/test.py",
+      "semantic_type": "test"
+    },
+    {
+      "name": "generics",
+      "type": "python_module",
+      "language": "python",
+      "path": "rest_framework/generics.py",
+      "files": [
+        {
+          "path": "rest_framework/generics.py",
+          "name": "generics.py",
+          "size": 10163
+        }
+      ],
+      "entry_point": "rest_framework/generics.py",
+      "semantic_type": "unknown"
+    }
+  ],
+  "grouping_strategy": "directory_based_llm_enhanced",
+  "coverage": {
+    "total_components": 58,
+    "total_files_grouped": 58,
+    "component_types": {
+      "python_module": 58
+    }
+  }
+}

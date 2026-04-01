@@ -8,6 +8,7 @@
 
 ## Overview
 
+
 This component contains **10 classes**, **2 functions**, and **72 methods**.
 
 ### Source Files
@@ -1333,6 +1334,7 @@ Create nested fields for forward and reverse relationships.
 ---
 
 
+
 ### Functions
 
 #### `as_serializer_error(exc)`
@@ -1435,7 +1437,7 @@ obj = BaseSerializer()
 
 ---
 
-**Generated:** 2026-03-27 11:57:52
+**Generated:** 2026-04-01 09:03:24
 **Component:** serializers
 **API Coverage:** 51.2%
 **Total APIs:** 84

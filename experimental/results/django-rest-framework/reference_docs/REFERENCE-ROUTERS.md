@@ -8,6 +8,7 @@
 
 ## Overview
 
+
 This component contains **4 classes**, **2 functions**, and **17 methods**.
 
 ### Source Files
@@ -366,6 +367,7 @@ for the API, and appending `.json` style format suffixes.
 ---
 
 
+
 ### Functions
 
 #### `escape_curly_brackets(url_path)`
@@ -428,7 +430,7 @@ obj = BaseRouter()
 
 ---
 
-**Generated:** 2026-03-27 11:57:52
+**Generated:** 2026-04-01 09:03:24
 **Component:** routers
 **API Coverage:** 60.9%
 **Total APIs:** 23

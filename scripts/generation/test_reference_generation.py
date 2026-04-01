@@ -20,7 +20,7 @@ from doxen.analyzer.llm_analyzer import LLMAnalyzer
 
 def test_reference_generation(
     repo_name: str = "django-rest-framework",
-    components_to_generate: list[str] = ["serializers", "views", "routers"],
+    components_to_generate: list[str] = None,
 ):
     """Test REFERENCE-*.md generation for specific components."""
 
@@ -46,10 +46,19 @@ def test_reference_generation(
     component_analyzer = ComponentAnalyzer(llm_analyzer=llm)
     doc_generator = DocGenerator(llm_analyzer=llm)
 
-    # Step 1: Group components
-    print("1. Grouping components...")
-    grouping_result = repo_analyzer.group_by_component(repo_path)
-    print(f"   ✓ Found {len(grouping_result['components'])} components\n")
+    # Step 1: Load existing component analysis
+    print("1. Loading existing component analysis...")
+    analysis_file = project_root / "experimental" / "analysis" / f"{repo_name}_component_grouping.json"
+
+    if analysis_file.exists():
+        import json
+        with open(analysis_file) as f:
+            grouping_result = json.load(f)
+        print(f"   ✓ Loaded {len(grouping_result['components'])} components from existing analysis\n")
+    else:
+        print("   ⚠️  No existing analysis found, running new analysis...")
+        grouping_result = repo_analyzer.group_by_component(repo_path)
+        print(f"   ✓ Found {len(grouping_result['components'])} components\n")
 
     # Step 2: Filter target components
     target_components = []
@@ -82,7 +91,7 @@ def test_reference_generation(
 
     # Step 4: Generate REFERENCE-*.md files
     print("4. Generating REFERENCE-*.md files...")
-    output_dir = project_root / "experimental" / "results" / repo_name / "reference_docs"
+    output_dir = repo_path / "doxen_output" / "reference_docs"
     generated_files = doc_generator.generate_reference_docs(
         analyzed_components,
         output_dir,
@@ -162,8 +171,26 @@ def test_reference_generation(
 
 
 if __name__ == "__main__":
-    # Test on django-rest-framework core components
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Generate REFERENCE-*.md documentation")
+    parser.add_argument("project_name", nargs='?', default="django-rest-framework",
+                      help="Project name (default: django-rest-framework)")
+
+    args = parser.parse_args()
+
+    # Select appropriate components based on project
+    if args.project_name == "django-rest-framework":
+        components = ["serializers", "views", "routers", "authentication", "permissions"]
+    elif args.project_name == "pandas":
+        # Use components actually detected by component analyzer
+        components = ["frontend", "scripts"]
+    else:
+        # Default set for unknown projects
+        components = ["core", "api", "utils", "models", "handlers"]
+
+    # Test on specified project core components
     test_reference_generation(
-        repo_name="django-rest-framework",
-        components_to_generate=["serializers", "views", "routers", "authentication", "permissions"],
+        repo_name=args.project_name,
+        components_to_generate=components,
     )

@@ -8,6 +8,7 @@
 
 ## Overview
 
+
 This component contains **1 class**, **4 functions**, and **33 methods**.
 
 ### Source Files
@@ -534,6 +535,7 @@ Handler method for HTTP 'OPTIONS' request.
 ---
 
 
+
 ### Functions
 
 #### `get_view_name(view)`
@@ -637,7 +639,7 @@ obj = APIView()
 
 ---
 
-**Generated:** 2026-03-27 11:57:52
+**Generated:** 2026-04-01 09:03:24
 **Component:** views
 **API Coverage:** 89.5%
 **Total APIs:** 38
